@@ -4,7 +4,7 @@ namespace CentSible.Models
 {
     public enum GoalType
     {
-        Saving
+        Saving,
         Sepnding
     }
 
@@ -15,6 +15,6 @@ namespace CentSible.Models
         public GoalType GoalType { get; set; }
         public decimal TargetAmount { get; set; }
         public decimal CurrentAmount { get; set; }
-        public Date TargetDate { get; set; }
+        public DateTime TargetDate { get; set; }
     }
 }
