@@ -26,6 +26,6 @@ namespace CentSible.Models
         public TransactionType TransactionType { get; set; }
         public Category Category { get; set; }
         public decimal Amount { get; set; }
-        public Date Date { get; set; }
+        public DateTime Date { get; set; }
     }
 }
