@@ -122,7 +122,6 @@ namespace CentSible.Views
 
             pbGoalProgress.Value = metrics.TotalPercent;
             lblPercentReached.Text = $"{metrics.TotalPercent}%";
-            lblStatusMsg.Text = metrics.StatusNote;
             pbMilestone.Value = metrics.MilestoneStep;
             lblMilestoneDesc.Text = metrics.StatusNote;
             lblMilestoneDays.Text = metrics.DaysText;
@@ -160,15 +159,34 @@ namespace CentSible.Views
         {
             UpdateGoalDate();
             UpdateFilter();
+            SyncDatePickerToSelectedPeriod();
         }
 
         private void numSelectYear_ValueChanged(object sender, EventArgs e)
         {
             UpdateGoalDate();
             UpdateFilter();
+            SyncDatePickerToSelectedPeriod();
         }
 
-      
+        private void SyncDatePickerToSelectedPeriod()
+        {
+            int month = cbSelectMonth.SelectedIndex + 1;
+
+
+            int year = (int)numSelectYear.Value;
+
+            int lastDay = DateTime.DaysInMonth(year, month);
+
+            dtpTargetDate.MaxDate = new DateTime(year, month, lastDay);
+
+            dtpTargetDate.Value = new DateTime(year, month, lastDay);
+
+            UpdateDaysRemaining();
+
+        }
+
+
         private void dtpTargetDate_ValueChanged(object sender, EventArgs e) => UpdateDaysRemaining();
         private void Switch(Form next) { _isNavigating = true; next.Show(); this.Close(); }
         private void btnNavHome_Click(object sender, EventArgs e) { _isNavigating = true; _home.Show(); this.Close(); }
