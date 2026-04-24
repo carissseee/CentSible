@@ -153,10 +153,11 @@
             this.PassTextLogin.ForeColor = System.Drawing.Color.Gray;
             this.PassTextLogin.Location = new System.Drawing.Point(263, 64);
             this.PassTextLogin.Name = "PassTextLogin";
+            this.PassTextLogin.PasswordChar = '*';
             this.PassTextLogin.Placeholder = "Enter password";
             this.PassTextLogin.PlaceholderColor = System.Drawing.Color.Gray;
             this.PassTextLogin.Size = new System.Drawing.Size(338, 22);
-            this.PassTextLogin.TabIndex = 8;
+            this.PassTextLogin.TabIndex = 1;
             // 
             // DontHaveAccLabelLogin
             // 
@@ -216,5 +217,9 @@
         private System.Windows.Forms.Label DontHaveAccLabelLogin;
         private PlaceholderText.PlaceholderTextBox UserTextLogin;
         private PlaceholderText.PlaceholderTextBox PassTextLogin;
+
     }
 }
+
+
+        

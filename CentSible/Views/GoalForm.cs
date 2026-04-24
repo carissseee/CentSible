@@ -79,8 +79,8 @@ namespace CentSible.Views
         {
             _activeType = type;
 
-          
-            lblLeftHeader.Text = type == GoalCategory.Spending ? "Spending" : "Saving";
+
+            SpendingGoalLabelGoal.Text = type == GoalCategory.Spending ? "Spending" : "Saving";
 
          
             lblRightHeader.Text = type == GoalCategory.Spending ? "Spending" : "Saving";
@@ -89,9 +89,9 @@ namespace CentSible.Views
 
             if (goal != null)
             {
-             
-                txtTargetAmount.Text = goal.TargetAmount.ToString();
-                txtCurrentAmount.Text = goal.CurrentAmount.ToString();
+
+                TargetAmountLabelGoal.Text = goal.TargetAmount.ToString();
+                CurrentAmountLabelGoal.Text = goal.CurrentAmount.ToString();
                 TargetDateDropDownGoal.Value = goal.TargetDate;
 
                 
@@ -106,9 +106,9 @@ namespace CentSible.Views
             }
             else
             {
-                
-                txtTargetAmount.Text = "";
-                txtCurrentAmount.Text = "";
+
+                TargetAmountLabelGoal.Text = "";
+                CurrentAmountLabelGoal.Text = "";
                 lblIndicatorSpent.Text = "₱ 0";
                 lblIndicatorTarget.Text = "₱ 0";
                 DaysRemainingLabelGoal.Text = "—";
@@ -137,8 +137,8 @@ namespace CentSible.Views
                 {
                     AccountID = _user.AccountID,
                     GoalType = _activeType,
-                    TargetAmount = double.Parse(txtTargetAmount.Text),
-                    CurrentAmount = double.Parse(txtCurrentAmount.Text),
+                    TargetAmount = double.Parse(TargetAmountLabelGoal.Text),
+                    CurrentAmount = double.Parse(CurrentAmountLabelGoal.Text),
                     TargetDate = TargetDateDropDownGoal.Value
                 };
 

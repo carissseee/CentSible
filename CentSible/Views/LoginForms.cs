@@ -46,10 +46,13 @@ namespace CentSible.Views
 
         private void lblCreateAccount_Click(object sender, EventArgs e)
         {
+            this.Hide();
             using (RegistrationForm regForm = new RegistrationForm())
             {
                 regForm.ShowDialog();
             }
+
+            this.Show();
         }
 
         private void label1_Click(object sender, EventArgs e) { }
