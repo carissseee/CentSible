@@ -1,4 +1,4 @@
-﻿namespace CentSible.Views
+﻿namespace CentSible.Forms
 {
     partial class LoginForms
     {
@@ -217,7 +217,6 @@
         private System.Windows.Forms.Label DontHaveAccLabelLogin;
         private PlaceholderText.PlaceholderTextBox UserTextLogin;
         private PlaceholderText.PlaceholderTextBox PassTextLogin;
-
     }
 }
 

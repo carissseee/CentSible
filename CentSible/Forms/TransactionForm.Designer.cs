@@ -1,6 +1,6 @@
-﻿namespace CentSible.Views
+﻿namespace CentSible.Forms
 {
-    partial class SummaryForm
+    partial class TransactionForm
     {
         /// <summary>
         /// Required designer variable.
@@ -81,7 +81,7 @@
             this.btnNavLogout.TabIndex = 4;
             this.btnNavLogout.Text = "Log Out";
             this.btnNavLogout.UseVisualStyleBackColor = true;
-            this.btnNavLogout.Click += new System.EventHandler(this.btnNavLogout_Click);
+            this.btnNavLogout.Click += new System.EventHandler(this.btnNavLogout_Click); 
             // 
             // btnNavPred
             // 
@@ -91,7 +91,7 @@
             this.btnNavPred.TabIndex = 3;
             this.btnNavPred.Text = "Prediction";
             this.btnNavPred.UseVisualStyleBackColor = true;
-            this.btnNavPred.Click += new System.EventHandler(this.btnNavPred_Click);
+            this.btnNavPred.Click += new System.EventHandler(this.btnNavPred_Click); 
             // 
             // btnNavSum
             // 
@@ -101,7 +101,7 @@
             this.btnNavSum.TabIndex = 2;
             this.btnNavSum.Text = "Summary";
             this.btnNavSum.UseVisualStyleBackColor = true;
-            this.btnNavSum.Click += new System.EventHandler(this.btnNavSum_Click); //bago
+            this.btnNavSum.Click += new System.EventHandler(this.btnNavSum_Click);
             // 
             // btnNavTrans
             // 
@@ -111,7 +111,7 @@
             this.btnNavTrans.TabIndex = 1;
             this.btnNavTrans.Text = "Transaction";
             this.btnNavTrans.UseVisualStyleBackColor = true;
-            this.btnNavTrans.Click += new System.EventHandler(this.btnNavTrans_Click);
+            this.btnNavTrans.Click += new System.EventHandler(this.btnNavTrans_Click); 
             // 
             // btnNavGoal
             // 
@@ -123,15 +123,15 @@
             this.btnNavGoal.UseVisualStyleBackColor = true;
             this.btnNavGoal.Click += new System.EventHandler(this.btnNavGoal_Click);
             // 
-            // SummaryForm
+            // TransactionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pnlSidebar);
-            this.Name = "SummaryForm";
-            this.Text = "SummaryForm";
-            this.Load += new System.EventHandler(this.SummaryForm_Load);
+            this.Name = "TransactionForm";
+            this.Text = "TransactionForm";
+            this.Load += new System.EventHandler(this.TransactionForm_Load);
             this.pnlSidebar.ResumeLayout(false);
             this.pnlSidebar.PerformLayout();
             this.ResumeLayout(false);
@@ -139,6 +139,7 @@
         }
 
         #endregion
+
         private System.Windows.Forms.Panel pnlSidebar;
         private System.Windows.Forms.Button btnNavHome;
         private System.Windows.Forms.Label lblCentisble;

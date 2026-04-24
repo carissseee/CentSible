@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CentSible.Logic;
 
-namespace CentSible.Views
+namespace CentSible.Forms
 {
     public partial class HomeForm : Form
     {
