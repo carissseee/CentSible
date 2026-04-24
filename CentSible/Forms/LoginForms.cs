@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CentSible.Logic;   
-using CentSible.Views;   
+using CentSible.Forms;   
 using CentSible.Models;
 
 
-namespace CentSible.Views
+namespace CentSible.Forms
 {
     public partial class LoginForms : Form
     {

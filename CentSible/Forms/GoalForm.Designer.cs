@@ -1,4 +1,4 @@
-﻿namespace CentSible.Views
+﻿namespace CentSible.Forms
 {
     partial class GoalForm
     {

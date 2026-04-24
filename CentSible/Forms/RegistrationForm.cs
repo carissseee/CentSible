@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using CentSible.Logic;
 
 
-namespace CentSible.Views
+namespace CentSible.Forms
 {
     public partial class RegistrationForm : Form
     {
