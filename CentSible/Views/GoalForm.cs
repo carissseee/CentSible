@@ -61,8 +61,8 @@ namespace CentSible.Views
         
         private void UpdateDaysRemaining()
         {
-            int days = (dtpTargetDate.Value.Date - DateTime.Today).Days;
-            lblDaysRemaining.Text = days >= 0 ? $"{days} Days" : "Overdue";
+            int days = (TargetDateDropDownGoal.Value.Date - DateTime.Today).Days;
+            DaysRemainingLabelGoal.Text = days >= 0 ? $"{days} Days" : "Overdue";
         }
 
         private void UpdateFilter()
@@ -79,8 +79,8 @@ namespace CentSible.Views
         {
             _activeType = type;
 
-          
-            lblLeftHeader.Text = type == GoalCategory.Spending ? "Spending" : "Saving";
+
+            SpendingGoalLabelGoal.Text = type == GoalCategory.Spending ? "Spending" : "Saving";
 
          
             lblRightHeader.Text = type == GoalCategory.Spending ? "Spending" : "Saving";
@@ -89,10 +89,10 @@ namespace CentSible.Views
 
             if (goal != null)
             {
-             
-                txtTargetAmount.Text = goal.TargetAmount.ToString();
-                txtCurrentAmount.Text = goal.CurrentAmount.ToString();
-                dtpTargetDate.Value = goal.TargetDate;
+
+                TargetAmountLabelGoal.Text = goal.TargetAmount.ToString();
+                CurrentAmountLabelGoal.Text = goal.CurrentAmount.ToString();
+                TargetDateDropDownGoal.Value = goal.TargetDate;
 
                 
                 lblIndicatorSpent.Text = $"₱ {goal.CurrentAmount:N0}";
@@ -106,12 +106,12 @@ namespace CentSible.Views
             }
             else
             {
-                
-                txtTargetAmount.Text = "";
-                txtCurrentAmount.Text = "";
+
+                TargetAmountLabelGoal.Text = "";
+                CurrentAmountLabelGoal.Text = "";
                 lblIndicatorSpent.Text = "₱ 0";
                 lblIndicatorTarget.Text = "₱ 0";
-                lblDaysRemaining.Text = "—";
+                DaysRemainingLabelGoal.Text = "—";
                 pnlResults.Visible = false;
             }
         }
@@ -136,9 +136,9 @@ namespace CentSible.Views
                 {
                     AccountID = _user.AccountID,
                     GoalType = _activeType,
-                    TargetAmount = double.Parse(txtTargetAmount.Text),
-                    CurrentAmount = double.Parse(txtCurrentAmount.Text),
-                    TargetDate = dtpTargetDate.Value
+                    TargetAmount = double.Parse(TargetAmountLabelGoal.Text),
+                    CurrentAmount = double.Parse(CurrentAmountLabelGoal.Text),
+                    TargetDate = TargetDateDropDownGoal.Value
                 };
 
                 if (_goalLogic.SaveOrUpdateGoal(data))
