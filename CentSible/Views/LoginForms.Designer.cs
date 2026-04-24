@@ -36,10 +36,10 @@
             this.PassLabelLogin = new System.Windows.Forms.Label();
             this.MainLayoutLogin = new System.Windows.Forms.TableLayoutPanel();
             this.UserPassLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.CentSibleLabel = new System.Windows.Forms.Label();
-            this.DontHaveAccLabelLogin = new System.Windows.Forms.Label();
             this.UserTextLogin = new PlaceholderText.PlaceholderTextBox();
             this.PassTextLogin = new PlaceholderText.PlaceholderTextBox();
+            this.DontHaveAccLabelLogin = new System.Windows.Forms.Label();
+            this.CentSibleLabelLogin = new System.Windows.Forms.Label();
             this.MainLayoutLogin.SuspendLayout();
             this.UserPassLayout.SuspendLayout();
             this.SuspendLayout();
@@ -103,10 +103,10 @@
             this.MainLayoutLogin.ColumnCount = 1;
             this.MainLayoutLogin.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.MainLayoutLogin.Controls.Add(this.UserPassLayout, 0, 1);
-            this.MainLayoutLogin.Controls.Add(this.CentSibleLabel, 0, 0);
             this.MainLayoutLogin.Controls.Add(this.btnLogin, 0, 2);
             this.MainLayoutLogin.Controls.Add(this.CreateAccountLogin, 0, 4);
             this.MainLayoutLogin.Controls.Add(this.DontHaveAccLabelLogin, 0, 3);
+            this.MainLayoutLogin.Controls.Add(this.CentSibleLabelLogin, 0, 0);
             this.MainLayoutLogin.Location = new System.Drawing.Point(12, 12);
             this.MainLayoutLogin.Name = "MainLayoutLogin";
             this.MainLayoutLogin.RowCount = 5;
@@ -136,17 +136,27 @@
             this.UserPassLayout.Size = new System.Drawing.Size(770, 101);
             this.UserPassLayout.TabIndex = 8;
             // 
-            // CentSibleLabel
+            // UserTextLogin
             // 
-            this.CentSibleLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.CentSibleLabel.AutoSize = true;
-            this.CentSibleLabel.Font = new System.Drawing.Font("Brush Script MT", 65F, System.Drawing.FontStyle.Italic);
-            this.CentSibleLabel.Location = new System.Drawing.Point(183, 31);
-            this.CentSibleLabel.Name = "CentSibleLabel";
-            this.CentSibleLabel.Size = new System.Drawing.Size(409, 134);
-            this.CentSibleLabel.TabIndex = 9;
-            this.CentSibleLabel.Text = "CentSible";
-            this.CentSibleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UserTextLogin.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.UserTextLogin.ForeColor = System.Drawing.Color.Gray;
+            this.UserTextLogin.Location = new System.Drawing.Point(263, 14);
+            this.UserTextLogin.Name = "UserTextLogin";
+            this.UserTextLogin.Placeholder = "Enter username";
+            this.UserTextLogin.PlaceholderColor = System.Drawing.Color.Gray;
+            this.UserTextLogin.Size = new System.Drawing.Size(338, 22);
+            this.UserTextLogin.TabIndex = 7;
+            // 
+            // PassTextLogin
+            // 
+            this.PassTextLogin.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.PassTextLogin.ForeColor = System.Drawing.Color.Gray;
+            this.PassTextLogin.Location = new System.Drawing.Point(263, 64);
+            this.PassTextLogin.Name = "PassTextLogin";
+            this.PassTextLogin.Placeholder = "Enter password";
+            this.PassTextLogin.PlaceholderColor = System.Drawing.Color.Gray;
+            this.PassTextLogin.Size = new System.Drawing.Size(338, 22);
+            this.PassTextLogin.TabIndex = 8;
             // 
             // DontHaveAccLabelLogin
             // 
@@ -159,32 +169,23 @@
             this.DontHaveAccLabelLogin.TabIndex = 10;
             this.DontHaveAccLabelLogin.Text = "Don\'t have an account?";
             // 
-            // UserTextLogin
+            // CentSibleLabelLogin
             // 
-            this.UserTextLogin.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.UserTextLogin.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.UserTextLogin.Location = new System.Drawing.Point(263, 14);
-            this.UserTextLogin.Name = "UserTextLogin";
-            this.UserTextLogin.Placeholder = "Enter username";
-            this.UserTextLogin.PlaceholderColor = System.Drawing.Color.Gray;
-            this.UserTextLogin.Size = new System.Drawing.Size(338, 22);
-            this.UserTextLogin.TabIndex = 7;
-            // 
-            // PassTextLogin
-            // 
-            this.PassTextLogin.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.PassTextLogin.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.PassTextLogin.Location = new System.Drawing.Point(263, 64);
-            this.PassTextLogin.Name = "PassTextLogin";
-            this.PassTextLogin.Placeholder = "Enter password";
-            this.PassTextLogin.PlaceholderColor = System.Drawing.Color.Gray;
-            this.PassTextLogin.Size = new System.Drawing.Size(338, 22);
-            this.PassTextLogin.TabIndex = 8;
+            this.CentSibleLabelLogin.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.CentSibleLabelLogin.AutoSize = true;
+            this.CentSibleLabelLogin.Font = new System.Drawing.Font("Brush Script MT", 65F, System.Drawing.FontStyle.Italic);
+            this.CentSibleLabelLogin.Location = new System.Drawing.Point(183, 31);
+            this.CentSibleLabelLogin.Name = "CentSibleLabelLogin";
+            this.CentSibleLabelLogin.Size = new System.Drawing.Size(409, 134);
+            this.CentSibleLabelLogin.TabIndex = 9;
+            this.CentSibleLabelLogin.Text = "CentSible";
+            this.CentSibleLabelLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LoginForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.MainLayoutLogin);
             this.MaximizeBox = false;
@@ -211,7 +212,7 @@
         private System.Windows.Forms.Label PassLabelLogin;
         private System.Windows.Forms.TableLayoutPanel MainLayoutLogin;
         private System.Windows.Forms.TableLayoutPanel UserPassLayout;
-        private System.Windows.Forms.Label CentSibleLabel;
+        private System.Windows.Forms.Label CentSibleLabelLogin;
         private System.Windows.Forms.Label DontHaveAccLabelLogin;
         private PlaceholderText.PlaceholderTextBox UserTextLogin;
         private PlaceholderText.PlaceholderTextBox PassTextLogin;

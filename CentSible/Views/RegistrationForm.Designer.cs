@@ -33,13 +33,13 @@
             this.ConfirmPassLabel = new System.Windows.Forms.Label();
             this.MainRegisLayoutTable = new System.Windows.Forms.TableLayoutPanel();
             this.CreateAccountLogin = new System.Windows.Forms.LinkLabel();
-            this.CentSibleLabel = new System.Windows.Forms.Label();
+            this.CentSibleLabelRegistration = new System.Windows.Forms.Label();
             this.RegisBtnRegis = new System.Windows.Forms.Button();
             this.RegisLabelLayoutTable = new System.Windows.Forms.TableLayoutPanel();
             this.BackToLoginBtn = new System.Windows.Forms.Label();
-            this.CreateUserTextRegis = new PlaceholderText.PlaceholderTextBox();
-            this.CreatePassTextRegis = new PlaceholderText.PlaceholderTextBox();
             this.ConfirmPassTextRegis = new PlaceholderText.PlaceholderTextBox();
+            this.CreatePassTextRegis = new PlaceholderText.PlaceholderTextBox();
+            this.CreateUserTextRegis = new PlaceholderText.PlaceholderTextBox();
             this.MainRegisLayoutTable.SuspendLayout();
             this.RegisLabelLayoutTable.SuspendLayout();
             this.SuspendLayout();
@@ -82,7 +82,7 @@
             this.MainRegisLayoutTable.ColumnCount = 1;
             this.MainRegisLayoutTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.MainRegisLayoutTable.Controls.Add(this.CreateAccountLogin, 0, 4);
-            this.MainRegisLayoutTable.Controls.Add(this.CentSibleLabel, 0, 0);
+            this.MainRegisLayoutTable.Controls.Add(this.CentSibleLabelRegistration, 0, 0);
             this.MainRegisLayoutTable.Controls.Add(this.RegisBtnRegis, 0, 2);
             this.MainRegisLayoutTable.Controls.Add(this.RegisLabelLayoutTable, 0, 1);
             this.MainRegisLayoutTable.Controls.Add(this.BackToLoginBtn, 0, 3);
@@ -109,17 +109,17 @@
             this.CreateAccountLogin.TabStop = true;
             this.CreateAccountLogin.Text = "Log In";
             // 
-            // CentSibleLabel
+            // CentSibleLabelRegistration
             // 
-            this.CentSibleLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.CentSibleLabel.AutoSize = true;
-            this.CentSibleLabel.Font = new System.Drawing.Font("Brush Script MT", 65F, System.Drawing.FontStyle.Italic);
-            this.CentSibleLabel.Location = new System.Drawing.Point(183, 31);
-            this.CentSibleLabel.Name = "CentSibleLabel";
-            this.CentSibleLabel.Size = new System.Drawing.Size(409, 134);
-            this.CentSibleLabel.TabIndex = 10;
-            this.CentSibleLabel.Text = "CentSible";
-            this.CentSibleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CentSibleLabelRegistration.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.CentSibleLabelRegistration.AutoSize = true;
+            this.CentSibleLabelRegistration.Font = new System.Drawing.Font("Brush Script MT", 65F, System.Drawing.FontStyle.Italic);
+            this.CentSibleLabelRegistration.Location = new System.Drawing.Point(183, 31);
+            this.CentSibleLabelRegistration.Name = "CentSibleLabelRegistration";
+            this.CentSibleLabelRegistration.Size = new System.Drawing.Size(409, 134);
+            this.CentSibleLabelRegistration.TabIndex = 10;
+            this.CentSibleLabelRegistration.Text = "CentSible";
+            this.CentSibleLabelRegistration.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // RegisBtnRegis
             // 
@@ -163,16 +163,16 @@
             this.BackToLoginBtn.TabIndex = 11;
             this.BackToLoginBtn.Text = "Already have an account?";
             // 
-            // CreateUserTextRegis
+            // ConfirmPassTextRegis
             // 
-            this.CreateUserTextRegis.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.CreateUserTextRegis.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.CreateUserTextRegis.Location = new System.Drawing.Point(301, 8);
-            this.CreateUserTextRegis.Name = "CreateUserTextRegis";
-            this.CreateUserTextRegis.Placeholder = "Enter username";
-            this.CreateUserTextRegis.PlaceholderColor = System.Drawing.Color.Gray;
-            this.CreateUserTextRegis.Size = new System.Drawing.Size(308, 22);
-            this.CreateUserTextRegis.TabIndex = 8;
+            this.ConfirmPassTextRegis.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ConfirmPassTextRegis.ForeColor = System.Drawing.Color.Gray;
+            this.ConfirmPassTextRegis.Location = new System.Drawing.Point(301, 87);
+            this.ConfirmPassTextRegis.Name = "ConfirmPassTextRegis";
+            this.ConfirmPassTextRegis.Placeholder = "Enter password";
+            this.ConfirmPassTextRegis.PlaceholderColor = System.Drawing.Color.Gray;
+            this.ConfirmPassTextRegis.Size = new System.Drawing.Size(308, 22);
+            this.ConfirmPassTextRegis.TabIndex = 10;
             // 
             // CreatePassTextRegis
             // 
@@ -185,21 +185,22 @@
             this.CreatePassTextRegis.Size = new System.Drawing.Size(308, 22);
             this.CreatePassTextRegis.TabIndex = 9;
             // 
-            // ConfirmPassTextRegis
+            // CreateUserTextRegis
             // 
-            this.ConfirmPassTextRegis.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ConfirmPassTextRegis.ForeColor = System.Drawing.Color.Gray;
-            this.ConfirmPassTextRegis.Location = new System.Drawing.Point(301, 87);
-            this.ConfirmPassTextRegis.Name = "ConfirmPassTextRegis";
-            this.ConfirmPassTextRegis.Placeholder = "Enter password";
-            this.ConfirmPassTextRegis.PlaceholderColor = System.Drawing.Color.Gray;
-            this.ConfirmPassTextRegis.Size = new System.Drawing.Size(308, 22);
-            this.ConfirmPassTextRegis.TabIndex = 10;
+            this.CreateUserTextRegis.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.CreateUserTextRegis.ForeColor = System.Drawing.Color.Gray;
+            this.CreateUserTextRegis.Location = new System.Drawing.Point(301, 8);
+            this.CreateUserTextRegis.Name = "CreateUserTextRegis";
+            this.CreateUserTextRegis.Placeholder = "Enter username";
+            this.CreateUserTextRegis.PlaceholderColor = System.Drawing.Color.Gray;
+            this.CreateUserTextRegis.Size = new System.Drawing.Size(308, 22);
+            this.CreateUserTextRegis.TabIndex = 8;
             // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.MainRegisLayoutTable);
             this.MaximizeBox = false;
@@ -208,7 +209,7 @@
             this.MinimumSize = new System.Drawing.Size(818, 497);
             this.Name = "RegistrationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RegistrationForm";
+            this.Text = "Registration";
             this.Load += new System.EventHandler(this.RegistrationForm_Load);
             this.MainRegisLayoutTable.ResumeLayout(false);
             this.MainRegisLayoutTable.PerformLayout();
@@ -225,7 +226,7 @@
         private System.Windows.Forms.TableLayoutPanel MainRegisLayoutTable;
         private System.Windows.Forms.TableLayoutPanel RegisLabelLayoutTable;
         private System.Windows.Forms.Button RegisBtnRegis;
-        private System.Windows.Forms.Label CentSibleLabel;
+        private System.Windows.Forms.Label CentSibleLabelRegistration;
         private System.Windows.Forms.Label BackToLoginBtn;
         private System.Windows.Forms.LinkLabel CreateAccountLogin;
         private PlaceholderText.PlaceholderTextBox CreateUserTextRegis;

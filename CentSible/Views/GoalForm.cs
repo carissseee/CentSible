@@ -61,8 +61,8 @@ namespace CentSible.Views
         
         private void UpdateDaysRemaining()
         {
-            int days = (dtpTargetDate.Value.Date - DateTime.Today).Days;
-            lblDaysRemaining.Text = days >= 0 ? $"{days} Days" : "Overdue";
+            int days = (TargetDateDropDownGoal.Value.Date - DateTime.Today).Days;
+            DaysRemainingLabelGoal.Text = days >= 0 ? $"{days} Days" : "Overdue";
         }
 
         private void UpdateFilter()
@@ -92,7 +92,7 @@ namespace CentSible.Views
              
                 txtTargetAmount.Text = goal.TargetAmount.ToString();
                 txtCurrentAmount.Text = goal.CurrentAmount.ToString();
-                dtpTargetDate.Value = goal.TargetDate;
+                TargetDateDropDownGoal.Value = goal.TargetDate;
 
                 
                 lblIndicatorSpent.Text = $"₱ {goal.CurrentAmount:N0}";
@@ -111,7 +111,7 @@ namespace CentSible.Views
                 txtCurrentAmount.Text = "";
                 lblIndicatorSpent.Text = "₱ 0";
                 lblIndicatorTarget.Text = "₱ 0";
-                lblDaysRemaining.Text = "—";
+                DaysRemainingLabelGoal.Text = "—";
                 pnlResults.Visible = false;
             }
         }
@@ -139,7 +139,7 @@ namespace CentSible.Views
                     GoalType = _activeType,
                     TargetAmount = double.Parse(txtTargetAmount.Text),
                     CurrentAmount = double.Parse(txtCurrentAmount.Text),
-                    TargetDate = dtpTargetDate.Value
+                    TargetDate = TargetDateDropDownGoal.Value
                 };
 
                 if (_goalLogic.SaveOrUpdateGoal(data))
