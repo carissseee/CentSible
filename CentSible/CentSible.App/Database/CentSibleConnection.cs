@@ -1,15 +1,15 @@
 ﻿using System;
-using MySql.Data.MySqlClient;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CentSible.Database
 {
-    public class CentSibleConnection
-    {
-        private readonly string connectionString = "Server=localhost;Port=3306;Database=centsible;Uid=root;Pwd=;";
+    public static class CentSibleConnection
 
-        public MySqlConnection GetConnection()
-        {
-            return new MySqlConnection(connectionString);
-        }
+    {
+        public static readonly string ConnectionString = "Server=localhost;Port=3306;Database=CentSible_sample;Uid=root;Pwd=;";
+
     }
 }
