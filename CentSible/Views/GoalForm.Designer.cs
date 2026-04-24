@@ -30,7 +30,6 @@
         {
             this.btnSpendingTab = new System.Windows.Forms.Button();
             this.btnSavingTab = new System.Windows.Forms.Button();
-            this.lblStatusMsg = new System.Windows.Forms.Label();
             this.lblPercentReached = new System.Windows.Forms.Label();
             this.pbGoalProgress = new System.Windows.Forms.ProgressBar();
             this.pbMilestone = new System.Windows.Forms.ProgressBar();
@@ -86,15 +85,6 @@
             this.btnSavingTab.Text = "Saving";
             this.btnSavingTab.UseVisualStyleBackColor = true;
             this.btnSavingTab.Click += new System.EventHandler(this.btnSavingTab_Click);
-            // 
-            // lblStatusMsg
-            // 
-            this.lblStatusMsg.AutoSize = true;
-            this.lblStatusMsg.Location = new System.Drawing.Point(126, 69);
-            this.lblStatusMsg.Name = "lblStatusMsg";
-            this.lblStatusMsg.Size = new System.Drawing.Size(104, 16);
-            this.lblStatusMsg.TabIndex = 7;
-            this.lblStatusMsg.Text = "Status Message";
             // 
             // lblPercentReached
             // 
@@ -261,7 +251,6 @@
             this.pnlResults.Controls.Add(this.pbMilestone);
             this.pnlResults.Controls.Add(this.pbGoalProgress);
             this.pnlResults.Controls.Add(this.lblPercentReached);
-            this.pnlResults.Controls.Add(this.lblStatusMsg);
             this.pnlResults.Location = new System.Drawing.Point(414, 91);
             this.pnlResults.Name = "pnlResults";
             this.pnlResults.Size = new System.Drawing.Size(345, 347);
@@ -453,7 +442,6 @@
         #endregion
         private System.Windows.Forms.Button btnSpendingTab;
         private System.Windows.Forms.Button btnSavingTab;
-        private System.Windows.Forms.Label lblStatusMsg;
         private System.Windows.Forms.Label lblPercentReached;
         private System.Windows.Forms.ProgressBar pbGoalProgress;
         private System.Windows.Forms.ProgressBar pbMilestone;
