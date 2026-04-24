@@ -14,16 +14,16 @@ using CentSible.Logic;
 
 namespace CentSible.Views
 {
-    public partial class GoalForm : Form
+    public partial class Goal : Form
     {
         private Form _home;
         private Account _user;
         private bool _isNavigating = false;
-        private List<Goal> _allGoals;
+        private List<Models.Goal> _allGoals;
         private GoalLogic _goalLogic = new GoalLogic();
         private GoalCategory _activeType = GoalCategory.Spending;
 
-        public GoalForm(Form home, Account user)
+        public Goal(Form home, Account user)
         {
             InitializeComponent();
             _home = home;
@@ -35,14 +35,14 @@ namespace CentSible.Views
             if (_user == null) return;
 
             
-            cbSelectMonth.SelectedIndexChanged -= cbSelectMonth_SelectedIndexChanged;
-            numSelectYear.ValueChanged -= numSelectYear_ValueChanged;
+            SelectMonthDropGoal.SelectedIndexChanged -= cbSelectMonth_SelectedIndexChanged;
+            SelectYearDropGoal.ValueChanged -= numSelectYear_ValueChanged;
 
-            cbSelectMonth.SelectedIndex = DateTime.Now.Month - 1;
-            numSelectYear.Value = DateTime.Now.Year;
+            SelectMonthDropGoal.SelectedIndex = DateTime.Now.Month - 1;
+            SelectYearDropGoal.Value = DateTime.Now.Year;
 
-            cbSelectMonth.SelectedIndexChanged += cbSelectMonth_SelectedIndexChanged;
-            numSelectYear.ValueChanged += numSelectYear_ValueChanged;
+            SelectMonthDropGoal.SelectedIndexChanged += cbSelectMonth_SelectedIndexChanged;
+            SelectYearDropGoal.ValueChanged += numSelectYear_ValueChanged;
 
             UpdateGoalDate();
             UpdateFilter();
@@ -51,11 +51,11 @@ namespace CentSible.Views
        
         private void UpdateGoalDate()
         {
-            string month = cbSelectMonth.SelectedIndex >= 0
-                ? cbSelectMonth.Items[cbSelectMonth.SelectedIndex].ToString()
+            string month = SelectMonthDropGoal.SelectedIndex >= 0
+                ? SelectMonthDropGoal.Items[SelectMonthDropGoal.SelectedIndex].ToString()
                 : DateTime.Now.ToString("MMMM");
-            int year = (int)numSelectYear.Value;
-            lblGoalsHeader.Text = $"{month} {year}";
+            int year = (int)SelectYearDropGoal.Value;
+            GoalDateLabelGoal.Text = $"{month} {year}";
         }
 
         
@@ -70,8 +70,8 @@ namespace CentSible.Views
             if (_user == null) return;
             _allGoals = _goalLogic.GetGoals(
                 _user.AccountID,
-                cbSelectMonth.SelectedIndex + 1,
-                (int)numSelectYear.Value);
+                SelectMonthDropGoal.SelectedIndex + 1,
+                (int)SelectYearDropGoal.Value);
             SetMode(_activeType);
         }
 
@@ -83,7 +83,7 @@ namespace CentSible.Views
             SpendingGoalLabelGoal.Text = type == GoalCategory.Spending ? "Spending" : "Saving";
 
          
-            lblRightHeader.Text = type == GoalCategory.Spending ? "Spending" : "Saving";
+            SpendingIndicatorLabelGoal.Text = type == GoalCategory.Spending ? "Spending" : "Saving";
 
             var goal = _allGoals?.Find(g => g.GoalType == type);
 
@@ -102,7 +102,7 @@ namespace CentSible.Views
                 UpdateDaysRemaining();
 
                 UpdateIndicators(goal);
-                pnlResults.Visible = true;
+                SpendIndicatorLayoutGoal.Visible = true;
             }
             else
             {
@@ -112,28 +112,28 @@ namespace CentSible.Views
                 lblIndicatorSpent.Text = "₱ 0";
                 lblIndicatorTarget.Text = "₱ 0";
                 DaysRemainingLabelGoal.Text = "—";
-                pnlResults.Visible = false;
+                SpendIndicatorLayoutGoal.Visible = false;
             }
         }
 
-        private void UpdateIndicators(Goal goal)
+        private void UpdateIndicators(Models.Goal goal)
         {
             var metrics = _goalLogic.GetCalculatedMetrics(goal);
 
             pbGoalProgress.Value = metrics.TotalPercent;
-            lblPercentReached.Text = $"{metrics.TotalPercent}%";
-            lblStatusMsg.Text = metrics.StatusNote;
-            pbMilestone.Value = metrics.MilestoneStep;
-            lblMilestoneDesc.Text = metrics.StatusNote;
-            lblMilestoneDays.Text = metrics.DaysText;
-            lblIndicatorDays.Text = metrics.DaysText;
+            IndicatorPercentLabelGoal.Text = $"{metrics.TotalPercent}%";
+            IndicatorStatusLabelGoal.Text = metrics.StatusNote;
+            MilestoneBarGoal.Value = metrics.MilestoneStep;
+            MilestoneDescLabelGoal.Text = metrics.StatusNote;
+            DaysToGoLabelGoal.Text = metrics.DaysText;
+            IndicatorDaysLabelGoal.Text = metrics.DaysText;
         }
 
         private void btnUpdateGoal_Click(object sender, EventArgs e)
         {
             try
             {
-                Goal data = new Goal
+                Models.Goal data = new Models.Goal
                 {
                     AccountID = _user.AccountID,
                     GoalType = _activeType,

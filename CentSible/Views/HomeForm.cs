@@ -111,7 +111,7 @@ namespace CentSible.Views
         // Navigation
         private void SwitchPage(Form newPage) { _isNavigating = true; newPage.Show(); this.Hide(); }
         private void btnNavHome_Click(object sender, EventArgs e) { }
-        private void btnNavGoal_Click(object sender, EventArgs e) => SwitchPage(new GoalForm(this, _user));
+        private void btnNavGoal_Click(object sender, EventArgs e) => SwitchPage(new Goal(this, _user));
         private void btnNavTrans_Click(object sender, EventArgs e) => SwitchPage(new TransactionForm(this, _user));
         private void btnNavSum_Click(object sender, EventArgs e) => SwitchPage(new SummaryForm(this, _user));
         private void btnNavPred_Click(object sender, EventArgs e) => SwitchPage(new PredictionForm(this, _user));

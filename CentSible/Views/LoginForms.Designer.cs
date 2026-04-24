@@ -146,6 +146,7 @@
             this.UserTextLogin.PlaceholderColor = System.Drawing.Color.Gray;
             this.UserTextLogin.Size = new System.Drawing.Size(338, 22);
             this.UserTextLogin.TabIndex = 7;
+
             // 
             // PassTextLogin
             // 

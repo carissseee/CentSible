@@ -35,7 +35,7 @@ namespace CentSible.Views
         
         private void Switch(Form next) { _isNavigating = true; next.Show(); this.Close(); }
         private void btnNavHome_Click(object sender, EventArgs e) { _isNavigating = true; _home.Show(); this.Close(); }
-        private void btnNavGoal_Click(object sender, EventArgs e) => Switch(new GoalForm(_home, _user));
+        private void btnNavGoal_Click(object sender, EventArgs e) => Switch(new Goal(_home, _user));
         private void btnNavTrans_Click(object sender, EventArgs e) { }
         private void btnNavSum_Click(object sender, EventArgs e) => Switch(new SummaryForm(_home, _user));
         private void btnNavPred_Click(object sender, EventArgs e) => Switch(new PredictionForm(_home, _user));
