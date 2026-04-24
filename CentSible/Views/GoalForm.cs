@@ -14,7 +14,7 @@ using CentSible.Logic;
 
 namespace CentSible.Views
 {
-    public partial class Goal : Form
+    public partial class GoalForm : Form
     {
         private Form _home;
         private Account _user;
@@ -23,7 +23,7 @@ namespace CentSible.Views
         private GoalLogic _goalLogic = new GoalLogic();
         private GoalCategory _activeType = GoalCategory.Spending;
 
-        public Goal(Form home, Account user)
+        public GoalForm(Form home, Account user)
         {
             InitializeComponent();
             _home = home;

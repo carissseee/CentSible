@@ -1,6 +1,6 @@
 ﻿namespace CentSible.Views
 {
-    partial class Goal
+    partial class GoalForm
     {
         /// <summary>
         /// Required designer variable.
@@ -705,7 +705,7 @@
             this.CurrentAmountTextGoal.Size = new System.Drawing.Size(89, 22);
             this.CurrentAmountTextGoal.TabIndex = 39;
             // 
-            // Goal
+            // GoalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -717,9 +717,9 @@
             this.MaximumSize = new System.Drawing.Size(818, 497);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(818, 497);
-            this.Name = "Goal";
+            this.Name = "GoalForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GoalForm";
+            this.Text = "Goal";
             this.Load += new System.EventHandler(this.GoalForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SelectYearDropGoal)).EndInit();
             this.SidebarTableLayoutGoal.ResumeLayout(false);
