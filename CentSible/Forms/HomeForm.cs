@@ -56,10 +56,10 @@ namespace CentSible.Forms
             var goals = _goalLogic.GetGoals(_user.AccountID, DateTime.Now.Month, DateTime.Now.Year);
             string month = DateTime.Now.ToString("MMMM");
 
-            pbSpendingHome.Value = 0;
-            pbSavingHome.Value = 0;
-            lblSpendingStatus.Text = $"No spending goal set for {month}";
-            lblSavingStatus.Text = $"No savings goal set for {month}";
+            BarSpendingHome.Value = 0;
+            BarSavingHome.Value = 0;
+            SpendStatLabelHome.Text = $"No spending goal set for {month}";
+            SaveStatLabelHome.Text = $"No savings goal set for {month}";
 
             foreach (var goal in goals)
             {
@@ -71,19 +71,19 @@ namespace CentSible.Forms
 
                 if (goal.GoalType == GoalCategory.Spending)
                 {
-                    pbSpendingHome.Value = percent;
-                    lblSpendingStatus.Text = display;
+                    BarSpendingHome.Value = percent;
+                    SpendStatLabelHome.Text = display;
                 }
                 else if (goal.GoalType == GoalCategory.Savings)
                 {
-                    pbSavingHome.Value = percent;
-                    lblSavingStatus.Text = display;
+                    BarSavingHome.Value = percent;
+                    SaveStatLabelHome.Text = display;
                 }
             }
         }
         private void UpdateWeeklyActivity()
         {
-            Panel[] dayPanels = { pnlMon, pnlTue, pnlWed, pnlThu, pnlFri, pnlSat, pnlSun };
+            Panel[] dayPanels = { MonPanelHome, TuePanelHome, WedPanelHome, ThuPanelHome, FriPanelHome, SatPanelHome, SunPanelHome };
             DateTime today = DateTime.Today;
             int diff = (7 + (today.DayOfWeek - DayOfWeek.Monday)) % 7;
             DateTime startOfWeek = today.AddDays(-diff).Date;
@@ -106,7 +106,7 @@ namespace CentSible.Forms
             pbMilestone.Minimum = 0;
             pbMilestone.Maximum = monthlyGoal;
             pbMilestone.Value = Math.Min(current, monthlyGoal);
-            lblLongestStreak.Text = $"Record: {current} / {monthlyGoal} days to Mastery";
+            LongestStreakLabelHome.Text = $"Record: {current} / {monthlyGoal} days to Mastery";
             pbMilestone.Refresh();
         }
 
@@ -118,5 +118,10 @@ namespace CentSible.Forms
         private void SumButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new SummaryForm(this, _user));
         private void PredButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new PredictionForm(this, _user));
         private void LogoutButtonGoal_Click(object sender, EventArgs e) { _isNavigating = true; new LoginForms().Show(); this.Dispose(); }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

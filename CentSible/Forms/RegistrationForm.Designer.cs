@@ -28,74 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CreateUserLabel = new System.Windows.Forms.Label();
-            this.CreatePassLabel = new System.Windows.Forms.Label();
-            this.ConfirmPassLabel = new System.Windows.Forms.Label();
-            this.MainRegisLayoutTable = new System.Windows.Forms.TableLayoutPanel();
+            this.CreateUserLabelRegis = new System.Windows.Forms.Label();
+            this.CreatePassLabelRegis = new System.Windows.Forms.Label();
+            this.ConfirmPassLabelRegis = new System.Windows.Forms.Label();
+            this.MainLayoutRegis = new System.Windows.Forms.TableLayoutPanel();
             this.CentSibleLabelRegistration = new System.Windows.Forms.Label();
             this.RegisBtnRegis = new System.Windows.Forms.Button();
-            this.RegisLabelLayoutTable = new System.Windows.Forms.TableLayoutPanel();
+            this.LabelLayoutRegis = new System.Windows.Forms.TableLayoutPanel();
+            this.AccoutnExistLabelRegis = new System.Windows.Forms.Label();
+            this.LoginLabelRegistration = new System.Windows.Forms.LinkLabel();
             this.ConfirmPassTextRegis = new PlaceholderText.PlaceholderTextBox();
             this.CreatePassTextRegis = new PlaceholderText.PlaceholderTextBox();
             this.CreateUserTextRegis = new PlaceholderText.PlaceholderTextBox();
-            this.BackToLoginBtn = new System.Windows.Forms.Label();
-            this.LoginLabelRegistration = new System.Windows.Forms.LinkLabel();
-            this.MainRegisLayoutTable.SuspendLayout();
-            this.RegisLabelLayoutTable.SuspendLayout();
+            this.MainLayoutRegis.SuspendLayout();
+            this.LabelLayoutRegis.SuspendLayout();
             this.SuspendLayout();
             // 
-            // CreateUserLabel
+            // CreateUserLabelRegis
             // 
-            this.CreateUserLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.CreateUserLabel.AutoSize = true;
-            this.CreateUserLabel.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateUserLabel.Location = new System.Drawing.Point(158, 7);
-            this.CreateUserLabel.Name = "CreateUserLabel";
-            this.CreateUserLabel.Size = new System.Drawing.Size(137, 24);
-            this.CreateUserLabel.TabIndex = 4;
-            this.CreateUserLabel.Text = "Create Username:";
+            this.CreateUserLabelRegis.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.CreateUserLabelRegis.AutoSize = true;
+            this.CreateUserLabelRegis.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateUserLabelRegis.Location = new System.Drawing.Point(158, 7);
+            this.CreateUserLabelRegis.Name = "CreateUserLabelRegis";
+            this.CreateUserLabelRegis.Size = new System.Drawing.Size(137, 24);
+            this.CreateUserLabelRegis.TabIndex = 4;
+            this.CreateUserLabelRegis.Text = "Create Username:";
             // 
-            // CreatePassLabel
+            // CreatePassLabelRegis
             // 
-            this.CreatePassLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.CreatePassLabel.AutoSize = true;
-            this.CreatePassLabel.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreatePassLabel.Location = new System.Drawing.Point(163, 46);
-            this.CreatePassLabel.Name = "CreatePassLabel";
-            this.CreatePassLabel.Size = new System.Drawing.Size(132, 24);
-            this.CreatePassLabel.TabIndex = 5;
-            this.CreatePassLabel.Text = "Create Password:";
+            this.CreatePassLabelRegis.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.CreatePassLabelRegis.AutoSize = true;
+            this.CreatePassLabelRegis.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreatePassLabelRegis.Location = new System.Drawing.Point(163, 46);
+            this.CreatePassLabelRegis.Name = "CreatePassLabelRegis";
+            this.CreatePassLabelRegis.Size = new System.Drawing.Size(132, 24);
+            this.CreatePassLabelRegis.TabIndex = 5;
+            this.CreatePassLabelRegis.Text = "Create Password:";
             // 
-            // ConfirmPassLabel
+            // ConfirmPassLabelRegis
             // 
-            this.ConfirmPassLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.ConfirmPassLabel.AutoSize = true;
-            this.ConfirmPassLabel.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfirmPassLabel.Location = new System.Drawing.Point(152, 86);
-            this.ConfirmPassLabel.Name = "ConfirmPassLabel";
-            this.ConfirmPassLabel.Size = new System.Drawing.Size(143, 24);
-            this.ConfirmPassLabel.TabIndex = 6;
-            this.ConfirmPassLabel.Text = "Confirm Password:";
+            this.ConfirmPassLabelRegis.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.ConfirmPassLabelRegis.AutoSize = true;
+            this.ConfirmPassLabelRegis.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmPassLabelRegis.Location = new System.Drawing.Point(152, 86);
+            this.ConfirmPassLabelRegis.Name = "ConfirmPassLabelRegis";
+            this.ConfirmPassLabelRegis.Size = new System.Drawing.Size(143, 24);
+            this.ConfirmPassLabelRegis.TabIndex = 6;
+            this.ConfirmPassLabelRegis.Text = "Confirm Password:";
             // 
-            // MainRegisLayoutTable
+            // MainLayoutRegis
             // 
-            this.MainRegisLayoutTable.ColumnCount = 1;
-            this.MainRegisLayoutTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.MainRegisLayoutTable.Controls.Add(this.CentSibleLabelRegistration, 0, 0);
-            this.MainRegisLayoutTable.Controls.Add(this.RegisBtnRegis, 0, 2);
-            this.MainRegisLayoutTable.Controls.Add(this.RegisLabelLayoutTable, 0, 1);
-            this.MainRegisLayoutTable.Controls.Add(this.BackToLoginBtn, 0, 3);
-            this.MainRegisLayoutTable.Controls.Add(this.LoginLabelRegistration, 0, 4);
-            this.MainRegisLayoutTable.Location = new System.Drawing.Point(12, 12);
-            this.MainRegisLayoutTable.Name = "MainRegisLayoutTable";
-            this.MainRegisLayoutTable.RowCount = 5;
-            this.MainRegisLayoutTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 165F));
-            this.MainRegisLayoutTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 125F));
-            this.MainRegisLayoutTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
-            this.MainRegisLayoutTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
-            this.MainRegisLayoutTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
-            this.MainRegisLayoutTable.Size = new System.Drawing.Size(776, 426);
-            this.MainRegisLayoutTable.TabIndex = 7;
+            this.MainLayoutRegis.ColumnCount = 1;
+            this.MainLayoutRegis.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.MainLayoutRegis.Controls.Add(this.RegisBtnRegis, 0, 2);
+            this.MainLayoutRegis.Controls.Add(this.LabelLayoutRegis, 0, 1);
+            this.MainLayoutRegis.Controls.Add(this.AccoutnExistLabelRegis, 0, 3);
+            this.MainLayoutRegis.Controls.Add(this.LoginLabelRegistration, 0, 4);
+            this.MainLayoutRegis.Controls.Add(this.CentSibleLabelRegistration, 0, 0);
+            this.MainLayoutRegis.Location = new System.Drawing.Point(12, 12);
+            this.MainLayoutRegis.Name = "MainLayoutRegis";
+            this.MainLayoutRegis.RowCount = 5;
+            this.MainLayoutRegis.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 165F));
+            this.MainLayoutRegis.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 125F));
+            this.MainLayoutRegis.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
+            this.MainLayoutRegis.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            this.MainLayoutRegis.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.MainLayoutRegis.Size = new System.Drawing.Size(776, 426);
+            this.MainLayoutRegis.TabIndex = 7;
             // 
             // CentSibleLabelRegistration
             // 
@@ -120,25 +120,49 @@
             this.RegisBtnRegis.UseVisualStyleBackColor = true;
             this.RegisBtnRegis.Click += new System.EventHandler(this.btnRegister_Click);
             // 
-            // RegisLabelLayoutTable
+            // LabelLayoutRegis
             // 
-            this.RegisLabelLayoutTable.ColumnCount = 2;
-            this.RegisLabelLayoutTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.7013F));
-            this.RegisLabelLayoutTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.2987F));
-            this.RegisLabelLayoutTable.Controls.Add(this.ConfirmPassTextRegis, 1, 2);
-            this.RegisLabelLayoutTable.Controls.Add(this.CreatePassTextRegis, 1, 1);
-            this.RegisLabelLayoutTable.Controls.Add(this.ConfirmPassLabel, 0, 2);
-            this.RegisLabelLayoutTable.Controls.Add(this.CreatePassLabel, 0, 1);
-            this.RegisLabelLayoutTable.Controls.Add(this.CreateUserLabel, 0, 0);
-            this.RegisLabelLayoutTable.Controls.Add(this.CreateUserTextRegis, 1, 0);
-            this.RegisLabelLayoutTable.Location = new System.Drawing.Point(3, 168);
-            this.RegisLabelLayoutTable.Name = "RegisLabelLayoutTable";
-            this.RegisLabelLayoutTable.RowCount = 3;
-            this.RegisLabelLayoutTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33223F));
-            this.RegisLabelLayoutTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33223F));
-            this.RegisLabelLayoutTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33556F));
-            this.RegisLabelLayoutTable.Size = new System.Drawing.Size(770, 119);
-            this.RegisLabelLayoutTable.TabIndex = 8;
+            this.LabelLayoutRegis.ColumnCount = 2;
+            this.LabelLayoutRegis.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.7013F));
+            this.LabelLayoutRegis.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.2987F));
+            this.LabelLayoutRegis.Controls.Add(this.ConfirmPassTextRegis, 1, 2);
+            this.LabelLayoutRegis.Controls.Add(this.CreatePassTextRegis, 1, 1);
+            this.LabelLayoutRegis.Controls.Add(this.ConfirmPassLabelRegis, 0, 2);
+            this.LabelLayoutRegis.Controls.Add(this.CreatePassLabelRegis, 0, 1);
+            this.LabelLayoutRegis.Controls.Add(this.CreateUserLabelRegis, 0, 0);
+            this.LabelLayoutRegis.Controls.Add(this.CreateUserTextRegis, 1, 0);
+            this.LabelLayoutRegis.Location = new System.Drawing.Point(3, 168);
+            this.LabelLayoutRegis.Name = "LabelLayoutRegis";
+            this.LabelLayoutRegis.RowCount = 3;
+            this.LabelLayoutRegis.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33223F));
+            this.LabelLayoutRegis.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33223F));
+            this.LabelLayoutRegis.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33556F));
+            this.LabelLayoutRegis.Size = new System.Drawing.Size(770, 119);
+            this.LabelLayoutRegis.TabIndex = 8;
+            // 
+            // AccoutnExistLabelRegis
+            // 
+            this.AccoutnExistLabelRegis.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.AccoutnExistLabelRegis.AutoSize = true;
+            this.AccoutnExistLabelRegis.Font = new System.Drawing.Font("Sitka Text", 7.8F);
+            this.AccoutnExistLabelRegis.Location = new System.Drawing.Point(305, 389);
+            this.AccoutnExistLabelRegis.Name = "AccoutnExistLabelRegis";
+            this.AccoutnExistLabelRegis.Size = new System.Drawing.Size(165, 19);
+            this.AccoutnExistLabelRegis.TabIndex = 11;
+            this.AccoutnExistLabelRegis.Text = "Already have an account?";
+            // 
+            // LoginLabelRegistration
+            // 
+            this.LoginLabelRegistration.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LoginLabelRegistration.AutoSize = true;
+            this.LoginLabelRegistration.Font = new System.Drawing.Font("Sitka Text", 7.8F);
+            this.LoginLabelRegistration.Location = new System.Drawing.Point(364, 408);
+            this.LoginLabelRegistration.Name = "LoginLabelRegistration";
+            this.LoginLabelRegistration.Size = new System.Drawing.Size(48, 18);
+            this.LoginLabelRegistration.TabIndex = 12;
+            this.LoginLabelRegistration.TabStop = true;
+            this.LoginLabelRegistration.Text = "Log In";
+            this.LoginLabelRegistration.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CreateAccountLogin_LinkClicked);
             // 
             // ConfirmPassTextRegis
             // 
@@ -175,37 +199,13 @@
             this.CreateUserTextRegis.Size = new System.Drawing.Size(308, 22);
             this.CreateUserTextRegis.TabIndex = 8;
             // 
-            // BackToLoginBtn
-            // 
-            this.BackToLoginBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.BackToLoginBtn.AutoSize = true;
-            this.BackToLoginBtn.Font = new System.Drawing.Font("Sitka Text", 7.8F);
-            this.BackToLoginBtn.Location = new System.Drawing.Point(305, 389);
-            this.BackToLoginBtn.Name = "BackToLoginBtn";
-            this.BackToLoginBtn.Size = new System.Drawing.Size(165, 19);
-            this.BackToLoginBtn.TabIndex = 11;
-            this.BackToLoginBtn.Text = "Already have an account?";
-            // 
-            // LoginLabelRegistration
-            // 
-            this.LoginLabelRegistration.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.LoginLabelRegistration.AutoSize = true;
-            this.LoginLabelRegistration.Font = new System.Drawing.Font("Sitka Text", 7.8F);
-            this.LoginLabelRegistration.Location = new System.Drawing.Point(364, 408);
-            this.LoginLabelRegistration.Name = "LoginLabelRegistration";
-            this.LoginLabelRegistration.Size = new System.Drawing.Size(48, 18);
-            this.LoginLabelRegistration.TabIndex = 12;
-            this.LoginLabelRegistration.TabStop = true;
-            this.LoginLabelRegistration.Text = "Log In";
-            this.LoginLabelRegistration.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CreateAccountLogin_LinkClicked);
-            // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.MainRegisLayoutTable);
+            this.Controls.Add(this.MainLayoutRegis);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(818, 497);
             this.MinimizeBox = false;
@@ -214,23 +214,23 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
             this.Load += new System.EventHandler(this.RegistrationForm_Load);
-            this.MainRegisLayoutTable.ResumeLayout(false);
-            this.MainRegisLayoutTable.PerformLayout();
-            this.RegisLabelLayoutTable.ResumeLayout(false);
-            this.RegisLabelLayoutTable.PerformLayout();
+            this.MainLayoutRegis.ResumeLayout(false);
+            this.MainLayoutRegis.PerformLayout();
+            this.LabelLayoutRegis.ResumeLayout(false);
+            this.LabelLayoutRegis.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Label CreateUserLabel;
-        private System.Windows.Forms.Label CreatePassLabel;
-        private System.Windows.Forms.Label ConfirmPassLabel;
-        private System.Windows.Forms.TableLayoutPanel MainRegisLayoutTable;
-        private System.Windows.Forms.TableLayoutPanel RegisLabelLayoutTable;
+        private System.Windows.Forms.Label CreateUserLabelRegis;
+        private System.Windows.Forms.Label CreatePassLabelRegis;
+        private System.Windows.Forms.Label ConfirmPassLabelRegis;
+        private System.Windows.Forms.TableLayoutPanel MainLayoutRegis;
+        private System.Windows.Forms.TableLayoutPanel LabelLayoutRegis;
         private System.Windows.Forms.Button RegisBtnRegis;
         private System.Windows.Forms.Label CentSibleLabelRegistration;
-        private System.Windows.Forms.Label BackToLoginBtn;
+        private System.Windows.Forms.Label AccoutnExistLabelRegis;
         private System.Windows.Forms.LinkLabel LoginLabelRegistration;
         private PlaceholderText.PlaceholderTextBox CreateUserTextRegis;
         private PlaceholderText.PlaceholderTextBox ConfirmPassTextRegis;
