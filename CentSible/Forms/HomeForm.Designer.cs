@@ -20,6 +20,8 @@
             base.Dispose(disposing);
         }
 
+
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -44,8 +46,8 @@
             this.pbSavingHome = new System.Windows.Forms.ProgressBar();
             this.lblSpendingStatus = new System.Windows.Forms.Label();
             this.lblSavingStatus = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblSpendingGoal = new System.Windows.Forms.Label();
+            this.lblSavingGoal = new System.Windows.Forms.Label();
             this.SidebarTableLayoutHome = new System.Windows.Forms.TableLayoutPanel();
             this.LogoutButtonGoal = new System.Windows.Forms.Button();
             this.PredButtonGoal = new System.Windows.Forms.Button();
@@ -179,23 +181,23 @@
             this.lblSavingStatus.TabIndex = 12;
             this.lblSavingStatus.Text = "saving";
             // 
-            // label1
+            // lblSpendingGoal
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(465, 269);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 16);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Spending Goal";
+            this.lblSpendingGoal.AutoSize = true;
+            this.lblSpendingGoal.Location = new System.Drawing.Point(465, 269);
+            this.lblSpendingGoal.Name = "lblSpendingGoal";
+            this.lblSpendingGoal.Size = new System.Drawing.Size(97, 16);
+            this.lblSpendingGoal.TabIndex = 13;
+            this.lblSpendingGoal.Text = "Spending Goal";
             // 
-            // label2
+            // lblSavingGoal
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(466, 337);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 16);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Saving Goal";
+            this.lblSavingGoal.AutoSize = true;
+            this.lblSavingGoal.Location = new System.Drawing.Point(466, 337);
+            this.lblSavingGoal.Name = "lblSavingGoal";
+            this.lblSavingGoal.Size = new System.Drawing.Size(81, 16);
+            this.lblSavingGoal.TabIndex = 14;
+            this.lblSavingGoal.Text = "Saving Goal";
             // 
             // SidebarTableLayoutHome
             // 
@@ -239,6 +241,7 @@
             this.LogoutButtonGoal.Text = "Logout";
             this.LogoutButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LogoutButtonGoal.UseVisualStyleBackColor = false;
+            this.LogoutButtonGoal.Click += new System.EventHandler(this.LogoutButtonGoal_Click);
             // 
             // PredButtonGoal
             // 
@@ -255,6 +258,7 @@
             this.PredButtonGoal.Text = "Prediction";
             this.PredButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PredButtonGoal.UseVisualStyleBackColor = false;
+            this.PredButtonGoal.Click += new System.EventHandler(this.PredButtonGoal_Click);
             // 
             // SumButtonGoal
             // 
@@ -271,6 +275,7 @@
             this.SumButtonGoal.Text = "Summary";
             this.SumButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SumButtonGoal.UseVisualStyleBackColor = false;
+            this.SumButtonGoal.Click += new System.EventHandler(this.SumButtonGoal_Click);
             // 
             // TranButtonGoal
             // 
@@ -287,6 +292,7 @@
             this.TranButtonGoal.Text = "Transactions";
             this.TranButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TranButtonGoal.UseVisualStyleBackColor = false;
+            this.TranButtonGoal.Click += new System.EventHandler(this.TranButtonGoal_Click);
             // 
             // GoalButtonGoal
             // 
@@ -303,6 +309,7 @@
             this.GoalButtonGoal.Text = "Goal";
             this.GoalButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GoalButtonGoal.UseVisualStyleBackColor = false;
+            this.GoalButtonGoal.Click += new System.EventHandler(this.GoalButtonGoal_Click);
             // 
             // CentSibleLabelGoal
             // 
@@ -333,6 +340,7 @@
             this.HomeButtonGoal.Text = "Home";
             this.HomeButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HomeButtonGoal.UseVisualStyleBackColor = false;
+            this.HomeButtonGoal.Click += new System.EventHandler(this.HomeButtonGoal_Click);
             // 
             // HomeForm
             // 
@@ -340,8 +348,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.SidebarTableLayoutHome);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblSavingGoal);
+            this.Controls.Add(this.lblSpendingGoal);
             this.Controls.Add(this.lblSavingStatus);
             this.Controls.Add(this.lblSpendingStatus);
             this.Controls.Add(this.pbSavingHome);
@@ -359,6 +367,7 @@
             this.Controls.Add(this.lblStreakTitle);
             this.Controls.Add(this.lblCurrentStreak);
             this.Name = "HomeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomeForm";
             this.Activated += new System.EventHandler(this.HomeForm_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HomeForm_FormClosing);
@@ -387,8 +396,8 @@
         private System.Windows.Forms.ProgressBar pbSavingHome;
         private System.Windows.Forms.Label lblSpendingStatus;
         private System.Windows.Forms.Label lblSavingStatus;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblSpendingGoal;
+        private System.Windows.Forms.Label lblSavingGoal;
         private System.Windows.Forms.TableLayoutPanel SidebarTableLayoutHome;
         private System.Windows.Forms.Button LogoutButtonGoal;
         private System.Windows.Forms.Button PredButtonGoal;

@@ -43,10 +43,16 @@ namespace CentSible.Logic
 
         public void RegisterUser(string username, string password, string confirm)
         {
-            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(confirm))
                 throw new Exception("All fields are required.");
-            if (password != confirm) throw new Exception("Passwords do not match.");
-            db.RegisterAccount(username, password);
+            if (username.Trim().Length < 3 || username.Trim().Length > 12)
+                throw new Exception("Username must be between 3 and 12 characters.");
+            if (password.Length < 5 || password.Length > 12)
+                throw new Exception("Password must be between 5 and 12 characters.");
+            if (password != confirm)
+                throw new Exception("Passwords do not match.");
+
+            db.RegisterAccount(username.Trim(), password);
         }
 
         public StreakMetrics GetStreakMetrics(Account user)

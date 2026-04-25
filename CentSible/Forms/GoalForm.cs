@@ -74,44 +74,41 @@ namespace CentSible.Forms
                 (int)SelectYearDropGoal.Value);
             SetMode(_activeType);
         }
-
         private void SetMode(GoalCategory type)
         {
             _activeType = type;
+            string modeText = (type == GoalCategory.Spending) ? "Spending" : "Saving";
 
-
-            SpendingGoalLabelGoal.Text = type == GoalCategory.Spending ? "Spending" : "Saving";
-
-         
-            SpendingIndicatorLabelGoal.Text = type == GoalCategory.Spending ? "Spending" : "Saving";
+        
+            dynamicGoalLabel.Text = $"{modeText} Goal";
+            dynamicIndicatorLabel.Text = $"{modeText} Indicator";
 
             var goal = _allGoals?.Find(g => g.GoalType == type);
 
             if (goal != null)
             {
-
-                TargetAmountLabelGoal.Text = goal.TargetAmount.ToString();
-                CurrentAmountLabelGoal.Text = goal.CurrentAmount.ToString();
-                TargetDateDropDownGoal.Value = goal.TargetDate;
+                
+                TargetAmountTextGoal.Text = goal.TargetAmount.ToString();
+                CurrentAmountTextGoal.Text = goal.CurrentAmount.ToString();
 
                 
+                TargetDateDropDownGoal.MinDate = new DateTime(2000, 1, 1);
+                TargetDateDropDownGoal.MaxDate = new DateTime(3000, 12, 31);
+                TargetDateDropDownGoal.Value = goal.TargetDate;
+
+              
                 lblIndicatorSpent.Text = $"₱ {goal.CurrentAmount:N0}";
                 lblIndicatorTarget.Text = $"₱ {goal.TargetAmount:N0}";
 
-                
-                UpdateDaysRemaining();
-
+               
                 UpdateIndicators(goal);
                 SpendIndicatorLayoutGoal.Visible = true;
             }
             else
             {
-
-                TargetAmountLabelGoal.Text = "";
-                CurrentAmountLabelGoal.Text = "";
-                lblIndicatorSpent.Text = "₱ 0";
-                lblIndicatorTarget.Text = "₱ 0";
-                DaysRemainingLabelGoal.Text = "—";
+                
+                TargetAmountTextGoal.Text = "";
+                CurrentAmountTextGoal.Text = "";
                 SpendIndicatorLayoutGoal.Visible = false;
             }
         }
@@ -122,36 +119,39 @@ namespace CentSible.Forms
 
             pbGoalProgress.Value = metrics.TotalPercent;
             IndicatorPercentLabelGoal.Text = $"{metrics.TotalPercent}%";
-            IndicatorStatusLabelGoal.Text = metrics.StatusNote;
             MilestoneBarGoal.Value = metrics.MilestoneStep;
             MilestoneDescLabelGoal.Text = metrics.StatusNote;
             DaysToGoLabelGoal.Text = metrics.DaysText;
             IndicatorDaysLabelGoal.Text = metrics.DaysText;
         }
-
         private void btnUpdateGoal_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Models.Goal data = new Models.Goal
-                {
-                    AccountID = _user.AccountID,
-                    GoalType = _activeType,
-                    TargetAmount = double.Parse(TargetAmountLabelGoal.Text),
-                    CurrentAmount = double.Parse(CurrentAmountLabelGoal.Text),
-                    TargetDate = TargetDateDropDownGoal.Value
-                };
+            
+            bool isTargetValid = double.TryParse(TargetAmountTextGoal.Text, out double target);
+            bool isCurrentValid = double.TryParse(CurrentAmountTextGoal.Text, out double current);
 
-                if (_goalLogic.SaveOrUpdateGoal(data))
-                {
-                    UpdateFilter();
-                    MessageBox.Show("Goal saved!");
-                }
+            if (!isTargetValid || !isCurrentValid)
+            {
+                MessageBox.Show("Please enter valid numbers for the amounts.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            catch (Exception ex) { MessageBox.Show("Error: " + ex.Message); }
+
+            Models.Goal data = new Models.Goal
+            {
+                AccountID = _user.AccountID,
+                GoalType = _activeType,
+                TargetAmount = target,
+                CurrentAmount = current,
+                TargetDate = TargetDateDropDownGoal.Value
+            };
+
+            if (_goalLogic.SaveOrUpdateGoal(data))
+            {
+                UpdateFilter(); 
+                MessageBox.Show("Goal saved!");
+            }
         }
 
-   
         private void btnSpendingTab_Click(object sender, EventArgs e) => SetMode(GoalCategory.Spending);
         private void btnSavingTab_Click(object sender, EventArgs e) => SetMode(GoalCategory.Savings);
 
@@ -172,30 +172,26 @@ namespace CentSible.Forms
 
         private void SyncDatePickerToSelectedPeriod()
         {
-            int month = cbSelectMonth.SelectedIndex + 1;
-
-
-            int year = (int)numSelectYear.Value;
+            int month = SelectMonthDropGoal.SelectedIndex + 1;  
+            int year = (int)SelectYearDropGoal.Value;           
 
             int lastDay = DateTime.DaysInMonth(year, month);
 
-            dtpTargetDate.MaxDate = new DateTime(year, month, lastDay);
-
-            dtpTargetDate.Value = new DateTime(year, month, lastDay);
+            TargetDateDropDownGoal.MaxDate = new DateTime(year, month, lastDay);  
+            TargetDateDropDownGoal.Value = new DateTime(year, month, lastDay);    
 
             UpdateDaysRemaining();
-
         }
 
 
-        private void dtpTargetDate_ValueChanged(object sender, EventArgs e) => UpdateDaysRemaining();
-        private void Switch(Form next) { _isNavigating = true; next.Show(); this.Close(); }
-        private void btnNavHome_Click(object sender, EventArgs e) { _isNavigating = true; _home.Show(); this.Close(); }
-        private void btnNavGoal_Click(object sender, EventArgs e) { }
-        private void btnNavTrans_Click(object sender, EventArgs e) => Switch(new TransactionForm(_home, _user));
-        private void btnNavSum_Click(object sender, EventArgs e) => Switch(new SummaryForm(_home, _user));
-        private void btnNavPred_Click(object sender, EventArgs e) => Switch(new PredictionForm(_home, _user));
-        private void btnNavLogout_Click(object sender, EventArgs e) { _isNavigating = true; new LoginForms().Show(); this.Dispose(); }
+        private void dtpTargetDate_ValueChanged(object sender, EventArgs e) => UpdateDaysRemaining();     
+        private void SwitchPage(Form newPage) { _isNavigating = true; newPage.Show(); this.Hide(); }
+        private void HomeButtonGoal_Click(object sender, EventArgs e) { _isNavigating = true; _home.Show(); this.Close(); }
+        private void GoalButtonGoal_Click(object sender, EventArgs e) { }
+        private void TranButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new TransactionForm(_home, _user));
+        private void SumButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new SummaryForm(_home, _user));
+        private void PredButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new PredictionForm(_home, _user));
+        private void LogoutButtonGoal_Click(object sender, EventArgs e) { _isNavigating = true; new LoginForms().Show(); this.Dispose(); }
 
         private void GoalForm_FormClosing(object sender, FormClosingEventArgs e)
         {

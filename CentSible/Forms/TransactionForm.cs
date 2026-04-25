@@ -8,6 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+using CentSible.Models;
+
 namespace CentSible.Forms
 {
     public partial class TransactionForm : Form
@@ -15,8 +20,6 @@ namespace CentSible.Forms
         private Form _home;
         private Account _user;
         private bool _isNavigating = false;
-
-        public TransactionForm() { InitializeComponent(); }
 
         public TransactionForm(Form home, Account user)
         {
@@ -28,31 +31,21 @@ namespace CentSible.Forms
         private void TransactionForm_Load(object sender, EventArgs e)
         {
             if (_user == null) return;
-            btnNavTrans.BackColor = Color.FromArgb(212, 236, 204);
-            btnNavTrans.ForeColor = Color.Black;
+            TranButtonGoal.BackColor = Color.FromArgb(212, 236, 204);
+            TranButtonGoal.ForeColor = Color.Black;
         }
 
-        
         private void Switch(Form next) { _isNavigating = true; next.Show(); this.Close(); }
-        private void btnNavHome_Click(object sender, EventArgs e) { _isNavigating = true; _home.Show(); this.Close(); }
-        private void btnNavGoal_Click(object sender, EventArgs e) => Switch(new GoalForm(_home, _user));
-        private void btnNavTrans_Click(object sender, EventArgs e) { }
-        private void btnNavSum_Click(object sender, EventArgs e) => Switch(new SummaryForm(_home, _user));
-        private void btnNavPred_Click(object sender, EventArgs e) => Switch(new PredictionForm(_home, _user));
-
-        private void btnNavLogout_Click(object sender, EventArgs e)
-        {
-            _isNavigating = true;
-            new LoginForms().Show();
-            this.Dispose();
-        }
+        private void HomeButtonGoal_Click(object sender, EventArgs e) { _isNavigating = true; _home.Show(); this.Close(); }
+        private void GoalButtonGoal_Click(object sender, EventArgs e) => Switch(new GoalForm(_home, _user));
+        private void TranButtonGoal_Click(object sender, EventArgs e) { }
+        private void SumButtonGoal_Click(object sender, EventArgs e) => Switch(new SummaryForm(_home, _user));
+        private void PredButtonGoal_Click(object sender, EventArgs e) => Switch(new PredictionForm(_home, _user));
+        private void LogoutButtonGoal_Click(object sender, EventArgs e) { _isNavigating = true; new LoginForms().Show(); this.Dispose(); }
 
         private void TransactionForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!_isNavigating && e.CloseReason == CloseReason.UserClosing)
-            {
-                Application.Exit();
-            }
+            if (!_isNavigating && e.CloseReason == CloseReason.UserClosing) Application.Exit();
         }
     }
 }
