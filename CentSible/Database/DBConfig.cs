@@ -9,7 +9,7 @@ namespace CentSible.Database
     public static class DBConfig
     
     {
-        public static readonly string ConnectionString = "Server=localhost;Port=3306;Database=centsible_db;Uid=root;Pwd=;";
+        public static readonly string ConnectionString = "Server=localhost;Port=3306;Database=centsible_sample;Uid=root;Pwd=;";
         
     }
 }

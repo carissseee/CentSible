@@ -63,7 +63,10 @@ namespace CentSible.Forms
 
             foreach (var goal in goals)
             {
-                int percent = (int)Math.Min((goal.CurrentAmount / goal.TargetAmount) * 100, 100);
+                if (goal.TargetAmount <= 0) continue;
+
+                double raw = (goal.CurrentAmount / goal.TargetAmount) * 100;
+                int percent = (int)Math.Min(Math.Max(raw, 0), 100);
                 string display = $"₱ {goal.CurrentAmount:N0} / ₱ {goal.TargetAmount:N0}";
 
                 if (goal.GoalType == GoalCategory.Spending)
@@ -78,7 +81,6 @@ namespace CentSible.Forms
                 }
             }
         }
-
         private void UpdateWeeklyActivity()
         {
             Panel[] dayPanels = { pnlMon, pnlTue, pnlWed, pnlThu, pnlFri, pnlSat, pnlSun };
@@ -108,13 +110,13 @@ namespace CentSible.Forms
             pbMilestone.Refresh();
         }
 
-        // Navigation
+
         private void SwitchPage(Form newPage) { _isNavigating = true; newPage.Show(); this.Hide(); }
-        private void btnNavHome_Click(object sender, EventArgs e) { }
-        private void btnNavGoal_Click(object sender, EventArgs e) => SwitchPage(new GoalForm(this, _user));
-        private void btnNavTrans_Click(object sender, EventArgs e) => SwitchPage(new TransactionForm(this, _user));
-        private void btnNavSum_Click(object sender, EventArgs e) => SwitchPage(new SummaryForm(this, _user));
-        private void btnNavPred_Click(object sender, EventArgs e) => SwitchPage(new PredictionForm(this, _user));
-        private void btnNavLogout_Click(object sender, EventArgs e) { new LoginForms().Show(); this.Dispose(); }
+        private void HomeButtonGoal_Click(object sender, EventArgs e) { }
+        private void GoalButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new GoalForm(this, _user));
+        private void TranButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new TransactionForm(this, _user));
+        private void SumButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new SummaryForm(this, _user));
+        private void PredButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new PredictionForm(this, _user));
+        private void LogoutButtonGoal_Click(object sender, EventArgs e) { _isNavigating = true; new LoginForms().Show(); this.Dispose(); }
     }
 }
