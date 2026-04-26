@@ -178,9 +178,9 @@ namespace CentSible.Views
 
             int lastDay = DateTime.DaysInMonth(year, month);
 
-            dtpTargetDate.MaxDate = new DateTime(year, month, lastDay);
+            TargetDateDropDownGoal.MaxDate = new DateTime(year, month, lastDay);
 
-            dtpTargetDate.Value = new DateTime(year, month, lastDay);
+            TargetDateDropDownGoal.Value = new DateTime(year, month, lastDay);
 
             UpdateDaysRemaining();
 
