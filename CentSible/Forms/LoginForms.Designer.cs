@@ -1,4 +1,4 @@
-﻿namespace CentSible.Views
+﻿namespace CentSible.Forms
 {
     partial class LoginForms
     {
@@ -35,13 +35,13 @@
             this.UserLabelLogin = new System.Windows.Forms.Label();
             this.PassLabelLogin = new System.Windows.Forms.Label();
             this.MainLayoutLogin = new System.Windows.Forms.TableLayoutPanel();
-            this.UserPassLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.UserPassLayoutLogin = new System.Windows.Forms.TableLayoutPanel();
             this.UserTextLogin = new PlaceholderText.PlaceholderTextBox();
             this.PassTextLogin = new PlaceholderText.PlaceholderTextBox();
             this.DontHaveAccLabelLogin = new System.Windows.Forms.Label();
             this.CentSibleLabelLogin = new System.Windows.Forms.Label();
             this.MainLayoutLogin.SuspendLayout();
-            this.UserPassLayout.SuspendLayout();
+            this.UserPassLayoutLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -102,7 +102,7 @@
             // 
             this.MainLayoutLogin.ColumnCount = 1;
             this.MainLayoutLogin.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.MainLayoutLogin.Controls.Add(this.UserPassLayout, 0, 1);
+            this.MainLayoutLogin.Controls.Add(this.UserPassLayoutLogin, 0, 1);
             this.MainLayoutLogin.Controls.Add(this.btnLogin, 0, 2);
             this.MainLayoutLogin.Controls.Add(this.CreateAccountLogin, 0, 4);
             this.MainLayoutLogin.Controls.Add(this.DontHaveAccLabelLogin, 0, 3);
@@ -118,23 +118,23 @@
             this.MainLayoutLogin.Size = new System.Drawing.Size(776, 426);
             this.MainLayoutLogin.TabIndex = 7;
             // 
-            // UserPassLayout
+            // UserPassLayoutLogin
             // 
-            this.UserPassLayout.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.UserPassLayout.ColumnCount = 2;
-            this.UserPassLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.76624F));
-            this.UserPassLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.23376F));
-            this.UserPassLayout.Controls.Add(this.UserLabelLogin, 0, 0);
-            this.UserPassLayout.Controls.Add(this.PassLabelLogin, 0, 1);
-            this.UserPassLayout.Controls.Add(this.UserTextLogin, 1, 0);
-            this.UserPassLayout.Controls.Add(this.PassTextLogin, 1, 1);
-            this.UserPassLayout.Location = new System.Drawing.Point(3, 168);
-            this.UserPassLayout.Name = "UserPassLayout";
-            this.UserPassLayout.RowCount = 2;
-            this.UserPassLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.UserPassLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.UserPassLayout.Size = new System.Drawing.Size(770, 101);
-            this.UserPassLayout.TabIndex = 8;
+            this.UserPassLayoutLogin.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.UserPassLayoutLogin.ColumnCount = 2;
+            this.UserPassLayoutLogin.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.76624F));
+            this.UserPassLayoutLogin.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.23376F));
+            this.UserPassLayoutLogin.Controls.Add(this.UserLabelLogin, 0, 0);
+            this.UserPassLayoutLogin.Controls.Add(this.PassLabelLogin, 0, 1);
+            this.UserPassLayoutLogin.Controls.Add(this.UserTextLogin, 1, 0);
+            this.UserPassLayoutLogin.Controls.Add(this.PassTextLogin, 1, 1);
+            this.UserPassLayoutLogin.Location = new System.Drawing.Point(3, 168);
+            this.UserPassLayoutLogin.Name = "UserPassLayoutLogin";
+            this.UserPassLayoutLogin.RowCount = 2;
+            this.UserPassLayoutLogin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.UserPassLayoutLogin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.UserPassLayoutLogin.Size = new System.Drawing.Size(770, 101);
+            this.UserPassLayoutLogin.TabIndex = 8;
             // 
             // UserTextLogin
             // 
@@ -199,8 +199,8 @@
             this.Load += new System.EventHandler(this.LoginForms_Load);
             this.MainLayoutLogin.ResumeLayout(false);
             this.MainLayoutLogin.PerformLayout();
-            this.UserPassLayout.ResumeLayout(false);
-            this.UserPassLayout.PerformLayout();
+            this.UserPassLayoutLogin.ResumeLayout(false);
+            this.UserPassLayoutLogin.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -212,12 +212,11 @@
         private System.Windows.Forms.Label UserLabelLogin;
         private System.Windows.Forms.Label PassLabelLogin;
         private System.Windows.Forms.TableLayoutPanel MainLayoutLogin;
-        private System.Windows.Forms.TableLayoutPanel UserPassLayout;
+        private System.Windows.Forms.TableLayoutPanel UserPassLayoutLogin;
         private System.Windows.Forms.Label CentSibleLabelLogin;
         private System.Windows.Forms.Label DontHaveAccLabelLogin;
         private PlaceholderText.PlaceholderTextBox UserTextLogin;
         private PlaceholderText.PlaceholderTextBox PassTextLogin;
-
     }
 }
 
