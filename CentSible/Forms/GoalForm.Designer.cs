@@ -67,8 +67,6 @@
             this.IndicatorBarBottomLayoutGoal = new System.Windows.Forms.TableLayoutPanel();
             this.IndicatorBarTopLayoutGoal = new System.Windows.Forms.TableLayoutPanel();
             this.MilestoneLayoutGoal = new System.Windows.Forms.TableLayoutPanel();
-            this.TargetAmountTextGoal = new PlaceholderText.PlaceholderTextBox();
-            this.CurrentAmountTextGoal = new PlaceholderText.PlaceholderTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.SelectYearDropGoal)).BeginInit();
             this.SidebarTableLayoutGoal.SuspendLayout();
             this.MainLayoutGoal.SuspendLayout();
