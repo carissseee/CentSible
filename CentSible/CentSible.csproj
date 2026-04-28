@@ -157,6 +157,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Forms\GoalForm.resx">
       <DependentUpon>GoalForm.cs</DependentUpon>
@@ -194,11 +195,40 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Icons\Current.png" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomElements\PlaceholderTextbox.cs">
       <SubType>Component</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Days.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Target.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\GoalForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\HomeForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\LogoutForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\PredictionForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\SummaryForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\TransactionForm.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

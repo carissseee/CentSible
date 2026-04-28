@@ -102,14 +102,12 @@ namespace CentSible.Forms
 
                
                 UpdateIndicators(goal);
-                SpendIndicatorLayoutGoal.Visible = true;
             }
             else
             {
                 
                 TargetAmountTextGoal.Text = "";
                 CurrentAmountTextGoal.Text = "";
-                SpendIndicatorLayoutGoal.Visible = false;
             }
         }
 
@@ -186,7 +184,11 @@ namespace CentSible.Forms
 
         private void dtpTargetDate_ValueChanged(object sender, EventArgs e) => UpdateDaysRemaining();     
         private void SwitchPage(Form newPage) { _isNavigating = true; newPage.Show(); this.Hide(); }
-        private void HomeButtonGoal_Click(object sender, EventArgs e) { _isNavigating = true; _home.Show(); this.Close(); }
+        private void HomeButtonGoal_Click(object sender, EventArgs e) {
+            _isNavigating = true;
+            _home.Show();
+            this.Close();
+        }
         private void GoalButtonGoal_Click(object sender, EventArgs e) { }
         private void TranButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new TransactionForm(_home, _user));
         private void SumButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new SummaryForm(_home, _user));
