@@ -975,6 +975,9 @@
             this.Controls.Add(this.MainLayoutGoal);
             this.Controls.Add(this.SidebarTableLayoutGoal);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1053, 557);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1053, 557);
             this.Name = "GoalForm";
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

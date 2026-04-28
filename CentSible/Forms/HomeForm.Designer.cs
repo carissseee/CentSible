@@ -136,7 +136,7 @@
             // MonPanelHome
             // 
             this.MonPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.MonPanelHome.Location = new System.Drawing.Point(47, 36);
+            this.MonPanelHome.Location = new System.Drawing.Point(68, 36);
             this.MonPanelHome.Name = "MonPanelHome";
             this.MonPanelHome.Size = new System.Drawing.Size(37, 32);
             this.MonPanelHome.TabIndex = 3;
@@ -144,7 +144,7 @@
             // TuePanelHome
             // 
             this.TuePanelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.TuePanelHome.Location = new System.Drawing.Point(91, 36);
+            this.TuePanelHome.Location = new System.Drawing.Point(126, 36);
             this.TuePanelHome.Name = "TuePanelHome";
             this.TuePanelHome.Size = new System.Drawing.Size(37, 32);
             this.TuePanelHome.TabIndex = 4;
@@ -152,7 +152,7 @@
             // WedPanelHome
             // 
             this.WedPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.WedPanelHome.Location = new System.Drawing.Point(135, 36);
+            this.WedPanelHome.Location = new System.Drawing.Point(184, 36);
             this.WedPanelHome.Name = "WedPanelHome";
             this.WedPanelHome.Size = new System.Drawing.Size(37, 32);
             this.WedPanelHome.TabIndex = 5;
@@ -160,7 +160,7 @@
             // ThuPanelHome
             // 
             this.ThuPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.ThuPanelHome.Location = new System.Drawing.Point(179, 36);
+            this.ThuPanelHome.Location = new System.Drawing.Point(242, 36);
             this.ThuPanelHome.Name = "ThuPanelHome";
             this.ThuPanelHome.Size = new System.Drawing.Size(37, 32);
             this.ThuPanelHome.TabIndex = 4;
@@ -168,7 +168,7 @@
             // FriPanelHome
             // 
             this.FriPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.FriPanelHome.Location = new System.Drawing.Point(223, 36);
+            this.FriPanelHome.Location = new System.Drawing.Point(300, 36);
             this.FriPanelHome.Name = "FriPanelHome";
             this.FriPanelHome.Size = new System.Drawing.Size(37, 32);
             this.FriPanelHome.TabIndex = 4;
@@ -176,7 +176,7 @@
             // SatPanelHome
             // 
             this.SatPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.SatPanelHome.Location = new System.Drawing.Point(271, 36);
+            this.SatPanelHome.Location = new System.Drawing.Point(361, 36);
             this.SatPanelHome.Name = "SatPanelHome";
             this.SatPanelHome.Size = new System.Drawing.Size(37, 32);
             this.SatPanelHome.TabIndex = 4;
@@ -184,7 +184,7 @@
             // SunPanelHome
             // 
             this.SunPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.SunPanelHome.Location = new System.Drawing.Point(3, 36);
+            this.SunPanelHome.Location = new System.Drawing.Point(10, 36);
             this.SunPanelHome.Name = "SunPanelHome";
             this.SunPanelHome.Size = new System.Drawing.Size(37, 32);
             this.SunPanelHome.TabIndex = 4;
@@ -214,7 +214,7 @@
             // 
             this.BarSpendingHome.Location = new System.Drawing.Point(3, 204);
             this.BarSpendingHome.Name = "BarSpendingHome";
-            this.BarSpendingHome.Size = new System.Drawing.Size(312, 32);
+            this.BarSpendingHome.Size = new System.Drawing.Size(409, 32);
             this.BarSpendingHome.TabIndex = 8;
             // 
             // progressBar2
@@ -230,7 +230,7 @@
             this.BarSavingHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
             this.BarSavingHome.Location = new System.Drawing.Point(3, 124);
             this.BarSavingHome.Name = "BarSavingHome";
-            this.BarSavingHome.Size = new System.Drawing.Size(309, 32);
+            this.BarSavingHome.Size = new System.Drawing.Size(406, 32);
             this.BarSavingHome.TabIndex = 10;
             // 
             // SpendStatLabelHome
@@ -239,7 +239,7 @@
             this.SpendStatLabelHome.AutoSize = true;
             this.SpendStatLabelHome.Font = new System.Drawing.Font("Sitka Text", 10F);
             this.SpendStatLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.SpendStatLabelHome.Location = new System.Drawing.Point(225, 12);
+            this.SpendStatLabelHome.Location = new System.Drawing.Point(322, 12);
             this.SpendStatLabelHome.Name = "SpendStatLabelHome";
             this.SpendStatLabelHome.Size = new System.Drawing.Size(84, 24);
             this.SpendStatLabelHome.TabIndex = 11;
@@ -252,7 +252,7 @@
             this.SaveStatLabelHome.AutoSize = true;
             this.SaveStatLabelHome.Font = new System.Drawing.Font("Sitka Text", 10F);
             this.SaveStatLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.SaveStatLabelHome.Location = new System.Drawing.Point(245, 12);
+            this.SaveStatLabelHome.Location = new System.Drawing.Point(342, 12);
             this.SaveStatLabelHome.Name = "SaveStatLabelHome";
             this.SaveStatLabelHome.Size = new System.Drawing.Size(61, 24);
             this.SaveStatLabelHome.TabIndex = 12;
@@ -397,7 +397,7 @@
             this.MainLayoutHome.RowCount = 2;
             this.MainLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 161F));
             this.MainLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 127F));
-            this.MainLayoutHome.Size = new System.Drawing.Size(648, 501);
+            this.MainLayoutHome.Size = new System.Drawing.Size(842, 504);
             this.MainLayoutHome.TabIndex = 37;
             // 
             // StreakLayoutMainHome
@@ -417,7 +417,7 @@
             this.StreakLayoutMainHome.RowCount = 2;
             this.StreakLayoutMainHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.32258F));
             this.StreakLayoutMainHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.67742F));
-            this.StreakLayoutMainHome.Size = new System.Drawing.Size(642, 155);
+            this.StreakLayoutMainHome.Size = new System.Drawing.Size(836, 155);
             this.StreakLayoutMainHome.TabIndex = 38;
             // 
             // StreakIconsLayoutHome
@@ -447,13 +447,13 @@
             this.StreakIconsLayoutHome.Controls.Add(this.TuePanelHome, 2, 1);
             this.StreakIconsLayoutHome.Controls.Add(this.MonPanelHome, 1, 1);
             this.StreakIconsLayoutHome.Controls.Add(this.SunLabelHome, 0, 0);
-            this.StreakIconsLayoutHome.Location = new System.Drawing.Point(324, 3);
+            this.StreakIconsLayoutHome.Location = new System.Drawing.Point(421, 3);
             this.StreakIconsLayoutHome.Name = "StreakIconsLayoutHome";
             this.StreakIconsLayoutHome.RowCount = 2;
             this.StreakIconsLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
             this.StreakIconsLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.StreakIconsLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.StreakIconsLayoutHome.Size = new System.Drawing.Size(315, 71);
+            this.StreakIconsLayoutHome.Size = new System.Drawing.Size(412, 71);
             this.StreakIconsLayoutHome.TabIndex = 39;
             // 
             // MonLabelHome
@@ -462,7 +462,7 @@
             this.MonLabelHome.AutoSize = true;
             this.MonLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
             this.MonLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.MonLabelHome.Location = new System.Drawing.Point(53, 15);
+            this.MonLabelHome.Location = new System.Drawing.Point(74, 15);
             this.MonLabelHome.Name = "MonLabelHome";
             this.MonLabelHome.Size = new System.Drawing.Size(26, 18);
             this.MonLabelHome.TabIndex = 39;
@@ -475,7 +475,7 @@
             this.WedLabelHome.AutoSize = true;
             this.WedLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
             this.WedLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.WedLabelHome.Location = new System.Drawing.Point(141, 15);
+            this.WedLabelHome.Location = new System.Drawing.Point(190, 15);
             this.WedLabelHome.Name = "WedLabelHome";
             this.WedLabelHome.Size = new System.Drawing.Size(26, 18);
             this.WedLabelHome.TabIndex = 41;
@@ -488,7 +488,7 @@
             this.SunLabelHome.AutoSize = true;
             this.SunLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
             this.SunLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.SunLabelHome.Location = new System.Drawing.Point(11, 15);
+            this.SunLabelHome.Location = new System.Drawing.Point(18, 15);
             this.SunLabelHome.Name = "SunLabelHome";
             this.SunLabelHome.Size = new System.Drawing.Size(22, 18);
             this.SunLabelHome.TabIndex = 45;
@@ -501,7 +501,7 @@
             this.TueLabelHome.AutoSize = true;
             this.TueLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
             this.TueLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.TueLabelHome.Location = new System.Drawing.Point(98, 15);
+            this.TueLabelHome.Location = new System.Drawing.Point(133, 15);
             this.TueLabelHome.Name = "TueLabelHome";
             this.TueLabelHome.Size = new System.Drawing.Size(23, 18);
             this.TueLabelHome.TabIndex = 40;
@@ -514,7 +514,7 @@
             this.SatLabelHome.AutoSize = true;
             this.SatLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
             this.SatLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.SatLabelHome.Location = new System.Drawing.Point(279, 15);
+            this.SatLabelHome.Location = new System.Drawing.Point(369, 15);
             this.SatLabelHome.Name = "SatLabelHome";
             this.SatLabelHome.Size = new System.Drawing.Size(21, 18);
             this.SatLabelHome.TabIndex = 44;
@@ -527,7 +527,7 @@
             this.FriLabelHome.AutoSize = true;
             this.FriLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
             this.FriLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.FriLabelHome.Location = new System.Drawing.Point(232, 15);
+            this.FriLabelHome.Location = new System.Drawing.Point(309, 15);
             this.FriLabelHome.Name = "FriLabelHome";
             this.FriLabelHome.Size = new System.Drawing.Size(20, 18);
             this.FriLabelHome.TabIndex = 43;
@@ -540,7 +540,7 @@
             this.ThuLabelHome.AutoSize = true;
             this.ThuLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
             this.ThuLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.ThuLabelHome.Location = new System.Drawing.Point(186, 15);
+            this.ThuLabelHome.Location = new System.Drawing.Point(249, 15);
             this.ThuLabelHome.Name = "ThuLabelHome";
             this.ThuLabelHome.Size = new System.Drawing.Size(23, 18);
             this.ThuLabelHome.TabIndex = 42;
@@ -561,7 +561,7 @@
             this.TranSaveSpendLayoutHome.RowCount = 1;
             this.TranSaveSpendLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TranSaveSpendLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TranSaveSpendLayoutHome.Size = new System.Drawing.Size(642, 334);
+            this.TranSaveSpendLayoutHome.Size = new System.Drawing.Size(836, 337);
             this.TranSaveSpendLayoutHome.TabIndex = 0;
             // 
             // SpentLabelLayHome
@@ -577,7 +577,7 @@
             this.SpentLabelLayHome.RowCount = 1;
             this.SpentLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SpentLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SpentLabelLayHome.Size = new System.Drawing.Size(312, 35);
+            this.SpentLabelLayHome.Size = new System.Drawing.Size(409, 35);
             this.SpentLabelLayHome.TabIndex = 0;
             // 
             // SpentLabelHome
@@ -599,7 +599,7 @@
             this.MoneySpentLabelHome.AutoSize = true;
             this.MoneySpentLabelHome.Font = new System.Drawing.Font("Sitka Text", 10F);
             this.MoneySpentLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.MoneySpentLabelHome.Location = new System.Drawing.Point(202, 11);
+            this.MoneySpentLabelHome.Location = new System.Drawing.Point(299, 11);
             this.MoneySpentLabelHome.Name = "MoneySpentLabelHome";
             this.MoneySpentLabelHome.Size = new System.Drawing.Size(107, 24);
             this.MoneySpentLabelHome.TabIndex = 11;
@@ -610,7 +610,7 @@
             // 
             this.BarSpentHome.Location = new System.Drawing.Point(3, 44);
             this.BarSpentHome.Name = "BarSpentHome";
-            this.BarSpentHome.Size = new System.Drawing.Size(309, 32);
+            this.BarSpentHome.Size = new System.Drawing.Size(406, 32);
             this.BarSpentHome.TabIndex = 8;
             // 
             // SpendingGoalLabelLayHome
@@ -626,7 +626,7 @@
             this.SpendingGoalLabelLayHome.RowCount = 1;
             this.SpendingGoalLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SpendingGoalLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SpendingGoalLabelLayHome.Size = new System.Drawing.Size(312, 36);
+            this.SpendingGoalLabelLayHome.Size = new System.Drawing.Size(409, 36);
             this.SpendingGoalLabelLayHome.TabIndex = 0;
             // 
             // SavingGoalLabelLayHome
@@ -642,7 +642,7 @@
             this.SavingGoalLabelLayHome.RowCount = 1;
             this.SavingGoalLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SavingGoalLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SavingGoalLabelLayHome.Size = new System.Drawing.Size(309, 36);
+            this.SavingGoalLabelLayHome.Size = new System.Drawing.Size(406, 36);
             this.SavingGoalLabelLayHome.TabIndex = 0;
             // 
             // SidebarTableLayoutGoal
@@ -838,28 +838,32 @@
             this.flowLayoutPanel1.Controls.Add(this.BarSavingHome);
             this.flowLayoutPanel1.Controls.Add(this.SpendingGoalLabelLayHome);
             this.flowLayoutPanel1.Controls.Add(this.BarSpendingHome);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(324, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(421, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(315, 328);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(412, 331);
             this.flowLayoutPanel1.TabIndex = 39;
             // 
             // StreakBarLayoutHome
             // 
             this.StreakBarLayoutHome.Controls.Add(this.LongestStreakLabelHome);
             this.StreakBarLayoutHome.Controls.Add(this.pbMilestone);
-            this.StreakBarLayoutHome.Location = new System.Drawing.Point(324, 80);
+            this.StreakBarLayoutHome.Location = new System.Drawing.Point(421, 80);
             this.StreakBarLayoutHome.Name = "StreakBarLayoutHome";
-            this.StreakBarLayoutHome.Size = new System.Drawing.Size(315, 72);
+            this.StreakBarLayoutHome.Size = new System.Drawing.Size(318, 72);
             this.StreakBarLayoutHome.TabIndex = 40;
             // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 506);
+            this.ClientSize = new System.Drawing.Size(1035, 510);
             this.Controls.Add(this.SidebarTableLayoutGoal);
             this.Controls.Add(this.MainLayoutHome);
             this.Controls.Add(this.progressBar2);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1053, 557);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1053, 557);
             this.Name = "HomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
