@@ -98,8 +98,10 @@
     <Compile Include="Database\AccountDB.cs" />
     <Compile Include="Database\DBConfig.cs" />
     <Compile Include="Database\GoalDB.cs" />
+    <Compile Include="Database\TransactionDB.cs" />
     <Compile Include="Logic\AccountLogic.cs" />
     <Compile Include="Logic\GoalLogic.cs" />
+    <Compile Include="Logic\TransactionLogic.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Budget.cs" />
     <Compile Include="Models\Goal.cs" />

@@ -8,19 +8,21 @@ namespace CentSible.Models
 {
     public enum TransactionType
     {
-        Income,
+        Budget,
         Expense
     }
 
     public enum Category
     {
-        Budget,
+        Income,
+        Allowance,
         Food,
         Transportation,
         Utilities,
         Miscellaneous,
         Health,
-        Leisure
+        Leisure,
+        Others
     }
     public class Transaction
     {
