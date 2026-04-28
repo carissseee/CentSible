@@ -62,19 +62,24 @@ namespace CentSible.Database
             }
         }
 
-        public void RegisterAccount(string username, string password)
+        public void RegisterAccount(Account user)
         {
             using (MySqlConnection conn = new MySqlConnection(DBConfig.ConnectionString))
             {
                 conn.Open();
-                string query = "INSERT INTO account (username, password, loginStreak, longestStreak, lastLoginDate) VALUES (@u, @p, 0, 0, NULL)";
+                string query = "INSERT INTO account (username, password, loginStreak, longestStreak, lastLoginDate) " +
+                               "VALUES (@u, @p, @s, @ls, NULL)";
+
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@u", username);
-                    cmd.Parameters.AddWithValue("@p", password);
+                    cmd.Parameters.AddWithValue("@u", user.Username);
+                    cmd.Parameters.AddWithValue("@p", user.Password);
+                    cmd.Parameters.AddWithValue("@s", user.LoginStreak);
+                    cmd.Parameters.AddWithValue("@ls", user.LongestStreak);
                     cmd.ExecuteNonQuery();
                 }
             }
         }
+
     }
 }

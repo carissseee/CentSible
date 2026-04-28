@@ -7,7 +7,6 @@ using CentSible.Models;
 using CentSible.Database;
 using System.Drawing;
 
-
 namespace CentSible.Logic
 {
     public class GoalLogic
@@ -22,6 +21,29 @@ namespace CentSible.Logic
             public Color ThemeColor { get; set; }
             public string DaysText { get; set; }
             public string AmountText { get; set; }
+        }
+
+        public bool ProcessGoalEntry(int accountId, GoalCategory type, double target, double current, DateTime date)
+        {
+            
+            if (target <= 0) throw new Exception("Target amount must be a positive value.");
+
+            
+            Goal goalModel = new Goal
+            {
+                AccountID = accountId,
+                GoalType = type,
+                TargetAmount = target,
+                CurrentAmount = current,
+                TargetDate = date
+            };
+
+            
+            var existing = _db.GetGoalsByPeriod(accountId, date.Month, date.Year)
+                              .Find(x => x.GoalType == type);
+
+            
+            return existing != null ? _db.UpdateGoal(goalModel) : _db.AddGoal(goalModel);
         }
 
         public GoalDisplayMetrics GetCalculatedMetrics(Goal goal)
@@ -62,10 +84,5 @@ namespace CentSible.Logic
         }
 
         public List<Goal> GetGoals(int id, int m, int y) => _db.GetGoalsByPeriod(id, m, y);
-        public bool SaveOrUpdateGoal(Goal g)
-        {
-            var existing = _db.GetGoalsByPeriod(g.AccountID, g.TargetDate.Month, g.TargetDate.Year).Find(x => x.GoalType == g.GoalType);
-            return existing != null ? _db.UpdateGoal(g) : _db.AddGoal(g);
-        }
     }
 }
