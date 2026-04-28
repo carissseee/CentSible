@@ -318,7 +318,7 @@
             this.MilestoneTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
             this.MilestoneTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
             this.MilestoneTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.MilestoneTabLayGoal.Size = new System.Drawing.Size(419, 240);
+            this.MilestoneTabLayGoal.Size = new System.Drawing.Size(419, 210);
             this.MilestoneTabLayGoal.TabIndex = 38;
             // 
             // CentSibleLabelGoal
@@ -472,7 +472,7 @@
             this.SpendGoalIndiLayout.RowCount = 1;
             this.SpendGoalIndiLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SpendGoalIndiLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SpendGoalIndiLayout.Size = new System.Drawing.Size(833, 440);
+            this.SpendGoalIndiLayout.Size = new System.Drawing.Size(833, 447);
             this.SpendGoalIndiLayout.TabIndex = 0;
             // 
             // SpendGoalFlowLayGoal
