@@ -512,8 +512,8 @@
             // 
             this.SpendingGoalTabLayGoal.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.SpendingGoalTabLayGoal.ColumnCount = 3;
-            this.SpendingGoalTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.0597F));
-            this.SpendingGoalTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.9403F));
+            this.SpendingGoalTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.02985F));
+            this.SpendingGoalTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.97015F));
             this.SpendingGoalTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.SpendingGoalTabLayGoal.Controls.Add(this.TargetAmountTextGoal, 2, 0);
             this.SpendingGoalTabLayGoal.Controls.Add(this.CurrentAmountTextGoal, 2, 1);
@@ -543,7 +543,7 @@
             this.TargetAmountTextGoal.ForeColor = System.Drawing.Color.Gray;
             this.TargetAmountTextGoal.Location = new System.Drawing.Point(309, 18);
             this.TargetAmountTextGoal.Name = "TargetAmountTextGoal";
-            this.TargetAmountTextGoal.Placeholder = "₱-------";
+            this.TargetAmountTextGoal.Placeholder = "₱";
             this.TargetAmountTextGoal.PlaceholderColor = System.Drawing.Color.Gray;
             this.TargetAmountTextGoal.Size = new System.Drawing.Size(68, 22);
             this.TargetAmountTextGoal.TabIndex = 38;
@@ -554,7 +554,7 @@
             this.CurrentAmountTextGoal.ForeColor = System.Drawing.Color.Gray;
             this.CurrentAmountTextGoal.Location = new System.Drawing.Point(309, 76);
             this.CurrentAmountTextGoal.Name = "CurrentAmountTextGoal";
-            this.CurrentAmountTextGoal.Placeholder = "₱-------";
+            this.CurrentAmountTextGoal.Placeholder = "₱";
             this.CurrentAmountTextGoal.PlaceholderColor = System.Drawing.Color.Gray;
             this.CurrentAmountTextGoal.Size = new System.Drawing.Size(68, 22);
             this.CurrentAmountTextGoal.TabIndex = 39;
@@ -565,7 +565,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.label1.Location = new System.Drawing.Point(105, 192);
+            this.label1.Location = new System.Drawing.Point(54, 192);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 23);
             this.label1.TabIndex = 41;
@@ -579,7 +579,7 @@
             this.TargetDateLabelGoal.AutoSize = true;
             this.TargetDateLabelGoal.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.TargetDateLabelGoal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.TargetDateLabelGoal.Location = new System.Drawing.Point(105, 133);
+            this.TargetDateLabelGoal.Location = new System.Drawing.Point(54, 133);
             this.TargetDateLabelGoal.Name = "TargetDateLabelGoal";
             this.TargetDateLabelGoal.Size = new System.Drawing.Size(102, 23);
             this.TargetDateLabelGoal.TabIndex = 40;
@@ -593,7 +593,7 @@
             this.CurrentAmountLabelGoal.AutoSize = true;
             this.CurrentAmountLabelGoal.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.CurrentAmountLabelGoal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.CurrentAmountLabelGoal.Location = new System.Drawing.Point(105, 75);
+            this.CurrentAmountLabelGoal.Location = new System.Drawing.Point(54, 75);
             this.CurrentAmountLabelGoal.Name = "CurrentAmountLabelGoal";
             this.CurrentAmountLabelGoal.Size = new System.Drawing.Size(139, 23);
             this.CurrentAmountLabelGoal.TabIndex = 37;
@@ -607,7 +607,7 @@
             this.TargetAmountLabelGoal.AutoSize = true;
             this.TargetAmountLabelGoal.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.TargetAmountLabelGoal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.TargetAmountLabelGoal.Location = new System.Drawing.Point(105, 17);
+            this.TargetAmountLabelGoal.Location = new System.Drawing.Point(54, 17);
             this.TargetAmountLabelGoal.Name = "TargetAmountLabelGoal";
             this.TargetAmountLabelGoal.Size = new System.Drawing.Size(128, 23);
             this.TargetAmountLabelGoal.TabIndex = 36;
@@ -619,7 +619,7 @@
             // 
             this.TargetAmountPicbox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TargetAmountPicbox.Image = global::CentSible.Properties.Resources.Target1;
-            this.TargetAmountPicbox.Location = new System.Drawing.Point(31, 9);
+            this.TargetAmountPicbox.Location = new System.Drawing.Point(5, 9);
             this.TargetAmountPicbox.Name = "TargetAmountPicbox";
             this.TargetAmountPicbox.Size = new System.Drawing.Size(40, 40);
             this.TargetAmountPicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -631,7 +631,7 @@
             this.CurrentAmountPicbox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CurrentAmountPicbox.Image = global::CentSible.Properties.Resources.Current;
             this.CurrentAmountPicbox.ImageLocation = "";
-            this.CurrentAmountPicbox.Location = new System.Drawing.Point(31, 67);
+            this.CurrentAmountPicbox.Location = new System.Drawing.Point(5, 67);
             this.CurrentAmountPicbox.Name = "CurrentAmountPicbox";
             this.CurrentAmountPicbox.Size = new System.Drawing.Size(40, 40);
             this.CurrentAmountPicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -642,7 +642,7 @@
             // 
             this.TargetDatePicbox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TargetDatePicbox.Image = global::CentSible.Properties.Resources.Date;
-            this.TargetDatePicbox.Location = new System.Drawing.Point(31, 125);
+            this.TargetDatePicbox.Location = new System.Drawing.Point(5, 125);
             this.TargetDatePicbox.Name = "TargetDatePicbox";
             this.TargetDatePicbox.Size = new System.Drawing.Size(40, 40);
             this.TargetDatePicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -653,7 +653,7 @@
             // 
             this.RemainDaysPicbox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.RemainDaysPicbox.Image = global::CentSible.Properties.Resources.Days;
-            this.RemainDaysPicbox.Location = new System.Drawing.Point(31, 183);
+            this.RemainDaysPicbox.Location = new System.Drawing.Point(5, 183);
             this.RemainDaysPicbox.Name = "RemainDaysPicbox";
             this.RemainDaysPicbox.Size = new System.Drawing.Size(40, 40);
             this.RemainDaysPicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
