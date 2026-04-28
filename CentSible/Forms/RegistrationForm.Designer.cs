@@ -32,11 +32,11 @@
             this.CreatePassLabelRegis = new System.Windows.Forms.Label();
             this.ConfirmPassLabelRegis = new System.Windows.Forms.Label();
             this.MainLayoutRegis = new System.Windows.Forms.TableLayoutPanel();
-            this.CentSibleLabelRegistration = new System.Windows.Forms.Label();
             this.RegisBtnRegis = new System.Windows.Forms.Button();
             this.LabelLayoutRegis = new System.Windows.Forms.TableLayoutPanel();
             this.AccoutnExistLabelRegis = new System.Windows.Forms.Label();
             this.LoginLabelRegistration = new System.Windows.Forms.LinkLabel();
+            this.CentSibleLabelRegistration = new System.Windows.Forms.Label();
             this.ConfirmPassTextRegis = new PlaceholderText.PlaceholderTextBox();
             this.CreatePassTextRegis = new PlaceholderText.PlaceholderTextBox();
             this.CreateUserTextRegis = new PlaceholderText.PlaceholderTextBox();
@@ -97,18 +97,6 @@
             this.MainLayoutRegis.Size = new System.Drawing.Size(776, 426);
             this.MainLayoutRegis.TabIndex = 7;
             // 
-            // CentSibleLabelRegistration
-            // 
-            this.CentSibleLabelRegistration.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.CentSibleLabelRegistration.AutoSize = true;
-            this.CentSibleLabelRegistration.Font = new System.Drawing.Font("Brush Script MT", 65F, System.Drawing.FontStyle.Italic);
-            this.CentSibleLabelRegistration.Location = new System.Drawing.Point(183, 31);
-            this.CentSibleLabelRegistration.Name = "CentSibleLabelRegistration";
-            this.CentSibleLabelRegistration.Size = new System.Drawing.Size(409, 134);
-            this.CentSibleLabelRegistration.TabIndex = 10;
-            this.CentSibleLabelRegistration.Text = "CentSible";
-            this.CentSibleLabelRegistration.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // RegisBtnRegis
             // 
             this.RegisBtnRegis.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -163,6 +151,18 @@
             this.LoginLabelRegistration.TabStop = true;
             this.LoginLabelRegistration.Text = "Log In";
             this.LoginLabelRegistration.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CreateAccountLogin_LinkClicked);
+            // 
+            // CentSibleLabelRegistration
+            // 
+            this.CentSibleLabelRegistration.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.CentSibleLabelRegistration.AutoSize = true;
+            this.CentSibleLabelRegistration.Font = new System.Drawing.Font("Brush Script MT", 65F, System.Drawing.FontStyle.Italic);
+            this.CentSibleLabelRegistration.Location = new System.Drawing.Point(183, 31);
+            this.CentSibleLabelRegistration.Name = "CentSibleLabelRegistration";
+            this.CentSibleLabelRegistration.Size = new System.Drawing.Size(409, 134);
+            this.CentSibleLabelRegistration.TabIndex = 10;
+            this.CentSibleLabelRegistration.Text = "CentSible";
+            this.CentSibleLabelRegistration.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ConfirmPassTextRegis
             // 
