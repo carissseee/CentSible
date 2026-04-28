@@ -54,7 +54,7 @@
             this.SelectYearDropGoal = new System.Windows.Forms.NumericUpDown();
             this.btnSavingTab = new System.Windows.Forms.Button();
             this.SpendGoalIndiLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.SpendGoalFlowLayGoal = new System.Windows.Forms.FlowLayoutPanel();
+            this.GoalFlowLayGoal = new System.Windows.Forms.FlowLayoutPanel();
             this.dynamicGoalLabel = new System.Windows.Forms.Label();
             this.Spacer1 = new System.Windows.Forms.Panel();
             this.SpendingGoalTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
@@ -68,7 +68,8 @@
             this.CurrentAmountPicbox = new System.Windows.Forms.PictureBox();
             this.TargetDatePicbox = new System.Windows.Forms.PictureBox();
             this.RemainDaysPicbox = new System.Windows.Forms.PictureBox();
-            this.SpendIndicatorFlowLayGoal = new System.Windows.Forms.FlowLayoutPanel();
+            this.SaveButtonPanelGoal = new System.Windows.Forms.Panel();
+            this.IndicatorFlowLayGoal = new System.Windows.Forms.FlowLayoutPanel();
             this.Spacer2 = new System.Windows.Forms.Panel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SidebarTableLayoutGoal = new System.Windows.Forms.FlowLayoutPanel();
@@ -90,7 +91,6 @@
             this.HomeTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
             this.HomeButtonGoal = new System.Windows.Forms.Button();
             this.HomePicBoxGoal = new System.Windows.Forms.PictureBox();
-            this.SaveButtonPanelGoal = new System.Windows.Forms.Panel();
             this.BarMainTabLayGoal.SuspendLayout();
             this.IndicatorBarBottomLayoutGoal.SuspendLayout();
             this.IndicatorBarTopLayoutGoal.SuspendLayout();
@@ -99,13 +99,14 @@
             this.HeaderGoal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SelectYearDropGoal)).BeginInit();
             this.SpendGoalIndiLayout.SuspendLayout();
-            this.SpendGoalFlowLayGoal.SuspendLayout();
+            this.GoalFlowLayGoal.SuspendLayout();
             this.SpendingGoalTabLayGoal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TargetAmountPicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CurrentAmountPicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TargetDatePicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RemainDaysPicbox)).BeginInit();
-            this.SpendIndicatorFlowLayGoal.SuspendLayout();
+            this.SaveButtonPanelGoal.SuspendLayout();
+            this.IndicatorFlowLayGoal.SuspendLayout();
             this.SidebarTableLayoutGoal.SuspendLayout();
             this.CentSibleTextPanelGoal.SuspendLayout();
             this.SideBarTabLayGoal.SuspendLayout();
@@ -119,7 +120,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.TranPicBoxGoal)).BeginInit();
             this.HomeTabLayGoal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxGoal)).BeginInit();
-            this.SaveButtonPanelGoal.SuspendLayout();
             this.SuspendLayout();
             // 
             // IndicatorPercentLabelGoal
@@ -161,7 +161,7 @@
             this.TargetDateDropDownGoal.Name = "TargetDateDropDownGoal";
             this.TargetDateDropDownGoal.Size = new System.Drawing.Size(92, 23);
             this.TargetDateDropDownGoal.TabIndex = 16;
-            this.TargetDateDropDownGoal.ValueChanged += new System.EventHandler(this.dtpTargetDate_ValueChanged);
+            this.TargetDateDropDownGoal.ValueChanged += new System.EventHandler(this.TargetDateDropDownGoal_ValueChanged);
             // 
             // btnUpdateGoal
             // 
@@ -465,8 +465,8 @@
             this.SpendGoalIndiLayout.ColumnCount = 2;
             this.SpendGoalIndiLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.29822F));
             this.SpendGoalIndiLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.70178F));
-            this.SpendGoalIndiLayout.Controls.Add(this.SpendGoalFlowLayGoal, 0, 0);
-            this.SpendGoalIndiLayout.Controls.Add(this.SpendIndicatorFlowLayGoal, 1, 0);
+            this.SpendGoalIndiLayout.Controls.Add(this.GoalFlowLayGoal, 0, 0);
+            this.SpendGoalIndiLayout.Controls.Add(this.IndicatorFlowLayGoal, 1, 0);
             this.SpendGoalIndiLayout.Location = new System.Drawing.Point(3, 57);
             this.SpendGoalIndiLayout.Name = "SpendGoalIndiLayout";
             this.SpendGoalIndiLayout.RowCount = 1;
@@ -475,16 +475,16 @@
             this.SpendGoalIndiLayout.Size = new System.Drawing.Size(833, 447);
             this.SpendGoalIndiLayout.TabIndex = 0;
             // 
-            // SpendGoalFlowLayGoal
+            // GoalFlowLayGoal
             // 
-            this.SpendGoalFlowLayGoal.Controls.Add(this.dynamicGoalLabel);
-            this.SpendGoalFlowLayGoal.Controls.Add(this.Spacer1);
-            this.SpendGoalFlowLayGoal.Controls.Add(this.SpendingGoalTabLayGoal);
-            this.SpendGoalFlowLayGoal.Controls.Add(this.SaveButtonPanelGoal);
-            this.SpendGoalFlowLayGoal.Location = new System.Drawing.Point(3, 3);
-            this.SpendGoalFlowLayGoal.Name = "SpendGoalFlowLayGoal";
-            this.SpendGoalFlowLayGoal.Size = new System.Drawing.Size(396, 434);
-            this.SpendGoalFlowLayGoal.TabIndex = 38;
+            this.GoalFlowLayGoal.Controls.Add(this.dynamicGoalLabel);
+            this.GoalFlowLayGoal.Controls.Add(this.Spacer1);
+            this.GoalFlowLayGoal.Controls.Add(this.SpendingGoalTabLayGoal);
+            this.GoalFlowLayGoal.Controls.Add(this.SaveButtonPanelGoal);
+            this.GoalFlowLayGoal.Location = new System.Drawing.Point(3, 3);
+            this.GoalFlowLayGoal.Name = "GoalFlowLayGoal";
+            this.GoalFlowLayGoal.Size = new System.Drawing.Size(396, 434);
+            this.GoalFlowLayGoal.TabIndex = 38;
             // 
             // dynamicGoalLabel
             // 
@@ -660,17 +660,25 @@
             this.RemainDaysPicbox.TabIndex = 45;
             this.RemainDaysPicbox.TabStop = false;
             // 
-            // SpendIndicatorFlowLayGoal
+            // SaveButtonPanelGoal
             // 
-            this.SpendIndicatorFlowLayGoal.Controls.Add(this.dynamicIndicatorLabel);
-            this.SpendIndicatorFlowLayGoal.Controls.Add(this.Spacer2);
-            this.SpendIndicatorFlowLayGoal.Controls.Add(this.IndicatorBarTopLayoutGoal);
-            this.SpendIndicatorFlowLayGoal.Controls.Add(this.BarMainTabLayGoal);
-            this.SpendIndicatorFlowLayGoal.Controls.Add(this.MilestoneTabLayGoal);
-            this.SpendIndicatorFlowLayGoal.Location = new System.Drawing.Point(405, 3);
-            this.SpendIndicatorFlowLayGoal.Name = "SpendIndicatorFlowLayGoal";
-            this.SpendIndicatorFlowLayGoal.Size = new System.Drawing.Size(425, 434);
-            this.SpendIndicatorFlowLayGoal.TabIndex = 39;
+            this.SaveButtonPanelGoal.Controls.Add(this.btnUpdateGoal);
+            this.SaveButtonPanelGoal.Location = new System.Drawing.Point(3, 332);
+            this.SaveButtonPanelGoal.Name = "SaveButtonPanelGoal";
+            this.SaveButtonPanelGoal.Size = new System.Drawing.Size(200, 100);
+            this.SaveButtonPanelGoal.TabIndex = 26;
+            // 
+            // IndicatorFlowLayGoal
+            // 
+            this.IndicatorFlowLayGoal.Controls.Add(this.dynamicIndicatorLabel);
+            this.IndicatorFlowLayGoal.Controls.Add(this.Spacer2);
+            this.IndicatorFlowLayGoal.Controls.Add(this.IndicatorBarTopLayoutGoal);
+            this.IndicatorFlowLayGoal.Controls.Add(this.BarMainTabLayGoal);
+            this.IndicatorFlowLayGoal.Controls.Add(this.MilestoneTabLayGoal);
+            this.IndicatorFlowLayGoal.Location = new System.Drawing.Point(405, 3);
+            this.IndicatorFlowLayGoal.Name = "IndicatorFlowLayGoal";
+            this.IndicatorFlowLayGoal.Size = new System.Drawing.Size(425, 434);
+            this.IndicatorFlowLayGoal.TabIndex = 39;
             // 
             // Spacer2
             // 
@@ -959,14 +967,6 @@
             this.HomePicBoxGoal.TabIndex = 15;
             this.HomePicBoxGoal.TabStop = false;
             // 
-            // SaveButtonPanelGoal
-            // 
-            this.SaveButtonPanelGoal.Controls.Add(this.btnUpdateGoal);
-            this.SaveButtonPanelGoal.Location = new System.Drawing.Point(3, 332);
-            this.SaveButtonPanelGoal.Name = "SaveButtonPanelGoal";
-            this.SaveButtonPanelGoal.Size = new System.Drawing.Size(200, 100);
-            this.SaveButtonPanelGoal.TabIndex = 26;
-            // 
             // GoalForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -995,16 +995,17 @@
             this.HeaderGoal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SelectYearDropGoal)).EndInit();
             this.SpendGoalIndiLayout.ResumeLayout(false);
-            this.SpendGoalFlowLayGoal.ResumeLayout(false);
-            this.SpendGoalFlowLayGoal.PerformLayout();
+            this.GoalFlowLayGoal.ResumeLayout(false);
+            this.GoalFlowLayGoal.PerformLayout();
             this.SpendingGoalTabLayGoal.ResumeLayout(false);
             this.SpendingGoalTabLayGoal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TargetAmountPicbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CurrentAmountPicbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TargetDatePicbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RemainDaysPicbox)).EndInit();
-            this.SpendIndicatorFlowLayGoal.ResumeLayout(false);
-            this.SpendIndicatorFlowLayGoal.PerformLayout();
+            this.SaveButtonPanelGoal.ResumeLayout(false);
+            this.IndicatorFlowLayGoal.ResumeLayout(false);
+            this.IndicatorFlowLayGoal.PerformLayout();
             this.SidebarTableLayoutGoal.ResumeLayout(false);
             this.CentSibleTextPanelGoal.ResumeLayout(false);
             this.SideBarTabLayGoal.ResumeLayout(false);
@@ -1018,7 +1019,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.TranPicBoxGoal)).EndInit();
             this.HomeTabLayGoal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxGoal)).EndInit();
-            this.SaveButtonPanelGoal.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1051,13 +1051,13 @@
         private System.Windows.Forms.TableLayoutPanel IndicatorBarTopLayoutGoal;
         private System.Windows.Forms.TableLayoutPanel IndicatorBarBottomLayoutGoal;
         private System.Windows.Forms.TableLayoutPanel BarMainTabLayGoal;
-        private System.Windows.Forms.FlowLayoutPanel SpendGoalFlowLayGoal;
+        private System.Windows.Forms.FlowLayoutPanel GoalFlowLayGoal;
         private System.Windows.Forms.PictureBox TargetAmountPicbox;
         private System.Windows.Forms.PictureBox CurrentAmountPicbox;
         private System.Windows.Forms.PictureBox TargetDatePicbox;
         private System.Windows.Forms.PictureBox RemainDaysPicbox;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.FlowLayoutPanel SpendIndicatorFlowLayGoal;
+        private System.Windows.Forms.FlowLayoutPanel IndicatorFlowLayGoal;
         private System.Windows.Forms.TableLayoutPanel HeaderGoal;
         private System.Windows.Forms.Label GoalDateLabelGoal;
         private System.Windows.Forms.ComboBox SelectMonthDropGoal;

@@ -79,7 +79,6 @@ namespace CentSible.Forms
             _activeType = type;
             string modeText = (type == GoalCategory.Spending) ? "Spending" : "Saving";
 
-        
             dynamicGoalLabel.Text = $"{modeText} Goal";
             dynamicIndicatorLabel.Text = $"{modeText} Indicator";
 
@@ -87,27 +86,31 @@ namespace CentSible.Forms
 
             if (goal != null)
             {
-                
                 TargetAmountTextGoal.Text = goal.TargetAmount.ToString();
                 CurrentAmountTextGoal.Text = goal.CurrentAmount.ToString();
-
-                
-                TargetDateDropDownGoal.MinDate = new DateTime(2000, 1, 1);
-                TargetDateDropDownGoal.MaxDate = new DateTime(3000, 12, 31);
                 TargetDateDropDownGoal.Value = goal.TargetDate;
 
-              
                 lblIndicatorSpent.Text = $"₱ {goal.CurrentAmount:N0}";
                 lblIndicatorTarget.Text = $"₱ {goal.TargetAmount:N0}";
 
-               
-                UpdateIndicators(goal);
+                UpdateIndicators(goal);  
+                IndicatorFlowLayGoal.Visible = true;
             }
             else
             {
+              
                 
                 TargetAmountTextGoal.Text = "";
                 CurrentAmountTextGoal.Text = "";
+                lblIndicatorSpent.Text = "₱ 0";
+                lblIndicatorTarget.Text = "₱ 0";
+                pbGoalProgress.Value = 0;           
+                IndicatorPercentLabelGoal.Text = "0%";
+                MilestoneBarGoal.Value = 0;         
+                MilestoneDescLabelGoal.Text = "No goal set for this period.";
+                DaysToGoLabelGoal.Text = "0 Days";
+                IndicatorDaysLabelGoal.Text = "0 Days";
+
             }
         }
 
@@ -170,19 +173,20 @@ namespace CentSible.Forms
 
         private void SyncDatePickerToSelectedPeriod()
         {
-            int month = SelectMonthDropGoal.SelectedIndex + 1;  
-            int year = (int)SelectYearDropGoal.Value;           
-
+            int month = SelectMonthDropGoal.SelectedIndex + 1;
+            int year = (int)SelectYearDropGoal.Value;
             int lastDay = DateTime.DaysInMonth(year, month);
 
-            TargetDateDropDownGoal.MaxDate = new DateTime(year, month, lastDay);  
-            TargetDateDropDownGoal.Value = new DateTime(year, month, lastDay);    
+            TargetDateDropDownGoal.MinDate = new DateTime(2000, 1, 1);
+            TargetDateDropDownGoal.MaxDate = new DateTime(3000, 12, 31);
 
+            TargetDateDropDownGoal.Value = new DateTime(year, month, lastDay);
+
+            UpdateFilter();
             UpdateDaysRemaining();
         }
 
-
-        private void dtpTargetDate_ValueChanged(object sender, EventArgs e) => UpdateDaysRemaining();     
+        private void TargetDateDropDownGoal_ValueChanged(object sender, EventArgs e) => UpdateDaysRemaining();
         private void SwitchPage(Form newPage) { _isNavigating = true; newPage.Show(); this.Hide(); }
         private void HomeButtonGoal_Click(object sender, EventArgs e) {
             _isNavigating = true;
