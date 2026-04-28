@@ -165,19 +165,19 @@
             this.cmbYear = new System.Windows.Forms.ComboBox();
             this.cmbMonth = new System.Windows.Forms.ComboBox();
             this.pnlBudget = new System.Windows.Forms.Panel();
-            this.lblBudget = new System.Windows.Forms.Label();
             this.lblBudget2 = new System.Windows.Forms.Label();
+            this.lblBudget = new System.Windows.Forms.Label();
             this.pnlTotalSpent = new System.Windows.Forms.Panel();
             this.lblSpent2 = new System.Windows.Forms.Label();
             this.lblSpent = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.pnlRemaining = new System.Windows.Forms.Panel();
+            this.lblRemaining2 = new System.Windows.Forms.Label();
+            this.lblRemaining = new System.Windows.Forms.Label();
             this.btnAll = new System.Windows.Forms.Button();
             this.btnExpense = new System.Windows.Forms.Button();
             this.btnBudget = new System.Windows.Forms.Button();
             this.btnAddTransaction = new System.Windows.Forms.Button();
-            this.dgvTransaction = new System.Windows.Forms.DataGridView();
+            this.dgvTransactions = new System.Windows.Forms.DataGridView();
             this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCategory = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -186,8 +186,8 @@
             this.SidebarLayout.SuspendLayout();
             this.pnlBudget.SuspendLayout();
             this.pnlTotalSpent.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).BeginInit();
+            this.pnlRemaining.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransactions)).BeginInit();
             this.SuspendLayout();
             // 
             // SidebarLayout
@@ -378,17 +378,6 @@
             this.pnlBudget.TabIndex = 0;
             this.pnlBudget.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // lblBudget
-            // 
-            this.lblBudget.AutoSize = true;
-            this.lblBudget.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBudget.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblBudget.Location = new System.Drawing.Point(15, 10);
-            this.lblBudget.Name = "lblBudget";
-            this.lblBudget.Size = new System.Drawing.Size(139, 20);
-            this.lblBudget.TabIndex = 0;
-            this.lblBudget.Text = "Monthly Budget";
-            // 
             // lblBudget2
             // 
             this.lblBudget2.AutoSize = true;
@@ -400,6 +389,17 @@
             this.lblBudget2.TabIndex = 1;
             this.lblBudget2.Text = "₱ 0.00";
             this.lblBudget2.Click += new System.EventHandler(this.lblBudget2_Click);
+            // 
+            // lblBudget
+            // 
+            this.lblBudget.AutoSize = true;
+            this.lblBudget.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBudget.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lblBudget.Location = new System.Drawing.Point(15, 10);
+            this.lblBudget.Name = "lblBudget";
+            this.lblBudget.Size = new System.Drawing.Size(139, 20);
+            this.lblBudget.TabIndex = 0;
+            this.lblBudget.Text = "Monthly Budget";
             // 
             // pnlTotalSpent
             // 
@@ -433,37 +433,37 @@
             this.lblSpent.TabIndex = 0;
             this.lblSpent.Text = "Total Spent";
             // 
-            // panel2
+            // pnlRemaining
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(762, 75);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 79);
-            this.panel2.TabIndex = 2;
+            this.pnlRemaining.BackColor = System.Drawing.Color.DarkGreen;
+            this.pnlRemaining.Controls.Add(this.lblRemaining2);
+            this.pnlRemaining.Controls.Add(this.lblRemaining);
+            this.pnlRemaining.Location = new System.Drawing.Point(762, 75);
+            this.pnlRemaining.Name = "pnlRemaining";
+            this.pnlRemaining.Size = new System.Drawing.Size(250, 79);
+            this.pnlRemaining.TabIndex = 2;
             // 
-            // label3
+            // lblRemaining2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(37, 39);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 20);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "₱ 0.00";
+            this.lblRemaining2.AutoSize = true;
+            this.lblRemaining2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRemaining2.ForeColor = System.Drawing.Color.White;
+            this.lblRemaining2.Location = new System.Drawing.Point(37, 39);
+            this.lblRemaining2.Name = "lblRemaining2";
+            this.lblRemaining2.Size = new System.Drawing.Size(62, 20);
+            this.lblRemaining2.TabIndex = 1;
+            this.lblRemaining2.Text = "₱ 0.00";
             // 
-            // label4
+            // lblRemaining
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.LightGreen;
-            this.label4.Location = new System.Drawing.Point(15, 10);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(162, 20);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Remaining Budget";
+            this.lblRemaining.AutoSize = true;
+            this.lblRemaining.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRemaining.ForeColor = System.Drawing.Color.LightGreen;
+            this.lblRemaining.Location = new System.Drawing.Point(15, 10);
+            this.lblRemaining.Name = "lblRemaining";
+            this.lblRemaining.Size = new System.Drawing.Size(162, 20);
+            this.lblRemaining.TabIndex = 0;
+            this.lblRemaining.Text = "Remaining Budget";
             // 
             // btnAll
             // 
@@ -510,11 +510,11 @@
             this.btnAddTransaction.UseVisualStyleBackColor = true;
             this.btnAddTransaction.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dgvTransaction
+            // dgvTransactions
             // 
-            this.dgvTransaction.AllowUserToAddRows = false;
-            this.dgvTransaction.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
+            this.dgvTransactions.AllowUserToAddRows = false;
+            this.dgvTransactions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTransactions.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(252)))), ((int)(((byte)(231)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -522,9 +522,9 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTransaction.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvTransactions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTransactions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colDate,
             this.colDescription,
             this.colCategory,
@@ -537,16 +537,16 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTransaction.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvTransaction.EnableHeadersVisualStyles = false;
-            this.dgvTransaction.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(252)))), ((int)(((byte)(231)))));
-            this.dgvTransaction.Location = new System.Drawing.Point(192, 243);
-            this.dgvTransaction.Name = "dgvTransaction";
-            this.dgvTransaction.RowHeadersVisible = false;
-            this.dgvTransaction.RowHeadersWidth = 51;
-            this.dgvTransaction.RowTemplate.Height = 24;
-            this.dgvTransaction.Size = new System.Drawing.Size(820, 255);
-            this.dgvTransaction.TabIndex = 9;
+            this.dgvTransactions.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvTransactions.EnableHeadersVisualStyles = false;
+            this.dgvTransactions.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(252)))), ((int)(((byte)(231)))));
+            this.dgvTransactions.Location = new System.Drawing.Point(192, 243);
+            this.dgvTransactions.Name = "dgvTransactions";
+            this.dgvTransactions.RowHeadersVisible = false;
+            this.dgvTransactions.RowHeadersWidth = 51;
+            this.dgvTransactions.RowTemplate.Height = 24;
+            this.dgvTransactions.Size = new System.Drawing.Size(820, 255);
+            this.dgvTransactions.TabIndex = 9;
             // 
             // colDate
             // 
@@ -594,12 +594,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(1035, 510);
-            this.Controls.Add(this.dgvTransaction);
+            this.Controls.Add(this.dgvTransactions);
             this.Controls.Add(this.btnAddTransaction);
             this.Controls.Add(this.btnBudget);
             this.Controls.Add(this.btnExpense);
             this.Controls.Add(this.btnAll);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlRemaining);
             this.Controls.Add(this.pnlTotalSpent);
             this.Controls.Add(this.pnlBudget);
             this.Controls.Add(this.cmbMonth);
@@ -622,9 +622,9 @@
             this.pnlBudget.PerformLayout();
             this.pnlTotalSpent.ResumeLayout(false);
             this.pnlTotalSpent.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).EndInit();
+            this.pnlRemaining.ResumeLayout(false);
+            this.pnlRemaining.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransactions)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -648,14 +648,14 @@
         private System.Windows.Forms.Panel pnlTotalSpent;
         private System.Windows.Forms.Label lblSpent2;
         private System.Windows.Forms.Label lblSpent;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel pnlRemaining;
+        private System.Windows.Forms.Label lblRemaining2;
+        private System.Windows.Forms.Label lblRemaining;
         private System.Windows.Forms.Button btnAll;
         private System.Windows.Forms.Button btnExpense;
         private System.Windows.Forms.Button btnBudget;
         private System.Windows.Forms.Button btnAddTransaction;
-        private System.Windows.Forms.DataGridView dgvTransaction;
+        private System.Windows.Forms.DataGridView dgvTransactions;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDescription;
         private System.Windows.Forms.DataGridViewComboBoxColumn colCategory;
