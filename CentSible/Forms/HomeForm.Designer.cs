@@ -48,13 +48,11 @@
             this.SaveStatLabelHome = new System.Windows.Forms.Label();
             this.SpendGoalLabelHome = new System.Windows.Forms.Label();
             this.SaveGoalLabelHome = new System.Windows.Forms.Label();
-            this.SidebarTableLayoutHome = new System.Windows.Forms.TableLayoutPanel();
             this.LogoutButtonHome = new System.Windows.Forms.Button();
             this.PredButtonHome = new System.Windows.Forms.Button();
             this.SumButtonHome = new System.Windows.Forms.Button();
             this.TranButtonHome = new System.Windows.Forms.Button();
             this.GoalButtonHome = new System.Windows.Forms.Button();
-            this.CentSibleLabelHome = new System.Windows.Forms.Label();
             this.HomeButtonHome = new System.Windows.Forms.Button();
             this.MainLayoutHome = new System.Windows.Forms.TableLayoutPanel();
             this.StreakLayoutMainHome = new System.Windows.Forms.TableLayoutPanel();
@@ -69,28 +67,52 @@
             this.StreakBarLayoutHome = new System.Windows.Forms.TableLayoutPanel();
             this.TranSaveSpendLayoutHome = new System.Windows.Forms.TableLayoutPanel();
             this.SpendSaveLayoutHome = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.SpentLabelLayHome = new System.Windows.Forms.TableLayoutPanel();
             this.SpentLabelHome = new System.Windows.Forms.Label();
             this.MoneySpentLabelHome = new System.Windows.Forms.Label();
             this.BarSpentHome = new System.Windows.Forms.ProgressBar();
             this.SpendingGoalLayoutHome = new System.Windows.Forms.TableLayoutPanel();
-            this.SpendingGoalLabelLayoutHome = new System.Windows.Forms.TableLayoutPanel();
+            this.SpendingGoalLabelLayHome = new System.Windows.Forms.TableLayoutPanel();
             this.SavingGoalLayoutHome = new System.Windows.Forms.TableLayoutPanel();
-            this.SavingGoalLabelLayoutHome = new System.Windows.Forms.TableLayoutPanel();
-            this.SidebarTableLayoutHome.SuspendLayout();
+            this.SavingGoalLabelLayHome = new System.Windows.Forms.TableLayoutPanel();
+            this.SidebarTableLayoutGoal = new System.Windows.Forms.FlowLayoutPanel();
+            this.CentSibleTextPanelGoal = new System.Windows.Forms.Panel();
+            this.CentSibleLabelHome = new System.Windows.Forms.Label();
+            this.SideBarTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
+            this.PredTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
+            this.PredPicBoxGoal = new System.Windows.Forms.PictureBox();
+            this.SumTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
+            this.SumPicBoxGoal = new System.Windows.Forms.PictureBox();
+            this.TranTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
+            this.GoalPicBoxGoal = new System.Windows.Forms.PictureBox();
+            this.GoalTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
+            this.TranPicBoxGoal = new System.Windows.Forms.PictureBox();
+            this.HomeTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
+            this.HomePicBoxGoal = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.MainLayoutHome.SuspendLayout();
             this.StreakLayoutMainHome.SuspendLayout();
             this.StreakIconsLayoutHome.SuspendLayout();
             this.StreakBarLayoutHome.SuspendLayout();
             this.TranSaveSpendLayoutHome.SuspendLayout();
             this.SpendSaveLayoutHome.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.SpendingGoalLayoutHome.SuspendLayout();
-            this.SpendingGoalLabelLayoutHome.SuspendLayout();
-            this.SavingGoalLayoutHome.SuspendLayout();
-            this.SavingGoalLabelLayoutHome.SuspendLayout();
+            this.SpentLabelLayHome.SuspendLayout();
+            this.SpendingGoalLabelLayHome.SuspendLayout();
+            this.SavingGoalLabelLayHome.SuspendLayout();
+            this.SidebarTableLayoutGoal.SuspendLayout();
+            this.CentSibleTextPanelGoal.SuspendLayout();
+            this.SideBarTabLayGoal.SuspendLayout();
+            this.PredTabLayGoal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxGoal)).BeginInit();
+            this.SumTabLayGoal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SumPicBoxGoal)).BeginInit();
+            this.TranTabLayGoal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxGoal)).BeginInit();
+            this.GoalTabLayGoal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TranPicBoxGoal)).BeginInit();
+            this.HomeTabLayGoal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxGoal)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblCurrentStreak
@@ -118,7 +140,7 @@
             // MonPanelHome
             // 
             this.MonPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.MonPanelHome.Location = new System.Drawing.Point(46, 36);
+            this.MonPanelHome.Location = new System.Drawing.Point(47, 36);
             this.MonPanelHome.Name = "MonPanelHome";
             this.MonPanelHome.Size = new System.Drawing.Size(37, 32);
             this.MonPanelHome.TabIndex = 3;
@@ -126,7 +148,7 @@
             // TuePanelHome
             // 
             this.TuePanelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.TuePanelHome.Location = new System.Drawing.Point(89, 36);
+            this.TuePanelHome.Location = new System.Drawing.Point(91, 36);
             this.TuePanelHome.Name = "TuePanelHome";
             this.TuePanelHome.Size = new System.Drawing.Size(37, 32);
             this.TuePanelHome.TabIndex = 4;
@@ -134,7 +156,7 @@
             // WedPanelHome
             // 
             this.WedPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.WedPanelHome.Location = new System.Drawing.Point(132, 36);
+            this.WedPanelHome.Location = new System.Drawing.Point(135, 36);
             this.WedPanelHome.Name = "WedPanelHome";
             this.WedPanelHome.Size = new System.Drawing.Size(37, 32);
             this.WedPanelHome.TabIndex = 5;
@@ -142,7 +164,7 @@
             // ThuPanelHome
             // 
             this.ThuPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.ThuPanelHome.Location = new System.Drawing.Point(175, 36);
+            this.ThuPanelHome.Location = new System.Drawing.Point(179, 36);
             this.ThuPanelHome.Name = "ThuPanelHome";
             this.ThuPanelHome.Size = new System.Drawing.Size(37, 32);
             this.ThuPanelHome.TabIndex = 4;
@@ -150,7 +172,7 @@
             // FriPanelHome
             // 
             this.FriPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.FriPanelHome.Location = new System.Drawing.Point(218, 36);
+            this.FriPanelHome.Location = new System.Drawing.Point(223, 36);
             this.FriPanelHome.Name = "FriPanelHome";
             this.FriPanelHome.Size = new System.Drawing.Size(37, 32);
             this.FriPanelHome.TabIndex = 4;
@@ -158,7 +180,7 @@
             // SatPanelHome
             // 
             this.SatPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.SatPanelHome.Location = new System.Drawing.Point(262, 36);
+            this.SatPanelHome.Location = new System.Drawing.Point(271, 36);
             this.SatPanelHome.Name = "SatPanelHome";
             this.SatPanelHome.Size = new System.Drawing.Size(37, 32);
             this.SatPanelHome.TabIndex = 4;
@@ -194,7 +216,7 @@
             // 
             // BarSpendingHome
             // 
-            this.BarSpendingHome.Location = new System.Drawing.Point(3, 45);
+            this.BarSpendingHome.Location = new System.Drawing.Point(3, 204);
             this.BarSpendingHome.Name = "BarSpendingHome";
             this.BarSpendingHome.Size = new System.Drawing.Size(292, 32);
             this.BarSpendingHome.TabIndex = 8;
@@ -210,7 +232,7 @@
             // 
             this.BarSavingHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
             this.BarSavingHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
-            this.BarSavingHome.Location = new System.Drawing.Point(3, 45);
+            this.BarSavingHome.Location = new System.Drawing.Point(3, 124);
             this.BarSavingHome.Name = "BarSavingHome";
             this.BarSavingHome.Size = new System.Drawing.Size(292, 32);
             this.BarSavingHome.TabIndex = 10;
@@ -265,32 +287,6 @@
             this.SaveGoalLabelHome.TabIndex = 14;
             this.SaveGoalLabelHome.Text = "Saving Goal";
             // 
-            // SidebarTableLayoutHome
-            // 
-            this.SidebarTableLayoutHome.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.SidebarTableLayoutHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            this.SidebarTableLayoutHome.ColumnCount = 1;
-            this.SidebarTableLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.SidebarTableLayoutHome.Controls.Add(this.LogoutButtonHome, 0, 6);
-            this.SidebarTableLayoutHome.Controls.Add(this.PredButtonHome, 0, 5);
-            this.SidebarTableLayoutHome.Controls.Add(this.SumButtonHome, 0, 4);
-            this.SidebarTableLayoutHome.Controls.Add(this.TranButtonHome, 0, 3);
-            this.SidebarTableLayoutHome.Controls.Add(this.GoalButtonHome, 0, 2);
-            this.SidebarTableLayoutHome.Controls.Add(this.CentSibleLabelHome, 0, 0);
-            this.SidebarTableLayoutHome.Controls.Add(this.HomeButtonHome, 0, 1);
-            this.SidebarTableLayoutHome.Location = new System.Drawing.Point(-2, 26);
-            this.SidebarTableLayoutHome.Name = "SidebarTableLayoutHome";
-            this.SidebarTableLayoutHome.RowCount = 7;
-            this.SidebarTableLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.48166F));
-            this.SidebarTableLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.13716F));
-            this.SidebarTableLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.13716F));
-            this.SidebarTableLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.13716F));
-            this.SidebarTableLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.13716F));
-            this.SidebarTableLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.13716F));
-            this.SidebarTableLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.83254F));
-            this.SidebarTableLayoutHome.Size = new System.Drawing.Size(173, 454);
-            this.SidebarTableLayoutHome.TabIndex = 36;
-            // 
             // LogoutButtonHome
             // 
             this.LogoutButtonHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -298,9 +294,9 @@
             this.LogoutButtonHome.FlatAppearance.BorderSize = 0;
             this.LogoutButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
             this.LogoutButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LogoutButtonHome.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogoutButtonHome.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.LogoutButtonHome.ForeColor = System.Drawing.Color.White;
-            this.LogoutButtonHome.Location = new System.Drawing.Point(3, 411);
+            this.LogoutButtonHome.Location = new System.Drawing.Point(3, 398);
             this.LogoutButtonHome.Name = "LogoutButtonHome";
             this.LogoutButtonHome.Size = new System.Drawing.Size(164, 40);
             this.LogoutButtonHome.TabIndex = 15;
@@ -315,11 +311,11 @@
             this.PredButtonHome.FlatAppearance.BorderSize = 0;
             this.PredButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
             this.PredButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PredButtonHome.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PredButtonHome.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.PredButtonHome.ForeColor = System.Drawing.Color.White;
-            this.PredButtonHome.Location = new System.Drawing.Point(3, 252);
+            this.PredButtonHome.Location = new System.Drawing.Point(67, 3);
             this.PredButtonHome.Name = "PredButtonHome";
-            this.PredButtonHome.Size = new System.Drawing.Size(164, 40);
+            this.PredButtonHome.Size = new System.Drawing.Size(113, 38);
             this.PredButtonHome.TabIndex = 14;
             this.PredButtonHome.Text = "Prediction";
             this.PredButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -332,11 +328,11 @@
             this.SumButtonHome.FlatAppearance.BorderSize = 0;
             this.SumButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
             this.SumButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SumButtonHome.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SumButtonHome.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.SumButtonHome.ForeColor = System.Drawing.Color.White;
-            this.SumButtonHome.Location = new System.Drawing.Point(3, 206);
+            this.SumButtonHome.Location = new System.Drawing.Point(67, 3);
             this.SumButtonHome.Name = "SumButtonHome";
-            this.SumButtonHome.Size = new System.Drawing.Size(164, 40);
+            this.SumButtonHome.Size = new System.Drawing.Size(113, 38);
             this.SumButtonHome.TabIndex = 13;
             this.SumButtonHome.Text = "Summary";
             this.SumButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -349,11 +345,11 @@
             this.TranButtonHome.FlatAppearance.BorderSize = 0;
             this.TranButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
             this.TranButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TranButtonHome.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TranButtonHome.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TranButtonHome.ForeColor = System.Drawing.Color.White;
-            this.TranButtonHome.Location = new System.Drawing.Point(3, 160);
+            this.TranButtonHome.Location = new System.Drawing.Point(67, 3);
             this.TranButtonHome.Name = "TranButtonHome";
-            this.TranButtonHome.Size = new System.Drawing.Size(164, 40);
+            this.TranButtonHome.Size = new System.Drawing.Size(113, 38);
             this.TranButtonHome.TabIndex = 12;
             this.TranButtonHome.Text = "Transactions";
             this.TranButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -366,30 +362,16 @@
             this.GoalButtonHome.FlatAppearance.BorderSize = 0;
             this.GoalButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
             this.GoalButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GoalButtonHome.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoalButtonHome.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.GoalButtonHome.ForeColor = System.Drawing.Color.White;
-            this.GoalButtonHome.Location = new System.Drawing.Point(3, 114);
+            this.GoalButtonHome.Location = new System.Drawing.Point(66, 3);
             this.GoalButtonHome.Name = "GoalButtonHome";
-            this.GoalButtonHome.Size = new System.Drawing.Size(164, 40);
+            this.GoalButtonHome.Size = new System.Drawing.Size(114, 38);
             this.GoalButtonHome.TabIndex = 11;
             this.GoalButtonHome.Text = "Goal";
             this.GoalButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GoalButtonHome.UseVisualStyleBackColor = false;
             this.GoalButtonHome.Click += new System.EventHandler(this.GoalButtonGoal_Click);
-            // 
-            // CentSibleLabelHome
-            // 
-            this.CentSibleLabelHome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CentSibleLabelHome.AutoSize = true;
-            this.CentSibleLabelHome.Font = new System.Drawing.Font("Brush Script MT", 23F, System.Drawing.FontStyle.Italic);
-            this.CentSibleLabelHome.ForeColor = System.Drawing.Color.White;
-            this.CentSibleLabelHome.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.CentSibleLabelHome.Location = new System.Drawing.Point(13, 8);
-            this.CentSibleLabelHome.Name = "CentSibleLabelHome";
-            this.CentSibleLabelHome.Size = new System.Drawing.Size(146, 48);
-            this.CentSibleLabelHome.TabIndex = 10;
-            this.CentSibleLabelHome.Text = "CentSible";
-            this.CentSibleLabelHome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // HomeButtonHome
             // 
@@ -397,11 +379,11 @@
             this.HomeButtonHome.FlatAppearance.BorderSize = 0;
             this.HomeButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
             this.HomeButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HomeButtonHome.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeButtonHome.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.HomeButtonHome.ForeColor = System.Drawing.Color.White;
-            this.HomeButtonHome.Location = new System.Drawing.Point(3, 68);
+            this.HomeButtonHome.Location = new System.Drawing.Point(67, 3);
             this.HomeButtonHome.Name = "HomeButtonHome";
-            this.HomeButtonHome.Size = new System.Drawing.Size(164, 40);
+            this.HomeButtonHome.Size = new System.Drawing.Size(113, 38);
             this.HomeButtonHome.TabIndex = 8;
             this.HomeButtonHome.Text = "Home";
             this.HomeButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -414,12 +396,12 @@
             this.MainLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.MainLayoutHome.Controls.Add(this.StreakLayoutMainHome, 0, 0);
             this.MainLayoutHome.Controls.Add(this.TranSaveSpendLayoutHome, 0, 1);
-            this.MainLayoutHome.Location = new System.Drawing.Point(171, 6);
+            this.MainLayoutHome.Location = new System.Drawing.Point(196, 4);
             this.MainLayoutHome.Name = "MainLayoutHome";
             this.MainLayoutHome.RowCount = 2;
             this.MainLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 161F));
             this.MainLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 127F));
-            this.MainLayoutHome.Size = new System.Drawing.Size(625, 443);
+            this.MainLayoutHome.Size = new System.Drawing.Size(648, 501);
             this.MainLayoutHome.TabIndex = 37;
             // 
             // StreakLayoutMainHome
@@ -439,7 +421,7 @@
             this.StreakLayoutMainHome.RowCount = 2;
             this.StreakLayoutMainHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.32258F));
             this.StreakLayoutMainHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.67742F));
-            this.StreakLayoutMainHome.Size = new System.Drawing.Size(619, 155);
+            this.StreakLayoutMainHome.Size = new System.Drawing.Size(642, 155);
             this.StreakLayoutMainHome.TabIndex = 38;
             // 
             // StreakIconsLayoutHome
@@ -469,13 +451,13 @@
             this.StreakIconsLayoutHome.Controls.Add(this.WedPanelHome, 3, 1);
             this.StreakIconsLayoutHome.Controls.Add(this.TuePanelHome, 2, 1);
             this.StreakIconsLayoutHome.Controls.Add(this.MonPanelHome, 1, 1);
-            this.StreakIconsLayoutHome.Location = new System.Drawing.Point(312, 3);
+            this.StreakIconsLayoutHome.Location = new System.Drawing.Point(324, 3);
             this.StreakIconsLayoutHome.Name = "StreakIconsLayoutHome";
             this.StreakIconsLayoutHome.RowCount = 2;
             this.StreakIconsLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
             this.StreakIconsLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.StreakIconsLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.StreakIconsLayoutHome.Size = new System.Drawing.Size(304, 71);
+            this.StreakIconsLayoutHome.Size = new System.Drawing.Size(315, 71);
             this.StreakIconsLayoutHome.TabIndex = 39;
             // 
             // MonLabelHome
@@ -484,7 +466,7 @@
             this.MonLabelHome.AutoSize = true;
             this.MonLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
             this.MonLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.MonLabelHome.Location = new System.Drawing.Point(51, 15);
+            this.MonLabelHome.Location = new System.Drawing.Point(53, 15);
             this.MonLabelHome.Name = "MonLabelHome";
             this.MonLabelHome.Size = new System.Drawing.Size(26, 18);
             this.MonLabelHome.TabIndex = 39;
@@ -497,7 +479,7 @@
             this.WedLabelHome.AutoSize = true;
             this.WedLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
             this.WedLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.WedLabelHome.Location = new System.Drawing.Point(137, 15);
+            this.WedLabelHome.Location = new System.Drawing.Point(141, 15);
             this.WedLabelHome.Name = "WedLabelHome";
             this.WedLabelHome.Size = new System.Drawing.Size(26, 18);
             this.WedLabelHome.TabIndex = 41;
@@ -510,7 +492,7 @@
             this.SunLabelHome.AutoSize = true;
             this.SunLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
             this.SunLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.SunLabelHome.Location = new System.Drawing.Point(10, 15);
+            this.SunLabelHome.Location = new System.Drawing.Point(11, 15);
             this.SunLabelHome.Name = "SunLabelHome";
             this.SunLabelHome.Size = new System.Drawing.Size(22, 18);
             this.SunLabelHome.TabIndex = 45;
@@ -523,7 +505,7 @@
             this.TueLabelHome.AutoSize = true;
             this.TueLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
             this.TueLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.TueLabelHome.Location = new System.Drawing.Point(96, 15);
+            this.TueLabelHome.Location = new System.Drawing.Point(98, 15);
             this.TueLabelHome.Name = "TueLabelHome";
             this.TueLabelHome.Size = new System.Drawing.Size(23, 18);
             this.TueLabelHome.TabIndex = 40;
@@ -536,7 +518,7 @@
             this.SatLabelHome.AutoSize = true;
             this.SatLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
             this.SatLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.SatLabelHome.Location = new System.Drawing.Point(270, 15);
+            this.SatLabelHome.Location = new System.Drawing.Point(279, 15);
             this.SatLabelHome.Name = "SatLabelHome";
             this.SatLabelHome.Size = new System.Drawing.Size(21, 18);
             this.SatLabelHome.TabIndex = 44;
@@ -549,7 +531,7 @@
             this.FriLabelHome.AutoSize = true;
             this.FriLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
             this.FriLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.FriLabelHome.Location = new System.Drawing.Point(226, 15);
+            this.FriLabelHome.Location = new System.Drawing.Point(232, 15);
             this.FriLabelHome.Name = "FriLabelHome";
             this.FriLabelHome.Size = new System.Drawing.Size(20, 18);
             this.FriLabelHome.TabIndex = 43;
@@ -562,7 +544,7 @@
             this.ThuLabelHome.AutoSize = true;
             this.ThuLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
             this.ThuLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.ThuLabelHome.Location = new System.Drawing.Point(182, 15);
+            this.ThuLabelHome.Location = new System.Drawing.Point(186, 15);
             this.ThuLabelHome.Name = "ThuLabelHome";
             this.ThuLabelHome.Size = new System.Drawing.Size(23, 18);
             this.ThuLabelHome.TabIndex = 42;
@@ -579,12 +561,12 @@
             this.StreakBarLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.StreakBarLayoutHome.Controls.Add(this.pbMilestone, 0, 1);
             this.StreakBarLayoutHome.Controls.Add(this.LongestStreakLabelHome, 0, 0);
-            this.StreakBarLayoutHome.Location = new System.Drawing.Point(312, 80);
+            this.StreakBarLayoutHome.Location = new System.Drawing.Point(324, 80);
             this.StreakBarLayoutHome.Name = "StreakBarLayoutHome";
             this.StreakBarLayoutHome.RowCount = 2;
             this.StreakBarLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.StreakBarLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.StreakBarLayoutHome.Size = new System.Drawing.Size(304, 72);
+            this.StreakBarLayoutHome.Size = new System.Drawing.Size(315, 72);
             this.StreakBarLayoutHome.TabIndex = 39;
             // 
             // TranSaveSpendLayoutHome
@@ -596,12 +578,13 @@
             this.TranSaveSpendLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TranSaveSpendLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TranSaveSpendLayoutHome.Controls.Add(this.SpendSaveLayoutHome, 1, 0);
+            this.TranSaveSpendLayoutHome.Controls.Add(this.flowLayoutPanel1, 0, 0);
             this.TranSaveSpendLayoutHome.Location = new System.Drawing.Point(3, 164);
             this.TranSaveSpendLayoutHome.Name = "TranSaveSpendLayoutHome";
             this.TranSaveSpendLayoutHome.RowCount = 1;
             this.TranSaveSpendLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TranSaveSpendLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TranSaveSpendLayoutHome.Size = new System.Drawing.Size(619, 276);
+            this.TranSaveSpendLayoutHome.Size = new System.Drawing.Size(642, 334);
             this.TranSaveSpendLayoutHome.TabIndex = 0;
             // 
             // SpendSaveLayoutHome
@@ -611,53 +594,32 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SpendSaveLayoutHome.ColumnCount = 1;
             this.SpendSaveLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.SpendSaveLayoutHome.Controls.Add(this.tableLayoutPanel1, 0, 0);
             this.SpendSaveLayoutHome.Controls.Add(this.SpendingGoalLayoutHome, 0, 2);
             this.SpendSaveLayoutHome.Controls.Add(this.SavingGoalLayoutHome, 0, 1);
-            this.SpendSaveLayoutHome.Location = new System.Drawing.Point(312, 3);
+            this.SpendSaveLayoutHome.Location = new System.Drawing.Point(324, 3);
             this.SpendSaveLayoutHome.Name = "SpendSaveLayoutHome";
             this.SpendSaveLayoutHome.RowCount = 3;
             this.SpendSaveLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.SpendSaveLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.SpendSaveLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.SpendSaveLayoutHome.Size = new System.Drawing.Size(304, 270);
+            this.SpendSaveLayoutHome.Size = new System.Drawing.Size(315, 328);
             this.SpendSaveLayoutHome.TabIndex = 38;
             // 
-            // tableLayoutPanel1
+            // SpentLabelLayHome
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.BarSpentHome, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(298, 84);
-            this.tableLayoutPanel1.TabIndex = 2;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.SpentLabelHome, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.MoneySpentLabelHome, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(292, 36);
-            this.tableLayoutPanel2.TabIndex = 0;
+            this.SpentLabelLayHome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SpentLabelLayHome.ColumnCount = 2;
+            this.SpentLabelLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SpentLabelLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SpentLabelLayHome.Controls.Add(this.SpentLabelHome, 0, 0);
+            this.SpentLabelLayHome.Controls.Add(this.MoneySpentLabelHome, 1, 0);
+            this.SpentLabelLayHome.Location = new System.Drawing.Point(3, 3);
+            this.SpentLabelLayHome.Name = "SpentLabelLayHome";
+            this.SpentLabelLayHome.RowCount = 1;
+            this.SpentLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SpentLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SpentLabelLayHome.Size = new System.Drawing.Size(293, 35);
+            this.SpentLabelLayHome.TabIndex = 0;
             // 
             // SpentLabelHome
             // 
@@ -665,7 +627,7 @@
             this.SpentLabelHome.AutoSize = true;
             this.SpentLabelHome.Font = new System.Drawing.Font("Sitka Text", 10F);
             this.SpentLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.SpentLabelHome.Location = new System.Drawing.Point(3, 12);
+            this.SpentLabelHome.Location = new System.Drawing.Point(3, 11);
             this.SpentLabelHome.Name = "SpentLabelHome";
             this.SpentLabelHome.Size = new System.Drawing.Size(55, 24);
             this.SpentLabelHome.TabIndex = 13;
@@ -678,7 +640,7 @@
             this.MoneySpentLabelHome.AutoSize = true;
             this.MoneySpentLabelHome.Font = new System.Drawing.Font("Sitka Text", 10F);
             this.MoneySpentLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.MoneySpentLabelHome.Location = new System.Drawing.Point(182, 12);
+            this.MoneySpentLabelHome.Location = new System.Drawing.Point(183, 11);
             this.MoneySpentLabelHome.Name = "MoneySpentLabelHome";
             this.MoneySpentLabelHome.Size = new System.Drawing.Size(107, 24);
             this.MoneySpentLabelHome.TabIndex = 11;
@@ -687,7 +649,7 @@
             // 
             // BarSpentHome
             // 
-            this.BarSpentHome.Location = new System.Drawing.Point(3, 45);
+            this.BarSpentHome.Location = new System.Drawing.Point(3, 44);
             this.BarSpentHome.Name = "BarSpentHome";
             this.BarSpentHome.Size = new System.Drawing.Size(292, 32);
             this.BarSpentHome.TabIndex = 8;
@@ -700,33 +662,29 @@
             this.SpendingGoalLayoutHome.ColumnCount = 1;
             this.SpendingGoalLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SpendingGoalLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SpendingGoalLayoutHome.Controls.Add(this.SpendingGoalLabelLayoutHome, 0, 0);
-            this.SpendingGoalLayoutHome.Controls.Add(this.BarSpendingHome, 0, 1);
-            this.SpendingGoalLayoutHome.Location = new System.Drawing.Point(3, 183);
+            this.SpendingGoalLayoutHome.Location = new System.Drawing.Point(3, 221);
             this.SpendingGoalLayoutHome.Name = "SpendingGoalLayoutHome";
             this.SpendingGoalLayoutHome.RowCount = 2;
             this.SpendingGoalLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SpendingGoalLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SpendingGoalLayoutHome.Size = new System.Drawing.Size(298, 84);
+            this.SpendingGoalLayoutHome.Size = new System.Drawing.Size(309, 104);
             this.SpendingGoalLayoutHome.TabIndex = 0;
             // 
-            // SpendingGoalLabelLayoutHome
+            // SpendingGoalLabelLayHome
             // 
-            this.SpendingGoalLabelLayoutHome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SpendingGoalLabelLayoutHome.ColumnCount = 2;
-            this.SpendingGoalLabelLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SpendingGoalLabelLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SpendingGoalLabelLayoutHome.Controls.Add(this.SpendGoalLabelHome, 0, 0);
-            this.SpendingGoalLabelLayoutHome.Controls.Add(this.SpendStatLabelHome, 1, 0);
-            this.SpendingGoalLabelLayoutHome.Location = new System.Drawing.Point(3, 3);
-            this.SpendingGoalLabelLayoutHome.Name = "SpendingGoalLabelLayoutHome";
-            this.SpendingGoalLabelLayoutHome.RowCount = 1;
-            this.SpendingGoalLabelLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SpendingGoalLabelLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SpendingGoalLabelLayoutHome.Size = new System.Drawing.Size(292, 36);
-            this.SpendingGoalLabelLayoutHome.TabIndex = 0;
+            this.SpendingGoalLabelLayHome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SpendingGoalLabelLayHome.ColumnCount = 2;
+            this.SpendingGoalLabelLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SpendingGoalLabelLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SpendingGoalLabelLayHome.Controls.Add(this.SpendGoalLabelHome, 0, 0);
+            this.SpendingGoalLabelLayHome.Controls.Add(this.SpendStatLabelHome, 1, 0);
+            this.SpendingGoalLabelLayHome.Location = new System.Drawing.Point(3, 162);
+            this.SpendingGoalLabelLayHome.Name = "SpendingGoalLabelLayHome";
+            this.SpendingGoalLabelLayHome.RowCount = 1;
+            this.SpendingGoalLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SpendingGoalLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SpendingGoalLabelLayHome.Size = new System.Drawing.Size(292, 36);
+            this.SpendingGoalLabelLayHome.TabIndex = 0;
             // 
             // SavingGoalLayoutHome
             // 
@@ -736,41 +694,235 @@
             this.SavingGoalLayoutHome.ColumnCount = 1;
             this.SavingGoalLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SavingGoalLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SavingGoalLayoutHome.Controls.Add(this.SavingGoalLabelLayoutHome, 0, 0);
-            this.SavingGoalLayoutHome.Controls.Add(this.BarSavingHome, 0, 1);
-            this.SavingGoalLayoutHome.Location = new System.Drawing.Point(3, 93);
+            this.SavingGoalLayoutHome.Location = new System.Drawing.Point(3, 112);
             this.SavingGoalLayoutHome.Name = "SavingGoalLayoutHome";
             this.SavingGoalLayoutHome.RowCount = 2;
             this.SavingGoalLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SavingGoalLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SavingGoalLayoutHome.Size = new System.Drawing.Size(298, 84);
+            this.SavingGoalLayoutHome.Size = new System.Drawing.Size(309, 103);
             this.SavingGoalLayoutHome.TabIndex = 1;
             // 
-            // SavingGoalLabelLayoutHome
+            // SavingGoalLabelLayHome
             // 
-            this.SavingGoalLabelLayoutHome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SavingGoalLabelLayoutHome.ColumnCount = 2;
-            this.SavingGoalLabelLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SavingGoalLabelLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SavingGoalLabelLayoutHome.Controls.Add(this.SaveGoalLabelHome, 0, 0);
-            this.SavingGoalLabelLayoutHome.Controls.Add(this.SaveStatLabelHome, 1, 0);
-            this.SavingGoalLabelLayoutHome.Location = new System.Drawing.Point(3, 3);
-            this.SavingGoalLabelLayoutHome.Name = "SavingGoalLabelLayoutHome";
-            this.SavingGoalLabelLayoutHome.RowCount = 1;
-            this.SavingGoalLabelLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SavingGoalLabelLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SavingGoalLabelLayoutHome.Size = new System.Drawing.Size(292, 36);
-            this.SavingGoalLabelLayoutHome.TabIndex = 0;
+            this.SavingGoalLabelLayHome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SavingGoalLabelLayHome.ColumnCount = 2;
+            this.SavingGoalLabelLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SavingGoalLabelLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SavingGoalLabelLayHome.Controls.Add(this.SaveGoalLabelHome, 0, 0);
+            this.SavingGoalLabelLayHome.Controls.Add(this.SaveStatLabelHome, 1, 0);
+            this.SavingGoalLabelLayHome.Location = new System.Drawing.Point(3, 82);
+            this.SavingGoalLabelLayHome.Name = "SavingGoalLabelLayHome";
+            this.SavingGoalLabelLayHome.RowCount = 1;
+            this.SavingGoalLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SavingGoalLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SavingGoalLabelLayHome.Size = new System.Drawing.Size(292, 36);
+            this.SavingGoalLabelLayHome.TabIndex = 0;
+            // 
+            // SidebarTableLayoutGoal
+            // 
+            this.SidebarTableLayoutGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.SidebarTableLayoutGoal.Controls.Add(this.CentSibleTextPanelGoal);
+            this.SidebarTableLayoutGoal.Controls.Add(this.SideBarTabLayGoal);
+            this.SidebarTableLayoutGoal.Location = new System.Drawing.Point(-2, -2);
+            this.SidebarTableLayoutGoal.Name = "SidebarTableLayoutGoal";
+            this.SidebarTableLayoutGoal.Size = new System.Drawing.Size(200, 521);
+            this.SidebarTableLayoutGoal.TabIndex = 39;
+            // 
+            // CentSibleTextPanelGoal
+            // 
+            this.CentSibleTextPanelGoal.Controls.Add(this.CentSibleLabelHome);
+            this.CentSibleTextPanelGoal.Location = new System.Drawing.Point(3, 3);
+            this.CentSibleTextPanelGoal.Name = "CentSibleTextPanelGoal";
+            this.CentSibleTextPanelGoal.Size = new System.Drawing.Size(197, 60);
+            this.CentSibleTextPanelGoal.TabIndex = 12;
+            // 
+            // CentSibleLabelHome
+            // 
+            this.CentSibleLabelHome.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.CentSibleLabelHome.Font = new System.Drawing.Font("Brush Script MT", 23F, System.Drawing.FontStyle.Italic);
+            this.CentSibleLabelHome.ForeColor = System.Drawing.Color.White;
+            this.CentSibleLabelHome.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.CentSibleLabelHome.Location = new System.Drawing.Point(0, -3);
+            this.CentSibleLabelHome.Name = "CentSibleLabelHome";
+            this.CentSibleLabelHome.Size = new System.Drawing.Size(197, 63);
+            this.CentSibleLabelHome.TabIndex = 10;
+            this.CentSibleLabelHome.Text = "CentSible";
+            this.CentSibleLabelHome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SideBarTabLayGoal
+            // 
+            this.SideBarTabLayGoal.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.SideBarTabLayGoal.ColumnCount = 1;
+            this.SideBarTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.SideBarTabLayGoal.Controls.Add(this.LogoutButtonHome, 0, 6);
+            this.SideBarTabLayGoal.Controls.Add(this.PredTabLayGoal, 0, 4);
+            this.SideBarTabLayGoal.Controls.Add(this.SumTabLayGoal, 0, 3);
+            this.SideBarTabLayGoal.Controls.Add(this.TranTabLayGoal, 0, 2);
+            this.SideBarTabLayGoal.Controls.Add(this.GoalTabLayGoal, 0, 1);
+            this.SideBarTabLayGoal.Controls.Add(this.HomeTabLayGoal, 0, 0);
+            this.SideBarTabLayGoal.Location = new System.Drawing.Point(3, 69);
+            this.SideBarTabLayGoal.Name = "SideBarTabLayGoal";
+            this.SideBarTabLayGoal.RowCount = 7;
+            this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 128F));
+            this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.SideBarTabLayGoal.Size = new System.Drawing.Size(189, 441);
+            this.SideBarTabLayGoal.TabIndex = 11;
+            // 
+            // PredTabLayGoal
+            // 
+            this.PredTabLayGoal.ColumnCount = 2;
+            this.PredTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
+            this.PredTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.PredTabLayGoal.Controls.Add(this.PredPicBoxGoal, 0, 0);
+            this.PredTabLayGoal.Controls.Add(this.PredButtonHome, 1, 0);
+            this.PredTabLayGoal.Location = new System.Drawing.Point(3, 203);
+            this.PredTabLayGoal.Name = "PredTabLayGoal";
+            this.PredTabLayGoal.RowCount = 1;
+            this.PredTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PredTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PredTabLayGoal.Size = new System.Drawing.Size(183, 44);
+            this.PredTabLayGoal.TabIndex = 25;
+            // 
+            // PredPicBoxGoal
+            // 
+            this.PredPicBoxGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PredPicBoxGoal.Image = global::CentSible.Properties.Resources.PredictionForm;
+            this.PredPicBoxGoal.Location = new System.Drawing.Point(12, 3);
+            this.PredPicBoxGoal.Name = "PredPicBoxGoal";
+            this.PredPicBoxGoal.Size = new System.Drawing.Size(40, 38);
+            this.PredPicBoxGoal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PredPicBoxGoal.TabIndex = 19;
+            this.PredPicBoxGoal.TabStop = false;
+            // 
+            // SumTabLayGoal
+            // 
+            this.SumTabLayGoal.ColumnCount = 2;
+            this.SumTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
+            this.SumTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.SumTabLayGoal.Controls.Add(this.SumPicBoxGoal, 0, 0);
+            this.SumTabLayGoal.Controls.Add(this.SumButtonHome, 1, 0);
+            this.SumTabLayGoal.Location = new System.Drawing.Point(3, 153);
+            this.SumTabLayGoal.Name = "SumTabLayGoal";
+            this.SumTabLayGoal.RowCount = 1;
+            this.SumTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SumTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SumTabLayGoal.Size = new System.Drawing.Size(183, 44);
+            this.SumTabLayGoal.TabIndex = 24;
+            // 
+            // SumPicBoxGoal
+            // 
+            this.SumPicBoxGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SumPicBoxGoal.Image = global::CentSible.Properties.Resources.SummaryForm;
+            this.SumPicBoxGoal.Location = new System.Drawing.Point(12, 3);
+            this.SumPicBoxGoal.Name = "SumPicBoxGoal";
+            this.SumPicBoxGoal.Size = new System.Drawing.Size(40, 38);
+            this.SumPicBoxGoal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SumPicBoxGoal.TabIndex = 18;
+            this.SumPicBoxGoal.TabStop = false;
+            // 
+            // TranTabLayGoal
+            // 
+            this.TranTabLayGoal.ColumnCount = 2;
+            this.TranTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
+            this.TranTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.TranTabLayGoal.Controls.Add(this.GoalPicBoxGoal, 0, 0);
+            this.TranTabLayGoal.Controls.Add(this.TranButtonHome, 1, 0);
+            this.TranTabLayGoal.Location = new System.Drawing.Point(3, 103);
+            this.TranTabLayGoal.Name = "TranTabLayGoal";
+            this.TranTabLayGoal.RowCount = 1;
+            this.TranTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TranTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TranTabLayGoal.Size = new System.Drawing.Size(183, 44);
+            this.TranTabLayGoal.TabIndex = 23;
+            // 
+            // GoalPicBoxGoal
+            // 
+            this.GoalPicBoxGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.GoalPicBoxGoal.Image = global::CentSible.Properties.Resources.TransactionForm;
+            this.GoalPicBoxGoal.Location = new System.Drawing.Point(12, 5);
+            this.GoalPicBoxGoal.Name = "GoalPicBoxGoal";
+            this.GoalPicBoxGoal.Size = new System.Drawing.Size(40, 33);
+            this.GoalPicBoxGoal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GoalPicBoxGoal.TabIndex = 16;
+            this.GoalPicBoxGoal.TabStop = false;
+            // 
+            // GoalTabLayGoal
+            // 
+            this.GoalTabLayGoal.ColumnCount = 2;
+            this.GoalTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.63415F));
+            this.GoalTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.36585F));
+            this.GoalTabLayGoal.Controls.Add(this.TranPicBoxGoal, 0, 0);
+            this.GoalTabLayGoal.Controls.Add(this.GoalButtonHome, 1, 0);
+            this.GoalTabLayGoal.Location = new System.Drawing.Point(3, 53);
+            this.GoalTabLayGoal.Name = "GoalTabLayGoal";
+            this.GoalTabLayGoal.RowCount = 1;
+            this.GoalTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.GoalTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.GoalTabLayGoal.Size = new System.Drawing.Size(183, 44);
+            this.GoalTabLayGoal.TabIndex = 22;
+            // 
+            // TranPicBoxGoal
+            // 
+            this.TranPicBoxGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TranPicBoxGoal.Image = global::CentSible.Properties.Resources.GoalForm;
+            this.TranPicBoxGoal.Location = new System.Drawing.Point(11, 3);
+            this.TranPicBoxGoal.Name = "TranPicBoxGoal";
+            this.TranPicBoxGoal.Size = new System.Drawing.Size(40, 38);
+            this.TranPicBoxGoal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.TranPicBoxGoal.TabIndex = 17;
+            this.TranPicBoxGoal.TabStop = false;
+            // 
+            // HomeTabLayGoal
+            // 
+            this.HomeTabLayGoal.ColumnCount = 2;
+            this.HomeTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
+            this.HomeTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.HomeTabLayGoal.Controls.Add(this.HomePicBoxGoal, 0, 0);
+            this.HomeTabLayGoal.Controls.Add(this.HomeButtonHome, 1, 0);
+            this.HomeTabLayGoal.Location = new System.Drawing.Point(3, 3);
+            this.HomeTabLayGoal.Name = "HomeTabLayGoal";
+            this.HomeTabLayGoal.RowCount = 1;
+            this.HomeTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.HomeTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.HomeTabLayGoal.Size = new System.Drawing.Size(183, 44);
+            this.HomeTabLayGoal.TabIndex = 21;
+            // 
+            // HomePicBoxGoal
+            // 
+            this.HomePicBoxGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.HomePicBoxGoal.Image = global::CentSible.Properties.Resources.HomeForm;
+            this.HomePicBoxGoal.Location = new System.Drawing.Point(12, 3);
+            this.HomePicBoxGoal.Name = "HomePicBoxGoal";
+            this.HomePicBoxGoal.Size = new System.Drawing.Size(40, 38);
+            this.HomePicBoxGoal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.HomePicBoxGoal.TabIndex = 15;
+            this.HomePicBoxGoal.TabStop = false;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.SpentLabelLayHome);
+            this.flowLayoutPanel1.Controls.Add(this.BarSpentHome);
+            this.flowLayoutPanel1.Controls.Add(this.SavingGoalLabelLayHome);
+            this.flowLayoutPanel1.Controls.Add(this.BarSavingHome);
+            this.flowLayoutPanel1.Controls.Add(this.SpendingGoalLabelLayHome);
+            this.flowLayoutPanel1.Controls.Add(this.BarSpendingHome);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(315, 323);
+            this.flowLayoutPanel1.TabIndex = 39;
             // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(845, 506);
+            this.Controls.Add(this.SidebarTableLayoutGoal);
             this.Controls.Add(this.MainLayoutHome);
-            this.Controls.Add(this.SidebarTableLayoutHome);
             this.Controls.Add(this.progressBar2);
             this.Name = "HomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -778,8 +930,6 @@
             this.Activated += new System.EventHandler(this.HomeForm_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HomeForm_FormClosing);
             this.Load += new System.EventHandler(this.HomeForm_Activated);
-            this.SidebarTableLayoutHome.ResumeLayout(false);
-            this.SidebarTableLayoutHome.PerformLayout();
             this.MainLayoutHome.ResumeLayout(false);
             this.StreakLayoutMainHome.ResumeLayout(false);
             this.StreakLayoutMainHome.PerformLayout();
@@ -789,15 +939,26 @@
             this.StreakBarLayoutHome.PerformLayout();
             this.TranSaveSpendLayoutHome.ResumeLayout(false);
             this.SpendSaveLayoutHome.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.SpendingGoalLayoutHome.ResumeLayout(false);
-            this.SpendingGoalLabelLayoutHome.ResumeLayout(false);
-            this.SpendingGoalLabelLayoutHome.PerformLayout();
-            this.SavingGoalLayoutHome.ResumeLayout(false);
-            this.SavingGoalLabelLayoutHome.ResumeLayout(false);
-            this.SavingGoalLabelLayoutHome.PerformLayout();
+            this.SpentLabelLayHome.ResumeLayout(false);
+            this.SpentLabelLayHome.PerformLayout();
+            this.SpendingGoalLabelLayHome.ResumeLayout(false);
+            this.SpendingGoalLabelLayHome.PerformLayout();
+            this.SavingGoalLabelLayHome.ResumeLayout(false);
+            this.SavingGoalLabelLayHome.PerformLayout();
+            this.SidebarTableLayoutGoal.ResumeLayout(false);
+            this.CentSibleTextPanelGoal.ResumeLayout(false);
+            this.SideBarTabLayGoal.ResumeLayout(false);
+            this.PredTabLayGoal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxGoal)).EndInit();
+            this.SumTabLayGoal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SumPicBoxGoal)).EndInit();
+            this.TranTabLayGoal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxGoal)).EndInit();
+            this.GoalTabLayGoal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TranPicBoxGoal)).EndInit();
+            this.HomeTabLayGoal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxGoal)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -821,26 +982,23 @@
         private System.Windows.Forms.Label SaveStatLabelHome;
         private System.Windows.Forms.Label SpendGoalLabelHome;
         private System.Windows.Forms.Label SaveGoalLabelHome;
-        private System.Windows.Forms.TableLayoutPanel SidebarTableLayoutHome;
         private System.Windows.Forms.Button LogoutButtonHome;
         private System.Windows.Forms.Button PredButtonHome;
         private System.Windows.Forms.Button SumButtonHome;
         private System.Windows.Forms.Button TranButtonHome;
         private System.Windows.Forms.Button GoalButtonHome;
-        private System.Windows.Forms.Label CentSibleLabelHome;
         private System.Windows.Forms.Button HomeButtonHome;
         private System.Windows.Forms.TableLayoutPanel MainLayoutHome;
         private System.Windows.Forms.TableLayoutPanel SpendSaveLayoutHome;
         private System.Windows.Forms.TableLayoutPanel SpendingGoalLayoutHome;
         private System.Windows.Forms.TableLayoutPanel SavingGoalLayoutHome;
-        private System.Windows.Forms.TableLayoutPanel SavingGoalLabelLayoutHome;
-        private System.Windows.Forms.TableLayoutPanel SpendingGoalLabelLayoutHome;
+        private System.Windows.Forms.TableLayoutPanel SavingGoalLabelLayHome;
+        private System.Windows.Forms.TableLayoutPanel SpendingGoalLabelLayHome;
         private System.Windows.Forms.TableLayoutPanel TranSaveSpendLayoutHome;
         private System.Windows.Forms.TableLayoutPanel StreakLayoutMainHome;
         private System.Windows.Forms.TableLayoutPanel StreakBarLayoutHome;
         private System.Windows.Forms.TableLayoutPanel StreakIconsLayoutHome;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel SpentLabelLayHome;
         private System.Windows.Forms.Label SpentLabelHome;
         private System.Windows.Forms.Label MoneySpentLabelHome;
         private System.Windows.Forms.ProgressBar BarSpentHome;
@@ -851,5 +1009,20 @@
         private System.Windows.Forms.Label ThuLabelHome;
         private System.Windows.Forms.Label WedLabelHome;
         private System.Windows.Forms.Label TueLabelHome;
+        private System.Windows.Forms.FlowLayoutPanel SidebarTableLayoutGoal;
+        private System.Windows.Forms.Panel CentSibleTextPanelGoal;
+        private System.Windows.Forms.Label CentSibleLabelHome;
+        private System.Windows.Forms.TableLayoutPanel SideBarTabLayGoal;
+        private System.Windows.Forms.TableLayoutPanel PredTabLayGoal;
+        private System.Windows.Forms.PictureBox PredPicBoxGoal;
+        private System.Windows.Forms.TableLayoutPanel SumTabLayGoal;
+        private System.Windows.Forms.PictureBox SumPicBoxGoal;
+        private System.Windows.Forms.TableLayoutPanel TranTabLayGoal;
+        private System.Windows.Forms.PictureBox GoalPicBoxGoal;
+        private System.Windows.Forms.TableLayoutPanel GoalTabLayGoal;
+        private System.Windows.Forms.PictureBox TranPicBoxGoal;
+        private System.Windows.Forms.TableLayoutPanel HomeTabLayGoal;
+        private System.Windows.Forms.PictureBox HomePicBoxGoal;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
