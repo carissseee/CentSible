@@ -10,7 +10,7 @@ namespace CentSible.Database
 {
     public class GoalDB
     {
-        //private string connString = "server=localhost;database=centsible_db;uid=root;pwd=;";
+        
 
         public List<Goal> GetGoalsByPeriod(int accountId, int month, int year)
         {
