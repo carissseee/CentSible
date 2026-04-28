@@ -34,7 +34,7 @@ namespace CentSible.Forms
         {
             if (_user == null) return;
 
-            
+
             SelectMonthDropGoal.SelectedIndexChanged -= cbSelectMonth_SelectedIndexChanged;
             SelectYearDropGoal.ValueChanged -= numSelectYear_ValueChanged;
 
@@ -48,7 +48,7 @@ namespace CentSible.Forms
             UpdateFilter();
         }
 
-       
+
         private void UpdateGoalDate()
         {
             string month = SelectMonthDropGoal.SelectedIndex >= 0
@@ -58,7 +58,7 @@ namespace CentSible.Forms
             GoalDateLabelGoal.Text = $"{month} {year}";
         }
 
-        
+
         private void UpdateDaysRemaining()
         {
             int days = (TargetDateDropDownGoal.Value.Date - DateTime.Today).Days;
@@ -93,20 +93,20 @@ namespace CentSible.Forms
                 lblIndicatorSpent.Text = $"₱ {goal.CurrentAmount:N0}";
                 lblIndicatorTarget.Text = $"₱ {goal.TargetAmount:N0}";
 
-                UpdateIndicators(goal);  
+                UpdateIndicators(goal);
                 IndicatorFlowLayGoal.Visible = true;
             }
             else
             {
-              
-                
+
+
                 TargetAmountTextGoal.Text = "";
                 CurrentAmountTextGoal.Text = "";
                 lblIndicatorSpent.Text = "₱ 0";
                 lblIndicatorTarget.Text = "₱ 0";
-                pbGoalProgress.Value = 0;           
+                pbGoalProgress.Value = 0;
                 IndicatorPercentLabelGoal.Text = "0%";
-                MilestoneBarGoal.Value = 0;         
+                MilestoneBarGoal.Value = 0;
                 MilestoneDescLabelGoal.Text = "No goal set for this period.";
                 DaysToGoLabelGoal.Text = "0 Days";
                 IndicatorDaysLabelGoal.Text = "0 Days";
@@ -127,36 +127,35 @@ namespace CentSible.Forms
         }
         private void btnUpdateGoal_Click(object sender, EventArgs e)
         {
-            
+           
             bool isTargetValid = double.TryParse(TargetAmountTextGoal.Text, out double target);
             bool isCurrentValid = double.TryParse(CurrentAmountTextGoal.Text, out double current);
 
             if (!isTargetValid || !isCurrentValid)
             {
-                MessageBox.Show("Please enter valid numbers for the amounts.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter valid numbers.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            Models.Goal data = new Models.Goal
+            try
             {
-                AccountID = _user.AccountID,
-                GoalType = _activeType,
-                TargetAmount = target,
-                CurrentAmount = current,
-                TargetDate = TargetDateDropDownGoal.Value
-            };
-
-            if (_goalLogic.SaveOrUpdateGoal(data))
+              
+                if (_goalLogic.ProcessGoalEntry(_user.AccountID, _activeType, target, current, TargetDateDropDownGoal.Value))
+                {
+                    UpdateFilter();
+                    MessageBox.Show("Goal saved!");
+                }
+            }
+            catch (Exception ex)
             {
-                UpdateFilter(); 
-                MessageBox.Show("Goal saved!");
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnSpendingTab_Click(object sender, EventArgs e) => SetMode(GoalCategory.Spending);
         private void btnSavingTab_Click(object sender, EventArgs e) => SetMode(GoalCategory.Savings);
 
-        
+
         private void cbSelectMonth_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateGoalDate();
@@ -188,7 +187,8 @@ namespace CentSible.Forms
 
         private void TargetDateDropDownGoal_ValueChanged(object sender, EventArgs e) => UpdateDaysRemaining();
         private void SwitchPage(Form newPage) { _isNavigating = true; newPage.Show(); this.Hide(); }
-        private void HomeButtonGoal_Click(object sender, EventArgs e) {
+        private void HomeButtonGoal_Click(object sender, EventArgs e)
+        {
             _isNavigating = true;
             _home.Show();
             this.Close();
@@ -203,5 +203,6 @@ namespace CentSible.Forms
         {
             if (!_isNavigating && e.CloseReason == CloseReason.UserClosing) Application.Exit();
         }
+
     }
 }

@@ -41,6 +41,7 @@ namespace CentSible.Logic
             return null;
         }
 
+   
         public void RegisterUser(string username, string password, string confirm)
         {
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(confirm))
@@ -52,7 +53,16 @@ namespace CentSible.Logic
             if (password != confirm)
                 throw new Exception("Passwords do not match.");
 
-            db.RegisterAccount(username.Trim(), password);
+            Account newUser = new Account
+            {
+                Username = username.Trim(),
+                Password = password,
+                LoginStreak = 0,
+                LongestStreak = 0
+            };
+
+            db.RegisterAccount(newUser);
+
         }
 
         public StreakMetrics GetStreakMetrics(Account user)
