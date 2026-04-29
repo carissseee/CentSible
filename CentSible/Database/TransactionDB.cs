@@ -17,7 +17,7 @@ namespace CentSible.Database
             MySqlConnection conn = new MySqlConnection(DBConfig.ConnectionString);
             conn.Open();
 
-            string query = "SELECT * FROM transaction " + "WHERE accountID = @accountID " + "AND MONTH(date) = @month " + "AND YEAR(date = @year " + "ORDER BY date ACS";
+            string query = "SELECT * FROM `transaction` " + "WHERE accountID = @accountID " + "AND MONTH(date) = @month " + "AND YEAR(date = @year " + "ORDER BY date ASC";
 
             MySqlCommand cmd = new MySqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@accountID", accountID);
