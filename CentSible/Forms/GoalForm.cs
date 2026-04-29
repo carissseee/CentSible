@@ -34,6 +34,7 @@ namespace CentSible.Forms
         {
             if (_user == null) return;
 
+            SetActiveTabButton(btnSpendingTab);
 
             SelectMonthDropGoal.SelectedIndexChanged -= cbSelectMonth_SelectedIndexChanged;
             SelectYearDropGoal.ValueChanged -= numSelectYear_ValueChanged;
@@ -152,8 +153,34 @@ namespace CentSible.Forms
             }
         }
 
-        private void btnSpendingTab_Click(object sender, EventArgs e) => SetMode(GoalCategory.Spending);
-        private void btnSavingTab_Click(object sender, EventArgs e) => SetMode(GoalCategory.Savings);
+        private Button _activeTabButton = null;
+
+        private void SetActiveTabButton(Button btn)
+        {
+            if (_activeTabButton != null)
+            {
+                _activeTabButton.BackColor = SystemColors.Control;
+                _activeTabButton.ForeColor = SystemColors.ControlText;
+                _activeTabButton.FlatStyle = FlatStyle.Standard;
+            }
+
+            btn.FlatStyle = FlatStyle.Flat;
+            btn.BackColor = Color.Green;
+            btn.ForeColor = Color.White;
+            _activeTabButton = btn;
+        }
+
+        private void btnSpendingTab_Click(object sender, EventArgs e)
+        {
+            SetActiveTabButton(btnSpendingTab);
+            SetMode(GoalCategory.Spending);
+        }
+
+        private void btnSavingTab_Click(object sender, EventArgs e)
+        {
+            SetActiveTabButton(btnSavingTab);
+            SetMode(GoalCategory.Savings);
+        }
 
 
         private void cbSelectMonth_SelectedIndexChanged(object sender, EventArgs e)
@@ -194,7 +221,7 @@ namespace CentSible.Forms
             this.Close();
         }
         private void GoalButtonGoal_Click(object sender, EventArgs e) { }
-        private void TranButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new TransactionForm(_home, _user));
+        //private void TranButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new TransactionForm(_home, _user));
         private void SumButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new SummaryForm(_home, _user));
         private void PredButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new PredictionForm(_home, _user));
         private void LogoutButtonGoal_Click(object sender, EventArgs e) { _isNavigating = true; new LoginForms().Show(); this.Dispose(); }

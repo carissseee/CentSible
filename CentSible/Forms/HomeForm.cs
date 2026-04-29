@@ -114,7 +114,7 @@ namespace CentSible.Forms
         private void SwitchPage(Form newPage) { _isNavigating = true; newPage.Show(); this.Hide(); }
         private void HomeButtonGoal_Click(object sender, EventArgs e) { }
         private void GoalButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new GoalForm(this, _user));
-        private void TranButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new TransactionForm(this, _user));
+        //private void TranButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new TransactionForm(this, _user));
         private void SumButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new SummaryForm(this, _user));
         private void PredButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new PredictionForm(this, _user));
         private void LogoutButtonGoal_Click(object sender, EventArgs e) { _isNavigating = true; new LoginForms().Show(); this.Dispose(); }
