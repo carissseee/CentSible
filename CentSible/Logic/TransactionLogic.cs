@@ -21,9 +21,9 @@ namespace CentSible.Logic
         {
             List<Transaction> filtered = new List<Transaction>();
 
-            foreach(Transaction t in transactions)
+            foreach (Transaction t in transactions)
             {
-                if(t.TransactionType == type)
+                if (t.TransactionType == type)
                 {
                     filtered.Add(t);
                 }
@@ -34,9 +34,9 @@ namespace CentSible.Logic
         public decimal GetTotalBudget(List<Transaction> transactions)
         {
             decimal total = 0;
-            foreach(Transaction t in transactions)
+            foreach (Transaction t in transactions)
             {
-                if(t.TransactionType == TransactionType.Budget)
+                if (t.TransactionType == TransactionType.Budget)
                 {
                     total += t.Amount;
                 }
@@ -47,9 +47,9 @@ namespace CentSible.Logic
         public decimal GetTotalSpent(List<Transaction> transactions)
         {
             decimal total = 0;
-            foreach(Transaction t in transactions)
+            foreach (Transaction t in transactions)
             {
-                if(t.TransactionType == TransactionType.Expense)
+                if (t.TransactionType == TransactionType.Expense)
                 {
                     total += t.Amount;
                 }
@@ -63,6 +63,20 @@ namespace CentSible.Logic
             decimal totalSpent = GetTotalSpent(transactions);
 
             return totalBudget - totalSpent;
+        }
+
+        public void AddTransaction(Transaction t)
+        {
+            transactionDB.AddTransaction(t);
+        }
+
+        public void DeleteTransaction(int transactionID)
+        {
+            transactionDB.DeleteTransaction(transactionID);
+        }
+        public void UpdateTransaction(Transaction t)
+        {
+            transactionDB.UpdateTransaction(t);
         }
     }
 }

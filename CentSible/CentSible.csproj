@@ -99,6 +99,12 @@
     <Compile Include="Database\DBConfig.cs" />
     <Compile Include="Database\GoalDB.cs" />
     <Compile Include="Database\TransactionDB.cs" />
+    <Compile Include="Forms\TransactionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TransactionForm.Designer.cs">
+      <DependentUpon>TransactionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Logic\AccountLogic.cs" />
     <Compile Include="Logic\GoalLogic.cs" />
     <Compile Include="Logic\TransactionLogic.cs" />
@@ -145,12 +151,9 @@
     <Compile Include="Forms\SummaryForm.Designer.cs">
       <DependentUpon>SummaryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\TransactionForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\TransactionForm.Designer.cs">
+    <EmbeddedResource Include="Forms\TransactionForm.resx">
       <DependentUpon>TransactionForm.cs</DependentUpon>
-    </Compile>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -179,9 +182,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SummaryForm.resx">
       <DependentUpon>SummaryForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\TransactionForm.resx">
-      <DependentUpon>TransactionForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
