@@ -201,14 +201,14 @@
             "October",
             "November ",
             "December"});
-            this.cbSelectMonthPred.Location = new System.Drawing.Point(539, 23);
+            this.cbSelectMonthPred.Location = new System.Drawing.Point(548, 12);
             this.cbSelectMonthPred.Name = "cbSelectMonthPred";
             this.cbSelectMonthPred.Size = new System.Drawing.Size(114, 24);
             this.cbSelectMonthPred.TabIndex = 1;
             // 
             // numSelectYearPred
             // 
-            this.numSelectYearPred.Location = new System.Drawing.Point(668, 25);
+            this.numSelectYearPred.Location = new System.Drawing.Point(668, 14);
             this.numSelectYearPred.Maximum = new decimal(new int[] {
             3000,
             0,
@@ -266,7 +266,7 @@
             this.chartForecast.ChartAreas.Add(chartArea1);
             legend1.Name = "DefaultLegend";
             this.chartForecast.Legends.Add(legend1);
-            this.chartForecast.Location = new System.Drawing.Point(227, 158);
+            this.chartForecast.Location = new System.Drawing.Point(208, 158);
             this.chartForecast.Name = "chartForecast";
             series1.BorderWidth = 3;
             series1.ChartArea = "ChartArea1";
@@ -292,7 +292,7 @@
             this.chartForecast.Series.Add(series1);
             this.chartForecast.Series.Add(series2);
             this.chartForecast.Series.Add(series3);
-            this.chartForecast.Size = new System.Drawing.Size(508, 264);
+            this.chartForecast.Size = new System.Drawing.Size(553, 264);
             this.chartForecast.TabIndex = 6;
             this.chartForecast.Text = "chart1";
             // 
@@ -317,7 +317,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(437, 126);
+            this.label3.Location = new System.Drawing.Point(427, 126);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 16);
             this.label3.TabIndex = 9;
