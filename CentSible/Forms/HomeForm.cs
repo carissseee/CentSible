@@ -67,16 +67,32 @@ namespace CentSible.Forms
         {
             try
             {
-               
                 DateTime now = DateTime.Now;
                 var monthlyTransactions = _db.GetTransactions(_user.AccountID, now.Month, now.Year);         
-                decimal totalSpent = _tLogic.GetTotalSpent(monthlyTransactions);          
-                MoneySpentLabelHome.Text = $"₱ {totalSpent:N0}";
+                decimal totalSpent = _tLogic.GetTotalSpent(monthlyTransactions);           
+                decimal totalBudget = monthlyTransactions
+                    .Where(t => t.TransactionType == TransactionType.Budget)
+                    .Sum(t => t.Amount);
+
+              
+                if (totalBudget > 0)
+                {
+                    
+                    MoneySpentLabelHome.Text = $"₱ {totalSpent:N0} / ₱ {totalBudget:N0}";            
+                    double rawPercent = (double)(totalSpent / totalBudget) * 100;
+                    int percent = (int)Math.Min(Math.Max(rawPercent, 0), 100);
+                    BarSpentHome.Value = percent;
+                }
+                else
+                {
+                   
+                    MoneySpentLabelHome.Text = $"₱ {totalSpent:N0} / ₱ 0";
+                    BarSpentHome.Value = 0;
+                }
             }
             catch (Exception ex)
             {
-                MoneySpentLabelHome.Text = "₱ 0";
-                Console.WriteLine("Error updating spending: " + ex.Message);
+                Console.WriteLine("Error: " + ex.Message);
             }
         }
 
