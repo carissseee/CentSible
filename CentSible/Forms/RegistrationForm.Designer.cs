@@ -170,7 +170,6 @@
             this.ConfirmPassTextRegis.ForeColor = System.Drawing.Color.Gray;
             this.ConfirmPassTextRegis.Location = new System.Drawing.Point(301, 87);
             this.ConfirmPassTextRegis.Name = "ConfirmPassTextRegis";
-            this.ConfirmPassTextRegis.PasswordChar = '*';
             this.ConfirmPassTextRegis.Placeholder = "Enter password";
             this.ConfirmPassTextRegis.PlaceholderColor = System.Drawing.Color.Gray;
             this.ConfirmPassTextRegis.Size = new System.Drawing.Size(308, 22);
@@ -181,8 +180,7 @@
             this.CreatePassTextRegis.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.CreatePassTextRegis.ForeColor = System.Drawing.Color.Gray;
             this.CreatePassTextRegis.Location = new System.Drawing.Point(301, 47);
-            this.CreatePassTextRegis.Name = "CreatePassTextRegis";
-            this.CreatePassTextRegis.PasswordChar = '*';
+            this.CreatePassTextRegis.Name = "CreatePassTextRegis";         
             this.CreatePassTextRegis.Placeholder = "Enter password";
             this.CreatePassTextRegis.PlaceholderColor = System.Drawing.Color.Gray;
             this.CreatePassTextRegis.Size = new System.Drawing.Size(308, 22);
