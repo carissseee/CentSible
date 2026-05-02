@@ -260,14 +260,15 @@
             // 
             chartArea1.AxisX.LabelStyle.Interval = 1D;
             chartArea1.AxisX.MajorGrid.Enabled = false;
+            chartArea1.AxisY.Interval = 500D;
             chartArea1.AxisY.LabelStyle.Format = "₱ #,##0";
-            chartArea1.AxisY.Maximum = 20000D;
+            chartArea1.AxisY.Maximum = 5000D;
             chartArea1.AxisY.Minimum = 0D;
             chartArea1.Name = "ChartArea1";
             this.chartForecast.ChartAreas.Add(chartArea1);
             legend1.Name = "DefaultLegend";
             this.chartForecast.Legends.Add(legend1);
-            this.chartForecast.Location = new System.Drawing.Point(208, 158);
+            this.chartForecast.Location = new System.Drawing.Point(189, 158);
             this.chartForecast.Name = "chartForecast";
             series1.BorderWidth = 3;
             series1.ChartArea = "ChartArea1";
@@ -293,7 +294,7 @@
             this.chartForecast.Series.Add(series1);
             this.chartForecast.Series.Add(series2);
             this.chartForecast.Series.Add(series3);
-            this.chartForecast.Size = new System.Drawing.Size(553, 264);
+            this.chartForecast.Size = new System.Drawing.Size(589, 280);
             this.chartForecast.TabIndex = 6;
             this.chartForecast.Text = "chart1";
             // 
