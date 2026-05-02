@@ -153,7 +153,6 @@
             this.PassTextLogin.ForeColor = System.Drawing.Color.Gray;
             this.PassTextLogin.Location = new System.Drawing.Point(263, 64);
             this.PassTextLogin.Name = "PassTextLogin";
-            this.PassTextLogin.PasswordChar = '*';
             this.PassTextLogin.Placeholder = "Enter password";
             this.PassTextLogin.PlaceholderColor = System.Drawing.Color.Gray;
             this.PassTextLogin.Size = new System.Drawing.Size(338, 22);
