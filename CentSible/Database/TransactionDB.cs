@@ -1,4 +1,5 @@
-﻿using CentSible.Models;
+﻿using CentSible.Database;
+using CentSible.Models;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -39,7 +40,7 @@ namespace CentSible.Database
 
                 list.Add(Transactions);
             }
-            
+
             data.Close();
             cmd.Dispose();
             conn.Close();
@@ -52,7 +53,7 @@ namespace CentSible.Database
             MySqlConnection conn = new MySqlConnection(DBConfig.ConnectionString);
             conn.Open();
 
-            string query = "INSERT INTO `transaction` (accountID, description, transactionType, category, amount, `date`) " + "VALUES (@accountID, @description, @transactionType, @category, @amount, @date)";
+            string query = "INSERT INTO `transaction` (accountID, description, transactionType, category, amount, date) " + "VALUES (@accountID, @description, @transactionType, @category, @amount, @date)";
 
             MySqlCommand cmd = new MySqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@accountID", tran.AccountID);
@@ -92,7 +93,7 @@ namespace CentSible.Database
                            "transactionType = @transactionType, " +
                            "category = @category, " +
                            "amount = @amount, " +
-                           "`date` = @date " +
+                           "date = @date " +
                            "WHERE transactionID = @transactionID";
 
             MySqlCommand cmd = new MySqlCommand(query, conn);
