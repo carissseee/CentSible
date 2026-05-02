@@ -631,7 +631,6 @@
             this.SpentLabelHome.Size = new System.Drawing.Size(55, 24);
             this.SpentLabelHome.TabIndex = 13;
             this.SpentLabelHome.Text = "Spent";
-            this.SpentLabelHome.Click += new System.EventHandler(this.label1_Click);
             // 
             // MoneySpentLabelHome
             // 

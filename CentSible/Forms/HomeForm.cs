@@ -1,4 +1,6 @@
-﻿using CentSible.Models;
+﻿using CentSible.Database;
+using CentSible.Logic;
+using CentSible.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,7 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CentSible.Logic;
+
+
 
 namespace CentSible.Forms
 {
@@ -18,6 +21,10 @@ namespace CentSible.Forms
         private bool _isNavigating = false;
         private GoalLogic _goalLogic;
         private AccountLogic _accountLogic = new AccountLogic();
+
+        
+        private TransactionLogic _tLogic = new TransactionLogic();
+        private TransactionDB _db = new TransactionDB();
 
         public HomeForm(Account user)
         {
@@ -29,26 +36,79 @@ namespace CentSible.Forms
         private void HomeForm_Load(object sender, EventArgs e)
         {
             if (_user == null) return;
-            lblCurrentStreak.Text = _user.LoginStreak.ToString();
-            UpdateHomeDashboard();
-            UpdateWeeklyActivity();
-            UpdateMilestoneProgress();
+            RefreshAllData(); 
         }
 
         private void HomeForm_Activated(object sender, EventArgs e)
         {
             if (_user == null) return;
-            lblCurrentStreak.Text = _user.LoginStreak.ToString();
-            UpdateHomeDashboard();
-            UpdateMilestoneProgress();
-            UpdateWeeklyActivity();
+            RefreshAllData(); 
             this.ActiveControl = null;
             this.Refresh();
         }
 
-        private void HomeForm_FormClosing(object sender, FormClosingEventArgs e)
+        
+        private void RefreshAllData()
         {
-            if (!_isNavigating && e.CloseReason == CloseReason.UserClosing) Application.Exit();
+            UpdateStreakDisplay();     
+            UpdateTotalSpent();        
+            UpdateHomeDashboard();     
+            UpdateWeeklyActivity();    
+            UpdateMilestoneProgress(); 
+        }
+
+        private void UpdateStreakDisplay()
+        {
+            
+            lblCurrentStreak.Text = _user.LoginStreak.ToString();
+        }
+
+        private void UpdateTotalSpent()
+        {
+            try
+            {
+                DateTime now = DateTime.Now;
+                var monthlyTransactions = _db.GetTransactions(_user.AccountID, now.Month, now.Year);         
+                decimal totalSpent = _tLogic.GetTotalSpent(monthlyTransactions);           
+                decimal totalBudget = monthlyTransactions
+                    .Where(t => t.TransactionType == TransactionType.Budget)
+                    .Sum(t => t.Amount);
+
+              
+                if (totalBudget > 0)
+                {
+                    
+                    MoneySpentLabelHome.Text = $"₱ {totalSpent:N0} / ₱ {totalBudget:N0}";            
+                    double rawPercent = (double)(totalSpent / totalBudget) * 100;
+                    int percent = (int)Math.Min(Math.Max(rawPercent, 0), 100);
+                    BarSpentHome.Value = percent;
+                }
+                else
+                {
+                   
+                    MoneySpentLabelHome.Text = $"₱ {totalSpent:N0} / ₱ 0";
+                    BarSpentHome.Value = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+        }
+
+        private void UpdateMilestoneProgress()
+        {
+            if (_user == null) return;
+
+           
+            var metrics = _accountLogic.GetStreakMetrics(_user);
+
+            pbMilestone.Minimum = 0;
+            pbMilestone.Maximum = metrics.MaxGoal;
+            pbMilestone.Value = Math.Min(metrics.LongestStreak, metrics.MaxGoal);     
+            LongestStreakLabelHome.Text = metrics.StreakText;
+            LongestStreakLabelHome.ForeColor = metrics.StatusColor;
+            pbMilestone.Refresh();
         }
 
         private void UpdateHomeDashboard()
@@ -81,6 +141,7 @@ namespace CentSible.Forms
                 }
             }
         }
+
         private void UpdateWeeklyActivity()
         {
             Panel[] dayPanels = { MonPanelHome, TuePanelHome, WedPanelHome, ThuPanelHome, FriPanelHome, SatPanelHome, SunPanelHome };
@@ -97,35 +158,22 @@ namespace CentSible.Forms
             }
         }
 
-        private void UpdateMilestoneProgress()
+        private void HomeForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (_user == null) return;
-            int current = _user.LongestStreak;
-            int monthlyGoal = 30;
-
-            pbMilestone.Minimum = 0;
-            pbMilestone.Maximum = monthlyGoal;
-            pbMilestone.Value = Math.Min(current, monthlyGoal);
-            LongestStreakLabelHome.Text = $"Record: {current} / {monthlyGoal} days to Mastery";
-            pbMilestone.Refresh();
+            if (!_isNavigating && e.CloseReason == CloseReason.UserClosing) Application.Exit();
         }
 
-
         private void SwitchPage(Form newPage) { _isNavigating = true; newPage.Show(); this.Hide(); }
-        private void HomeButtonGoal_Click(object sender, EventArgs e) { }
+        private void HomeButtonGoal_Click(object sender, EventArgs e)
+        {
+            
+        }
         private void GoalButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new GoalForm(this, _user));
         private void TranButtonHome_Click(object sender, EventArgs e) => SwitchPage(new TransactionForm(this, _user));
         private void SumButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new SummaryForm(this, _user));
         private void PredButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new PredictionForm(this, _user));
         private void LogoutButtonGoal_Click(object sender, EventArgs e) { _isNavigating = true; new LoginForms().Show(); this.Dispose(); }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
     }
-
 }
-
-     
