@@ -56,6 +56,16 @@ namespace CentSible.Forms
             UpdateWeeklyActivity();
             UpdateMilestoneProgress();
             UpdateRecentTransactionsTable();
+            UpdateHeaderLabels();
+        }
+
+        private void UpdateHeaderLabels()
+        {
+            if (_user == null) return;
+     
+            string monthYear = DateTime.Now.ToString("MMMM yyyy");     
+            lblDashboardHeader.Text = $"Good day, {_user.Username}!" + Environment.NewLine +
+                                      $"Here’s your financial overview for {monthYear}";
         }
 
         private void UpdateRecentTransactionsTable()
