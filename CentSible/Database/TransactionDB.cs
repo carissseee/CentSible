@@ -11,6 +11,45 @@ namespace CentSible.Database
 {
     public class TransactionDB
     {
+        public List<Transaction> GetRecentTransactions(int accountID, int limit = 5)
+        {
+            List<Transaction> list = new List<Transaction>();
+
+            MySqlConnection conn = new MySqlConnection(DBConfig.ConnectionString);
+            conn.Open();
+
+            
+            string query = "SELECT * FROM `transaction` WHERE accountID = @accountID " +
+                           "ORDER BY date DESC, transactionID DESC LIMIT @limit";
+
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@accountID", accountID);
+            cmd.Parameters.AddWithValue("@limit", limit);
+
+            MySqlDataReader data = cmd.ExecuteReader();
+
+            while (data.Read())
+            {
+            
+                Transaction Transactions = new Transaction();
+                Transactions.TransactionID = data.GetInt32("transactionID");
+                Transactions.AccountID = data.GetInt32("accountID");
+                Transactions.Description = data.GetString("description");
+                Transactions.Amount = data.GetDecimal("amount");
+                Transactions.Date = data.GetDateTime("date");
+                Transactions.TransactionType = (TransactionType)Enum.Parse(typeof(TransactionType), data.GetString("transactionType"));
+                Transactions.Category = (Category)Enum.Parse(typeof(Category), data.GetString("category"));
+
+                list.Add(Transactions);
+            }
+
+            data.Close();
+            cmd.Dispose();
+            conn.Close();
+
+            return list;
+        }
+
         public List<Transaction> GetTransactions(int accountID, int month, int year)
         {
             List<Transaction> list = new List<Transaction>();
