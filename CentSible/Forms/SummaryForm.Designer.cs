@@ -128,6 +128,7 @@
             this.TranButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TranButtonGoal.UseVisualStyleBackColor = false;
             //this.TranButtonGoal.Click += new System.EventHandler(this.TranButtonGoal_Click);
+
             // 
             // SumButtonGoal
             // 

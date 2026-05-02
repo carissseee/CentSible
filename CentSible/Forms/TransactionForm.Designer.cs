@@ -58,10 +58,10 @@
             this.dgvTransaction = new System.Windows.Forms.DataGridView();
             this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCategory = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colType = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colCategory = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEdit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colSave = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colTransactionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SidebarLayout.SuspendLayout();
@@ -124,6 +124,7 @@
             this.HomeButtonGoal.Text = "Home";
             this.HomeButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HomeButtonGoal.UseVisualStyleBackColor = false;
+            this.HomeButtonGoal.Click += new System.EventHandler(this.HomeButtonGoal_Click);
             // 
             // GoalButtonGoal
             // 
@@ -140,6 +141,7 @@
             this.GoalButtonGoal.Text = "Goal";
             this.GoalButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GoalButtonGoal.UseVisualStyleBackColor = false;
+            this.GoalButtonGoal.Click += new System.EventHandler(this.GoalButtonGoal_Click);
             // 
             // TranButtonGoal
             // 
@@ -156,6 +158,7 @@
             this.TranButtonGoal.Text = "Transactions";
             this.TranButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TranButtonGoal.UseVisualStyleBackColor = false;
+            this.TranButtonGoal.Click += new System.EventHandler(this.TranButtonGoal_Click);
             // 
             // SumButtonGoal
             // 
@@ -172,6 +175,7 @@
             this.SumButtonGoal.Text = "Summary";
             this.SumButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SumButtonGoal.UseVisualStyleBackColor = false;
+            this.SumButtonGoal.Click += new System.EventHandler(this.SumButtonGoal_Click);
             // 
             // PredButtonGoal
             // 
@@ -188,6 +192,7 @@
             this.PredButtonGoal.Text = "Prediction";
             this.PredButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PredButtonGoal.UseVisualStyleBackColor = false;
+            this.PredButtonGoal.Click += new System.EventHandler(this.PredButtonGoal_Click);
             // 
             // LogoutButtonGoal
             // 
@@ -205,6 +210,7 @@
             this.LogoutButtonGoal.Text = "Logout";
             this.LogoutButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LogoutButtonGoal.UseVisualStyleBackColor = false;
+            this.LogoutButtonGoal.Click += new System.EventHandler(this.LogoutButtonGoal_Click);
             // 
             // lblTransaction
             // 
@@ -359,6 +365,7 @@
             this.btnAll.TabIndex = 8;
             this.btnAll.Text = "All";
             this.btnAll.UseVisualStyleBackColor = true;
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
             // btnExpense
             // 
@@ -370,6 +377,7 @@
             this.btnExpense.TabIndex = 9;
             this.btnExpense.Text = "Expense";
             this.btnExpense.UseVisualStyleBackColor = true;
+            this.btnExpense.Click += new System.EventHandler(this.btnExpense_Click);
             // 
             // btnBudget
             // 
@@ -381,13 +389,14 @@
             this.btnBudget.TabIndex = 10;
             this.btnBudget.Text = "Budget";
             this.btnBudget.UseVisualStyleBackColor = true;
+            this.btnBudget.Click += new System.EventHandler(this.btnBudget_Click);
             // 
             // btnAddTransaction
             // 
             this.btnAddTransaction.BackColor = System.Drawing.Color.DarkGreen;
             this.btnAddTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTransaction.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnAddTransaction.Location = new System.Drawing.Point(781, 205);
+            this.btnAddTransaction.Location = new System.Drawing.Point(781, 194);
             this.btnAddTransaction.Name = "btnAddTransaction";
             this.btnAddTransaction.Size = new System.Drawing.Size(216, 33);
             this.btnAddTransaction.TabIndex = 11;
@@ -413,10 +422,10 @@
             this.dgvTransaction.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colDate,
             this.colDescription,
-            this.colCategory,
             this.colType,
+            this.colCategory,
             this.colAmount,
-            this.colEdit,
+            this.colSave,
             this.colDelete,
             this.colTransactionID});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -436,6 +445,9 @@
             this.dgvTransaction.RowTemplate.Height = 24;
             this.dgvTransaction.Size = new System.Drawing.Size(795, 249);
             this.dgvTransaction.TabIndex = 12;
+            this.dgvTransaction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellContentClick);
+            this.dgvTransaction.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellValueChanged);
+            this.dgvTransaction.CurrentCellDirtyStateChanged += new System.EventHandler(this.dgvTransaction_CurrentCellDirtyStateChanged);
             this.dgvTransaction.Click += new System.EventHandler(this.dgvTransaction_Click);
             // 
             // colDate
@@ -450,32 +462,33 @@
             this.colDescription.MinimumWidth = 6;
             this.colDescription.Name = "colDescription";
             // 
+            // colType
+            // 
+            this.colType.HeaderText = "Type";
+            this.colType.Items.AddRange(new object[] {
+            "Expense",
+            "Budget"});
+            this.colType.MinimumWidth = 6;
+            this.colType.Name = "colType";
+            this.colType.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
             // colCategory
             // 
             this.colCategory.HeaderText = "Category";
             this.colCategory.Items.AddRange(new object[] {
-            "Income,",
-            "Allowance,",
-            "Food,",
-            "Transportation,",
-            "Utilities,",
-            "Miscellaneous,",
-            "Health,",
-            "Leisure,",
+            "Income",
+            "Allowance",
+            "Food",
+            "Transportation",
+            "Utilities",
+            "Miscellaneous",
+            "Health",
+            "Leisure",
             "Others"});
             this.colCategory.MinimumWidth = 6;
             this.colCategory.Name = "colCategory";
             this.colCategory.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colCategory.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // colType
-            // 
-            this.colType.HeaderText = "Type";
-            this.colType.Items.AddRange(new object[] {
-            "Budget",
-            "Expense"});
-            this.colType.MinimumWidth = 6;
-            this.colType.Name = "colType";
             // 
             // colAmount
             // 
@@ -483,11 +496,13 @@
             this.colAmount.MinimumWidth = 6;
             this.colAmount.Name = "colAmount";
             // 
-            // colEdit
+            // colSave
             // 
-            this.colEdit.HeaderText = "";
-            this.colEdit.MinimumWidth = 6;
-            this.colEdit.Name = "colEdit";
+            this.colSave.HeaderText = "";
+            this.colSave.MinimumWidth = 6;
+            this.colSave.Name = "colSave";
+            this.colSave.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colSave.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // colDelete
             // 
@@ -504,8 +519,7 @@
             // 
             // TransactionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1035, 510);
             this.Controls.Add(this.dgvTransaction);
             this.Controls.Add(this.btnAddTransaction);
@@ -520,8 +534,13 @@
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblTransaction);
             this.Controls.Add(this.SidebarLayout);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1053, 557);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1053, 557);
             this.Name = "TransactionForm";
-            this.Text = "TransactionForm";
+            this.RightToLeftLayout = true;
+            this.Text = "Transaction";
             this.Load += new System.EventHandler(this.TransactionForm_Load);
             this.SidebarLayout.ResumeLayout(false);
             this.SidebarLayout.PerformLayout();
@@ -567,10 +586,10 @@
         private System.Windows.Forms.DataGridView dgvTransaction;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDescription;
-        private System.Windows.Forms.DataGridViewComboBoxColumn colCategory;
         private System.Windows.Forms.DataGridViewComboBoxColumn colType;
+        private System.Windows.Forms.DataGridViewComboBoxColumn colCategory;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAmount;
-        private System.Windows.Forms.DataGridViewButtonColumn colEdit;
+        private System.Windows.Forms.DataGridViewButtonColumn colSave;
         private System.Windows.Forms.DataGridViewButtonColumn colDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTransactionID;
     }
