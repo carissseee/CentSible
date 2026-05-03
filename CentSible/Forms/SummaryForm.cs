@@ -36,7 +36,7 @@ namespace CentSible.Forms
         private void Switch(Form next) { _isNavigating = true; next.Show(); this.Close(); }
         private void HomeButtonGoal_Click(object sender, EventArgs e) { _isNavigating = true; _home.Show(); this.Close(); }
         private void GoalButtonGoal_Click(object sender, EventArgs e) => Switch(new GoalForm(_home, _user));
-        private void TranButtonGoal_Click(object sender, EventArgs e) => Switch(new TransactionForm(_home, _user));
+        //private void TranButtonGoal_Click(object sender, EventArgs e) => Switch(new TransactionForm(_home, _user));
         private void SumButtonGoal_Click(object sender, EventArgs e) { }
         private void PredButtonGoal_Click(object sender, EventArgs e) => Switch(new PredictionForm(_home, _user));
         private void LogoutButtonGoal_Click(object sender, EventArgs e) { _isNavigating = true; new LoginForms().Show(); this.Dispose(); }

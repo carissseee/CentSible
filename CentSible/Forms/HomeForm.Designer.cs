@@ -354,7 +354,7 @@
             this.TranButtonHome.Text = "Transactions";
             this.TranButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TranButtonHome.UseVisualStyleBackColor = false;
-            this.TranButtonHome.Click += new System.EventHandler(this.TranButtonGoal_Click);
+            //this.TranButtonHome.Click += new System.EventHandler(this.TranButtonGoal_Click);
             // 
             // GoalButtonHome
             // 
