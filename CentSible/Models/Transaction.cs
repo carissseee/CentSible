@@ -19,7 +19,6 @@ namespace CentSible.Models
         Food,
         Transportation,
         Utilities,
-        Miscellaneous,
         Health,
         Leisure,
         Others
