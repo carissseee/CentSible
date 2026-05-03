@@ -30,6 +30,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblCurrentStreak = new System.Windows.Forms.Label();
             this.lblStreakTitle = new System.Windows.Forms.Label();
             this.MonPanelHome = new System.Windows.Forms.Panel();
@@ -56,21 +58,24 @@
             this.HomeButtonHome = new System.Windows.Forms.Button();
             this.MainLayoutHome = new System.Windows.Forms.TableLayoutPanel();
             this.StreakLayoutMainHome = new System.Windows.Forms.TableLayoutPanel();
+            this.StreakBarLayoutHome = new System.Windows.Forms.FlowLayoutPanel();
             this.StreakIconsLayoutHome = new System.Windows.Forms.TableLayoutPanel();
             this.MonLabelHome = new System.Windows.Forms.Label();
             this.WedLabelHome = new System.Windows.Forms.Label();
-            this.SunLabelHome = new System.Windows.Forms.Label();
             this.TueLabelHome = new System.Windows.Forms.Label();
             this.SatLabelHome = new System.Windows.Forms.Label();
             this.FriLabelHome = new System.Windows.Forms.Label();
             this.ThuLabelHome = new System.Windows.Forms.Label();
+            this.SunLabelHome = new System.Windows.Forms.Label();
+            this.LongestStreakTabLayHome = new System.Windows.Forms.TableLayoutPanel();
             this.TranSaveSpendLayoutHome = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SpentLabelLayHome = new System.Windows.Forms.TableLayoutPanel();
             this.SpentLabelHome = new System.Windows.Forms.Label();
             this.MoneySpentLabelHome = new System.Windows.Forms.Label();
             this.BarSpentHome = new System.Windows.Forms.ProgressBar();
-            this.SpendingGoalLabelLayHome = new System.Windows.Forms.TableLayoutPanel();
             this.SavingGoalLabelLayHome = new System.Windows.Forms.TableLayoutPanel();
+            this.SpendingGoalLabelLayHome = new System.Windows.Forms.TableLayoutPanel();
             this.SidebarTableLayoutGoal = new System.Windows.Forms.FlowLayoutPanel();
             this.CentSibleTextPanelGoal = new System.Windows.Forms.Panel();
             this.CentSibleLabelHome = new System.Windows.Forms.Label();
@@ -85,16 +90,18 @@
             this.TranPicBoxGoal = new System.Windows.Forms.PictureBox();
             this.HomeTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
             this.HomePicBoxGoal = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.StreakBarLayoutHome = new System.Windows.Forms.FlowLayoutPanel();
-            this.LongestStreakTabLayHome = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvRecentTransactions = new System.Windows.Forms.DataGridView();
+            this.lblDashboardHeader = new System.Windows.Forms.Label();
             this.MainLayoutHome.SuspendLayout();
             this.StreakLayoutMainHome.SuspendLayout();
+            this.StreakBarLayoutHome.SuspendLayout();
             this.StreakIconsLayoutHome.SuspendLayout();
+            this.LongestStreakTabLayHome.SuspendLayout();
             this.TranSaveSpendLayoutHome.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SpentLabelLayHome.SuspendLayout();
-            this.SpendingGoalLabelLayHome.SuspendLayout();
             this.SavingGoalLabelLayHome.SuspendLayout();
+            this.SpendingGoalLabelLayHome.SuspendLayout();
             this.SidebarTableLayoutGoal.SuspendLayout();
             this.CentSibleTextPanelGoal.SuspendLayout();
             this.SideBarTabLayGoal.SuspendLayout();
@@ -108,9 +115,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TranPicBoxGoal)).BeginInit();
             this.HomeTabLayGoal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxGoal)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.StreakBarLayoutHome.SuspendLayout();
-            this.LongestStreakTabLayHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecentTransactions)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCurrentStreak
@@ -354,7 +359,7 @@
             this.TranButtonHome.Text = "Transactions";
             this.TranButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TranButtonHome.UseVisualStyleBackColor = false;
-            //this.TranButtonHome.Click += new System.EventHandler(this.TranButtonGoal_Click);
+            this.TranButtonHome.Click += new System.EventHandler(this.TranButtonHome_Click);
             // 
             // GoalButtonHome
             // 
@@ -415,6 +420,7 @@
             this.StreakLayoutMainHome.Controls.Add(this.StreakBarLayoutHome, 1, 1);
             this.StreakLayoutMainHome.Controls.Add(this.StreakIconsLayoutHome, 1, 0);
             this.StreakLayoutMainHome.Controls.Add(this.LongestStreakTabLayHome, 0, 1);
+            this.StreakLayoutMainHome.Controls.Add(this.lblDashboardHeader, 0, 0);
             this.StreakLayoutMainHome.Location = new System.Drawing.Point(3, 3);
             this.StreakLayoutMainHome.Name = "StreakLayoutMainHome";
             this.StreakLayoutMainHome.RowCount = 2;
@@ -422,6 +428,15 @@
             this.StreakLayoutMainHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.67742F));
             this.StreakLayoutMainHome.Size = new System.Drawing.Size(836, 155);
             this.StreakLayoutMainHome.TabIndex = 38;
+            // 
+            // StreakBarLayoutHome
+            // 
+            this.StreakBarLayoutHome.Controls.Add(this.LongestStreakLabelHome);
+            this.StreakBarLayoutHome.Controls.Add(this.pbMilestone);
+            this.StreakBarLayoutHome.Location = new System.Drawing.Point(421, 80);
+            this.StreakBarLayoutHome.Name = "StreakBarLayoutHome";
+            this.StreakBarLayoutHome.Size = new System.Drawing.Size(398, 72);
+            this.StreakBarLayoutHome.TabIndex = 40;
             // 
             // StreakIconsLayoutHome
             // 
@@ -485,19 +500,6 @@
             this.WedLabelHome.Text = "We";
             this.WedLabelHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // SunLabelHome
-            // 
-            this.SunLabelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.SunLabelHome.AutoSize = true;
-            this.SunLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
-            this.SunLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.SunLabelHome.Location = new System.Drawing.Point(18, 15);
-            this.SunLabelHome.Name = "SunLabelHome";
-            this.SunLabelHome.Size = new System.Drawing.Size(22, 18);
-            this.SunLabelHome.TabIndex = 45;
-            this.SunLabelHome.Text = "Su";
-            this.SunLabelHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
             // TueLabelHome
             // 
             this.TueLabelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -550,6 +552,34 @@
             this.ThuLabelHome.Text = "Th";
             this.ThuLabelHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
+            // SunLabelHome
+            // 
+            this.SunLabelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.SunLabelHome.AutoSize = true;
+            this.SunLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
+            this.SunLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
+            this.SunLabelHome.Location = new System.Drawing.Point(18, 15);
+            this.SunLabelHome.Name = "SunLabelHome";
+            this.SunLabelHome.Size = new System.Drawing.Size(22, 18);
+            this.SunLabelHome.TabIndex = 45;
+            this.SunLabelHome.Text = "Su";
+            this.SunLabelHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // LongestStreakTabLayHome
+            // 
+            this.LongestStreakTabLayHome.ColumnCount = 2;
+            this.LongestStreakTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.76699F));
+            this.LongestStreakTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.23301F));
+            this.LongestStreakTabLayHome.Controls.Add(this.lblStreakTitle, 0, 0);
+            this.LongestStreakTabLayHome.Controls.Add(this.lblCurrentStreak, 1, 0);
+            this.LongestStreakTabLayHome.Location = new System.Drawing.Point(3, 80);
+            this.LongestStreakTabLayHome.Name = "LongestStreakTabLayHome";
+            this.LongestStreakTabLayHome.RowCount = 1;
+            this.LongestStreakTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.LongestStreakTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.LongestStreakTabLayHome.Size = new System.Drawing.Size(412, 72);
+            this.LongestStreakTabLayHome.TabIndex = 41;
+            // 
             // TranSaveSpendLayoutHome
             // 
             this.TranSaveSpendLayoutHome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -559,6 +589,7 @@
             this.TranSaveSpendLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TranSaveSpendLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TranSaveSpendLayoutHome.Controls.Add(this.flowLayoutPanel1, 1, 0);
+            this.TranSaveSpendLayoutHome.Controls.Add(this.dgvRecentTransactions, 0, 0);
             this.TranSaveSpendLayoutHome.Location = new System.Drawing.Point(3, 164);
             this.TranSaveSpendLayoutHome.Name = "TranSaveSpendLayoutHome";
             this.TranSaveSpendLayoutHome.RowCount = 1;
@@ -566,6 +597,19 @@
             this.TranSaveSpendLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TranSaveSpendLayoutHome.Size = new System.Drawing.Size(836, 337);
             this.TranSaveSpendLayoutHome.TabIndex = 0;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.SpentLabelLayHome);
+            this.flowLayoutPanel1.Controls.Add(this.BarSpentHome);
+            this.flowLayoutPanel1.Controls.Add(this.SavingGoalLabelLayHome);
+            this.flowLayoutPanel1.Controls.Add(this.BarSavingHome);
+            this.flowLayoutPanel1.Controls.Add(this.SpendingGoalLabelLayHome);
+            this.flowLayoutPanel1.Controls.Add(this.BarSpendingHome);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(421, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(412, 331);
+            this.flowLayoutPanel1.TabIndex = 39;
             // 
             // SpentLabelLayHome
             // 
@@ -594,7 +638,6 @@
             this.SpentLabelHome.Size = new System.Drawing.Size(55, 24);
             this.SpentLabelHome.TabIndex = 13;
             this.SpentLabelHome.Text = "Spent";
-            this.SpentLabelHome.Click += new System.EventHandler(this.label1_Click);
             // 
             // MoneySpentLabelHome
             // 
@@ -616,22 +659,6 @@
             this.BarSpentHome.Size = new System.Drawing.Size(392, 32);
             this.BarSpentHome.TabIndex = 8;
             // 
-            // SpendingGoalLabelLayHome
-            // 
-            this.SpendingGoalLabelLayHome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SpendingGoalLabelLayHome.ColumnCount = 2;
-            this.SpendingGoalLabelLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SpendingGoalLabelLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SpendingGoalLabelLayHome.Controls.Add(this.SpendGoalLabelHome, 0, 0);
-            this.SpendingGoalLabelLayHome.Controls.Add(this.SpendStatLabelHome, 1, 0);
-            this.SpendingGoalLabelLayHome.Location = new System.Drawing.Point(3, 162);
-            this.SpendingGoalLabelLayHome.Name = "SpendingGoalLabelLayHome";
-            this.SpendingGoalLabelLayHome.RowCount = 1;
-            this.SpendingGoalLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SpendingGoalLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SpendingGoalLabelLayHome.Size = new System.Drawing.Size(395, 36);
-            this.SpendingGoalLabelLayHome.TabIndex = 0;
-            // 
             // SavingGoalLabelLayHome
             // 
             this.SavingGoalLabelLayHome.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -647,6 +674,22 @@
             this.SavingGoalLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SavingGoalLabelLayHome.Size = new System.Drawing.Size(392, 36);
             this.SavingGoalLabelLayHome.TabIndex = 0;
+            // 
+            // SpendingGoalLabelLayHome
+            // 
+            this.SpendingGoalLabelLayHome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SpendingGoalLabelLayHome.ColumnCount = 2;
+            this.SpendingGoalLabelLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SpendingGoalLabelLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SpendingGoalLabelLayHome.Controls.Add(this.SpendGoalLabelHome, 0, 0);
+            this.SpendingGoalLabelLayHome.Controls.Add(this.SpendStatLabelHome, 1, 0);
+            this.SpendingGoalLabelLayHome.Location = new System.Drawing.Point(3, 162);
+            this.SpendingGoalLabelLayHome.Name = "SpendingGoalLabelLayHome";
+            this.SpendingGoalLabelLayHome.RowCount = 1;
+            this.SpendingGoalLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SpendingGoalLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SpendingGoalLabelLayHome.Size = new System.Drawing.Size(395, 36);
+            this.SpendingGoalLabelLayHome.TabIndex = 0;
             // 
             // SidebarTableLayoutGoal
             // 
@@ -833,42 +876,48 @@
             this.HomePicBoxGoal.TabIndex = 15;
             this.HomePicBoxGoal.TabStop = false;
             // 
-            // flowLayoutPanel1
+            // dgvRecentTransactions
             // 
-            this.flowLayoutPanel1.Controls.Add(this.SpentLabelLayHome);
-            this.flowLayoutPanel1.Controls.Add(this.BarSpentHome);
-            this.flowLayoutPanel1.Controls.Add(this.SavingGoalLabelLayHome);
-            this.flowLayoutPanel1.Controls.Add(this.BarSavingHome);
-            this.flowLayoutPanel1.Controls.Add(this.SpendingGoalLabelLayHome);
-            this.flowLayoutPanel1.Controls.Add(this.BarSpendingHome);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(421, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(412, 331);
-            this.flowLayoutPanel1.TabIndex = 39;
+            this.dgvRecentTransactions.AllowUserToAddRows = false;
+            this.dgvRecentTransactions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRecentTransactions.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
+            this.dgvRecentTransactions.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRecentTransactions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvRecentTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRecentTransactions.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvRecentTransactions.EnableHeadersVisualStyles = false;
+            this.dgvRecentTransactions.GridColor = System.Drawing.Color.DarkGreen;
+            this.dgvRecentTransactions.Location = new System.Drawing.Point(3, 3);
+            this.dgvRecentTransactions.Name = "dgvRecentTransactions";
+            this.dgvRecentTransactions.ReadOnly = true;
+            this.dgvRecentTransactions.RowHeadersVisible = false;
+            this.dgvRecentTransactions.RowHeadersWidth = 51;
+            this.dgvRecentTransactions.RowTemplate.Height = 24;
+            this.dgvRecentTransactions.Size = new System.Drawing.Size(412, 226);
+            this.dgvRecentTransactions.TabIndex = 40;
             // 
-            // StreakBarLayoutHome
+            // lblDashboardHeader
             // 
-            this.StreakBarLayoutHome.Controls.Add(this.LongestStreakLabelHome);
-            this.StreakBarLayoutHome.Controls.Add(this.pbMilestone);
-            this.StreakBarLayoutHome.Location = new System.Drawing.Point(421, 80);
-            this.StreakBarLayoutHome.Name = "StreakBarLayoutHome";
-            this.StreakBarLayoutHome.Size = new System.Drawing.Size(398, 72);
-            this.StreakBarLayoutHome.TabIndex = 40;
-            // 
-            // LongestStreakTabLayHome
-            // 
-            this.LongestStreakTabLayHome.ColumnCount = 2;
-            this.LongestStreakTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.76699F));
-            this.LongestStreakTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.23301F));
-            this.LongestStreakTabLayHome.Controls.Add(this.lblStreakTitle, 0, 0);
-            this.LongestStreakTabLayHome.Controls.Add(this.lblCurrentStreak, 1, 0);
-            this.LongestStreakTabLayHome.Location = new System.Drawing.Point(3, 80);
-            this.LongestStreakTabLayHome.Name = "LongestStreakTabLayHome";
-            this.LongestStreakTabLayHome.RowCount = 1;
-            this.LongestStreakTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.LongestStreakTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.LongestStreakTabLayHome.Size = new System.Drawing.Size(412, 72);
-            this.LongestStreakTabLayHome.TabIndex = 41;
+            this.lblDashboardHeader.AutoSize = true;
+            this.lblDashboardHeader.Location = new System.Drawing.Point(3, 0);
+            this.lblDashboardHeader.Name = "lblDashboardHeader";
+            this.lblDashboardHeader.Size = new System.Drawing.Size(124, 16);
+            this.lblDashboardHeader.TabIndex = 42;
+            this.lblDashboardHeader.Text = "Dashboard Header";
             // 
             // HomeForm
             // 
@@ -889,15 +938,21 @@
             this.Load += new System.EventHandler(this.HomeForm_Activated);
             this.MainLayoutHome.ResumeLayout(false);
             this.StreakLayoutMainHome.ResumeLayout(false);
+            this.StreakLayoutMainHome.PerformLayout();
+            this.StreakBarLayoutHome.ResumeLayout(false);
+            this.StreakBarLayoutHome.PerformLayout();
             this.StreakIconsLayoutHome.ResumeLayout(false);
             this.StreakIconsLayoutHome.PerformLayout();
+            this.LongestStreakTabLayHome.ResumeLayout(false);
+            this.LongestStreakTabLayHome.PerformLayout();
             this.TranSaveSpendLayoutHome.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.SpentLabelLayHome.ResumeLayout(false);
             this.SpentLabelLayHome.PerformLayout();
-            this.SpendingGoalLabelLayHome.ResumeLayout(false);
-            this.SpendingGoalLabelLayHome.PerformLayout();
             this.SavingGoalLabelLayHome.ResumeLayout(false);
             this.SavingGoalLabelLayHome.PerformLayout();
+            this.SpendingGoalLabelLayHome.ResumeLayout(false);
+            this.SpendingGoalLabelLayHome.PerformLayout();
             this.SidebarTableLayoutGoal.ResumeLayout(false);
             this.CentSibleTextPanelGoal.ResumeLayout(false);
             this.SideBarTabLayGoal.ResumeLayout(false);
@@ -911,11 +966,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TranPicBoxGoal)).EndInit();
             this.HomeTabLayGoal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxGoal)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.StreakBarLayoutHome.ResumeLayout(false);
-            this.StreakBarLayoutHome.PerformLayout();
-            this.LongestStreakTabLayHome.ResumeLayout(false);
-            this.LongestStreakTabLayHome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecentTransactions)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -979,5 +1030,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel StreakBarLayoutHome;
         private System.Windows.Forms.TableLayoutPanel LongestStreakTabLayHome;
+        private System.Windows.Forms.DataGridView dgvRecentTransactions;
+        private System.Windows.Forms.Label lblDashboardHeader;
     }
 }

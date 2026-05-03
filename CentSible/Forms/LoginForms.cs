@@ -21,6 +21,8 @@ namespace CentSible.Forms
         public LoginForms()
         {
             InitializeComponent();
+            PassTextLogin.PasswordChar = '\0';
+            PassTextLogin.TextChanged += PassTextLogin_TextChanged;
         }
 
         private void LoginForms_Load(object sender, EventArgs e) { }
@@ -44,6 +46,21 @@ namespace CentSible.Forms
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
+        private void PassTextLogin_TextChanged(object sender, EventArgs e)
+        {
+            bool isPlaceholder = PassTextLogin.Text == PassTextLogin.Placeholder || string.IsNullOrWhiteSpace(PassTextLogin.Text);
+
+            PassTextLogin.PasswordChar = isPlaceholder ? '\0' : '*';
+        }
+
+        private void PassTextLogin_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(PassTextLogin.Text) || PassTextLogin.Text == PassTextLogin.Placeholder)
+            {
+                PassTextLogin.PasswordChar = '\0';
+            }
+        }
+
         private void lblCreateAccount_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -54,7 +71,5 @@ namespace CentSible.Forms
 
             this.Show();
         }
-
-        private void label1_Click(object sender, EventArgs e) { }
     }
 }
