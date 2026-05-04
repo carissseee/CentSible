@@ -27,34 +27,48 @@ namespace CentSible.Logic
             return total;
         }
 
-        public string GetHighestCategory(Dictionary<string, decimal> spending)
+        public List<string> GetAllHighestCategories(Dictionary<string, decimal> spending)
         {
-            string highestCategory = "";
+            List<string> highestCategories = new List<string>();
             decimal highestAmount = 0;
             foreach (KeyValuePair<string, decimal> item in spending)
             {
                 if (item.Value > highestAmount)
                 {
                     highestAmount = item.Value;
-                    highestCategory = item.Key;
                 }
             }
-            return highestCategory;
+
+            foreach (KeyValuePair<string, decimal> item in spending)
+            {
+                if (item.Value == highestAmount)
+                {
+                    highestCategories.Add(item.Key);
+                }
+            }
+            return highestCategories;
         }
 
-        public string GetLowestCategory(Dictionary<string, decimal> spending)
+        public List<string> GetAllLowestCategories(Dictionary<string, decimal> spending)
         {
-            string lowestCategory = "";
+            List<string> lowestCategories = new List<string>();
             decimal lowestAmount = decimal.MaxValue;
             foreach (KeyValuePair<string, decimal> item in spending)
             {
                 if (item.Value < lowestAmount)
                 {
                     lowestAmount = item.Value;
-                    lowestCategory = item.Key;
                 }
             }
-            return lowestCategory;
+
+            foreach (KeyValuePair<string, decimal> item in spending)
+            {
+                if (item.Value == lowestAmount)
+                {
+                    lowestCategories.Add(item.Key);
+                }
+            }
+            return lowestCategories;
         }
 
         public decimal GetPercentage(decimal categoryAmount, decimal totalAmount)

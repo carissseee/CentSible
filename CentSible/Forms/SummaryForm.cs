@@ -104,31 +104,87 @@ namespace CentSible.Forms
         private void UpdateSummaryReport(Dictionary<string, decimal> spending, decimal totalSpent, int month, int year)
         {
             string monthName = new DateTime(year, month, 1).ToString("MMMM");
+            List<string> highestCategories = summaryLogic.GetAllHighestCategories(spending);
+            List<string> lowestCategories = summaryLogic.GetAllLowestCategories(spending);
+            List<string> onlyCategories = summaryLogic.GetAllHighestCategories(spending);
+            decimal highestPercent = summaryLogic.GetPercentage(GetCategoryAmount(spending, highestCategories[0]), totalSpent);
+            decimal lowestPercent = summaryLogic.GetPercentage(GetCategoryAmount(spending, lowestCategories[0]), totalSpent);
+            string onlyCategory = onlyCategories[0];
+            decimal onlyPercent = summaryLogic.GetPercentage(GetCategoryAmount(spending, onlyCategory), totalSpent);
+            decimal tiedPercent = summaryLogic.GetPercentage(GetCategoryAmount(spending, highestCategories[0]), totalSpent);
+
             if (totalSpent == 0)
             {
                 lblMSummary.Text = "In " + monthName + ", there are no recorded expenses yet.";
                 return;
             }
-            else if (spending.Count == 1)
+            if (spending.Count == 1)
             {
-                string onlyCategory = summaryLogic.GetHighestCategory(spending);
-                decimal onlyPercent = summaryLogic.GetPercentage(GetCategoryAmount(spending, onlyCategory), totalSpent);
-
-                lblMSummary.Text = "In " + monthName + ", total expedintures reached ₱" + totalSpent.ToString("N0") + ". " +
+                lblMSummary.Text = "In " + monthName + ", total expenditures reached ₱" + totalSpent.ToString("N0") + ". " +
                                    "All spending went to " + onlyCategory + " (" + onlyPercent + "%).";
+                return;
             }
-            else
+            if (spending.Count == 2)
             {
-                string highestCategory = summaryLogic.GetHighestCategory(spending);
-                string lowestCategory = summaryLogic.GetLowestCategory(spending);
-                decimal highestPercent = summaryLogic.GetPercentage(GetCategoryAmount(spending, highestCategory), totalSpent);
-                decimal lowestPercent = summaryLogic.GetPercentage(GetCategoryAmount(spending, lowestCategory), totalSpent);
-
-                lblMSummary.Text = "In " + monthName + ", total expedintures reached ₱" + totalSpent.ToString("N0") + ". " +
-                                "The largest share went to " + highestCategory + " (" + highestPercent + "%), " +
-                                "while  the smallest portion was " + lowestCategory + " (" + lowestPercent + "%). " +
-                                "Overall spending was recorded accross " + spending.Count + " categories.";
+                if (highestCategories.Count == 2)
+                {
+                   lblMSummary.Text = "In " + monthName + ", total expenditures reached ₱" + totalSpent.ToString("N0") + ". " +
+                                       "Spending was equally split between " + highestCategories[0] + " and " + highestCategories[1] +
+                                       " (both at " + tiedPercent + "%).";
+                }
+                else
+                {
+                    lblMSummary.Text = "In " + monthName + ", total expenditures reached ₱" + totalSpent.ToString("N0") + ". " +
+                                       "The largest shre went to " + highestCategories[0] + " (" + highestPercent + "%), " +
+                                       "while the smallest portion was " + lowestCategories[0] + lowestCategories[0] + " (" + lowestPercent + "&).";
+                }
+                return;
             }
+            if (spending.Count >= 3)
+            {
+                if (highestCategories.Count == spending.Count)
+                {
+                    lblMSummary.Text = "In " + monthName + ", total expenditures reached ₱" + totalSpent.ToString("N0") + ". " +
+                                       "Spending was equally distributed accross all " + spending.Count + " categories at " + highestPercent + "% each.";
+                    return;
+                }
+
+                string highestText = "";
+                if (highestCategories.Count == 1)
+                {
+                    highestText = highestCategories[0] + " (" + highestPercent + "%)";
+                }
+                else if (highestCategories.Count == 2)
+                {
+                    highestText = highestCategories[0] + " and " + highestCategories[1] + " (both tied at " + highestPercent + "%)";
+                }
+                else
+                {
+                    string allText = string.Join(", ", highestCategories.GetRange(0, highestCategories.Count - 1));
+                    highestText = allText + " and " + highestCategories[highestCategories.Count - 1] + " (all tied at " + highestPercent + "%)";
+                }
+
+                string lowestText = "";
+                if (lowestCategories.Count == 1)
+                {
+                    lowestText = lowestCategories[0] + " (" + lowestPercent + "%)";
+                }
+                else if (lowestCategories.Count == 2)
+                {
+                    lowestText = lowestCategories[0] + " and " + lowestCategories[1] + " (both tied at " + lowestPercent + "%)";
+                }
+                else
+                {
+                    string allText = string.Join(", ", lowestCategories.GetRange(0, lowestCategories.Count - 1));
+                    lowestText = allText + " and " + lowestCategories[lowestCategories.Count - 1] + " (all tied at " + lowestPercent + "%)";
+                }
+
+                lblMSummary.Text = "In " + monthName + ", total expenditures reached ₱" + totalSpent.ToString("N0") + ". " +
+                                   "The largest share went to " + highestText + ", " + "while the smallest portion went to " + lowestText + ". " +
+                                   "Overall spending was recorded accross " + spending.Count + " categories.";
+
+            }
+
         }
 
         private void cmbYear_SelectedIndexChanged(object sender, EventArgs e)
