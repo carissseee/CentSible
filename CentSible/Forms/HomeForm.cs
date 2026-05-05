@@ -33,62 +33,25 @@ namespace CentSible.Forms
             _goalLogic = new GoalLogic();
 
             var goalGroup = new Control[] { GoalButtonHome, GoalTabLayHome };
-            WireHoverRecursive(GoalButtonHome, goalGroup);
-            WireHoverRecursive(GoalTabLayHome, goalGroup);
+            UIHelper.WireHoverRecursive(GoalButtonHome, goalGroup);
+            UIHelper.WireHoverRecursive(GoalTabLayHome, goalGroup);
 
             var sumGroup = new Control[] { SumButtonHome, SumTabLayHome };
-            WireHoverRecursive(SumButtonHome, sumGroup);
-            WireHoverRecursive(SumTabLayHome, sumGroup);
+            UIHelper.WireHoverRecursive(SumButtonHome, sumGroup);
+            UIHelper.WireHoverRecursive(SumTabLayHome, sumGroup);
 
             var tranGroup = new Control[] { TranButtonHome, TranTabLayHome };
-            WireHoverRecursive(TranButtonHome, tranGroup);
-            WireHoverRecursive(TranTabLayHome, tranGroup);
+            UIHelper.WireHoverRecursive(TranButtonHome, tranGroup);
+            UIHelper.WireHoverRecursive(TranTabLayHome, tranGroup);
 
             var predGroup = new Control[] { PredButtonHome, PredTabLayHome };
-            WireHoverRecursive(PredButtonHome, predGroup);
-            WireHoverRecursive(PredTabLayHome, predGroup);
+            UIHelper.WireHoverRecursive(PredButtonHome, predGroup);
+            UIHelper.WireHoverRecursive(PredTabLayHome, predGroup);
 
-            WireClickRecursive(GoalTabLayHome, GoalButtonGoal_Click);
-            WireClickRecursive(SumTabLayHome, SumButtonGoal_Click);
-            WireClickRecursive(TranTabLayHome, TranButtonHome_Click);
-            WireClickRecursive(PredTabLayHome, PredButtonGoal_Click);
-        }
-
-        private void WireClickRecursive(Control root, EventHandler handler)
-        {
-            root.Click += handler;
-            foreach (Control child in root.Controls)
-                WireClickRecursive(child, handler);
-        }
-
-        private void WireHoverRecursive(Control root, Control[] group)
-        {
-            root.Tag = group;
-            root.MouseEnter += HoverEnter;
-            root.MouseLeave += HoverLeave;
-            foreach (Control child in root.Controls)
-                WireHoverRecursive(child, group);
-        }
-
-        private void RecolorRecursive(Control ctrl, Color color)
-        {
-            ctrl.BackColor = color;
-            foreach (Control child in ctrl.Controls)
-                RecolorRecursive(child, color);
-        }
-
-        private void HoverEnter(object sender, EventArgs e)
-        {
-            var group = (Control[])((Control)sender).Tag;
-            foreach (var ctrl in group)
-                RecolorRecursive(ctrl, Color.FromArgb(82, 160, 90));
-        }
-
-        private void HoverLeave(object sender, EventArgs e)
-        {
-            var group = (Control[])((Control)sender).Tag;
-            foreach (var ctrl in group)
-                RecolorRecursive(ctrl, Color.FromArgb(26, 46, 27));
+            UIHelper.WireClickRecursive(GoalTabLayHome, GoalButtonGoal_Click);
+            UIHelper.WireClickRecursive(SumTabLayHome, SumButtonGoal_Click);
+            UIHelper.WireClickRecursive(TranTabLayHome, TranButtonHome_Click);
+            UIHelper.WireClickRecursive(PredTabLayHome, PredButtonGoal_Click);
         }
 
         private void HomeForm_Load(object sender, EventArgs e)
