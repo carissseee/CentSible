@@ -77,7 +77,7 @@
             this.BarSpentHome = new System.Windows.Forms.ProgressBar();
             this.SavingGoalLabelLayHome = new System.Windows.Forms.TableLayoutPanel();
             this.SpendingGoalLabelLayHome = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvRecentTransactions = new System.Windows.Forms.DataGridView();
+            this.dgvRecentTransactionsTabLay = new System.Windows.Forms.DataGridView();
             this.SidebarTableLayoutHome = new System.Windows.Forms.FlowLayoutPanel();
             this.CentSibleTextPanelGoal = new System.Windows.Forms.Panel();
             this.CentSibleLabelHome = new System.Windows.Forms.Label();
@@ -102,7 +102,7 @@
             this.SpentLabelLayHome.SuspendLayout();
             this.SavingGoalLabelLayHome.SuspendLayout();
             this.SpendingGoalLabelLayHome.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecentTransactions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecentTransactionsTabLay)).BeginInit();
             this.SidebarTableLayoutHome.SuspendLayout();
             this.CentSibleTextPanelGoal.SuspendLayout();
             this.SideBarTabLayGoal.SuspendLayout();
@@ -598,7 +598,7 @@
             this.TranSaveSpendLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TranSaveSpendLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TranSaveSpendLayoutHome.Controls.Add(this.flowLayoutPanel1, 1, 0);
-            this.TranSaveSpendLayoutHome.Controls.Add(this.dgvRecentTransactions, 0, 0);
+            this.TranSaveSpendLayoutHome.Controls.Add(this.dgvRecentTransactionsTabLay, 0, 0);
             this.TranSaveSpendLayoutHome.Location = new System.Drawing.Point(3, 164);
             this.TranSaveSpendLayoutHome.Name = "TranSaveSpendLayoutHome";
             this.TranSaveSpendLayoutHome.RowCount = 1;
@@ -700,12 +700,12 @@
             this.SpendingGoalLabelLayHome.Size = new System.Drawing.Size(395, 36);
             this.SpendingGoalLabelLayHome.TabIndex = 0;
             // 
-            // dgvRecentTransactions
+            // dgvRecentTransactionsTabLay
             // 
-            this.dgvRecentTransactions.AllowUserToAddRows = false;
-            this.dgvRecentTransactions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvRecentTransactions.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
-            this.dgvRecentTransactions.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvRecentTransactionsTabLay.AllowUserToAddRows = false;
+            this.dgvRecentTransactionsTabLay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRecentTransactionsTabLay.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
+            this.dgvRecentTransactionsTabLay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -713,8 +713,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRecentTransactions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvRecentTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRecentTransactionsTabLay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvRecentTransactionsTabLay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -722,17 +722,17 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRecentTransactions.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvRecentTransactions.EnableHeadersVisualStyles = false;
-            this.dgvRecentTransactions.GridColor = System.Drawing.Color.DarkGreen;
-            this.dgvRecentTransactions.Location = new System.Drawing.Point(3, 3);
-            this.dgvRecentTransactions.Name = "dgvRecentTransactions";
-            this.dgvRecentTransactions.ReadOnly = true;
-            this.dgvRecentTransactions.RowHeadersVisible = false;
-            this.dgvRecentTransactions.RowHeadersWidth = 51;
-            this.dgvRecentTransactions.RowTemplate.Height = 24;
-            this.dgvRecentTransactions.Size = new System.Drawing.Size(412, 226);
-            this.dgvRecentTransactions.TabIndex = 40;
+            this.dgvRecentTransactionsTabLay.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvRecentTransactionsTabLay.EnableHeadersVisualStyles = false;
+            this.dgvRecentTransactionsTabLay.GridColor = System.Drawing.Color.DarkGreen;
+            this.dgvRecentTransactionsTabLay.Location = new System.Drawing.Point(3, 3);
+            this.dgvRecentTransactionsTabLay.Name = "dgvRecentTransactionsTabLay";
+            this.dgvRecentTransactionsTabLay.ReadOnly = true;
+            this.dgvRecentTransactionsTabLay.RowHeadersVisible = false;
+            this.dgvRecentTransactionsTabLay.RowHeadersWidth = 51;
+            this.dgvRecentTransactionsTabLay.RowTemplate.Height = 24;
+            this.dgvRecentTransactionsTabLay.Size = new System.Drawing.Size(412, 331);
+            this.dgvRecentTransactionsTabLay.TabIndex = 40;
             // 
             // SidebarTableLayoutHome
             // 
@@ -954,7 +954,7 @@
             this.SavingGoalLabelLayHome.PerformLayout();
             this.SpendingGoalLabelLayHome.ResumeLayout(false);
             this.SpendingGoalLabelLayHome.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecentTransactions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecentTransactionsTabLay)).EndInit();
             this.SidebarTableLayoutHome.ResumeLayout(false);
             this.CentSibleTextPanelGoal.ResumeLayout(false);
             this.SideBarTabLayGoal.ResumeLayout(false);
@@ -1031,7 +1031,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel StreakBarLayoutHome;
         private System.Windows.Forms.TableLayoutPanel LongestStreakTabLayHome;
-        private System.Windows.Forms.DataGridView dgvRecentTransactions;
+        private System.Windows.Forms.DataGridView dgvRecentTransactionsTabLay;
         private System.Windows.Forms.Label lblDashboardHeader;
     }
 }

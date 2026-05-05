@@ -74,8 +74,8 @@ namespace CentSible.Database
                 Transactions.Description = data.GetString("description");
                 Transactions.Amount = data.GetDecimal("amount");
                 Transactions.Date = data.GetDateTime("date");
-                Transactions.TransactionType = (TransactionType)Enum.Parse(typeof(TransactionType), data.GetString("transactionType"));
-                Transactions.Category = (Category)Enum.Parse(typeof(Category), data.GetString("category"));
+                Transactions.TransactionType = (TransactionType)Enum.Parse(typeof(TransactionType), data.GetString("transactionType"), true);
+                Transactions.Category = (Category)Enum.Parse(typeof(Category), data.GetString("category"), true);
 
                 list.Add(Transactions);
             }

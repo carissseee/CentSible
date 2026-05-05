@@ -94,18 +94,18 @@ namespace CentSible.Forms
             try
             {
               
-                dgvRecentTransactions.DataSource = null;            
+                dgvRecentTransactionsTabLay.DataSource = null;            
                 var recent = _db.GetRecentTransactions(_user.AccountID, 5);            
-                dgvRecentTransactions.DataSource = recent.Select(t => new {
+                dgvRecentTransactionsTabLay.DataSource = recent.Select(t => new {
                     Date = t.Date.ToString("MMM dd"),
                     Description = t.Description,
                     Category = t.Category.ToString(),           
                     Amount = (t.TransactionType == TransactionType.Expense ? "- ₱ " : "+ ₱ ") + t.Amount.ToString("N0")
                 }).ToList();
       
-                dgvRecentTransactions.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dgvRecentTransactions.AllowUserToAddRows = false;
-                dgvRecentTransactions.RowHeadersVisible = false;
+                dgvRecentTransactionsTabLay.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvRecentTransactionsTabLay.AllowUserToAddRows = false;
+                dgvRecentTransactionsTabLay.RowHeadersVisible = false;
             }
             catch (Exception ex)
             {
