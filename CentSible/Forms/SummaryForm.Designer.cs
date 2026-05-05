@@ -453,7 +453,7 @@
             // 
             this.LogoutButtonSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
             this.LogoutButtonSum.FlatAppearance.BorderSize = 0;
-            this.LogoutButtonSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
+            this.LogoutButtonSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.LogoutButtonSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogoutButtonSum.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.LogoutButtonSum.ForeColor = System.Drawing.Color.White;
@@ -493,9 +493,10 @@
             // 
             // PredButtonSum
             // 
+            this.PredButtonSum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.PredButtonSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
             this.PredButtonSum.FlatAppearance.BorderSize = 0;
-            this.PredButtonSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
+            this.PredButtonSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.PredButtonSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PredButtonSum.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.PredButtonSum.ForeColor = System.Drawing.Color.White;
