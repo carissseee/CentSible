@@ -6,6 +6,8 @@ public static class UIHelper
 {
     public static void WireClickRecursive(Control root, EventHandler handler)
     {
+        if (root is Button) return;
+        root.Click -= handler;
         root.Click += handler;
         foreach (Control child in root.Controls)
             WireClickRecursive(child, handler);
@@ -14,6 +16,8 @@ public static class UIHelper
     public static void WireHoverRecursive(Control root, Control[] group)
     {
         root.Tag = group;
+        root.MouseEnter -= HoverEnter;
+        root.MouseLeave -= HoverLeave;
         root.MouseEnter += HoverEnter;
         root.MouseLeave += HoverLeave;
         foreach (Control child in root.Controls)

@@ -308,7 +308,7 @@
             this.LogoutButtonHome.Text = " Logout";
             this.LogoutButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LogoutButtonHome.UseVisualStyleBackColor = false;
-            this.LogoutButtonHome.Click += new System.EventHandler(this.LogoutButtonGoal_Click);
+            this.LogoutButtonHome.Click += new System.EventHandler(this.LogoutButtonHome_Click);
             // 
             // PredButtonHome
             // 
@@ -325,7 +325,7 @@
             this.PredButtonHome.Text = "Prediction";
             this.PredButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PredButtonHome.UseVisualStyleBackColor = false;
-            this.PredButtonHome.Click += new System.EventHandler(this.PredButtonGoal_Click);
+            this.PredButtonHome.Click += new System.EventHandler(this.PredButtonHome_Click);
             // 
             // SumButtonHome
             // 
@@ -342,7 +342,7 @@
             this.SumButtonHome.Text = "Summary";
             this.SumButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SumButtonHome.UseVisualStyleBackColor = false;
-            this.SumButtonHome.Click += new System.EventHandler(this.SumButtonGoal_Click);
+            this.SumButtonHome.Click += new System.EventHandler(this.SumButtonHome_Click);
             // 
             // TranButtonHome
             // 
@@ -376,7 +376,7 @@
             this.GoalButtonHome.Text = "Goal";
             this.GoalButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GoalButtonHome.UseVisualStyleBackColor = false;
-            this.GoalButtonHome.Click += new System.EventHandler(this.GoalButtonGoal_Click);
+            this.GoalButtonHome.Click += new System.EventHandler(this.GoalButtonHome_Click);
             // 
             // HomeButtonHome
             // 

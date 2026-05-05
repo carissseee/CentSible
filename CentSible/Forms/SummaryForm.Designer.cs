@@ -29,9 +29,9 @@
        
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lblSummary = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.cmbYear = new System.Windows.Forms.ComboBox();
@@ -144,18 +144,18 @@
             this.chartSummary.BorderlineColor = System.Drawing.Color.DarkGreen;
             this.chartSummary.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartSummary.BorderlineWidth = 2;
-            chartArea2.Name = "ChartArea1";
-            this.chartSummary.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartSummary.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chartSummary.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartSummary.Legends.Add(legend1);
             this.chartSummary.Location = new System.Drawing.Point(627, 75);
             this.chartSummary.Name = "chartSummary";
             this.chartSummary.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartSummary.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartSummary.Series.Add(series1);
             this.chartSummary.Size = new System.Drawing.Size(362, 412);
             this.chartSummary.TabIndex = 5;
             this.chartSummary.Text = "Category Breakdown";
@@ -464,6 +464,7 @@
             this.LogoutButtonSum.Text = "Logout";
             this.LogoutButtonSum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LogoutButtonSum.UseVisualStyleBackColor = false;
+            this.LogoutButtonSum.Click += new System.EventHandler(this.LogoutButtonSum_Click);
             // 
             // PredTabLaySum
             // 
@@ -493,9 +494,9 @@
             // 
             // PredButtonSum
             // 
-            this.PredButtonSum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.PredButtonSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
             this.PredButtonSum.FlatAppearance.BorderSize = 0;
+            this.PredButtonSum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.PredButtonSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.PredButtonSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PredButtonSum.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -537,16 +538,17 @@
             // 
             // SumButtonSum
             // 
+            this.SumButtonSum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.SumButtonSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.SumButtonSum.FlatAppearance.BorderSize = 0;
             this.SumButtonSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.SumButtonSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SumButtonSum.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.SumButtonSum.ForeColor = System.Drawing.Color.White;
-            this.SumButtonSum.Location = new System.Drawing.Point(67, 3);
+            this.SumButtonSum.Location = new System.Drawing.Point(66, 3);
             this.SumButtonSum.Name = "SumButtonSum";
-            this.SumButtonSum.Size = new System.Drawing.Size(113, 38);
-            this.SumButtonSum.TabIndex = 13;
+            this.SumButtonSum.Size = new System.Drawing.Size(114, 38);
+            this.SumButtonSum.TabIndex = 11;
             this.SumButtonSum.Text = "Summary";
             this.SumButtonSum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SumButtonSum.UseVisualStyleBackColor = false;
@@ -568,9 +570,9 @@
             // 
             // TranButtonSum
             // 
-            this.TranButtonSum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.TranButtonSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
             this.TranButtonSum.FlatAppearance.BorderSize = 0;
+            this.TranButtonSum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.TranButtonSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.TranButtonSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TranButtonSum.Font = new System.Drawing.Font("Segoe UI", 10F);

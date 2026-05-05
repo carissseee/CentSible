@@ -48,10 +48,10 @@ namespace CentSible.Forms
             UIHelper.WireHoverRecursive(PredButtonHome, predGroup);
             UIHelper.WireHoverRecursive(PredTabLayHome, predGroup);
 
-            UIHelper.WireClickRecursive(GoalTabLayHome, GoalButtonGoal_Click);
-            UIHelper.WireClickRecursive(SumTabLayHome, SumButtonGoal_Click);
+            UIHelper.WireClickRecursive(GoalTabLayHome, GoalButtonHome_Click);
+            UIHelper.WireClickRecursive(SumTabLayHome, SumButtonHome_Click);
             UIHelper.WireClickRecursive(TranTabLayHome, TranButtonHome_Click);
-            UIHelper.WireClickRecursive(PredTabLayHome, PredButtonGoal_Click);
+            UIHelper.WireClickRecursive(PredTabLayHome, PredButtonHome_Click);
         }
 
         private void HomeForm_Load(object sender, EventArgs e)
@@ -221,17 +221,12 @@ namespace CentSible.Forms
             if (!_isNavigating && e.CloseReason == CloseReason.UserClosing) Application.Exit();
         }
 
-        private void SwitchPage(Form newPage) { _isNavigating = true; newPage.Show(); this.Hide(); }
-        private void HomeButtonGoal_Click(object sender, EventArgs e)
-        {
-            
-        }
-        private void GoalButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new GoalForm(this, _user));
-        private void TranButtonHome_Click(object sender, EventArgs e) => SwitchPage(new TransactionForm(this, _user));
-        private void SumButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new SummaryForm(this, _user));
-        private void PredButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new PredictionForm(this, _user));
-        private void LogoutButtonGoal_Click(object sender, EventArgs e) { _isNavigating = true; new LoginForms().Show(); this.Dispose(); }
+        private void GoalButtonHome_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Goal);
+        private void TranButtonHome_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Transaction);
+        private void SumButtonHome_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Summary);
+        private void PredButtonHome_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Prediction);
 
-        
+        private void LogoutButtonHome_Click(object sender, EventArgs e) => Navigator.Logout(this);
+
     }
 }

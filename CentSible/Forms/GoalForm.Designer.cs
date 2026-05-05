@@ -918,7 +918,6 @@
             this.GoalButtonGoal.Text = "Goal";
             this.GoalButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GoalButtonGoal.UseVisualStyleBackColor = false;
-            this.GoalButtonGoal.Click += new System.EventHandler(this.GoalButtonGoal_Click);
             // 
             // GoalPicBoxGoal
             // 

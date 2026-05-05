@@ -121,6 +121,7 @@
     </Compile>
     <Compile Include="Logic\AccountLogic.cs" />
     <Compile Include="Logic\GoalLogic.cs" />
+    <Compile Include="Logic\Navigator.cs" />
     <Compile Include="Logic\PredictionLogic.cs" />
     <Compile Include="Logic\SummaryLogic.cs" />
     <Compile Include="Logic\TransactionLogic.cs" />

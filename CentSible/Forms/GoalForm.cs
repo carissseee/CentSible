@@ -23,10 +23,9 @@ namespace CentSible.Forms
         private GoalLogic _goalLogic = new GoalLogic();
         private GoalCategory _activeType = GoalCategory.Spending;
 
-        public GoalForm(Form home, Account user)
+        public GoalForm(Account user)
         {
             InitializeComponent();
-            _home = home;
             _user = user;
 
             var homeGroup = new Control[] { HomeButtonGoal, HomeTabLayGoal};
@@ -45,7 +44,7 @@ namespace CentSible.Forms
             UIHelper.WireHoverRecursive(PredButtonGoal, predGroup);
             UIHelper.WireHoverRecursive(PredTabLayGoal, predGroup);
 
-            UIHelper.WireClickRecursive(GoalTabLayGoal, GoalButtonGoal_Click);
+            UIHelper.WireClickRecursive(HomeTabLayGoal, HomeButtonGoal_Click);
             UIHelper.WireClickRecursive(SumTabLayGoal, SumButtonGoal_Click);
             UIHelper.WireClickRecursive(TranTabLayGoal, TranButtonGoal_Click);
             UIHelper.WireClickRecursive(PredTabLayGoal, PredButtonGoal_Click);
@@ -234,23 +233,13 @@ namespace CentSible.Forms
         }
 
         private void TargetDateDropDownGoal_ValueChanged(object sender, EventArgs e) => UpdateDaysRemaining();
-        private void SwitchPage(Form newPage) { _isNavigating = true; newPage.Show(); this.Hide(); }
-        private void HomeButtonGoal_Click(object sender, EventArgs e)
-        {
-            _isNavigating = true;
-            _home.Show();
-            this.Close();
-        }
-        private void GoalButtonGoal_Click(object sender, EventArgs e) { }
-        private void TranButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new TransactionForm(_home, _user));
-        private void SumButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new SummaryForm(_home, _user));
-        private void PredButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new PredictionForm(_home, _user));
+        private void HomeButtonGoal_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Home);
+        private void TranButtonGoal_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Transaction);
+        private void SumButtonGoal_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Summary);
+        private void PredButtonGoal_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Prediction);
         private void LogoutButtonGoal_Click(object sender, EventArgs e) { _isNavigating = true; new LoginForms().Show(); this.Dispose(); }
 
-        private void GoalForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (!_isNavigating && e.CloseReason == CloseReason.UserClosing) Application.Exit();
-        }
+        private void GoalForm_FormClosing(object sender, FormClosingEventArgs e) => Navigator.Logout(this);
 
     }
 }
