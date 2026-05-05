@@ -508,6 +508,7 @@
             this.PredButtonSum.Text = "Prediction";
             this.PredButtonSum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PredButtonSum.UseVisualStyleBackColor = false;
+            this.PredButtonSum.Click += new System.EventHandler(this.PredButtonSum_Click);
             // 
             // SumTabLaySum
             // 
@@ -584,6 +585,7 @@
             this.TranButtonSum.Text = "Transactions";
             this.TranButtonSum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TranButtonSum.UseVisualStyleBackColor = false;
+            this.TranButtonSum.Click += new System.EventHandler(this.TranButtonSum_Click);
             // 
             // TranPicBoxSum
             // 
@@ -626,6 +628,7 @@
             this.GoalButtonSum.Text = "Goal";
             this.GoalButtonSum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GoalButtonSum.UseVisualStyleBackColor = false;
+            this.GoalButtonSum.Click += new System.EventHandler(this.GoalButtonSum_Click);
             // 
             // GoalPicBoxSum
             // 
@@ -668,6 +671,7 @@
             this.HomeButtonSum.Text = "Home";
             this.HomeButtonSum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HomeButtonSum.UseVisualStyleBackColor = false;
+            this.HomeButtonSum.Click += new System.EventHandler(this.HomeButtonSum_Click);
             // 
             // HomePicBoxSum
             // 
