@@ -25,6 +25,27 @@ namespace CentSible.Forms
             InitializeComponent();
             _home = home;
             _user = user;
+
+            var homeGroup = new Control[] { HomeButtonSum, HomeTabLaySum };
+            UIHelper.WireHoverRecursive(HomeButtonSum, homeGroup);
+            UIHelper.WireHoverRecursive(HomeTabLaySum, homeGroup);
+
+            var goalGroup = new Control[] { GoalButtonSum, GoalTabLaySum };
+            UIHelper.WireHoverRecursive(GoalButtonSum, goalGroup);
+            UIHelper.WireHoverRecursive(GoalTabLaySum, goalGroup);
+
+            var tranGroup = new Control[] { TranButtonSum, TranTabLaySum };
+            UIHelper.WireHoverRecursive(TranButtonSum, tranGroup);
+            UIHelper.WireHoverRecursive(TranTabLaySum, tranGroup);
+
+            var predGroup = new Control[] { PredButtonSum, PredTabLaySum };
+            UIHelper.WireHoverRecursive(PredButtonSum, predGroup);
+            UIHelper.WireHoverRecursive(PredTabLaySum, predGroup);
+
+            UIHelper.WireClickRecursive(HomeTabLaySum, HomeButtonSum_Click);
+            UIHelper.WireClickRecursive(GoalTabLaySum, GoalButtonSum_Click);
+            UIHelper.WireClickRecursive(SumTabLaySum, SumButtonSum_Click);
+            UIHelper.WireClickRecursive(PredTabLaySum, PredButtonSum_Click);
         }
 
         private void SummaryForm_Load(object sender, EventArgs e)
@@ -33,9 +54,6 @@ namespace CentSible.Forms
             {
                 return;
             }
-
-            SumButtonGoal.BackColor = Color.FromArgb(212, 236, 204);
-            SumButtonGoal.ForeColor = Color.Black;
 
             cmbYear.SelectedIndexChanged -= cmbYear_SelectedIndexChanged;
             int currentYear = DateTime.Now.Year;
@@ -198,12 +216,12 @@ namespace CentSible.Forms
         }
 
         private void SwitchPage(Form newPage) { _isNavigating = true; newPage.Show(); this.Hide(); }
-        private void HomeButtonGoal_Click(object sender, EventArgs e) { _isNavigating = true; _home.Show(); this.Hide(); }
-        private void GoalButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new GoalForm(_home, _user));
-        private void TranButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new TransactionForm(_home, _user));
-        private void SumButtonGoal_Click(object sender, EventArgs e) { }
-        private void PredButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new PredictionForm(_home, _user));
-        private void LogoutButtonGoal_Click(object sender, EventArgs e) { _isNavigating = true; new LoginForms().Show(); this.Dispose(); }
+        private void HomeButtonSum_Click(object sender, EventArgs e) { _isNavigating = true; _home.Show(); this.Hide(); }
+        private void GoalButtonSum_Click(object sender, EventArgs e) => SwitchPage(new GoalForm(_home, _user));
+        private void TranButtonSum_Click(object sender, EventArgs e) => SwitchPage(new TransactionForm(_home, _user));
+        private void SumButtonSum_Click(object sender, EventArgs e) { }
+        private void PredButtonSum_Click(object sender, EventArgs e) => SwitchPage(new PredictionForm(_home, _user));
+        private void LogoutButtonSum_Click(object sender, EventArgs e) { _isNavigating = true; new LoginForms().Show(); this.Dispose(); }
 
         private void SummaryForm_FormClosing(object sender, FormClosingEventArgs e)
         {
