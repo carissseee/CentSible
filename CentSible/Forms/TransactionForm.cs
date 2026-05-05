@@ -24,11 +24,32 @@ namespace CentSible.Forms
 
         private TransactionLogic transactionLogic = new TransactionLogic();
         private List<Transaction> transactions = new List<Transaction>();
-        public TransactionForm(Form home, Account user)
+        public TransactionForm(Account user)
         {
             InitializeComponent(); 
-            _home = home;          
-            _user = user;          
+        
+            _user = user;
+
+            var homeGroup = new Control[] { HomeButtonTran, HomeTabLayTran };
+            UIHelper.WireHoverRecursive(HomeButtonTran, homeGroup);
+            UIHelper.WireHoverRecursive(HomeTabLayTran, homeGroup);
+
+            var goalGroup = new Control[] { GoalButtonTran, GoalTabLayTran };
+            UIHelper.WireHoverRecursive(GoalButtonTran, goalGroup);
+            UIHelper.WireHoverRecursive(GoalTabLayTran, goalGroup);
+
+            var sumGroup = new Control[] { SumButtonTran, SumTabLayTran };
+            UIHelper.WireHoverRecursive(SumButtonTran, sumGroup);
+            UIHelper.WireHoverRecursive(SumTabLayTran, sumGroup);
+
+            var predGroup = new Control[] { PredButtonTran, PredTabLayTran };
+            UIHelper.WireHoverRecursive(PredButtonTran, predGroup);
+            UIHelper.WireHoverRecursive(PredTabLayTran, predGroup);
+
+            UIHelper.WireClickRecursive(HomeTabLayTran, HomeButtonTran_Click);
+            UIHelper.WireClickRecursive(GoalTabLayTran, GoalButtonTran_Click);
+            UIHelper.WireClickRecursive(SumTabLayTran, SumButtonTran_Click);
+            UIHelper.WireClickRecursive(PredTabLayTran, PredButtonTran_Click);
         }
         private void TransactionForm_Load(object sender, EventArgs e)
         {
@@ -37,8 +58,8 @@ namespace CentSible.Forms
                 return;
             }
 
-            TranButtonGoal.BackColor = Color.FromArgb(212, 236, 204);
-            TranButtonGoal.ForeColor = Color.Black;
+            TranButtonTran.BackColor = Color.FromArgb(212, 236, 204);
+            TranButtonTran.ForeColor = Color.Black;
 
             cmbYear.SelectedIndexChanged -= cmbYear_SelectedIndexChanged;
             cmbYear.Items.Add(DateTime.Now.Year.ToString());
@@ -161,13 +182,11 @@ namespace CentSible.Forms
             List<Transaction> filtered = transactionLogic.GetByType(transactions, TransactionType.Budget);
             DisplayTransactions(filtered);
         }
-        private void SwitchPage(Form newPage) { _isNavigating = true; newPage.Show(); this.Hide(); }
-        private void HomeButtonGoal_Click(object sender, EventArgs e) { _isNavigating = true; _home.Show(); this.Hide(); }
-        private void GoalButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new GoalForm(_home, _user));
-        private void TranButtonGoal_Click(object sender, EventArgs e) { }
-        private void SumButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new SummaryForm(_home, _user));
-        private void PredButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new PredictionForm(_home, _user));
-        private void LogoutButtonGoal_Click(object sender, EventArgs e) { _isNavigating = true; new LoginForms().Show(); this.Dispose(); }
+        private void HomeButtonTran_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Home);
+        private void GoalButtonTran_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Goal);
+        private void SumButtonTran_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Summary);
+        private void PredButtonTran_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Prediction);
+        private void LogoutButtonTran_Click(object sender, EventArgs e) => Navigator.Logout(this);
         private void Transaction_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (!_isNavigating && e.CloseReason == CloseReason.UserClosing)

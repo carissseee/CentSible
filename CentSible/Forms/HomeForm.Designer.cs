@@ -77,21 +77,21 @@
             this.BarSpentHome = new System.Windows.Forms.ProgressBar();
             this.SavingGoalLabelLayHome = new System.Windows.Forms.TableLayoutPanel();
             this.SpendingGoalLabelLayHome = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvRecentTransactions = new System.Windows.Forms.DataGridView();
-            this.SidebarTableLayoutGoal = new System.Windows.Forms.FlowLayoutPanel();
+            this.dgvRecentTransactionsTabLay = new System.Windows.Forms.DataGridView();
+            this.SidebarTableLayoutHome = new System.Windows.Forms.FlowLayoutPanel();
             this.CentSibleTextPanelGoal = new System.Windows.Forms.Panel();
             this.CentSibleLabelHome = new System.Windows.Forms.Label();
             this.SideBarTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
             this.PredTabLayHome = new System.Windows.Forms.TableLayoutPanel();
-            this.PredPicBoxGoal = new System.Windows.Forms.PictureBox();
+            this.PredPicBoxHome = new System.Windows.Forms.PictureBox();
             this.SumTabLayHome = new System.Windows.Forms.TableLayoutPanel();
-            this.SumPicBoxGoal = new System.Windows.Forms.PictureBox();
+            this.SumPicBoxHome = new System.Windows.Forms.PictureBox();
             this.TranTabLayHome = new System.Windows.Forms.TableLayoutPanel();
-            this.GoalPicBoxGoal = new System.Windows.Forms.PictureBox();
-            this.GoalTabLayHome = new System.Windows.Forms.TableLayoutPanel();
             this.TranPicBoxGoal = new System.Windows.Forms.PictureBox();
+            this.GoalTabLayHome = new System.Windows.Forms.TableLayoutPanel();
+            this.GoalPicBoxHome = new System.Windows.Forms.PictureBox();
             this.HomeTabLayHome = new System.Windows.Forms.TableLayoutPanel();
-            this.HomePicBoxGoal = new System.Windows.Forms.PictureBox();
+            this.HomePicBoxHome = new System.Windows.Forms.PictureBox();
             this.MainLayoutHome.SuspendLayout();
             this.StreakLayoutMainHome.SuspendLayout();
             this.StreakBarLayoutHome.SuspendLayout();
@@ -102,20 +102,20 @@
             this.SpentLabelLayHome.SuspendLayout();
             this.SavingGoalLabelLayHome.SuspendLayout();
             this.SpendingGoalLabelLayHome.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecentTransactions)).BeginInit();
-            this.SidebarTableLayoutGoal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecentTransactionsTabLay)).BeginInit();
+            this.SidebarTableLayoutHome.SuspendLayout();
             this.CentSibleTextPanelGoal.SuspendLayout();
             this.SideBarTabLayGoal.SuspendLayout();
             this.PredTabLayHome.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxGoal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxHome)).BeginInit();
             this.SumTabLayHome.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SumPicBoxGoal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SumPicBoxHome)).BeginInit();
             this.TranTabLayHome.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxGoal)).BeginInit();
-            this.GoalTabLayHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TranPicBoxGoal)).BeginInit();
+            this.GoalTabLayHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxHome)).BeginInit();
             this.HomeTabLayHome.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxGoal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxHome)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCurrentStreak
@@ -308,12 +308,13 @@
             this.LogoutButtonHome.Text = " Logout";
             this.LogoutButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LogoutButtonHome.UseVisualStyleBackColor = false;
-            this.LogoutButtonHome.Click += new System.EventHandler(this.LogoutButtonGoal_Click);
+            this.LogoutButtonHome.Click += new System.EventHandler(this.LogoutButtonHome_Click);
             // 
             // PredButtonHome
             // 
-            this.PredButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(82, 160, 90);
             this.PredButtonHome.FlatAppearance.BorderSize = 0;
+            this.PredButtonHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
+            this.PredButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.PredButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PredButtonHome.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.PredButtonHome.ForeColor = System.Drawing.Color.White;
@@ -324,12 +325,13 @@
             this.PredButtonHome.Text = "Prediction";
             this.PredButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PredButtonHome.UseVisualStyleBackColor = false;
-            this.PredButtonHome.Click += new System.EventHandler(this.PredButtonGoal_Click);
+            this.PredButtonHome.Click += new System.EventHandler(this.PredButtonHome_Click);
             // 
             // SumButtonHome
-            //
-            this.SumButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(82, 160, 90);
+            // 
             this.SumButtonHome.FlatAppearance.BorderSize = 0;
+            this.SumButtonHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
+            this.SumButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.SumButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SumButtonHome.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.SumButtonHome.ForeColor = System.Drawing.Color.White;
@@ -340,12 +342,13 @@
             this.SumButtonHome.Text = "Summary";
             this.SumButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SumButtonHome.UseVisualStyleBackColor = false;
-            this.SumButtonHome.Click += new System.EventHandler(this.SumButtonGoal_Click);
+            this.SumButtonHome.Click += new System.EventHandler(this.SumButtonHome_Click);
             // 
             // TranButtonHome
             // 
-            this.TranButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(82, 160, 90);
             this.TranButtonHome.FlatAppearance.BorderSize = 0;
+            this.TranButtonHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
+            this.TranButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.TranButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TranButtonHome.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TranButtonHome.ForeColor = System.Drawing.Color.White;
@@ -360,8 +363,9 @@
             // 
             // GoalButtonHome
             // 
-            this.GoalButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(82, 160, 90);
             this.GoalButtonHome.FlatAppearance.BorderSize = 0;
+            this.GoalButtonHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
+            this.GoalButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.GoalButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GoalButtonHome.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.GoalButtonHome.ForeColor = System.Drawing.Color.White;
@@ -372,13 +376,14 @@
             this.GoalButtonHome.Text = "Goal";
             this.GoalButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GoalButtonHome.UseVisualStyleBackColor = false;
-            this.GoalButtonHome.Click += new System.EventHandler(this.GoalButtonGoal_Click);
+            this.GoalButtonHome.Click += new System.EventHandler(this.GoalButtonHome_Click);
             // 
             // HomeButtonHome
             // 
-            this.HomeButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(52, 110, 60);
             this.HomeButtonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.HomeButtonHome.FlatAppearance.BorderSize = 0;
+            this.HomeButtonHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
+            this.HomeButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.HomeButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeButtonHome.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.HomeButtonHome.ForeColor = System.Drawing.Color.White;
@@ -593,7 +598,7 @@
             this.TranSaveSpendLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TranSaveSpendLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TranSaveSpendLayoutHome.Controls.Add(this.flowLayoutPanel1, 1, 0);
-            this.TranSaveSpendLayoutHome.Controls.Add(this.dgvRecentTransactions, 0, 0);
+            this.TranSaveSpendLayoutHome.Controls.Add(this.dgvRecentTransactionsTabLay, 0, 0);
             this.TranSaveSpendLayoutHome.Location = new System.Drawing.Point(3, 164);
             this.TranSaveSpendLayoutHome.Name = "TranSaveSpendLayoutHome";
             this.TranSaveSpendLayoutHome.RowCount = 1;
@@ -695,12 +700,12 @@
             this.SpendingGoalLabelLayHome.Size = new System.Drawing.Size(395, 36);
             this.SpendingGoalLabelLayHome.TabIndex = 0;
             // 
-            // dgvRecentTransactions
+            // dgvRecentTransactionsTabLay
             // 
-            this.dgvRecentTransactions.AllowUserToAddRows = false;
-            this.dgvRecentTransactions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvRecentTransactions.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
-            this.dgvRecentTransactions.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvRecentTransactionsTabLay.AllowUserToAddRows = false;
+            this.dgvRecentTransactionsTabLay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRecentTransactionsTabLay.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
+            this.dgvRecentTransactionsTabLay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -708,8 +713,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRecentTransactions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvRecentTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRecentTransactionsTabLay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvRecentTransactionsTabLay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -717,27 +722,27 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRecentTransactions.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvRecentTransactions.EnableHeadersVisualStyles = false;
-            this.dgvRecentTransactions.GridColor = System.Drawing.Color.DarkGreen;
-            this.dgvRecentTransactions.Location = new System.Drawing.Point(3, 3);
-            this.dgvRecentTransactions.Name = "dgvRecentTransactions";
-            this.dgvRecentTransactions.ReadOnly = true;
-            this.dgvRecentTransactions.RowHeadersVisible = false;
-            this.dgvRecentTransactions.RowHeadersWidth = 51;
-            this.dgvRecentTransactions.RowTemplate.Height = 24;
-            this.dgvRecentTransactions.Size = new System.Drawing.Size(412, 226);
-            this.dgvRecentTransactions.TabIndex = 40;
+            this.dgvRecentTransactionsTabLay.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvRecentTransactionsTabLay.EnableHeadersVisualStyles = false;
+            this.dgvRecentTransactionsTabLay.GridColor = System.Drawing.Color.DarkGreen;
+            this.dgvRecentTransactionsTabLay.Location = new System.Drawing.Point(3, 3);
+            this.dgvRecentTransactionsTabLay.Name = "dgvRecentTransactionsTabLay";
+            this.dgvRecentTransactionsTabLay.ReadOnly = true;
+            this.dgvRecentTransactionsTabLay.RowHeadersVisible = false;
+            this.dgvRecentTransactionsTabLay.RowHeadersWidth = 51;
+            this.dgvRecentTransactionsTabLay.RowTemplate.Height = 24;
+            this.dgvRecentTransactionsTabLay.Size = new System.Drawing.Size(412, 331);
+            this.dgvRecentTransactionsTabLay.TabIndex = 40;
             // 
-            // SidebarTableLayoutGoal
+            // SidebarTableLayoutHome
             // 
-            this.SidebarTableLayoutGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            this.SidebarTableLayoutGoal.Controls.Add(this.CentSibleTextPanelGoal);
-            this.SidebarTableLayoutGoal.Controls.Add(this.SideBarTabLayGoal);
-            this.SidebarTableLayoutGoal.Location = new System.Drawing.Point(-2, -2);
-            this.SidebarTableLayoutGoal.Name = "SidebarTableLayoutGoal";
-            this.SidebarTableLayoutGoal.Size = new System.Drawing.Size(200, 521);
-            this.SidebarTableLayoutGoal.TabIndex = 39;
+            this.SidebarTableLayoutHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.SidebarTableLayoutHome.Controls.Add(this.CentSibleTextPanelGoal);
+            this.SidebarTableLayoutHome.Controls.Add(this.SideBarTabLayGoal);
+            this.SidebarTableLayoutHome.Location = new System.Drawing.Point(-2, -2);
+            this.SidebarTableLayoutHome.Name = "SidebarTableLayoutHome";
+            this.SidebarTableLayoutHome.Size = new System.Drawing.Size(200, 521);
+            this.SidebarTableLayoutHome.TabIndex = 39;
             // 
             // CentSibleTextPanelGoal
             // 
@@ -789,7 +794,7 @@
             this.PredTabLayHome.ColumnCount = 2;
             this.PredTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
             this.PredTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
-            this.PredTabLayHome.Controls.Add(this.PredPicBoxGoal, 0, 0);
+            this.PredTabLayHome.Controls.Add(this.PredPicBoxHome, 0, 0);
             this.PredTabLayHome.Controls.Add(this.PredButtonHome, 1, 0);
             this.PredTabLayHome.Location = new System.Drawing.Point(3, 203);
             this.PredTabLayHome.Name = "PredTabLayHome";
@@ -799,23 +804,23 @@
             this.PredTabLayHome.Size = new System.Drawing.Size(183, 44);
             this.PredTabLayHome.TabIndex = 25;
             // 
-            // PredPicBoxGoal
+            // PredPicBoxHome
             // 
-            this.PredPicBoxGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PredPicBoxGoal.Image = global::CentSible.Properties.Resources.PredictionForm;
-            this.PredPicBoxGoal.Location = new System.Drawing.Point(12, 3);
-            this.PredPicBoxGoal.Name = "PredPicBoxGoal";
-            this.PredPicBoxGoal.Size = new System.Drawing.Size(40, 38);
-            this.PredPicBoxGoal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PredPicBoxGoal.TabIndex = 19;
-            this.PredPicBoxGoal.TabStop = false;
+            this.PredPicBoxHome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PredPicBoxHome.Image = global::CentSible.Properties.Resources.PredictionForm;
+            this.PredPicBoxHome.Location = new System.Drawing.Point(12, 3);
+            this.PredPicBoxHome.Name = "PredPicBoxHome";
+            this.PredPicBoxHome.Size = new System.Drawing.Size(40, 38);
+            this.PredPicBoxHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PredPicBoxHome.TabIndex = 19;
+            this.PredPicBoxHome.TabStop = false;
             // 
             // SumTabLayHome
             // 
             this.SumTabLayHome.ColumnCount = 2;
             this.SumTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
             this.SumTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
-            this.SumTabLayHome.Controls.Add(this.SumPicBoxGoal, 0, 0);
+            this.SumTabLayHome.Controls.Add(this.SumPicBoxHome, 0, 0);
             this.SumTabLayHome.Controls.Add(this.SumButtonHome, 1, 0);
             this.SumTabLayHome.Location = new System.Drawing.Point(3, 153);
             this.SumTabLayHome.Name = "SumTabLayHome";
@@ -825,23 +830,23 @@
             this.SumTabLayHome.Size = new System.Drawing.Size(183, 44);
             this.SumTabLayHome.TabIndex = 24;
             // 
-            // SumPicBoxGoal
+            // SumPicBoxHome
             // 
-            this.SumPicBoxGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SumPicBoxGoal.Image = global::CentSible.Properties.Resources.SummaryForm;
-            this.SumPicBoxGoal.Location = new System.Drawing.Point(12, 3);
-            this.SumPicBoxGoal.Name = "SumPicBoxGoal";
-            this.SumPicBoxGoal.Size = new System.Drawing.Size(40, 38);
-            this.SumPicBoxGoal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.SumPicBoxGoal.TabIndex = 18;
-            this.SumPicBoxGoal.TabStop = false;
+            this.SumPicBoxHome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SumPicBoxHome.Image = global::CentSible.Properties.Resources.SummaryForm;
+            this.SumPicBoxHome.Location = new System.Drawing.Point(12, 3);
+            this.SumPicBoxHome.Name = "SumPicBoxHome";
+            this.SumPicBoxHome.Size = new System.Drawing.Size(40, 38);
+            this.SumPicBoxHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SumPicBoxHome.TabIndex = 18;
+            this.SumPicBoxHome.TabStop = false;
             // 
             // TranTabLayHome
             // 
             this.TranTabLayHome.ColumnCount = 2;
             this.TranTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
             this.TranTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
-            this.TranTabLayHome.Controls.Add(this.GoalPicBoxGoal, 0, 0);
+            this.TranTabLayHome.Controls.Add(this.TranPicBoxGoal, 0, 0);
             this.TranTabLayHome.Controls.Add(this.TranButtonHome, 1, 0);
             this.TranTabLayHome.Location = new System.Drawing.Point(3, 103);
             this.TranTabLayHome.Name = "TranTabLayHome";
@@ -851,23 +856,23 @@
             this.TranTabLayHome.Size = new System.Drawing.Size(183, 44);
             this.TranTabLayHome.TabIndex = 23;
             // 
-            // GoalPicBoxGoal
+            // TranPicBoxGoal
             // 
-            this.GoalPicBoxGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.GoalPicBoxGoal.Image = global::CentSible.Properties.Resources.TransactionForm;
-            this.GoalPicBoxGoal.Location = new System.Drawing.Point(12, 5);
-            this.GoalPicBoxGoal.Name = "GoalPicBoxGoal";
-            this.GoalPicBoxGoal.Size = new System.Drawing.Size(40, 33);
-            this.GoalPicBoxGoal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.GoalPicBoxGoal.TabIndex = 16;
-            this.GoalPicBoxGoal.TabStop = false;
+            this.TranPicBoxGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TranPicBoxGoal.Image = global::CentSible.Properties.Resources.TransactionForm;
+            this.TranPicBoxGoal.Location = new System.Drawing.Point(12, 5);
+            this.TranPicBoxGoal.Name = "TranPicBoxGoal";
+            this.TranPicBoxGoal.Size = new System.Drawing.Size(40, 33);
+            this.TranPicBoxGoal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.TranPicBoxGoal.TabIndex = 16;
+            this.TranPicBoxGoal.TabStop = false;
             // 
             // GoalTabLayHome
             // 
             this.GoalTabLayHome.ColumnCount = 2;
             this.GoalTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.63415F));
             this.GoalTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.36585F));
-            this.GoalTabLayHome.Controls.Add(this.TranPicBoxGoal, 0, 0);
+            this.GoalTabLayHome.Controls.Add(this.GoalPicBoxHome, 0, 0);
             this.GoalTabLayHome.Controls.Add(this.GoalButtonHome, 1, 0);
             this.GoalTabLayHome.Location = new System.Drawing.Point(3, 53);
             this.GoalTabLayHome.Name = "GoalTabLayHome";
@@ -877,16 +882,16 @@
             this.GoalTabLayHome.Size = new System.Drawing.Size(183, 44);
             this.GoalTabLayHome.TabIndex = 22;
             // 
-            // TranPicBoxGoal
+            // GoalPicBoxHome
             // 
-            this.TranPicBoxGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TranPicBoxGoal.Image = global::CentSible.Properties.Resources.GoalForm;
-            this.TranPicBoxGoal.Location = new System.Drawing.Point(11, 3);
-            this.TranPicBoxGoal.Name = "TranPicBoxGoal";
-            this.TranPicBoxGoal.Size = new System.Drawing.Size(40, 38);
-            this.TranPicBoxGoal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.TranPicBoxGoal.TabIndex = 17;
-            this.TranPicBoxGoal.TabStop = false;
+            this.GoalPicBoxHome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.GoalPicBoxHome.Image = global::CentSible.Properties.Resources.GoalForm;
+            this.GoalPicBoxHome.Location = new System.Drawing.Point(11, 3);
+            this.GoalPicBoxHome.Name = "GoalPicBoxHome";
+            this.GoalPicBoxHome.Size = new System.Drawing.Size(40, 38);
+            this.GoalPicBoxHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GoalPicBoxHome.TabIndex = 17;
+            this.GoalPicBoxHome.TabStop = false;
             // 
             // HomeTabLayHome
             // 
@@ -894,7 +899,7 @@
             this.HomeTabLayHome.ColumnCount = 2;
             this.HomeTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
             this.HomeTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
-            this.HomeTabLayHome.Controls.Add(this.HomePicBoxGoal, 0, 0);
+            this.HomeTabLayHome.Controls.Add(this.HomePicBoxHome, 0, 0);
             this.HomeTabLayHome.Controls.Add(this.HomeButtonHome, 1, 0);
             this.HomeTabLayHome.Location = new System.Drawing.Point(3, 3);
             this.HomeTabLayHome.Name = "HomeTabLayHome";
@@ -904,22 +909,22 @@
             this.HomeTabLayHome.Size = new System.Drawing.Size(183, 44);
             this.HomeTabLayHome.TabIndex = 21;
             // 
-            // HomePicBoxGoal
+            // HomePicBoxHome
             // 
-            this.HomePicBoxGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.HomePicBoxGoal.Image = global::CentSible.Properties.Resources.HomeForm;
-            this.HomePicBoxGoal.Location = new System.Drawing.Point(12, 3);
-            this.HomePicBoxGoal.Name = "HomePicBoxGoal";
-            this.HomePicBoxGoal.Size = new System.Drawing.Size(40, 38);
-            this.HomePicBoxGoal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.HomePicBoxGoal.TabIndex = 15;
-            this.HomePicBoxGoal.TabStop = false;
+            this.HomePicBoxHome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.HomePicBoxHome.Image = global::CentSible.Properties.Resources.HomeForm;
+            this.HomePicBoxHome.Location = new System.Drawing.Point(12, 3);
+            this.HomePicBoxHome.Name = "HomePicBoxHome";
+            this.HomePicBoxHome.Size = new System.Drawing.Size(40, 38);
+            this.HomePicBoxHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.HomePicBoxHome.TabIndex = 15;
+            this.HomePicBoxHome.TabStop = false;
             // 
             // HomeForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1035, 510);
-            this.Controls.Add(this.SidebarTableLayoutGoal);
+            this.Controls.Add(this.SidebarTableLayoutHome);
             this.Controls.Add(this.MainLayoutHome);
             this.Controls.Add(this.progressBar2);
             this.MaximizeBox = false;
@@ -949,20 +954,20 @@
             this.SavingGoalLabelLayHome.PerformLayout();
             this.SpendingGoalLabelLayHome.ResumeLayout(false);
             this.SpendingGoalLabelLayHome.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecentTransactions)).EndInit();
-            this.SidebarTableLayoutGoal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecentTransactionsTabLay)).EndInit();
+            this.SidebarTableLayoutHome.ResumeLayout(false);
             this.CentSibleTextPanelGoal.ResumeLayout(false);
             this.SideBarTabLayGoal.ResumeLayout(false);
             this.PredTabLayHome.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxGoal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxHome)).EndInit();
             this.SumTabLayHome.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SumPicBoxGoal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SumPicBoxHome)).EndInit();
             this.TranTabLayHome.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxGoal)).EndInit();
-            this.GoalTabLayHome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TranPicBoxGoal)).EndInit();
+            this.GoalTabLayHome.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxHome)).EndInit();
             this.HomeTabLayHome.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxGoal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxHome)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1009,24 +1014,24 @@
         private System.Windows.Forms.Label ThuLabelHome;
         private System.Windows.Forms.Label WedLabelHome;
         private System.Windows.Forms.Label TueLabelHome;
-        private System.Windows.Forms.FlowLayoutPanel SidebarTableLayoutGoal;
+        private System.Windows.Forms.FlowLayoutPanel SidebarTableLayoutHome;
         private System.Windows.Forms.Panel CentSibleTextPanelGoal;
         private System.Windows.Forms.Label CentSibleLabelHome;
         private System.Windows.Forms.TableLayoutPanel SideBarTabLayGoal;
         private System.Windows.Forms.TableLayoutPanel PredTabLayHome;
-        private System.Windows.Forms.PictureBox PredPicBoxGoal;
+        private System.Windows.Forms.PictureBox PredPicBoxHome;
         private System.Windows.Forms.TableLayoutPanel SumTabLayHome;
-        private System.Windows.Forms.PictureBox SumPicBoxGoal;
+        private System.Windows.Forms.PictureBox SumPicBoxHome;
         private System.Windows.Forms.TableLayoutPanel TranTabLayHome;
-        private System.Windows.Forms.PictureBox GoalPicBoxGoal;
-        private System.Windows.Forms.TableLayoutPanel GoalTabLayHome;
         private System.Windows.Forms.PictureBox TranPicBoxGoal;
+        private System.Windows.Forms.TableLayoutPanel GoalTabLayHome;
+        private System.Windows.Forms.PictureBox GoalPicBoxHome;
         private System.Windows.Forms.TableLayoutPanel HomeTabLayHome;
-        private System.Windows.Forms.PictureBox HomePicBoxGoal;
+        private System.Windows.Forms.PictureBox HomePicBoxHome;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel StreakBarLayoutHome;
         private System.Windows.Forms.TableLayoutPanel LongestStreakTabLayHome;
-        private System.Windows.Forms.DataGridView dgvRecentTransactions;
+        private System.Windows.Forms.DataGridView dgvRecentTransactionsTabLay;
         private System.Windows.Forms.Label lblDashboardHeader;
     }
 }

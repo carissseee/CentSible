@@ -19,14 +19,34 @@ namespace CentSible.Forms
         private bool _isNavigating = false;
         private PredictionLogic _predLogic = new PredictionLogic();
 
-        public PredictionForm(Form home, Account user)
+        public PredictionForm(Account user)
         {
             InitializeComponent();
-            _home = home;
             _user = user;
 
             this.VisibleChanged += PredictionForm_VisibleChanged;
             this.cbSelectMonthPred.SelectedIndexChanged += cbSelectMonthPred_SelectedIndexChanged;
+
+            var homeGroup = new Control[] { HomeButtonPred, HomeTabLayPred };
+            UIHelper.WireHoverRecursive(HomeButtonPred, homeGroup);
+            UIHelper.WireHoverRecursive(HomeTabLayPred, homeGroup);
+
+            var goalGroup = new Control[] { GoalButtonPred, GoalTabLayPred };
+            UIHelper.WireHoverRecursive(GoalButtonPred, goalGroup);
+            UIHelper.WireHoverRecursive(GoalTabLayPred, goalGroup);
+
+            var tranGroup = new Control[] { TranButtonPred, TranTabLayPred };
+            UIHelper.WireHoverRecursive(TranButtonPred, tranGroup);
+            UIHelper.WireHoverRecursive(TranTabLayPred, tranGroup);
+
+            var sumGroup = new Control[] { SumButtonPred, SumTabLayPred };
+            UIHelper.WireHoverRecursive(SumButtonPred, sumGroup);
+            UIHelper.WireHoverRecursive(SumTabLayPred, sumGroup);
+            
+            UIHelper.WireClickRecursive(HomeTabLayPred, HomeButtonPred_Click);
+            UIHelper.WireClickRecursive(GoalTabLayPred, GoalButtonPred_Click);
+            UIHelper.WireClickRecursive(SumTabLayPred, SumButtonPred_Click);
+            UIHelper.WireClickRecursive(PredTabLayPred, TranButtonPred_Click);
         }
 
         private void PredictionForm_Load(object sender, EventArgs e)
@@ -38,8 +58,6 @@ namespace CentSible.Forms
             numSelectYearPred.Value = DateTime.Now.Year;
             numSelectYearPred.Enabled = false;    
             cbSelectMonthPred.SelectedIndex = DateTime.Now.Month - 1;      
-            PredButtonGoal.BackColor = Color.FromArgb(212, 236, 204);
-            PredButtonGoal.ForeColor = Color.Black;
             RunPrediction();
         }
 
@@ -109,25 +127,19 @@ namespace CentSible.Forms
             this.Close();
         }
 
-        private void GoalButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new GoalForm(_home, _user));
-        private void TranButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new TransactionForm(_home, _user));     
-        private void SumButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new SummaryForm(_home, _user));
-        private void PredButtonGoal_Click(object sender, EventArgs e) { }
-        private void LogoutButtonGoal_Click(object sender, EventArgs e)
-        {
-            _isNavigating = true;
-            new LoginForms().Show();
-            this.Dispose();
-           
-        }
+        private void HomeButtonPred_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Home);
+
+        private void GoalButtonPred_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Goal);
+        private void TranButtonPred_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Transaction);
+        private void SumButtonPred_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Summary);
+        private void LogoutButtonPred_Click(object sender, EventArgs e) => Navigator.Logout(this);
 
         private void PredictionForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!_isNavigating && e.CloseReason == CloseReason.UserClosing)
+            if (e.CloseReason == CloseReason.UserClosing && Navigator.Home != null)
                 Application.Exit();
-            
         }
 
-       
+
     }
 }

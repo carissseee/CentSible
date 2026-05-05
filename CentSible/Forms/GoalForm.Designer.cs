@@ -58,6 +58,8 @@
             this.dynamicGoalLabel = new System.Windows.Forms.Label();
             this.Spacer1 = new System.Windows.Forms.Panel();
             this.SpendingGoalTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
+            this.TargetAmountTextGoal = new PlaceholderText.PlaceholderTextBox();
+            this.CurrentAmountTextGoal = new PlaceholderText.PlaceholderTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TargetDateLabelGoal = new System.Windows.Forms.Label();
             this.CurrentAmountLabelGoal = new System.Windows.Forms.Label();
@@ -82,15 +84,13 @@
             this.SumButtonGoal = new System.Windows.Forms.Button();
             this.TranTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
             this.TranButtonGoal = new System.Windows.Forms.Button();
-            this.GoalPicBoxGoal = new System.Windows.Forms.PictureBox();
+            this.TranPicBoxGoal = new System.Windows.Forms.PictureBox();
             this.GoalTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
             this.GoalButtonGoal = new System.Windows.Forms.Button();
-            this.TranPicBoxGoal = new System.Windows.Forms.PictureBox();
+            this.GoalPicBoxGoal = new System.Windows.Forms.PictureBox();
             this.HomeTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
             this.HomeButtonGoal = new System.Windows.Forms.Button();
             this.HomePicBoxGoal = new System.Windows.Forms.PictureBox();
-            this.TargetAmountTextGoal = new PlaceholderText.PlaceholderTextBox();
-            this.CurrentAmountTextGoal = new PlaceholderText.PlaceholderTextBox();
             this.BarMainTabLayGoal.SuspendLayout();
             this.IndicatorBarBottomLayoutGoal.SuspendLayout();
             this.IndicatorBarTopLayoutGoal.SuspendLayout();
@@ -115,9 +115,9 @@
             this.SumTabLayGoal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SumPicBoxGoal)).BeginInit();
             this.TranTabLayGoal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxGoal)).BeginInit();
-            this.GoalTabLayGoal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TranPicBoxGoal)).BeginInit();
+            this.GoalTabLayGoal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxGoal)).BeginInit();
             this.HomeTabLayGoal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxGoal)).BeginInit();
             this.SuspendLayout();
@@ -539,6 +539,28 @@
             this.SpendingGoalTabLayGoal.Size = new System.Drawing.Size(342, 233);
             this.SpendingGoalTabLayGoal.TabIndex = 37;
             // 
+            // TargetAmountTextGoal
+            // 
+            this.TargetAmountTextGoal.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TargetAmountTextGoal.ForeColor = System.Drawing.Color.Gray;
+            this.TargetAmountTextGoal.Location = new System.Drawing.Point(231, 18);
+            this.TargetAmountTextGoal.Name = "TargetAmountTextGoal";
+            this.TargetAmountTextGoal.Placeholder = "₱";
+            this.TargetAmountTextGoal.PlaceholderColor = System.Drawing.Color.Gray;
+            this.TargetAmountTextGoal.Size = new System.Drawing.Size(68, 22);
+            this.TargetAmountTextGoal.TabIndex = 38;
+            // 
+            // CurrentAmountTextGoal
+            // 
+            this.CurrentAmountTextGoal.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.CurrentAmountTextGoal.ForeColor = System.Drawing.Color.Gray;
+            this.CurrentAmountTextGoal.Location = new System.Drawing.Point(231, 76);
+            this.CurrentAmountTextGoal.Name = "CurrentAmountTextGoal";
+            this.CurrentAmountTextGoal.Placeholder = "₱";
+            this.CurrentAmountTextGoal.PlaceholderColor = System.Drawing.Color.Gray;
+            this.CurrentAmountTextGoal.Size = new System.Drawing.Size(68, 22);
+            this.CurrentAmountTextGoal.TabIndex = 39;
+            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -711,22 +733,22 @@
             this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 128F));
-            this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.SideBarTabLayGoal.Size = new System.Drawing.Size(197, 441);
+            this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 146F));
+            this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.SideBarTabLayGoal.Size = new System.Drawing.Size(189, 441);
             this.SideBarTabLayGoal.TabIndex = 11;
             // 
             // LogoutButtonGoal
             // 
             this.LogoutButtonGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
             this.LogoutButtonGoal.FlatAppearance.BorderSize = 0;
-            this.LogoutButtonGoal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
+            this.LogoutButtonGoal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.LogoutButtonGoal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogoutButtonGoal.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.LogoutButtonGoal.ForeColor = System.Drawing.Color.White;
-            this.LogoutButtonGoal.Location = new System.Drawing.Point(3, 381);
+            this.LogoutButtonGoal.Location = new System.Drawing.Point(3, 399);
             this.LogoutButtonGoal.Name = "LogoutButtonGoal";
-            this.LogoutButtonGoal.Size = new System.Drawing.Size(114, 57);
+            this.LogoutButtonGoal.Size = new System.Drawing.Size(183, 39);
             this.LogoutButtonGoal.TabIndex = 15;
             this.LogoutButtonGoal.Text = "Logout";
             this.LogoutButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -745,14 +767,14 @@
             this.PredTabLayGoal.RowCount = 1;
             this.PredTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PredTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PredTabLayGoal.Size = new System.Drawing.Size(191, 44);
+            this.PredTabLayGoal.Size = new System.Drawing.Size(183, 44);
             this.PredTabLayGoal.TabIndex = 25;
             // 
             // PredPicBoxGoal
             // 
             this.PredPicBoxGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PredPicBoxGoal.Image = global::CentSible.Properties.Resources.PredictionForm;
-            this.PredPicBoxGoal.Location = new System.Drawing.Point(13, 3);
+            this.PredPicBoxGoal.Location = new System.Drawing.Point(12, 3);
             this.PredPicBoxGoal.Name = "PredPicBoxGoal";
             this.PredPicBoxGoal.Size = new System.Drawing.Size(40, 38);
             this.PredPicBoxGoal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -761,15 +783,16 @@
             // 
             // PredButtonGoal
             // 
+            this.PredButtonGoal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.PredButtonGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
             this.PredButtonGoal.FlatAppearance.BorderSize = 0;
-            this.PredButtonGoal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
+            this.PredButtonGoal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.PredButtonGoal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PredButtonGoal.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.PredButtonGoal.ForeColor = System.Drawing.Color.White;
-            this.PredButtonGoal.Location = new System.Drawing.Point(70, 3);
+            this.PredButtonGoal.Location = new System.Drawing.Point(67, 3);
             this.PredButtonGoal.Name = "PredButtonGoal";
-            this.PredButtonGoal.Size = new System.Drawing.Size(115, 38);
+            this.PredButtonGoal.Size = new System.Drawing.Size(113, 38);
             this.PredButtonGoal.TabIndex = 14;
             this.PredButtonGoal.Text = "Prediction";
             this.PredButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -788,14 +811,14 @@
             this.SumTabLayGoal.RowCount = 1;
             this.SumTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SumTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SumTabLayGoal.Size = new System.Drawing.Size(191, 44);
+            this.SumTabLayGoal.Size = new System.Drawing.Size(183, 44);
             this.SumTabLayGoal.TabIndex = 24;
             // 
             // SumPicBoxGoal
             // 
             this.SumPicBoxGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.SumPicBoxGoal.Image = global::CentSible.Properties.Resources.SummaryForm;
-            this.SumPicBoxGoal.Location = new System.Drawing.Point(13, 3);
+            this.SumPicBoxGoal.Location = new System.Drawing.Point(12, 3);
             this.SumPicBoxGoal.Name = "SumPicBoxGoal";
             this.SumPicBoxGoal.Size = new System.Drawing.Size(40, 38);
             this.SumPicBoxGoal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -804,15 +827,16 @@
             // 
             // SumButtonGoal
             // 
+            this.SumButtonGoal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.SumButtonGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
             this.SumButtonGoal.FlatAppearance.BorderSize = 0;
-            this.SumButtonGoal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
+            this.SumButtonGoal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.SumButtonGoal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SumButtonGoal.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.SumButtonGoal.ForeColor = System.Drawing.Color.White;
-            this.SumButtonGoal.Location = new System.Drawing.Point(70, 3);
+            this.SumButtonGoal.Location = new System.Drawing.Point(67, 3);
             this.SumButtonGoal.Name = "SumButtonGoal";
-            this.SumButtonGoal.Size = new System.Drawing.Size(118, 38);
+            this.SumButtonGoal.Size = new System.Drawing.Size(113, 38);
             this.SumButtonGoal.TabIndex = 13;
             this.SumButtonGoal.Text = "Summary";
             this.SumButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -825,85 +849,86 @@
             this.TranTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
             this.TranTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
             this.TranTabLayGoal.Controls.Add(this.TranButtonGoal, 1, 0);
-            this.TranTabLayGoal.Controls.Add(this.GoalPicBoxGoal, 0, 0);
+            this.TranTabLayGoal.Controls.Add(this.TranPicBoxGoal, 0, 0);
             this.TranTabLayGoal.Location = new System.Drawing.Point(3, 103);
             this.TranTabLayGoal.Name = "TranTabLayGoal";
             this.TranTabLayGoal.RowCount = 1;
             this.TranTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TranTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TranTabLayGoal.Size = new System.Drawing.Size(191, 44);
+            this.TranTabLayGoal.Size = new System.Drawing.Size(183, 44);
             this.TranTabLayGoal.TabIndex = 23;
             // 
             // TranButtonGoal
             // 
+            this.TranButtonGoal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.TranButtonGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
             this.TranButtonGoal.FlatAppearance.BorderSize = 0;
-            this.TranButtonGoal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
+            this.TranButtonGoal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.TranButtonGoal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TranButtonGoal.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TranButtonGoal.ForeColor = System.Drawing.Color.White;
-            this.TranButtonGoal.Location = new System.Drawing.Point(70, 3);
+            this.TranButtonGoal.Location = new System.Drawing.Point(67, 3);
             this.TranButtonGoal.Name = "TranButtonGoal";
-            this.TranButtonGoal.Size = new System.Drawing.Size(118, 38);
+            this.TranButtonGoal.Size = new System.Drawing.Size(113, 38);
             this.TranButtonGoal.TabIndex = 12;
             this.TranButtonGoal.Text = "Transactions";
             this.TranButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TranButtonGoal.UseVisualStyleBackColor = false;
-            this.TranButtonGoal.Click += new System.EventHandler(this.TranButtonGoal_Click);
             // 
-            // GoalPicBoxGoal
+            // TranPicBoxGoal
             // 
-            this.GoalPicBoxGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.GoalPicBoxGoal.Image = global::CentSible.Properties.Resources.TransactionForm;
-            this.GoalPicBoxGoal.Location = new System.Drawing.Point(13, 5);
-            this.GoalPicBoxGoal.Name = "GoalPicBoxGoal";
-            this.GoalPicBoxGoal.Size = new System.Drawing.Size(40, 33);
-            this.GoalPicBoxGoal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.GoalPicBoxGoal.TabIndex = 16;
-            this.GoalPicBoxGoal.TabStop = false;
+            this.TranPicBoxGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TranPicBoxGoal.Image = global::CentSible.Properties.Resources.TransactionForm;
+            this.TranPicBoxGoal.Location = new System.Drawing.Point(12, 5);
+            this.TranPicBoxGoal.Name = "TranPicBoxGoal";
+            this.TranPicBoxGoal.Size = new System.Drawing.Size(40, 33);
+            this.TranPicBoxGoal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.TranPicBoxGoal.TabIndex = 16;
+            this.TranPicBoxGoal.TabStop = false;
             // 
             // GoalTabLayGoal
             // 
+            this.GoalTabLayGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.GoalTabLayGoal.ColumnCount = 2;
             this.GoalTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.63415F));
             this.GoalTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.36585F));
             this.GoalTabLayGoal.Controls.Add(this.GoalButtonGoal, 1, 0);
-            this.GoalTabLayGoal.Controls.Add(this.TranPicBoxGoal, 0, 0);
+            this.GoalTabLayGoal.Controls.Add(this.GoalPicBoxGoal, 0, 0);
             this.GoalTabLayGoal.Location = new System.Drawing.Point(3, 53);
             this.GoalTabLayGoal.Name = "GoalTabLayGoal";
             this.GoalTabLayGoal.RowCount = 1;
             this.GoalTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.GoalTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.GoalTabLayGoal.Size = new System.Drawing.Size(191, 44);
+            this.GoalTabLayGoal.Size = new System.Drawing.Size(183, 44);
             this.GoalTabLayGoal.TabIndex = 22;
             // 
             // GoalButtonGoal
             // 
-            this.GoalButtonGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.GoalButtonGoal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
+            this.GoalButtonGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.GoalButtonGoal.FlatAppearance.BorderSize = 0;
-            this.GoalButtonGoal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
+            this.GoalButtonGoal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.GoalButtonGoal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GoalButtonGoal.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.GoalButtonGoal.ForeColor = System.Drawing.Color.White;
-            this.GoalButtonGoal.Location = new System.Drawing.Point(69, 3);
+            this.GoalButtonGoal.Location = new System.Drawing.Point(66, 3);
             this.GoalButtonGoal.Name = "GoalButtonGoal";
-            this.GoalButtonGoal.Size = new System.Drawing.Size(119, 38);
+            this.GoalButtonGoal.Size = new System.Drawing.Size(114, 38);
             this.GoalButtonGoal.TabIndex = 11;
             this.GoalButtonGoal.Text = "Goal";
             this.GoalButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GoalButtonGoal.UseVisualStyleBackColor = false;
-            this.GoalButtonGoal.Click += new System.EventHandler(this.GoalButtonGoal_Click);
             // 
-            // TranPicBoxGoal
+            // GoalPicBoxGoal
             // 
-            this.TranPicBoxGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TranPicBoxGoal.Image = global::CentSible.Properties.Resources.GoalForm;
-            this.TranPicBoxGoal.Location = new System.Drawing.Point(13, 3);
-            this.TranPicBoxGoal.Name = "TranPicBoxGoal";
-            this.TranPicBoxGoal.Size = new System.Drawing.Size(40, 38);
-            this.TranPicBoxGoal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.TranPicBoxGoal.TabIndex = 17;
-            this.TranPicBoxGoal.TabStop = false;
+            this.GoalPicBoxGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.GoalPicBoxGoal.Image = global::CentSible.Properties.Resources.GoalForm;
+            this.GoalPicBoxGoal.Location = new System.Drawing.Point(11, 3);
+            this.GoalPicBoxGoal.Name = "GoalPicBoxGoal";
+            this.GoalPicBoxGoal.Size = new System.Drawing.Size(40, 38);
+            this.GoalPicBoxGoal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GoalPicBoxGoal.TabIndex = 17;
+            this.GoalPicBoxGoal.TabStop = false;
             // 
             // HomeTabLayGoal
             // 
@@ -917,18 +942,19 @@
             this.HomeTabLayGoal.RowCount = 1;
             this.HomeTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.HomeTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.HomeTabLayGoal.Size = new System.Drawing.Size(191, 44);
+            this.HomeTabLayGoal.Size = new System.Drawing.Size(183, 44);
             this.HomeTabLayGoal.TabIndex = 21;
             // 
             // HomeButtonGoal
             // 
+            this.HomeButtonGoal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.HomeButtonGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
             this.HomeButtonGoal.FlatAppearance.BorderSize = 0;
-            this.HomeButtonGoal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
+            this.HomeButtonGoal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.HomeButtonGoal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeButtonGoal.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.HomeButtonGoal.ForeColor = System.Drawing.Color.White;
-            this.HomeButtonGoal.Location = new System.Drawing.Point(70, 3);
+            this.HomeButtonGoal.Location = new System.Drawing.Point(67, 3);
             this.HomeButtonGoal.Name = "HomeButtonGoal";
             this.HomeButtonGoal.Size = new System.Drawing.Size(108, 38);
             this.HomeButtonGoal.TabIndex = 8;
@@ -941,34 +967,12 @@
             // 
             this.HomePicBoxGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HomePicBoxGoal.Image = global::CentSible.Properties.Resources.HomeForm;
-            this.HomePicBoxGoal.Location = new System.Drawing.Point(13, 3);
+            this.HomePicBoxGoal.Location = new System.Drawing.Point(12, 3);
             this.HomePicBoxGoal.Name = "HomePicBoxGoal";
             this.HomePicBoxGoal.Size = new System.Drawing.Size(40, 38);
             this.HomePicBoxGoal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.HomePicBoxGoal.TabIndex = 15;
             this.HomePicBoxGoal.TabStop = false;
-            // 
-            // TargetAmountTextGoal
-            // 
-            this.TargetAmountTextGoal.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TargetAmountTextGoal.ForeColor = System.Drawing.Color.Gray;
-            this.TargetAmountTextGoal.Location = new System.Drawing.Point(231, 18);
-            this.TargetAmountTextGoal.Name = "TargetAmountTextGoal";
-            this.TargetAmountTextGoal.Placeholder = "₱";
-            this.TargetAmountTextGoal.PlaceholderColor = System.Drawing.Color.Gray;
-            this.TargetAmountTextGoal.Size = new System.Drawing.Size(68, 22);
-            this.TargetAmountTextGoal.TabIndex = 38;
-            // 
-            // CurrentAmountTextGoal
-            // 
-            this.CurrentAmountTextGoal.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.CurrentAmountTextGoal.ForeColor = System.Drawing.Color.Gray;
-            this.CurrentAmountTextGoal.Location = new System.Drawing.Point(231, 76);
-            this.CurrentAmountTextGoal.Name = "CurrentAmountTextGoal";
-            this.CurrentAmountTextGoal.Placeholder = "₱";
-            this.CurrentAmountTextGoal.PlaceholderColor = System.Drawing.Color.Gray;
-            this.CurrentAmountTextGoal.Size = new System.Drawing.Size(68, 22);
-            this.CurrentAmountTextGoal.TabIndex = 39;
             // 
             // GoalForm
             // 
@@ -1017,9 +1021,9 @@
             this.SumTabLayGoal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SumPicBoxGoal)).EndInit();
             this.TranTabLayGoal.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxGoal)).EndInit();
-            this.GoalTabLayGoal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TranPicBoxGoal)).EndInit();
+            this.GoalTabLayGoal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxGoal)).EndInit();
             this.HomeTabLayGoal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxGoal)).EndInit();
             this.ResumeLayout(false);
@@ -1084,10 +1088,10 @@
         private System.Windows.Forms.Button SumButtonGoal;
         private System.Windows.Forms.TableLayoutPanel TranTabLayGoal;
         private System.Windows.Forms.Button TranButtonGoal;
-        private System.Windows.Forms.PictureBox GoalPicBoxGoal;
+        private System.Windows.Forms.PictureBox TranPicBoxGoal;
         private System.Windows.Forms.TableLayoutPanel GoalTabLayGoal;
         private System.Windows.Forms.Button GoalButtonGoal;
-        private System.Windows.Forms.PictureBox TranPicBoxGoal;
+        private System.Windows.Forms.PictureBox GoalPicBoxGoal;
         private System.Windows.Forms.Panel SaveButtonPanelGoal;
     }
 }

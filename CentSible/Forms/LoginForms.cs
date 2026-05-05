@@ -35,7 +35,13 @@ namespace CentSible.Forms
                 if (user != null)
                 {
                     MessageBox.Show("Login Successful!");
-                    new HomeForm(user).Show();
+                    Navigator.Home = new HomeForm(user);
+                    Navigator.Goal = new GoalForm(user);
+                    Navigator.Summary = new SummaryForm(user);
+                    Navigator.Transaction = new TransactionForm(user);
+                    Navigator.Prediction = new PredictionForm(user);
+
+                    Navigator.Home.Show();
                     this.Hide();
                 }
                 else
