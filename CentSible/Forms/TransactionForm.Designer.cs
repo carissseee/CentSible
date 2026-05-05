@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTransaction = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.cmbYear = new System.Windows.Forms.ComboBox();
@@ -56,7 +56,7 @@
             this.colSave = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colTransactionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SidebarTableLayoutGoal = new System.Windows.Forms.FlowLayoutPanel();
+            this.SidebarTableLayoutTran = new System.Windows.Forms.FlowLayoutPanel();
             this.CentSibleTextPanelGoal = new System.Windows.Forms.Panel();
             this.CentSibleLabelTran = new System.Windows.Forms.Label();
             this.SideBarTabLayTran = new System.Windows.Forms.TableLayoutPanel();
@@ -80,7 +80,7 @@
             this.pnlTotalSpent.SuspendLayout();
             this.pnlRemaining.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).BeginInit();
-            this.SidebarTableLayoutGoal.SuspendLayout();
+            this.SidebarTableLayoutTran.SuspendLayout();
             this.CentSibleTextPanelGoal.SuspendLayout();
             this.SideBarTabLayTran.SuspendLayout();
             this.PredTabLayTran.SuspendLayout();
@@ -293,14 +293,14 @@
             this.dgvTransaction.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
             this.dgvTransaction.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkGreen;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTransaction.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colDate,
@@ -311,14 +311,14 @@
             this.colSave,
             this.colDelete,
             this.colTransactionID});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTransaction.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTransaction.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTransaction.EnableHeadersVisualStyles = false;
             this.dgvTransaction.GridColor = System.Drawing.Color.DarkGreen;
             this.dgvTransaction.Location = new System.Drawing.Point(194, 249);
@@ -400,15 +400,15 @@
             this.colTransactionID.Name = "colTransactionID";
             this.colTransactionID.Visible = false;
             // 
-            // SidebarTableLayoutGoal
+            // SidebarTableLayoutTran
             // 
-            this.SidebarTableLayoutGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            this.SidebarTableLayoutGoal.Controls.Add(this.CentSibleTextPanelGoal);
-            this.SidebarTableLayoutGoal.Controls.Add(this.SideBarTabLayTran);
-            this.SidebarTableLayoutGoal.Location = new System.Drawing.Point(-2, -2);
-            this.SidebarTableLayoutGoal.Name = "SidebarTableLayoutGoal";
-            this.SidebarTableLayoutGoal.Size = new System.Drawing.Size(200, 521);
-            this.SidebarTableLayoutGoal.TabIndex = 39;
+            this.SidebarTableLayoutTran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.SidebarTableLayoutTran.Controls.Add(this.CentSibleTextPanelGoal);
+            this.SidebarTableLayoutTran.Controls.Add(this.SideBarTabLayTran);
+            this.SidebarTableLayoutTran.Location = new System.Drawing.Point(-2, -2);
+            this.SidebarTableLayoutTran.Name = "SidebarTableLayoutTran";
+            this.SidebarTableLayoutTran.Size = new System.Drawing.Size(200, 521);
+            this.SidebarTableLayoutTran.TabIndex = 39;
             // 
             // CentSibleTextPanelGoal
             // 
@@ -629,6 +629,7 @@
             this.GoalButtonTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GoalButtonTran.UseVisualStyleBackColor = false;
             this.GoalButtonTran.Click += new System.EventHandler(this.GoalButtonTran_Click);
+            // 
             // GoalPicBoxTran
             // 
             this.GoalPicBoxTran.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -686,7 +687,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1035, 510);
-            this.Controls.Add(this.SidebarTableLayoutGoal);
+            this.Controls.Add(this.SidebarTableLayoutTran);
             this.Controls.Add(this.dgvTransaction);
             this.Controls.Add(this.btnAddTransaction);
             this.Controls.Add(this.btnBudget);
@@ -714,7 +715,7 @@
             this.pnlRemaining.ResumeLayout(false);
             this.pnlRemaining.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).EndInit();
-            this.SidebarTableLayoutGoal.ResumeLayout(false);
+            this.SidebarTableLayoutTran.ResumeLayout(false);
             this.CentSibleTextPanelGoal.ResumeLayout(false);
             this.SideBarTabLayTran.ResumeLayout(false);
             this.PredTabLayTran.ResumeLayout(false);
@@ -759,7 +760,7 @@
         private System.Windows.Forms.DataGridViewButtonColumn colSave;
         private System.Windows.Forms.DataGridViewButtonColumn colDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTransactionID;
-        private System.Windows.Forms.FlowLayoutPanel SidebarTableLayoutGoal;
+        private System.Windows.Forms.FlowLayoutPanel SidebarTableLayoutTran;
         private System.Windows.Forms.Panel CentSibleTextPanelGoal;
         private System.Windows.Forms.Label CentSibleLabelTran;
         private System.Windows.Forms.TableLayoutPanel SideBarTabLayTran;

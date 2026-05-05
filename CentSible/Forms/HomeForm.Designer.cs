@@ -78,7 +78,7 @@
             this.SavingGoalLabelLayHome = new System.Windows.Forms.TableLayoutPanel();
             this.SpendingGoalLabelLayHome = new System.Windows.Forms.TableLayoutPanel();
             this.dgvRecentTransactions = new System.Windows.Forms.DataGridView();
-            this.SidebarTableLayoutGoal = new System.Windows.Forms.FlowLayoutPanel();
+            this.SidebarTableLayoutHome = new System.Windows.Forms.FlowLayoutPanel();
             this.CentSibleTextPanelGoal = new System.Windows.Forms.Panel();
             this.CentSibleLabelHome = new System.Windows.Forms.Label();
             this.SideBarTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
@@ -103,7 +103,7 @@
             this.SavingGoalLabelLayHome.SuspendLayout();
             this.SpendingGoalLabelLayHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecentTransactions)).BeginInit();
-            this.SidebarTableLayoutGoal.SuspendLayout();
+            this.SidebarTableLayoutHome.SuspendLayout();
             this.CentSibleTextPanelGoal.SuspendLayout();
             this.SideBarTabLayGoal.SuspendLayout();
             this.PredTabLayHome.SuspendLayout();
@@ -326,7 +326,6 @@
             this.PredButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PredButtonHome.UseVisualStyleBackColor = false;
             this.PredButtonHome.Click += new System.EventHandler(this.PredButtonGoal_Click);
-
             // 
             // SumButtonHome
             // 
@@ -381,9 +380,9 @@
             // 
             // HomeButtonHome
             // 
-            this.HomeButtonHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.HomeButtonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.HomeButtonHome.FlatAppearance.BorderSize = 0;
+            this.HomeButtonHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.HomeButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.HomeButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeButtonHome.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -735,15 +734,15 @@
             this.dgvRecentTransactions.Size = new System.Drawing.Size(412, 226);
             this.dgvRecentTransactions.TabIndex = 40;
             // 
-            // SidebarTableLayoutGoal
+            // SidebarTableLayoutHome
             // 
-            this.SidebarTableLayoutGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            this.SidebarTableLayoutGoal.Controls.Add(this.CentSibleTextPanelGoal);
-            this.SidebarTableLayoutGoal.Controls.Add(this.SideBarTabLayGoal);
-            this.SidebarTableLayoutGoal.Location = new System.Drawing.Point(-2, -2);
-            this.SidebarTableLayoutGoal.Name = "SidebarTableLayoutGoal";
-            this.SidebarTableLayoutGoal.Size = new System.Drawing.Size(200, 521);
-            this.SidebarTableLayoutGoal.TabIndex = 39;
+            this.SidebarTableLayoutHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.SidebarTableLayoutHome.Controls.Add(this.CentSibleTextPanelGoal);
+            this.SidebarTableLayoutHome.Controls.Add(this.SideBarTabLayGoal);
+            this.SidebarTableLayoutHome.Location = new System.Drawing.Point(-2, -2);
+            this.SidebarTableLayoutHome.Name = "SidebarTableLayoutHome";
+            this.SidebarTableLayoutHome.Size = new System.Drawing.Size(200, 521);
+            this.SidebarTableLayoutHome.TabIndex = 39;
             // 
             // CentSibleTextPanelGoal
             // 
@@ -925,7 +924,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1035, 510);
-            this.Controls.Add(this.SidebarTableLayoutGoal);
+            this.Controls.Add(this.SidebarTableLayoutHome);
             this.Controls.Add(this.MainLayoutHome);
             this.Controls.Add(this.progressBar2);
             this.MaximizeBox = false;
@@ -956,7 +955,7 @@
             this.SpendingGoalLabelLayHome.ResumeLayout(false);
             this.SpendingGoalLabelLayHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecentTransactions)).EndInit();
-            this.SidebarTableLayoutGoal.ResumeLayout(false);
+            this.SidebarTableLayoutHome.ResumeLayout(false);
             this.CentSibleTextPanelGoal.ResumeLayout(false);
             this.SideBarTabLayGoal.ResumeLayout(false);
             this.PredTabLayHome.ResumeLayout(false);
@@ -1015,7 +1014,7 @@
         private System.Windows.Forms.Label ThuLabelHome;
         private System.Windows.Forms.Label WedLabelHome;
         private System.Windows.Forms.Label TueLabelHome;
-        private System.Windows.Forms.FlowLayoutPanel SidebarTableLayoutGoal;
+        private System.Windows.Forms.FlowLayoutPanel SidebarTableLayoutHome;
         private System.Windows.Forms.Panel CentSibleTextPanelGoal;
         private System.Windows.Forms.Label CentSibleLabelHome;
         private System.Windows.Forms.TableLayoutPanel SideBarTabLayGoal;

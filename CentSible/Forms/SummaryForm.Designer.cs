@@ -29,9 +29,9 @@
        
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lblSummary = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.cmbYear = new System.Windows.Forms.ComboBox();
@@ -60,42 +60,42 @@
             this.pnlSummary = new System.Windows.Forms.Panel();
             this.lblMSummary = new System.Windows.Forms.Label();
             this.lblReport = new System.Windows.Forms.Label();
-            this.SidebarTableLayoutGoal = new System.Windows.Forms.FlowLayoutPanel();
+            this.SidebarTableLayoutSum = new System.Windows.Forms.FlowLayoutPanel();
             this.CentSibleTextPanelGoal = new System.Windows.Forms.Panel();
-            this.CentSibleLabelTran = new System.Windows.Forms.Label();
-            this.SideBarTabLayTran = new System.Windows.Forms.TableLayoutPanel();
-            this.LogoutButtonTran = new System.Windows.Forms.Button();
-            this.PredTabLayTran = new System.Windows.Forms.TableLayoutPanel();
-            this.PredPicBoxTran = new System.Windows.Forms.PictureBox();
-            this.PredButtonTran = new System.Windows.Forms.Button();
-            this.SumTabLayTran = new System.Windows.Forms.TableLayoutPanel();
-            this.SumPicBoxTran = new System.Windows.Forms.PictureBox();
-            this.SumButtonTran = new System.Windows.Forms.Button();
-            this.TranTabLayTran = new System.Windows.Forms.TableLayoutPanel();
-            this.TranButtonTran = new System.Windows.Forms.Button();
-            this.TranPicBoxTran = new System.Windows.Forms.PictureBox();
-            this.GoalTabLayTran = new System.Windows.Forms.TableLayoutPanel();
-            this.GoalButtonTran = new System.Windows.Forms.Button();
-            this.GoalPicBoxTran = new System.Windows.Forms.PictureBox();
-            this.HomeTabLayTran = new System.Windows.Forms.TableLayoutPanel();
-            this.HomeButtonTran = new System.Windows.Forms.Button();
-            this.HomePicBoxTran = new System.Windows.Forms.PictureBox();
+            this.CentSibleLabelSum = new System.Windows.Forms.Label();
+            this.SideBarTabLaySum = new System.Windows.Forms.TableLayoutPanel();
+            this.LogoutButtonSum = new System.Windows.Forms.Button();
+            this.PredTabLaySum = new System.Windows.Forms.TableLayoutPanel();
+            this.PredPicBoxSum = new System.Windows.Forms.PictureBox();
+            this.PredButtonSum = new System.Windows.Forms.Button();
+            this.SumTabLaySum = new System.Windows.Forms.TableLayoutPanel();
+            this.SumPicBoxSum = new System.Windows.Forms.PictureBox();
+            this.SumButtonSum = new System.Windows.Forms.Button();
+            this.TranTabLaySum = new System.Windows.Forms.TableLayoutPanel();
+            this.TranButtonSum = new System.Windows.Forms.Button();
+            this.TranPicBoxSum = new System.Windows.Forms.PictureBox();
+            this.GoalTabLaySum = new System.Windows.Forms.TableLayoutPanel();
+            this.GoalButtonSum = new System.Windows.Forms.Button();
+            this.GoalPicBoxSum = new System.Windows.Forms.PictureBox();
+            this.HomeTabLaySum = new System.Windows.Forms.TableLayoutPanel();
+            this.HomeButtonSum = new System.Windows.Forms.Button();
+            this.HomePicBoxSum = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.chartSummary)).BeginInit();
             this.pnlBreakdown.SuspendLayout();
             this.pnlSummary.SuspendLayout();
-            this.SidebarTableLayoutGoal.SuspendLayout();
+            this.SidebarTableLayoutSum.SuspendLayout();
             this.CentSibleTextPanelGoal.SuspendLayout();
-            this.SideBarTabLayTran.SuspendLayout();
-            this.PredTabLayTran.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxTran)).BeginInit();
-            this.SumTabLayTran.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SumPicBoxTran)).BeginInit();
-            this.TranTabLayTran.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TranPicBoxTran)).BeginInit();
-            this.GoalTabLayTran.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxTran)).BeginInit();
-            this.HomeTabLayTran.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxTran)).BeginInit();
+            this.SideBarTabLaySum.SuspendLayout();
+            this.PredTabLaySum.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxSum)).BeginInit();
+            this.SumTabLaySum.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SumPicBoxSum)).BeginInit();
+            this.TranTabLaySum.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TranPicBoxSum)).BeginInit();
+            this.GoalTabLaySum.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxSum)).BeginInit();
+            this.HomeTabLaySum.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxSum)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSummary
@@ -144,18 +144,18 @@
             this.chartSummary.BorderlineColor = System.Drawing.Color.DarkGreen;
             this.chartSummary.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartSummary.BorderlineWidth = 2;
-            chartArea2.Name = "ChartArea1";
-            this.chartSummary.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartSummary.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chartSummary.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartSummary.Legends.Add(legend1);
             this.chartSummary.Location = new System.Drawing.Point(627, 75);
             this.chartSummary.Name = "chartSummary";
             this.chartSummary.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartSummary.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartSummary.Series.Add(series1);
             this.chartSummary.Size = new System.Drawing.Size(362, 412);
             this.chartSummary.TabIndex = 5;
             this.chartSummary.Text = "Category Breakdown";
@@ -394,287 +394,287 @@
             this.lblReport.TabIndex = 0;
             this.lblReport.Text = "Summary Report";
             // 
-            // SidebarTableLayoutGoal
+            // SidebarTableLayoutSum
             // 
-            this.SidebarTableLayoutGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            this.SidebarTableLayoutGoal.Controls.Add(this.CentSibleTextPanelGoal);
-            this.SidebarTableLayoutGoal.Controls.Add(this.SideBarTabLayTran);
-            this.SidebarTableLayoutGoal.Location = new System.Drawing.Point(-2, -2);
-            this.SidebarTableLayoutGoal.Name = "SidebarTableLayoutGoal";
-            this.SidebarTableLayoutGoal.Size = new System.Drawing.Size(200, 521);
-            this.SidebarTableLayoutGoal.TabIndex = 40;
+            this.SidebarTableLayoutSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.SidebarTableLayoutSum.Controls.Add(this.CentSibleTextPanelGoal);
+            this.SidebarTableLayoutSum.Controls.Add(this.SideBarTabLaySum);
+            this.SidebarTableLayoutSum.Location = new System.Drawing.Point(-2, -2);
+            this.SidebarTableLayoutSum.Name = "SidebarTableLayoutSum";
+            this.SidebarTableLayoutSum.Size = new System.Drawing.Size(200, 521);
+            this.SidebarTableLayoutSum.TabIndex = 40;
             // 
             // CentSibleTextPanelGoal
             // 
-            this.CentSibleTextPanelGoal.Controls.Add(this.CentSibleLabelTran);
+            this.CentSibleTextPanelGoal.Controls.Add(this.CentSibleLabelSum);
             this.CentSibleTextPanelGoal.Location = new System.Drawing.Point(3, 3);
             this.CentSibleTextPanelGoal.Name = "CentSibleTextPanelGoal";
             this.CentSibleTextPanelGoal.Size = new System.Drawing.Size(197, 60);
             this.CentSibleTextPanelGoal.TabIndex = 12;
             // 
-            // CentSibleLabelTran
+            // CentSibleLabelSum
             // 
-            this.CentSibleLabelTran.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.CentSibleLabelTran.Font = new System.Drawing.Font("Brush Script MT", 23F, System.Drawing.FontStyle.Italic);
-            this.CentSibleLabelTran.ForeColor = System.Drawing.Color.White;
-            this.CentSibleLabelTran.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.CentSibleLabelTran.Location = new System.Drawing.Point(0, -3);
-            this.CentSibleLabelTran.Name = "CentSibleLabelTran";
-            this.CentSibleLabelTran.Size = new System.Drawing.Size(197, 63);
-            this.CentSibleLabelTran.TabIndex = 10;
-            this.CentSibleLabelTran.Text = "CentSible";
-            this.CentSibleLabelTran.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CentSibleLabelSum.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.CentSibleLabelSum.Font = new System.Drawing.Font("Brush Script MT", 23F, System.Drawing.FontStyle.Italic);
+            this.CentSibleLabelSum.ForeColor = System.Drawing.Color.White;
+            this.CentSibleLabelSum.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.CentSibleLabelSum.Location = new System.Drawing.Point(0, -3);
+            this.CentSibleLabelSum.Name = "CentSibleLabelSum";
+            this.CentSibleLabelSum.Size = new System.Drawing.Size(197, 63);
+            this.CentSibleLabelSum.TabIndex = 10;
+            this.CentSibleLabelSum.Text = "CentSible";
+            this.CentSibleLabelSum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // SideBarTabLayTran
+            // SideBarTabLaySum
             // 
-            this.SideBarTabLayTran.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.SideBarTabLayTran.ColumnCount = 1;
-            this.SideBarTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.SideBarTabLayTran.Controls.Add(this.LogoutButtonTran, 1, 6);
-            this.SideBarTabLayTran.Controls.Add(this.PredTabLayTran, 0, 4);
-            this.SideBarTabLayTran.Controls.Add(this.SumTabLayTran, 0, 3);
-            this.SideBarTabLayTran.Controls.Add(this.TranTabLayTran, 0, 2);
-            this.SideBarTabLayTran.Controls.Add(this.GoalTabLayTran, 0, 1);
-            this.SideBarTabLayTran.Controls.Add(this.HomeTabLayTran, 0, 0);
-            this.SideBarTabLayTran.Location = new System.Drawing.Point(3, 69);
-            this.SideBarTabLayTran.Name = "SideBarTabLayTran";
-            this.SideBarTabLayTran.RowCount = 7;
-            this.SideBarTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.SideBarTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.SideBarTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.SideBarTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.SideBarTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.SideBarTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 146F));
-            this.SideBarTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.SideBarTabLayTran.Size = new System.Drawing.Size(189, 441);
-            this.SideBarTabLayTran.TabIndex = 11;
+            this.SideBarTabLaySum.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.SideBarTabLaySum.ColumnCount = 1;
+            this.SideBarTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.SideBarTabLaySum.Controls.Add(this.LogoutButtonSum, 1, 6);
+            this.SideBarTabLaySum.Controls.Add(this.PredTabLaySum, 0, 4);
+            this.SideBarTabLaySum.Controls.Add(this.SumTabLaySum, 0, 3);
+            this.SideBarTabLaySum.Controls.Add(this.TranTabLaySum, 0, 2);
+            this.SideBarTabLaySum.Controls.Add(this.GoalTabLaySum, 0, 1);
+            this.SideBarTabLaySum.Controls.Add(this.HomeTabLaySum, 0, 0);
+            this.SideBarTabLaySum.Location = new System.Drawing.Point(3, 69);
+            this.SideBarTabLaySum.Name = "SideBarTabLaySum";
+            this.SideBarTabLaySum.RowCount = 7;
+            this.SideBarTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.SideBarTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.SideBarTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.SideBarTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.SideBarTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.SideBarTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 146F));
+            this.SideBarTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.SideBarTabLaySum.Size = new System.Drawing.Size(189, 441);
+            this.SideBarTabLaySum.TabIndex = 11;
             // 
-            // LogoutButtonTran
+            // LogoutButtonSum
             // 
-            this.LogoutButtonTran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            this.LogoutButtonTran.FlatAppearance.BorderSize = 0;
-            this.LogoutButtonTran.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
-            this.LogoutButtonTran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LogoutButtonTran.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.LogoutButtonTran.ForeColor = System.Drawing.Color.White;
-            this.LogoutButtonTran.Location = new System.Drawing.Point(3, 399);
-            this.LogoutButtonTran.Name = "LogoutButtonTran";
-            this.LogoutButtonTran.Size = new System.Drawing.Size(183, 39);
-            this.LogoutButtonTran.TabIndex = 15;
-            this.LogoutButtonTran.Text = "Logout";
-            this.LogoutButtonTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogoutButtonTran.UseVisualStyleBackColor = false;
+            this.LogoutButtonSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.LogoutButtonSum.FlatAppearance.BorderSize = 0;
+            this.LogoutButtonSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
+            this.LogoutButtonSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogoutButtonSum.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.LogoutButtonSum.ForeColor = System.Drawing.Color.White;
+            this.LogoutButtonSum.Location = new System.Drawing.Point(3, 399);
+            this.LogoutButtonSum.Name = "LogoutButtonSum";
+            this.LogoutButtonSum.Size = new System.Drawing.Size(183, 39);
+            this.LogoutButtonSum.TabIndex = 15;
+            this.LogoutButtonSum.Text = "Logout";
+            this.LogoutButtonSum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LogoutButtonSum.UseVisualStyleBackColor = false;
             // 
-            // PredTabLayTran
+            // PredTabLaySum
             // 
-            this.PredTabLayTran.ColumnCount = 2;
-            this.PredTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
-            this.PredTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
-            this.PredTabLayTran.Controls.Add(this.PredPicBoxTran, 0, 0);
-            this.PredTabLayTran.Controls.Add(this.PredButtonTran, 1, 0);
-            this.PredTabLayTran.Location = new System.Drawing.Point(3, 203);
-            this.PredTabLayTran.Name = "PredTabLayTran";
-            this.PredTabLayTran.RowCount = 1;
-            this.PredTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PredTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PredTabLayTran.Size = new System.Drawing.Size(183, 44);
-            this.PredTabLayTran.TabIndex = 25;
+            this.PredTabLaySum.ColumnCount = 2;
+            this.PredTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
+            this.PredTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.PredTabLaySum.Controls.Add(this.PredPicBoxSum, 0, 0);
+            this.PredTabLaySum.Controls.Add(this.PredButtonSum, 1, 0);
+            this.PredTabLaySum.Location = new System.Drawing.Point(3, 203);
+            this.PredTabLaySum.Name = "PredTabLaySum";
+            this.PredTabLaySum.RowCount = 1;
+            this.PredTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PredTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PredTabLaySum.Size = new System.Drawing.Size(183, 44);
+            this.PredTabLaySum.TabIndex = 25;
             // 
-            // PredPicBoxTran
+            // PredPicBoxSum
             // 
-            this.PredPicBoxTran.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PredPicBoxTran.Image = global::CentSible.Properties.Resources.PredictionForm;
-            this.PredPicBoxTran.Location = new System.Drawing.Point(12, 3);
-            this.PredPicBoxTran.Name = "PredPicBoxTran";
-            this.PredPicBoxTran.Size = new System.Drawing.Size(40, 38);
-            this.PredPicBoxTran.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PredPicBoxTran.TabIndex = 19;
-            this.PredPicBoxTran.TabStop = false;
+            this.PredPicBoxSum.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PredPicBoxSum.Image = global::CentSible.Properties.Resources.PredictionForm;
+            this.PredPicBoxSum.Location = new System.Drawing.Point(12, 3);
+            this.PredPicBoxSum.Name = "PredPicBoxSum";
+            this.PredPicBoxSum.Size = new System.Drawing.Size(40, 38);
+            this.PredPicBoxSum.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PredPicBoxSum.TabIndex = 19;
+            this.PredPicBoxSum.TabStop = false;
             // 
-            // PredButtonTran
+            // PredButtonSum
             // 
-            this.PredButtonTran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            this.PredButtonTran.FlatAppearance.BorderSize = 0;
-            this.PredButtonTran.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
-            this.PredButtonTran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PredButtonTran.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.PredButtonTran.ForeColor = System.Drawing.Color.White;
-            this.PredButtonTran.Location = new System.Drawing.Point(67, 3);
-            this.PredButtonTran.Name = "PredButtonTran";
-            this.PredButtonTran.Size = new System.Drawing.Size(113, 38);
-            this.PredButtonTran.TabIndex = 14;
-            this.PredButtonTran.Text = "Prediction";
-            this.PredButtonTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.PredButtonTran.UseVisualStyleBackColor = false;
+            this.PredButtonSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.PredButtonSum.FlatAppearance.BorderSize = 0;
+            this.PredButtonSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
+            this.PredButtonSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PredButtonSum.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.PredButtonSum.ForeColor = System.Drawing.Color.White;
+            this.PredButtonSum.Location = new System.Drawing.Point(67, 3);
+            this.PredButtonSum.Name = "PredButtonSum";
+            this.PredButtonSum.Size = new System.Drawing.Size(113, 38);
+            this.PredButtonSum.TabIndex = 14;
+            this.PredButtonSum.Text = "Prediction";
+            this.PredButtonSum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.PredButtonSum.UseVisualStyleBackColor = false;
             // 
-            // SumTabLayTran
+            // SumTabLaySum
             // 
-            this.SumTabLayTran.ColumnCount = 2;
-            this.SumTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
-            this.SumTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
-            this.SumTabLayTran.Controls.Add(this.SumPicBoxTran, 0, 0);
-            this.SumTabLayTran.Controls.Add(this.SumButtonTran, 1, 0);
-            this.SumTabLayTran.Location = new System.Drawing.Point(3, 153);
-            this.SumTabLayTran.Name = "SumTabLayTran";
-            this.SumTabLayTran.RowCount = 1;
-            this.SumTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SumTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SumTabLayTran.Size = new System.Drawing.Size(183, 44);
-            this.SumTabLayTran.TabIndex = 24;
+            this.SumTabLaySum.ColumnCount = 2;
+            this.SumTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
+            this.SumTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.SumTabLaySum.Controls.Add(this.SumPicBoxSum, 0, 0);
+            this.SumTabLaySum.Controls.Add(this.SumButtonSum, 1, 0);
+            this.SumTabLaySum.Location = new System.Drawing.Point(3, 153);
+            this.SumTabLaySum.Name = "SumTabLaySum";
+            this.SumTabLaySum.RowCount = 1;
+            this.SumTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SumTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SumTabLaySum.Size = new System.Drawing.Size(183, 44);
+            this.SumTabLaySum.TabIndex = 24;
             // 
-            // SumPicBoxTran
+            // SumPicBoxSum
             // 
-            this.SumPicBoxTran.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SumPicBoxTran.Image = global::CentSible.Properties.Resources.SummaryForm;
-            this.SumPicBoxTran.Location = new System.Drawing.Point(12, 3);
-            this.SumPicBoxTran.Name = "SumPicBoxTran";
-            this.SumPicBoxTran.Size = new System.Drawing.Size(40, 38);
-            this.SumPicBoxTran.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.SumPicBoxTran.TabIndex = 18;
-            this.SumPicBoxTran.TabStop = false;
+            this.SumPicBoxSum.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SumPicBoxSum.Image = global::CentSible.Properties.Resources.SummaryForm;
+            this.SumPicBoxSum.Location = new System.Drawing.Point(12, 3);
+            this.SumPicBoxSum.Name = "SumPicBoxSum";
+            this.SumPicBoxSum.Size = new System.Drawing.Size(40, 38);
+            this.SumPicBoxSum.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SumPicBoxSum.TabIndex = 18;
+            this.SumPicBoxSum.TabStop = false;
             // 
-            // SumButtonTran
+            // SumButtonSum
             // 
-            this.SumButtonTran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            this.SumButtonTran.FlatAppearance.BorderSize = 0;
-            this.SumButtonTran.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
-            this.SumButtonTran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SumButtonTran.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.SumButtonTran.ForeColor = System.Drawing.Color.White;
-            this.SumButtonTran.Location = new System.Drawing.Point(67, 3);
-            this.SumButtonTran.Name = "SumButtonTran";
-            this.SumButtonTran.Size = new System.Drawing.Size(113, 38);
-            this.SumButtonTran.TabIndex = 13;
-            this.SumButtonTran.Text = "Summary";
-            this.SumButtonTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SumButtonTran.UseVisualStyleBackColor = false;
+            this.SumButtonSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.SumButtonSum.FlatAppearance.BorderSize = 0;
+            this.SumButtonSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
+            this.SumButtonSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SumButtonSum.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.SumButtonSum.ForeColor = System.Drawing.Color.White;
+            this.SumButtonSum.Location = new System.Drawing.Point(67, 3);
+            this.SumButtonSum.Name = "SumButtonSum";
+            this.SumButtonSum.Size = new System.Drawing.Size(113, 38);
+            this.SumButtonSum.TabIndex = 13;
+            this.SumButtonSum.Text = "Summary";
+            this.SumButtonSum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SumButtonSum.UseVisualStyleBackColor = false;
             // 
-            // TranTabLayTran
+            // TranTabLaySum
             // 
-            this.TranTabLayTran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
-            this.TranTabLayTran.ColumnCount = 2;
-            this.TranTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
-            this.TranTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
-            this.TranTabLayTran.Controls.Add(this.TranButtonTran, 1, 0);
-            this.TranTabLayTran.Controls.Add(this.TranPicBoxTran, 0, 0);
-            this.TranTabLayTran.Location = new System.Drawing.Point(3, 103);
-            this.TranTabLayTran.Name = "TranTabLayTran";
-            this.TranTabLayTran.RowCount = 1;
-            this.TranTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TranTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TranTabLayTran.Size = new System.Drawing.Size(183, 44);
-            this.TranTabLayTran.TabIndex = 23;
+            this.TranTabLaySum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
+            this.TranTabLaySum.ColumnCount = 2;
+            this.TranTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
+            this.TranTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.TranTabLaySum.Controls.Add(this.TranButtonSum, 1, 0);
+            this.TranTabLaySum.Controls.Add(this.TranPicBoxSum, 0, 0);
+            this.TranTabLaySum.Location = new System.Drawing.Point(3, 103);
+            this.TranTabLaySum.Name = "TranTabLaySum";
+            this.TranTabLaySum.RowCount = 1;
+            this.TranTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TranTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TranTabLaySum.Size = new System.Drawing.Size(183, 44);
+            this.TranTabLaySum.TabIndex = 23;
             // 
-            // TranButtonTran
+            // TranButtonSum
             // 
-            this.TranButtonTran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
-            this.TranButtonTran.FlatAppearance.BorderSize = 0;
-            this.TranButtonTran.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
-            this.TranButtonTran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TranButtonTran.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.TranButtonTran.ForeColor = System.Drawing.Color.White;
-            this.TranButtonTran.Location = new System.Drawing.Point(67, 3);
-            this.TranButtonTran.Name = "TranButtonTran";
-            this.TranButtonTran.Size = new System.Drawing.Size(113, 38);
-            this.TranButtonTran.TabIndex = 12;
-            this.TranButtonTran.Text = "Transactions";
-            this.TranButtonTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.TranButtonTran.UseVisualStyleBackColor = false;
+            this.TranButtonSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
+            this.TranButtonSum.FlatAppearance.BorderSize = 0;
+            this.TranButtonSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
+            this.TranButtonSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TranButtonSum.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.TranButtonSum.ForeColor = System.Drawing.Color.White;
+            this.TranButtonSum.Location = new System.Drawing.Point(67, 3);
+            this.TranButtonSum.Name = "TranButtonSum";
+            this.TranButtonSum.Size = new System.Drawing.Size(113, 38);
+            this.TranButtonSum.TabIndex = 12;
+            this.TranButtonSum.Text = "Transactions";
+            this.TranButtonSum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TranButtonSum.UseVisualStyleBackColor = false;
             // 
-            // TranPicBoxTran
+            // TranPicBoxSum
             // 
-            this.TranPicBoxTran.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TranPicBoxTran.Image = global::CentSible.Properties.Resources.TransactionForm;
-            this.TranPicBoxTran.Location = new System.Drawing.Point(12, 5);
-            this.TranPicBoxTran.Name = "TranPicBoxTran";
-            this.TranPicBoxTran.Size = new System.Drawing.Size(40, 33);
-            this.TranPicBoxTran.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.TranPicBoxTran.TabIndex = 16;
-            this.TranPicBoxTran.TabStop = false;
+            this.TranPicBoxSum.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TranPicBoxSum.Image = global::CentSible.Properties.Resources.TransactionForm;
+            this.TranPicBoxSum.Location = new System.Drawing.Point(12, 5);
+            this.TranPicBoxSum.Name = "TranPicBoxSum";
+            this.TranPicBoxSum.Size = new System.Drawing.Size(40, 33);
+            this.TranPicBoxSum.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.TranPicBoxSum.TabIndex = 16;
+            this.TranPicBoxSum.TabStop = false;
             // 
-            // GoalTabLayTran
+            // GoalTabLaySum
             // 
-            this.GoalTabLayTran.ColumnCount = 2;
-            this.GoalTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.63415F));
-            this.GoalTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.36585F));
-            this.GoalTabLayTran.Controls.Add(this.GoalButtonTran, 1, 0);
-            this.GoalTabLayTran.Controls.Add(this.GoalPicBoxTran, 0, 0);
-            this.GoalTabLayTran.Location = new System.Drawing.Point(3, 53);
-            this.GoalTabLayTran.Name = "GoalTabLayTran";
-            this.GoalTabLayTran.RowCount = 1;
-            this.GoalTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.GoalTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.GoalTabLayTran.Size = new System.Drawing.Size(183, 44);
-            this.GoalTabLayTran.TabIndex = 22;
+            this.GoalTabLaySum.ColumnCount = 2;
+            this.GoalTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.63415F));
+            this.GoalTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.36585F));
+            this.GoalTabLaySum.Controls.Add(this.GoalButtonSum, 1, 0);
+            this.GoalTabLaySum.Controls.Add(this.GoalPicBoxSum, 0, 0);
+            this.GoalTabLaySum.Location = new System.Drawing.Point(3, 53);
+            this.GoalTabLaySum.Name = "GoalTabLaySum";
+            this.GoalTabLaySum.RowCount = 1;
+            this.GoalTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.GoalTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.GoalTabLaySum.Size = new System.Drawing.Size(183, 44);
+            this.GoalTabLaySum.TabIndex = 22;
             // 
-            // GoalButtonTran
+            // GoalButtonSum
             // 
-            this.GoalButtonTran.FlatAppearance.BorderSize = 0;
-            this.GoalButtonTran.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
-            this.GoalButtonTran.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
-            this.GoalButtonTran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GoalButtonTran.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.GoalButtonTran.ForeColor = System.Drawing.Color.White;
-            this.GoalButtonTran.Location = new System.Drawing.Point(66, 3);
-            this.GoalButtonTran.Name = "GoalButtonTran";
-            this.GoalButtonTran.Size = new System.Drawing.Size(114, 38);
-            this.GoalButtonTran.TabIndex = 11;
-            this.GoalButtonTran.Text = "Goal";
-            this.GoalButtonTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GoalButtonTran.UseVisualStyleBackColor = false;
+            this.GoalButtonSum.FlatAppearance.BorderSize = 0;
+            this.GoalButtonSum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
+            this.GoalButtonSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
+            this.GoalButtonSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GoalButtonSum.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.GoalButtonSum.ForeColor = System.Drawing.Color.White;
+            this.GoalButtonSum.Location = new System.Drawing.Point(66, 3);
+            this.GoalButtonSum.Name = "GoalButtonSum";
+            this.GoalButtonSum.Size = new System.Drawing.Size(114, 38);
+            this.GoalButtonSum.TabIndex = 11;
+            this.GoalButtonSum.Text = "Goal";
+            this.GoalButtonSum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.GoalButtonSum.UseVisualStyleBackColor = false;
             // 
-            // GoalPicBoxTran
+            // GoalPicBoxSum
             // 
-            this.GoalPicBoxTran.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.GoalPicBoxTran.Image = global::CentSible.Properties.Resources.GoalForm;
-            this.GoalPicBoxTran.Location = new System.Drawing.Point(11, 3);
-            this.GoalPicBoxTran.Name = "GoalPicBoxTran";
-            this.GoalPicBoxTran.Size = new System.Drawing.Size(40, 38);
-            this.GoalPicBoxTran.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.GoalPicBoxTran.TabIndex = 17;
-            this.GoalPicBoxTran.TabStop = false;
+            this.GoalPicBoxSum.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.GoalPicBoxSum.Image = global::CentSible.Properties.Resources.GoalForm;
+            this.GoalPicBoxSum.Location = new System.Drawing.Point(11, 3);
+            this.GoalPicBoxSum.Name = "GoalPicBoxSum";
+            this.GoalPicBoxSum.Size = new System.Drawing.Size(40, 38);
+            this.GoalPicBoxSum.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GoalPicBoxSum.TabIndex = 17;
+            this.GoalPicBoxSum.TabStop = false;
             // 
-            // HomeTabLayTran
+            // HomeTabLaySum
             // 
-            this.HomeTabLayTran.ColumnCount = 2;
-            this.HomeTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
-            this.HomeTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
-            this.HomeTabLayTran.Controls.Add(this.HomeButtonTran, 1, 0);
-            this.HomeTabLayTran.Controls.Add(this.HomePicBoxTran, 0, 0);
-            this.HomeTabLayTran.Location = new System.Drawing.Point(3, 3);
-            this.HomeTabLayTran.Name = "HomeTabLayTran";
-            this.HomeTabLayTran.RowCount = 1;
-            this.HomeTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.HomeTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.HomeTabLayTran.Size = new System.Drawing.Size(183, 44);
-            this.HomeTabLayTran.TabIndex = 21;
+            this.HomeTabLaySum.ColumnCount = 2;
+            this.HomeTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
+            this.HomeTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.HomeTabLaySum.Controls.Add(this.HomeButtonSum, 1, 0);
+            this.HomeTabLaySum.Controls.Add(this.HomePicBoxSum, 0, 0);
+            this.HomeTabLaySum.Location = new System.Drawing.Point(3, 3);
+            this.HomeTabLaySum.Name = "HomeTabLaySum";
+            this.HomeTabLaySum.RowCount = 1;
+            this.HomeTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.HomeTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.HomeTabLaySum.Size = new System.Drawing.Size(183, 44);
+            this.HomeTabLaySum.TabIndex = 21;
             // 
-            // HomeButtonTran
+            // HomeButtonSum
             // 
-            this.HomeButtonTran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            this.HomeButtonTran.FlatAppearance.BorderSize = 0;
-            this.HomeButtonTran.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
-            this.HomeButtonTran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HomeButtonTran.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.HomeButtonTran.ForeColor = System.Drawing.Color.White;
-            this.HomeButtonTran.Location = new System.Drawing.Point(67, 3);
-            this.HomeButtonTran.Name = "HomeButtonTran";
-            this.HomeButtonTran.Size = new System.Drawing.Size(108, 38);
-            this.HomeButtonTran.TabIndex = 8;
-            this.HomeButtonTran.Text = "Home";
-            this.HomeButtonTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HomeButtonTran.UseVisualStyleBackColor = false;
+            this.HomeButtonSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.HomeButtonSum.FlatAppearance.BorderSize = 0;
+            this.HomeButtonSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
+            this.HomeButtonSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HomeButtonSum.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.HomeButtonSum.ForeColor = System.Drawing.Color.White;
+            this.HomeButtonSum.Location = new System.Drawing.Point(67, 3);
+            this.HomeButtonSum.Name = "HomeButtonSum";
+            this.HomeButtonSum.Size = new System.Drawing.Size(108, 38);
+            this.HomeButtonSum.TabIndex = 8;
+            this.HomeButtonSum.Text = "Home";
+            this.HomeButtonSum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.HomeButtonSum.UseVisualStyleBackColor = false;
             // 
-            // HomePicBoxTran
+            // HomePicBoxSum
             // 
-            this.HomePicBoxTran.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.HomePicBoxTran.Image = global::CentSible.Properties.Resources.HomeForm;
-            this.HomePicBoxTran.Location = new System.Drawing.Point(12, 3);
-            this.HomePicBoxTran.Name = "HomePicBoxTran";
-            this.HomePicBoxTran.Size = new System.Drawing.Size(40, 38);
-            this.HomePicBoxTran.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.HomePicBoxTran.TabIndex = 15;
-            this.HomePicBoxTran.TabStop = false;
+            this.HomePicBoxSum.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.HomePicBoxSum.Image = global::CentSible.Properties.Resources.HomeForm;
+            this.HomePicBoxSum.Location = new System.Drawing.Point(12, 3);
+            this.HomePicBoxSum.Name = "HomePicBoxSum";
+            this.HomePicBoxSum.Size = new System.Drawing.Size(40, 38);
+            this.HomePicBoxSum.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.HomePicBoxSum.TabIndex = 15;
+            this.HomePicBoxSum.TabStop = false;
             // 
             // SummaryForm
             // 
@@ -682,7 +682,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(1035, 510);
-            this.Controls.Add(this.SidebarTableLayoutGoal);
+            this.Controls.Add(this.SidebarTableLayoutSum);
             this.Controls.Add(this.pnlSummary);
             this.Controls.Add(this.pnlBreakdown);
             this.Controls.Add(this.chartSummary);
@@ -704,19 +704,19 @@
             this.pnlBreakdown.PerformLayout();
             this.pnlSummary.ResumeLayout(false);
             this.pnlSummary.PerformLayout();
-            this.SidebarTableLayoutGoal.ResumeLayout(false);
+            this.SidebarTableLayoutSum.ResumeLayout(false);
             this.CentSibleTextPanelGoal.ResumeLayout(false);
-            this.SideBarTabLayTran.ResumeLayout(false);
-            this.PredTabLayTran.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxTran)).EndInit();
-            this.SumTabLayTran.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SumPicBoxTran)).EndInit();
-            this.TranTabLayTran.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.TranPicBoxTran)).EndInit();
-            this.GoalTabLayTran.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxTran)).EndInit();
-            this.HomeTabLayTran.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxTran)).EndInit();
+            this.SideBarTabLaySum.ResumeLayout(false);
+            this.PredTabLaySum.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxSum)).EndInit();
+            this.SumTabLaySum.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SumPicBoxSum)).EndInit();
+            this.TranTabLaySum.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TranPicBoxSum)).EndInit();
+            this.GoalTabLaySum.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxSum)).EndInit();
+            this.HomeTabLaySum.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxSum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -750,25 +750,25 @@
         private System.Windows.Forms.Label lblUTotal;
         private System.Windows.Forms.Label lblTTotal;
         private System.Windows.Forms.Label lblMSummary;
-        private System.Windows.Forms.FlowLayoutPanel SidebarTableLayoutGoal;
+        private System.Windows.Forms.FlowLayoutPanel SidebarTableLayoutSum;
         private System.Windows.Forms.Panel CentSibleTextPanelGoal;
-        private System.Windows.Forms.Label CentSibleLabelTran;
-        private System.Windows.Forms.TableLayoutPanel SideBarTabLayTran;
-        private System.Windows.Forms.Button LogoutButtonTran;
-        private System.Windows.Forms.TableLayoutPanel PredTabLayTran;
-        private System.Windows.Forms.PictureBox PredPicBoxTran;
-        private System.Windows.Forms.Button PredButtonTran;
-        private System.Windows.Forms.TableLayoutPanel SumTabLayTran;
-        private System.Windows.Forms.PictureBox SumPicBoxTran;
-        private System.Windows.Forms.Button SumButtonTran;
-        private System.Windows.Forms.TableLayoutPanel TranTabLayTran;
-        private System.Windows.Forms.Button TranButtonTran;
-        private System.Windows.Forms.PictureBox TranPicBoxTran;
-        private System.Windows.Forms.TableLayoutPanel GoalTabLayTran;
-        private System.Windows.Forms.Button GoalButtonTran;
-        private System.Windows.Forms.PictureBox GoalPicBoxTran;
-        private System.Windows.Forms.TableLayoutPanel HomeTabLayTran;
-        private System.Windows.Forms.Button HomeButtonTran;
-        private System.Windows.Forms.PictureBox HomePicBoxTran;
+        private System.Windows.Forms.Label CentSibleLabelSum;
+        private System.Windows.Forms.TableLayoutPanel SideBarTabLaySum;
+        private System.Windows.Forms.Button LogoutButtonSum;
+        private System.Windows.Forms.TableLayoutPanel PredTabLaySum;
+        private System.Windows.Forms.PictureBox PredPicBoxSum;
+        private System.Windows.Forms.Button PredButtonSum;
+        private System.Windows.Forms.TableLayoutPanel SumTabLaySum;
+        private System.Windows.Forms.PictureBox SumPicBoxSum;
+        private System.Windows.Forms.Button SumButtonSum;
+        private System.Windows.Forms.TableLayoutPanel TranTabLaySum;
+        private System.Windows.Forms.Button TranButtonSum;
+        private System.Windows.Forms.PictureBox TranPicBoxSum;
+        private System.Windows.Forms.TableLayoutPanel GoalTabLaySum;
+        private System.Windows.Forms.Button GoalButtonSum;
+        private System.Windows.Forms.PictureBox GoalPicBoxSum;
+        private System.Windows.Forms.TableLayoutPanel HomeTabLaySum;
+        private System.Windows.Forms.Button HomeButtonSum;
+        private System.Windows.Forms.PictureBox HomePicBoxSum;
     }
 }
