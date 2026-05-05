@@ -557,6 +557,7 @@
             // 
             // TranTabLayTran
             // 
+            this.TranTabLayTran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.TranTabLayTran.ColumnCount = 2;
             this.TranTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
             this.TranTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
@@ -599,7 +600,6 @@
             // 
             // GoalTabLayTran
             // 
-            this.GoalTabLayTran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.GoalTabLayTran.ColumnCount = 2;
             this.GoalTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.63415F));
             this.GoalTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.36585F));
@@ -616,6 +616,7 @@
             // GoalButtonTran
             // 
             this.GoalButtonTran.FlatAppearance.BorderSize = 0;
+            this.GoalButtonTran.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.GoalButtonTran.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.GoalButtonTran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GoalButtonTran.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -628,7 +629,6 @@
             this.GoalButtonTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GoalButtonTran.UseVisualStyleBackColor = false;
             this.GoalButtonTran.Click += new System.EventHandler(this.GoalButtonTran_Click);
-            // 
             // GoalPicBoxTran
             // 
             this.GoalPicBoxTran.Anchor = System.Windows.Forms.AnchorStyles.None;
