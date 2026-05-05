@@ -31,6 +31,64 @@ namespace CentSible.Forms
             InitializeComponent();
             _user = user;
             _goalLogic = new GoalLogic();
+
+            var goalGroup = new Control[] { GoalButtonHome, GoalTabLayHome };
+            WireHoverRecursive(GoalButtonHome, goalGroup);
+            WireHoverRecursive(GoalTabLayHome, goalGroup);
+
+            var sumGroup = new Control[] { SumButtonHome, SumTabLayHome };
+            WireHoverRecursive(SumButtonHome, sumGroup);
+            WireHoverRecursive(SumTabLayHome, sumGroup);
+
+            var tranGroup = new Control[] { TranButtonHome, TranTabLayHome };
+            WireHoverRecursive(TranButtonHome, tranGroup);
+            WireHoverRecursive(TranTabLayHome, tranGroup);
+
+            var predGroup = new Control[] { PredButtonHome, PredTabLayHome };
+            WireHoverRecursive(PredButtonHome, predGroup);
+            WireHoverRecursive(PredTabLayHome, predGroup);
+
+            WireClickRecursive(GoalTabLayHome, GoalButtonGoal_Click);
+            WireClickRecursive(SumTabLayHome, SumButtonGoal_Click);
+            WireClickRecursive(TranTabLayHome, TranButtonHome_Click);
+            WireClickRecursive(PredTabLayHome, PredButtonGoal_Click);
+        }
+
+        private void WireClickRecursive(Control root, EventHandler handler)
+        {
+            root.Click += handler;
+            foreach (Control child in root.Controls)
+                WireClickRecursive(child, handler);
+        }
+
+        private void WireHoverRecursive(Control root, Control[] group)
+        {
+            root.Tag = group;
+            root.MouseEnter += HoverEnter;
+            root.MouseLeave += HoverLeave;
+            foreach (Control child in root.Controls)
+                WireHoverRecursive(child, group);
+        }
+
+        private void RecolorRecursive(Control ctrl, Color color)
+        {
+            ctrl.BackColor = color;
+            foreach (Control child in ctrl.Controls)
+                RecolorRecursive(child, color);
+        }
+
+        private void HoverEnter(object sender, EventArgs e)
+        {
+            var group = (Control[])((Control)sender).Tag;
+            foreach (var ctrl in group)
+                RecolorRecursive(ctrl, Color.FromArgb(82, 160, 90));
+        }
+
+        private void HoverLeave(object sender, EventArgs e)
+        {
+            var group = (Control[])((Control)sender).Tag;
+            foreach (var ctrl in group)
+                RecolorRecursive(ctrl, Color.FromArgb(26, 46, 27));
         }
 
         private void HomeForm_Load(object sender, EventArgs e)
@@ -211,6 +269,6 @@ namespace CentSible.Forms
         private void PredButtonGoal_Click(object sender, EventArgs e) => SwitchPage(new PredictionForm(this, _user));
         private void LogoutButtonGoal_Click(object sender, EventArgs e) { _isNavigating = true; new LoginForms().Show(); this.Dispose(); }
 
-       
+        
     }
 }

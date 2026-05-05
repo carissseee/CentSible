@@ -30,8 +30,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblCurrentStreak = new System.Windows.Forms.Label();
             this.lblStreakTitle = new System.Windows.Forms.Label();
             this.MonPanelHome = new System.Windows.Forms.Panel();
@@ -68,6 +68,7 @@
             this.ThuLabelHome = new System.Windows.Forms.Label();
             this.SunLabelHome = new System.Windows.Forms.Label();
             this.LongestStreakTabLayHome = new System.Windows.Forms.TableLayoutPanel();
+            this.lblDashboardHeader = new System.Windows.Forms.Label();
             this.TranSaveSpendLayoutHome = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SpentLabelLayHome = new System.Windows.Forms.TableLayoutPanel();
@@ -76,22 +77,21 @@
             this.BarSpentHome = new System.Windows.Forms.ProgressBar();
             this.SavingGoalLabelLayHome = new System.Windows.Forms.TableLayoutPanel();
             this.SpendingGoalLabelLayHome = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvRecentTransactions = new System.Windows.Forms.DataGridView();
             this.SidebarTableLayoutGoal = new System.Windows.Forms.FlowLayoutPanel();
             this.CentSibleTextPanelGoal = new System.Windows.Forms.Panel();
             this.CentSibleLabelHome = new System.Windows.Forms.Label();
             this.SideBarTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
-            this.PredTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
+            this.PredTabLayHome = new System.Windows.Forms.TableLayoutPanel();
             this.PredPicBoxGoal = new System.Windows.Forms.PictureBox();
-            this.SumTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
+            this.SumTabLayHome = new System.Windows.Forms.TableLayoutPanel();
             this.SumPicBoxGoal = new System.Windows.Forms.PictureBox();
-            this.TranTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
+            this.TranTabLayHome = new System.Windows.Forms.TableLayoutPanel();
             this.GoalPicBoxGoal = new System.Windows.Forms.PictureBox();
-            this.GoalTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
+            this.GoalTabLayHome = new System.Windows.Forms.TableLayoutPanel();
             this.TranPicBoxGoal = new System.Windows.Forms.PictureBox();
-            this.HomeTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
+            this.HomeTabLayHome = new System.Windows.Forms.TableLayoutPanel();
             this.HomePicBoxGoal = new System.Windows.Forms.PictureBox();
-            this.dgvRecentTransactions = new System.Windows.Forms.DataGridView();
-            this.lblDashboardHeader = new System.Windows.Forms.Label();
             this.MainLayoutHome.SuspendLayout();
             this.StreakLayoutMainHome.SuspendLayout();
             this.StreakBarLayoutHome.SuspendLayout();
@@ -102,20 +102,20 @@
             this.SpentLabelLayHome.SuspendLayout();
             this.SavingGoalLabelLayHome.SuspendLayout();
             this.SpendingGoalLabelLayHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecentTransactions)).BeginInit();
             this.SidebarTableLayoutGoal.SuspendLayout();
             this.CentSibleTextPanelGoal.SuspendLayout();
             this.SideBarTabLayGoal.SuspendLayout();
-            this.PredTabLayGoal.SuspendLayout();
+            this.PredTabLayHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxGoal)).BeginInit();
-            this.SumTabLayGoal.SuspendLayout();
+            this.SumTabLayHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SumPicBoxGoal)).BeginInit();
-            this.TranTabLayGoal.SuspendLayout();
+            this.TranTabLayHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxGoal)).BeginInit();
-            this.GoalTabLayGoal.SuspendLayout();
+            this.GoalTabLayHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TranPicBoxGoal)).BeginInit();
-            this.HomeTabLayGoal.SuspendLayout();
+            this.HomeTabLayHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxGoal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecentTransactions)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCurrentStreak
@@ -297,24 +297,23 @@
             this.LogoutButtonHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LogoutButtonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
             this.LogoutButtonHome.FlatAppearance.BorderSize = 0;
-            this.LogoutButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
+            this.LogoutButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.LogoutButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogoutButtonHome.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.LogoutButtonHome.ForeColor = System.Drawing.Color.White;
-            this.LogoutButtonHome.Location = new System.Drawing.Point(3, 398);
+            this.LogoutButtonHome.Location = new System.Drawing.Point(3, 399);
             this.LogoutButtonHome.Name = "LogoutButtonHome";
-            this.LogoutButtonHome.Size = new System.Drawing.Size(164, 40);
+            this.LogoutButtonHome.Size = new System.Drawing.Size(183, 39);
             this.LogoutButtonHome.TabIndex = 15;
-            this.LogoutButtonHome.Text = "Logout";
+            this.LogoutButtonHome.Text = " Logout";
             this.LogoutButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LogoutButtonHome.UseVisualStyleBackColor = false;
             this.LogoutButtonHome.Click += new System.EventHandler(this.LogoutButtonGoal_Click);
             // 
             // PredButtonHome
             // 
-            this.PredButtonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.PredButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(82, 160, 90);
             this.PredButtonHome.FlatAppearance.BorderSize = 0;
-            this.PredButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
             this.PredButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PredButtonHome.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.PredButtonHome.ForeColor = System.Drawing.Color.White;
@@ -328,10 +327,9 @@
             this.PredButtonHome.Click += new System.EventHandler(this.PredButtonGoal_Click);
             // 
             // SumButtonHome
-            // 
-            this.SumButtonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            //
+            this.SumButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(82, 160, 90);
             this.SumButtonHome.FlatAppearance.BorderSize = 0;
-            this.SumButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
             this.SumButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SumButtonHome.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.SumButtonHome.ForeColor = System.Drawing.Color.White;
@@ -346,9 +344,8 @@
             // 
             // TranButtonHome
             // 
-            this.TranButtonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.TranButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(82, 160, 90);
             this.TranButtonHome.FlatAppearance.BorderSize = 0;
-            this.TranButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
             this.TranButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TranButtonHome.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TranButtonHome.ForeColor = System.Drawing.Color.White;
@@ -363,9 +360,8 @@
             // 
             // GoalButtonHome
             // 
-            this.GoalButtonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.GoalButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(82, 160, 90);
             this.GoalButtonHome.FlatAppearance.BorderSize = 0;
-            this.GoalButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
             this.GoalButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GoalButtonHome.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.GoalButtonHome.ForeColor = System.Drawing.Color.White;
@@ -380,9 +376,9 @@
             // 
             // HomeButtonHome
             // 
-            this.HomeButtonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.HomeButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(52, 110, 60);
+            this.HomeButtonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.HomeButtonHome.FlatAppearance.BorderSize = 0;
-            this.HomeButtonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
             this.HomeButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeButtonHome.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.HomeButtonHome.ForeColor = System.Drawing.Color.White;
@@ -393,7 +389,6 @@
             this.HomeButtonHome.Text = "Home";
             this.HomeButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HomeButtonHome.UseVisualStyleBackColor = false;
-            this.HomeButtonHome.Click += new System.EventHandler(this.HomeButtonGoal_Click);
             // 
             // MainLayoutHome
             // 
@@ -580,6 +575,15 @@
             this.LongestStreakTabLayHome.Size = new System.Drawing.Size(412, 72);
             this.LongestStreakTabLayHome.TabIndex = 41;
             // 
+            // lblDashboardHeader
+            // 
+            this.lblDashboardHeader.AutoSize = true;
+            this.lblDashboardHeader.Location = new System.Drawing.Point(3, 0);
+            this.lblDashboardHeader.Name = "lblDashboardHeader";
+            this.lblDashboardHeader.Size = new System.Drawing.Size(124, 16);
+            this.lblDashboardHeader.TabIndex = 42;
+            this.lblDashboardHeader.Text = "Dashboard Header";
+            // 
             // TranSaveSpendLayoutHome
             // 
             this.TranSaveSpendLayoutHome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -691,6 +695,40 @@
             this.SpendingGoalLabelLayHome.Size = new System.Drawing.Size(395, 36);
             this.SpendingGoalLabelLayHome.TabIndex = 0;
             // 
+            // dgvRecentTransactions
+            // 
+            this.dgvRecentTransactions.AllowUserToAddRows = false;
+            this.dgvRecentTransactions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRecentTransactions.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
+            this.dgvRecentTransactions.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRecentTransactions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvRecentTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRecentTransactions.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvRecentTransactions.EnableHeadersVisualStyles = false;
+            this.dgvRecentTransactions.GridColor = System.Drawing.Color.DarkGreen;
+            this.dgvRecentTransactions.Location = new System.Drawing.Point(3, 3);
+            this.dgvRecentTransactions.Name = "dgvRecentTransactions";
+            this.dgvRecentTransactions.ReadOnly = true;
+            this.dgvRecentTransactions.RowHeadersVisible = false;
+            this.dgvRecentTransactions.RowHeadersWidth = 51;
+            this.dgvRecentTransactions.RowTemplate.Height = 24;
+            this.dgvRecentTransactions.Size = new System.Drawing.Size(412, 226);
+            this.dgvRecentTransactions.TabIndex = 40;
+            // 
             // SidebarTableLayoutGoal
             // 
             this.SidebarTableLayoutGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
@@ -727,12 +765,12 @@
             this.SideBarTabLayGoal.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.SideBarTabLayGoal.ColumnCount = 1;
             this.SideBarTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.SideBarTabLayGoal.Controls.Add(this.PredTabLayHome, 0, 4);
+            this.SideBarTabLayGoal.Controls.Add(this.SumTabLayHome, 0, 3);
+            this.SideBarTabLayGoal.Controls.Add(this.TranTabLayHome, 0, 2);
+            this.SideBarTabLayGoal.Controls.Add(this.GoalTabLayHome, 0, 1);
+            this.SideBarTabLayGoal.Controls.Add(this.HomeTabLayHome, 0, 0);
             this.SideBarTabLayGoal.Controls.Add(this.LogoutButtonHome, 0, 6);
-            this.SideBarTabLayGoal.Controls.Add(this.PredTabLayGoal, 0, 4);
-            this.SideBarTabLayGoal.Controls.Add(this.SumTabLayGoal, 0, 3);
-            this.SideBarTabLayGoal.Controls.Add(this.TranTabLayGoal, 0, 2);
-            this.SideBarTabLayGoal.Controls.Add(this.GoalTabLayGoal, 0, 1);
-            this.SideBarTabLayGoal.Controls.Add(this.HomeTabLayGoal, 0, 0);
             this.SideBarTabLayGoal.Location = new System.Drawing.Point(3, 69);
             this.SideBarTabLayGoal.Name = "SideBarTabLayGoal";
             this.SideBarTabLayGoal.RowCount = 7;
@@ -741,25 +779,25 @@
             this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 128F));
-            this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 146F));
+            this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.SideBarTabLayGoal.Size = new System.Drawing.Size(189, 441);
             this.SideBarTabLayGoal.TabIndex = 11;
             // 
-            // PredTabLayGoal
+            // PredTabLayHome
             // 
-            this.PredTabLayGoal.ColumnCount = 2;
-            this.PredTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
-            this.PredTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
-            this.PredTabLayGoal.Controls.Add(this.PredPicBoxGoal, 0, 0);
-            this.PredTabLayGoal.Controls.Add(this.PredButtonHome, 1, 0);
-            this.PredTabLayGoal.Location = new System.Drawing.Point(3, 203);
-            this.PredTabLayGoal.Name = "PredTabLayGoal";
-            this.PredTabLayGoal.RowCount = 1;
-            this.PredTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PredTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PredTabLayGoal.Size = new System.Drawing.Size(183, 44);
-            this.PredTabLayGoal.TabIndex = 25;
+            this.PredTabLayHome.ColumnCount = 2;
+            this.PredTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
+            this.PredTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.PredTabLayHome.Controls.Add(this.PredPicBoxGoal, 0, 0);
+            this.PredTabLayHome.Controls.Add(this.PredButtonHome, 1, 0);
+            this.PredTabLayHome.Location = new System.Drawing.Point(3, 203);
+            this.PredTabLayHome.Name = "PredTabLayHome";
+            this.PredTabLayHome.RowCount = 1;
+            this.PredTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PredTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PredTabLayHome.Size = new System.Drawing.Size(183, 44);
+            this.PredTabLayHome.TabIndex = 25;
             // 
             // PredPicBoxGoal
             // 
@@ -772,20 +810,20 @@
             this.PredPicBoxGoal.TabIndex = 19;
             this.PredPicBoxGoal.TabStop = false;
             // 
-            // SumTabLayGoal
+            // SumTabLayHome
             // 
-            this.SumTabLayGoal.ColumnCount = 2;
-            this.SumTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
-            this.SumTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
-            this.SumTabLayGoal.Controls.Add(this.SumPicBoxGoal, 0, 0);
-            this.SumTabLayGoal.Controls.Add(this.SumButtonHome, 1, 0);
-            this.SumTabLayGoal.Location = new System.Drawing.Point(3, 153);
-            this.SumTabLayGoal.Name = "SumTabLayGoal";
-            this.SumTabLayGoal.RowCount = 1;
-            this.SumTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SumTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SumTabLayGoal.Size = new System.Drawing.Size(183, 44);
-            this.SumTabLayGoal.TabIndex = 24;
+            this.SumTabLayHome.ColumnCount = 2;
+            this.SumTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
+            this.SumTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.SumTabLayHome.Controls.Add(this.SumPicBoxGoal, 0, 0);
+            this.SumTabLayHome.Controls.Add(this.SumButtonHome, 1, 0);
+            this.SumTabLayHome.Location = new System.Drawing.Point(3, 153);
+            this.SumTabLayHome.Name = "SumTabLayHome";
+            this.SumTabLayHome.RowCount = 1;
+            this.SumTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SumTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SumTabLayHome.Size = new System.Drawing.Size(183, 44);
+            this.SumTabLayHome.TabIndex = 24;
             // 
             // SumPicBoxGoal
             // 
@@ -798,20 +836,20 @@
             this.SumPicBoxGoal.TabIndex = 18;
             this.SumPicBoxGoal.TabStop = false;
             // 
-            // TranTabLayGoal
+            // TranTabLayHome
             // 
-            this.TranTabLayGoal.ColumnCount = 2;
-            this.TranTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
-            this.TranTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
-            this.TranTabLayGoal.Controls.Add(this.GoalPicBoxGoal, 0, 0);
-            this.TranTabLayGoal.Controls.Add(this.TranButtonHome, 1, 0);
-            this.TranTabLayGoal.Location = new System.Drawing.Point(3, 103);
-            this.TranTabLayGoal.Name = "TranTabLayGoal";
-            this.TranTabLayGoal.RowCount = 1;
-            this.TranTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TranTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TranTabLayGoal.Size = new System.Drawing.Size(183, 44);
-            this.TranTabLayGoal.TabIndex = 23;
+            this.TranTabLayHome.ColumnCount = 2;
+            this.TranTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
+            this.TranTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.TranTabLayHome.Controls.Add(this.GoalPicBoxGoal, 0, 0);
+            this.TranTabLayHome.Controls.Add(this.TranButtonHome, 1, 0);
+            this.TranTabLayHome.Location = new System.Drawing.Point(3, 103);
+            this.TranTabLayHome.Name = "TranTabLayHome";
+            this.TranTabLayHome.RowCount = 1;
+            this.TranTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TranTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TranTabLayHome.Size = new System.Drawing.Size(183, 44);
+            this.TranTabLayHome.TabIndex = 23;
             // 
             // GoalPicBoxGoal
             // 
@@ -824,20 +862,20 @@
             this.GoalPicBoxGoal.TabIndex = 16;
             this.GoalPicBoxGoal.TabStop = false;
             // 
-            // GoalTabLayGoal
+            // GoalTabLayHome
             // 
-            this.GoalTabLayGoal.ColumnCount = 2;
-            this.GoalTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.63415F));
-            this.GoalTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.36585F));
-            this.GoalTabLayGoal.Controls.Add(this.TranPicBoxGoal, 0, 0);
-            this.GoalTabLayGoal.Controls.Add(this.GoalButtonHome, 1, 0);
-            this.GoalTabLayGoal.Location = new System.Drawing.Point(3, 53);
-            this.GoalTabLayGoal.Name = "GoalTabLayGoal";
-            this.GoalTabLayGoal.RowCount = 1;
-            this.GoalTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.GoalTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.GoalTabLayGoal.Size = new System.Drawing.Size(183, 44);
-            this.GoalTabLayGoal.TabIndex = 22;
+            this.GoalTabLayHome.ColumnCount = 2;
+            this.GoalTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.63415F));
+            this.GoalTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.36585F));
+            this.GoalTabLayHome.Controls.Add(this.TranPicBoxGoal, 0, 0);
+            this.GoalTabLayHome.Controls.Add(this.GoalButtonHome, 1, 0);
+            this.GoalTabLayHome.Location = new System.Drawing.Point(3, 53);
+            this.GoalTabLayHome.Name = "GoalTabLayHome";
+            this.GoalTabLayHome.RowCount = 1;
+            this.GoalTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.GoalTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.GoalTabLayHome.Size = new System.Drawing.Size(183, 44);
+            this.GoalTabLayHome.TabIndex = 22;
             // 
             // TranPicBoxGoal
             // 
@@ -850,20 +888,21 @@
             this.TranPicBoxGoal.TabIndex = 17;
             this.TranPicBoxGoal.TabStop = false;
             // 
-            // HomeTabLayGoal
+            // HomeTabLayHome
             // 
-            this.HomeTabLayGoal.ColumnCount = 2;
-            this.HomeTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
-            this.HomeTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
-            this.HomeTabLayGoal.Controls.Add(this.HomePicBoxGoal, 0, 0);
-            this.HomeTabLayGoal.Controls.Add(this.HomeButtonHome, 1, 0);
-            this.HomeTabLayGoal.Location = new System.Drawing.Point(3, 3);
-            this.HomeTabLayGoal.Name = "HomeTabLayGoal";
-            this.HomeTabLayGoal.RowCount = 1;
-            this.HomeTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.HomeTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.HomeTabLayGoal.Size = new System.Drawing.Size(183, 44);
-            this.HomeTabLayGoal.TabIndex = 21;
+            this.HomeTabLayHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
+            this.HomeTabLayHome.ColumnCount = 2;
+            this.HomeTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
+            this.HomeTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.HomeTabLayHome.Controls.Add(this.HomePicBoxGoal, 0, 0);
+            this.HomeTabLayHome.Controls.Add(this.HomeButtonHome, 1, 0);
+            this.HomeTabLayHome.Location = new System.Drawing.Point(3, 3);
+            this.HomeTabLayHome.Name = "HomeTabLayHome";
+            this.HomeTabLayHome.RowCount = 1;
+            this.HomeTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.HomeTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.HomeTabLayHome.Size = new System.Drawing.Size(183, 44);
+            this.HomeTabLayHome.TabIndex = 21;
             // 
             // HomePicBoxGoal
             // 
@@ -875,49 +914,6 @@
             this.HomePicBoxGoal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.HomePicBoxGoal.TabIndex = 15;
             this.HomePicBoxGoal.TabStop = false;
-            // 
-            // dgvRecentTransactions
-            // 
-            this.dgvRecentTransactions.AllowUserToAddRows = false;
-            this.dgvRecentTransactions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvRecentTransactions.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
-            this.dgvRecentTransactions.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkGreen;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRecentTransactions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvRecentTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRecentTransactions.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvRecentTransactions.EnableHeadersVisualStyles = false;
-            this.dgvRecentTransactions.GridColor = System.Drawing.Color.DarkGreen;
-            this.dgvRecentTransactions.Location = new System.Drawing.Point(3, 3);
-            this.dgvRecentTransactions.Name = "dgvRecentTransactions";
-            this.dgvRecentTransactions.ReadOnly = true;
-            this.dgvRecentTransactions.RowHeadersVisible = false;
-            this.dgvRecentTransactions.RowHeadersWidth = 51;
-            this.dgvRecentTransactions.RowTemplate.Height = 24;
-            this.dgvRecentTransactions.Size = new System.Drawing.Size(412, 226);
-            this.dgvRecentTransactions.TabIndex = 40;
-            // 
-            // lblDashboardHeader
-            // 
-            this.lblDashboardHeader.AutoSize = true;
-            this.lblDashboardHeader.Location = new System.Drawing.Point(3, 0);
-            this.lblDashboardHeader.Name = "lblDashboardHeader";
-            this.lblDashboardHeader.Size = new System.Drawing.Size(124, 16);
-            this.lblDashboardHeader.TabIndex = 42;
-            this.lblDashboardHeader.Text = "Dashboard Header";
             // 
             // HomeForm
             // 
@@ -953,20 +949,20 @@
             this.SavingGoalLabelLayHome.PerformLayout();
             this.SpendingGoalLabelLayHome.ResumeLayout(false);
             this.SpendingGoalLabelLayHome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecentTransactions)).EndInit();
             this.SidebarTableLayoutGoal.ResumeLayout(false);
             this.CentSibleTextPanelGoal.ResumeLayout(false);
             this.SideBarTabLayGoal.ResumeLayout(false);
-            this.PredTabLayGoal.ResumeLayout(false);
+            this.PredTabLayHome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxGoal)).EndInit();
-            this.SumTabLayGoal.ResumeLayout(false);
+            this.SumTabLayHome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SumPicBoxGoal)).EndInit();
-            this.TranTabLayGoal.ResumeLayout(false);
+            this.TranTabLayHome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxGoal)).EndInit();
-            this.GoalTabLayGoal.ResumeLayout(false);
+            this.GoalTabLayHome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TranPicBoxGoal)).EndInit();
-            this.HomeTabLayGoal.ResumeLayout(false);
+            this.HomeTabLayHome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxGoal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecentTransactions)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1017,15 +1013,15 @@
         private System.Windows.Forms.Panel CentSibleTextPanelGoal;
         private System.Windows.Forms.Label CentSibleLabelHome;
         private System.Windows.Forms.TableLayoutPanel SideBarTabLayGoal;
-        private System.Windows.Forms.TableLayoutPanel PredTabLayGoal;
+        private System.Windows.Forms.TableLayoutPanel PredTabLayHome;
         private System.Windows.Forms.PictureBox PredPicBoxGoal;
-        private System.Windows.Forms.TableLayoutPanel SumTabLayGoal;
+        private System.Windows.Forms.TableLayoutPanel SumTabLayHome;
         private System.Windows.Forms.PictureBox SumPicBoxGoal;
-        private System.Windows.Forms.TableLayoutPanel TranTabLayGoal;
+        private System.Windows.Forms.TableLayoutPanel TranTabLayHome;
         private System.Windows.Forms.PictureBox GoalPicBoxGoal;
-        private System.Windows.Forms.TableLayoutPanel GoalTabLayGoal;
+        private System.Windows.Forms.TableLayoutPanel GoalTabLayHome;
         private System.Windows.Forms.PictureBox TranPicBoxGoal;
-        private System.Windows.Forms.TableLayoutPanel HomeTabLayGoal;
+        private System.Windows.Forms.TableLayoutPanel HomeTabLayHome;
         private System.Windows.Forms.PictureBox HomePicBoxGoal;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel StreakBarLayoutHome;
