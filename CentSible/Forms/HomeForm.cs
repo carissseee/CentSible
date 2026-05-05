@@ -11,8 +11,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-
 namespace CentSible.Forms
 {
     public partial class HomeForm : Form
@@ -22,7 +20,6 @@ namespace CentSible.Forms
         private GoalLogic _goalLogic;
         private AccountLogic _accountLogic = new AccountLogic();
 
-        
         private TransactionLogic _tLogic = new TransactionLogic();
         private TransactionDB _db = new TransactionDB();
 
@@ -57,17 +54,16 @@ namespace CentSible.Forms
         private void HomeForm_Load(object sender, EventArgs e)
         {
             if (_user == null) return;
-            RefreshAllData(); 
+            RefreshAllData();
         }
 
         private void HomeForm_Activated(object sender, EventArgs e)
         {
             if (_user == null) return;
-            RefreshAllData(); 
+            RefreshAllData();
             this.ActiveControl = null;
             this.Refresh();
         }
-
 
         private void RefreshAllData()
         {
@@ -83,8 +79,8 @@ namespace CentSible.Forms
         private void UpdateHeaderLabels()
         {
             if (_user == null) return;
-     
-            string monthYear = DateTime.Now.ToString("MMMM yyyy");     
+
+            string monthYear = DateTime.Now.ToString("MMMM yyyy");
             lblDashboardHeader.Text = $"Good day, {_user.Username}!" + Environment.NewLine +
                                       $"Here’s your financial overview for {monthYear}";
         }
@@ -93,16 +89,20 @@ namespace CentSible.Forms
         {
             try
             {
-              
-                dgvRecentTransactionsTabLay.DataSource = null;            
-                var recent = _db.GetRecentTransactions(_user.AccountID, 5);            
-                dgvRecentTransactionsTabLay.DataSource = recent.Select(t => new {
-                    Date = t.Date.ToString("MMM dd"),
-                    Description = t.Description,
-                    Category = t.Category.ToString(),           
-                    Amount = (t.TransactionType == TransactionType.Expense ? "- ₱ " : "+ ₱ ") + t.Amount.ToString("N0")
+                dgvRecentTransactionsTabLay.DataSource = null;
+                var recent = _db.GetRecentTransactions(_user.AccountID, 5);
+                dgvRecentTransactionsTabLay.DataSource = recent.Select(t => {
+                    decimal truncAmount = Math.Truncate(t.Amount * 100) / 100;
+
+                    return new
+                    {
+                        Date = t.Date.ToString("MMM dd"),
+                        Description = t.Description,
+                        Category = t.Category.ToString(),
+                        Amount = (t.TransactionType == TransactionType.Expense ? "- ₱ " : "+ ₱ ") + truncAmount.ToString("F2")
+                    };
                 }).ToList();
-      
+
                 dgvRecentTransactionsTabLay.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvRecentTransactionsTabLay.AllowUserToAddRows = false;
                 dgvRecentTransactionsTabLay.RowHeadersVisible = false;
@@ -115,7 +115,6 @@ namespace CentSible.Forms
 
         private void UpdateStreakDisplay()
         {
-            
             lblCurrentStreak.Text = _user.LoginStreak.ToString();
         }
 
@@ -124,25 +123,24 @@ namespace CentSible.Forms
             try
             {
                 DateTime now = DateTime.Now;
-                var monthlyTransactions = _db.GetTransactions(_user.AccountID, now.Month, now.Year);         
-                decimal totalSpent = _tLogic.GetTotalSpent(monthlyTransactions);           
+                var monthlyTransactions = _db.GetTransactions(_user.AccountID, now.Month, now.Year);
+                decimal totalSpent = _tLogic.GetTotalSpent(monthlyTransactions);
                 decimal totalBudget = monthlyTransactions
                     .Where(t => t.TransactionType == TransactionType.Budget)
                     .Sum(t => t.Amount);
+                decimal truncSpent = Math.Truncate(totalSpent * 100) / 100;
+                decimal truncBudget = Math.Truncate(totalBudget * 100) / 100;
 
-              
                 if (totalBudget > 0)
                 {
-                    
-                    MoneySpentLabelHome.Text = $"₱ {totalSpent:N0} / ₱ {totalBudget:N0}";            
+                    MoneySpentLabelHome.Text = $"₱ {truncSpent:F2} / ₱ {truncBudget:F2}";
                     double rawPercent = (double)(totalSpent / totalBudget) * 100;
                     int percent = (int)Math.Min(Math.Max(rawPercent, 0), 100);
                     BarSpentHome.Value = percent;
                 }
                 else
                 {
-                   
-                    MoneySpentLabelHome.Text = $"₱ {totalSpent:N0} / ₱ 0";
+                    MoneySpentLabelHome.Text = $"₱ {truncSpent:F2} / ₱ 0.00";
                     BarSpentHome.Value = 0;
                 }
             }
@@ -156,12 +154,11 @@ namespace CentSible.Forms
         {
             if (_user == null) return;
 
-           
             var metrics = _accountLogic.GetStreakMetrics(_user);
 
             pbMilestone.Minimum = 0;
             pbMilestone.Maximum = metrics.MaxGoal;
-            pbMilestone.Value = Math.Min(metrics.LongestStreak, metrics.MaxGoal);     
+            pbMilestone.Value = Math.Min(metrics.LongestStreak, metrics.MaxGoal);
             LongestStreakLabelHome.Text = metrics.StreakText;
             LongestStreakLabelHome.ForeColor = metrics.StatusColor;
             pbMilestone.Refresh();
@@ -182,8 +179,10 @@ namespace CentSible.Forms
                 if (goal.TargetAmount <= 0) continue;
 
                 double raw = (goal.CurrentAmount / goal.TargetAmount) * 100;
-                int percent = (int)Math.Min(Math.Max(raw, 0), 100);
-                string display = $"₱ {goal.CurrentAmount:N0} / ₱ {goal.TargetAmount:N0}";
+                int percent = (int)Math.Min(Math.Max(raw, 0), 100);       
+                decimal truncCurrent = Math.Truncate((decimal)goal.CurrentAmount * 100) / 100;
+                decimal truncTarget = Math.Truncate((decimal)goal.TargetAmount * 100) / 100;     
+                string display = $"₱ {truncCurrent:F2} / ₱ {truncTarget:F2}";
 
                 if (goal.GoalType == GoalCategory.Spending)
                 {
@@ -214,8 +213,6 @@ namespace CentSible.Forms
             }
         }
 
-
-
         private void HomeForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (!_isNavigating && e.CloseReason == CloseReason.UserClosing) Application.Exit();
@@ -227,6 +224,5 @@ namespace CentSible.Forms
         private void PredButtonHome_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Prediction);
 
         private void LogoutButtonHome_Click(object sender, EventArgs e) => Navigator.Logout(this);
-
     }
 }
