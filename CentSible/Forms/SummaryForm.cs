@@ -104,26 +104,27 @@ namespace CentSible.Forms
         private void UpdateSummaryReport(Dictionary<string, decimal> spending, decimal totalSpent, int month, int year)
         {
             string monthName = new DateTime(year, month, 1).ToString("MMMM");
-            List<string> highestCategories = summaryLogic.GetAllHighestCategories(spending);
-            List<string> lowestCategories = summaryLogic.GetAllLowestCategories(spending);
-            List<string> onlyCategories = summaryLogic.GetAllHighestCategories(spending);
-            decimal highestPercent = summaryLogic.GetPercentage(GetCategoryAmount(spending, highestCategories[0]), totalSpent);
-            decimal lowestPercent = summaryLogic.GetPercentage(GetCategoryAmount(spending, lowestCategories[0]), totalSpent);
-            string onlyCategory = onlyCategories[0];
-            decimal onlyPercent = summaryLogic.GetPercentage(GetCategoryAmount(spending, onlyCategory), totalSpent);
-            decimal tiedPercent = summaryLogic.GetPercentage(GetCategoryAmount(spending, highestCategories[0]), totalSpent);
-
             if (totalSpent == 0)
-            {
+            {  
                 lblMSummary.Text = "In " + monthName + ", there are no recorded expenses yet.";
                 return;
             }
+
+            List<string> onlyCategories = summaryLogic.GetAllHighestCategories(spending);
+            string onlyCategory = onlyCategories[0];
+            decimal onlyPercent = summaryLogic.GetPercentage(GetCategoryAmount(spending, onlyCategory), totalSpent);
             if (spending.Count == 1)
             {
                 lblMSummary.Text = "In " + monthName + ", total expenditures reached ₱" + totalSpent.ToString("N0") + ". " +
                                    "All spending went to " + onlyCategory + " (" + onlyPercent + "%).";
                 return;
             }
+
+            List<string> highestCategories = summaryLogic.GetAllHighestCategories(spending);
+            List<string> lowestCategories = summaryLogic.GetAllLowestCategories(spending);
+            decimal tiedPercent = summaryLogic.GetPercentage(GetCategoryAmount(spending, highestCategories[0]), totalSpent);
+            decimal highestPercent = summaryLogic.GetPercentage(GetCategoryAmount(spending, highestCategories[0]), totalSpent);
+            decimal lowestPercent = summaryLogic.GetPercentage(GetCategoryAmount(spending, lowestCategories[0]), totalSpent);
             if (spending.Count == 2)
             {
                 if (highestCategories.Count == 2)
