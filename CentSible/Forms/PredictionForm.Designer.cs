@@ -278,9 +278,11 @@
             this.LogoutButtonPred.Text = "Logout";
             this.LogoutButtonPred.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LogoutButtonPred.UseVisualStyleBackColor = false;
+            this.LogoutButtonPred.Click += new System.EventHandler(this.LogoutButtonPred_Click);
             // 
             // PredTabLayPred
             // 
+            this.PredTabLayPred.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.PredTabLayPred.ColumnCount = 2;
             this.PredTabLayPred.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
             this.PredTabLayPred.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
@@ -292,7 +294,7 @@
             this.PredTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PredTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PredTabLayPred.Size = new System.Drawing.Size(183, 44);
-            this.PredTabLayPred.TabIndex = 25;
+            this.PredTabLayPred.TabIndex = 24;
             // 
             // PredPicBoxPred
             // 
@@ -307,17 +309,17 @@
             // 
             // PredButtonPred
             // 
-            this.PredButtonPred.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.PredButtonPred.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
+            this.PredButtonPred.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.PredButtonPred.FlatAppearance.BorderSize = 0;
-            this.PredButtonPred.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
-            this.PredButtonPred.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
+            this.PredButtonPred.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.PredButtonPred.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PredButtonPred.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.PredButtonPred.ForeColor = System.Drawing.Color.White;
-            this.PredButtonPred.Location = new System.Drawing.Point(67, 3);
+            this.PredButtonPred.Location = new System.Drawing.Point(66, 3);
             this.PredButtonPred.Name = "PredButtonPred";
-            this.PredButtonPred.Size = new System.Drawing.Size(113, 38);
-            this.PredButtonPred.TabIndex = 14;
+            this.PredButtonPred.Size = new System.Drawing.Size(114, 38);
+            this.PredButtonPred.TabIndex = 11;
             this.PredButtonPred.Text = "Prediction";
             this.PredButtonPred.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PredButtonPred.UseVisualStyleBackColor = false;
@@ -351,9 +353,9 @@
             // 
             // SumButtonPred
             // 
-            this.SumButtonPred.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.SumButtonPred.FlatAppearance.BorderSize = 0;
-            this.SumButtonPred.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
+            this.SumButtonPred.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
+            this.SumButtonPred.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.SumButtonPred.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SumButtonPred.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.SumButtonPred.ForeColor = System.Drawing.Color.White;
@@ -364,6 +366,7 @@
             this.SumButtonPred.Text = "Summary";
             this.SumButtonPred.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SumButtonPred.UseVisualStyleBackColor = false;
+            this.SumButtonPred.Click += new System.EventHandler(this.SumButtonPred_Click);
             // 
             // TranTabLayPred
             // 
@@ -396,6 +399,7 @@
             this.TranButtonPred.Text = "Transactions";
             this.TranButtonPred.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TranButtonPred.UseVisualStyleBackColor = false;
+            this.TranButtonPred.Click += new System.EventHandler(this.TranButtonPred_Click);
             // 
             // TranPicBoxPred
             // 
@@ -438,6 +442,7 @@
             this.GoalButtonPred.Text = "Goal";
             this.GoalButtonPred.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GoalButtonPred.UseVisualStyleBackColor = false;
+            this.GoalButtonPred.Click += new System.EventHandler(this.GoalButtonPred_Click);
             // 
             // GoalPicBoxPred
             // 
@@ -467,7 +472,7 @@
             // 
             // HomeButtonPred
             // 
-            this.HomeButtonPred.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.HomeButtonPred.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.HomeButtonPred.FlatAppearance.BorderSize = 0;
             this.HomeButtonPred.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.HomeButtonPred.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -480,6 +485,7 @@
             this.HomeButtonPred.Text = "Home";
             this.HomeButtonPred.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HomeButtonPred.UseVisualStyleBackColor = false;
+            this.HomeButtonPred.Click += new System.EventHandler(this.HomeButtonPred_Click);
             // 
             // HomePicBoxPred
             // 

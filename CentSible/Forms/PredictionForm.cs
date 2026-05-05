@@ -136,11 +136,10 @@ namespace CentSible.Forms
 
         private void PredictionForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!_isNavigating && e.CloseReason == CloseReason.UserClosing)
+            if (e.CloseReason == CloseReason.UserClosing && Navigator.Home != null)
                 Application.Exit();
-            
         }
 
-       
+
     }
 }
