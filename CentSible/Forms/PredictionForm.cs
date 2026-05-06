@@ -66,14 +66,16 @@ namespace CentSible.Forms
         {
             try
             {
+
                 int month = cbSelectMonthPred.SelectedIndex + 1;
                 int year = (int)numSelectYearPred.Value;
-
                 var result = _predLogic.GetForecast(_user.AccountID, month, year);
 
-               
-                lblPredSpendingAmount.Text = $"₱ {result.AvgSpent:N0}";
-                lblPredSavingAmount.Text = $"₱ {result.PredictedSaving:N0}";
+                decimal truncSpent = Math.Truncate(result.AvgSpent * 100) / 100;
+                decimal truncSaving = Math.Truncate(result.PredictedSaving * 100) / 100;
+
+                lblPredSpendingAmount.Text = $"₱ {truncSpent:N2}";
+                lblPredSavingAmount.Text = $"₱ {truncSaving:N2}";
                 lblContextDate.Text = $"{cbSelectMonthPred.SelectedItem} {year}";
 
                 
@@ -83,13 +85,14 @@ namespace CentSible.Forms
 
                 foreach (var data in result.History)
                 {
-                   
-                    chartForecast.Series["Expense"].Points.AddXY(data.MonthName, data.Spent);
 
-                   
-                    chartForecast.Series["Budget"].Points.AddXY(data.MonthName, data.Budget);
 
-                  
+                    decimal chartSpent = Math.Truncate(data.Spent * 100) / 100;
+                    decimal chartBudget = Math.Truncate(data.Budget * 100) / 100;
+                    decimal chartSaving = Math.Truncate((data.Budget - data.Spent) * 100) / 100;
+
+                    chartForecast.Series["Expense"].Points.AddXY(data.MonthName, data.Spent);         
+                    chartForecast.Series["Budget"].Points.AddXY(data.MonthName, data.Budget);       
                     chartForecast.Series["Saving"].Points.AddXY(data.MonthName, data.Budget - data.Spent);
                 }
             }
