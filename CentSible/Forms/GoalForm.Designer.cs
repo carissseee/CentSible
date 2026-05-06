@@ -783,9 +783,9 @@
             // 
             // PredButtonGoal
             // 
-            this.PredButtonGoal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.PredButtonGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
             this.PredButtonGoal.FlatAppearance.BorderSize = 0;
+            this.PredButtonGoal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.PredButtonGoal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.PredButtonGoal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PredButtonGoal.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -827,9 +827,9 @@
             // 
             // SumButtonGoal
             // 
-            this.SumButtonGoal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.SumButtonGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
             this.SumButtonGoal.FlatAppearance.BorderSize = 0;
+            this.SumButtonGoal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.SumButtonGoal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.SumButtonGoal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SumButtonGoal.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -860,9 +860,9 @@
             // 
             // TranButtonGoal
             // 
-            this.TranButtonGoal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.TranButtonGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
             this.TranButtonGoal.FlatAppearance.BorderSize = 0;
+            this.TranButtonGoal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.TranButtonGoal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.TranButtonGoal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TranButtonGoal.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -904,9 +904,9 @@
             // 
             // GoalButtonGoal
             // 
-            this.GoalButtonGoal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.GoalButtonGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.GoalButtonGoal.FlatAppearance.BorderSize = 0;
+            this.GoalButtonGoal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.GoalButtonGoal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.GoalButtonGoal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GoalButtonGoal.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -947,9 +947,9 @@
             // 
             // HomeButtonGoal
             // 
-            this.HomeButtonGoal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.HomeButtonGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
             this.HomeButtonGoal.FlatAppearance.BorderSize = 0;
+            this.HomeButtonGoal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.HomeButtonGoal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.HomeButtonGoal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeButtonGoal.Font = new System.Drawing.Font("Segoe UI", 10F);

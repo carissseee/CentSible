@@ -253,5 +253,8 @@
   <ItemGroup>
     <None Include="Icons\TransactionForm.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Streak.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

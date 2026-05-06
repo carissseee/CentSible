@@ -81,7 +81,7 @@ namespace CentSible.Forms
             if (_user == null) return;
 
             string monthYear = DateTime.Now.ToString("MMMM yyyy");
-            lblDashboardHeader.Text = $"Good day, {_user.Username}!\nHere’s your financial overview\nfor {monthYear}";
+            lblDashboardHeader.Text = $"Good day, {_user.Username}!\nHere’s your financial overview for {monthYear}";
         }
 
         private void UpdateRecentTransactionsTable()
@@ -206,9 +206,9 @@ namespace CentSible.Forms
             for (int i = 0; i < 7; i++)
             {
                 DateTime target = startOfWeek.AddDays(i).Date;
-                if (target == today) dayPanels[i].BackColor = Color.OrangeRed;
-                else if (target < today) dayPanels[i].BackColor = Color.DimGray;
-                else dayPanels[i].BackColor = Color.FromArgb(45, 45, 48);
+                if (target == today) dayPanels[i].BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+                else if (target < today) dayPanels[i].BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
+                else dayPanels[i].BackColor = System.Drawing.Color.White;
             }
         }
 
