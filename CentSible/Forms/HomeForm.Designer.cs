@@ -30,8 +30,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblCurrentStreak = new System.Windows.Forms.Label();
             this.lblStreakTitle = new System.Windows.Forms.Label();
             this.MonPanelHome = new System.Windows.Forms.Panel();
@@ -147,7 +147,8 @@
             // MonPanelHome
             // 
             this.MonPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.MonPanelHome.Location = new System.Drawing.Point(67, 26);
+            this.MonPanelHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MonPanelHome.Location = new System.Drawing.Point(10, 26);
             this.MonPanelHome.Name = "MonPanelHome";
             this.MonPanelHome.Size = new System.Drawing.Size(37, 37);
             this.MonPanelHome.TabIndex = 3;
@@ -155,7 +156,8 @@
             // TuePanelHome
             // 
             this.TuePanelHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TuePanelHome.Location = new System.Drawing.Point(124, 26);
+            this.TuePanelHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TuePanelHome.Location = new System.Drawing.Point(67, 26);
             this.TuePanelHome.Name = "TuePanelHome";
             this.TuePanelHome.Size = new System.Drawing.Size(37, 37);
             this.TuePanelHome.TabIndex = 4;
@@ -163,7 +165,8 @@
             // WedPanelHome
             // 
             this.WedPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.WedPanelHome.Location = new System.Drawing.Point(181, 26);
+            this.WedPanelHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.WedPanelHome.Location = new System.Drawing.Point(124, 26);
             this.WedPanelHome.Name = "WedPanelHome";
             this.WedPanelHome.Size = new System.Drawing.Size(37, 37);
             this.WedPanelHome.TabIndex = 5;
@@ -171,7 +174,8 @@
             // ThuPanelHome
             // 
             this.ThuPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ThuPanelHome.Location = new System.Drawing.Point(238, 26);
+            this.ThuPanelHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ThuPanelHome.Location = new System.Drawing.Point(181, 26);
             this.ThuPanelHome.Name = "ThuPanelHome";
             this.ThuPanelHome.Size = new System.Drawing.Size(37, 37);
             this.ThuPanelHome.TabIndex = 4;
@@ -179,7 +183,8 @@
             // FriPanelHome
             // 
             this.FriPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.FriPanelHome.Location = new System.Drawing.Point(295, 26);
+            this.FriPanelHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FriPanelHome.Location = new System.Drawing.Point(238, 26);
             this.FriPanelHome.Name = "FriPanelHome";
             this.FriPanelHome.Size = new System.Drawing.Size(37, 37);
             this.FriPanelHome.TabIndex = 4;
@@ -187,7 +192,8 @@
             // SatPanelHome
             // 
             this.SatPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.SatPanelHome.Location = new System.Drawing.Point(354, 26);
+            this.SatPanelHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SatPanelHome.Location = new System.Drawing.Point(295, 26);
             this.SatPanelHome.Name = "SatPanelHome";
             this.SatPanelHome.Size = new System.Drawing.Size(37, 37);
             this.SatPanelHome.TabIndex = 4;
@@ -195,7 +201,8 @@
             // SunPanelHome
             // 
             this.SunPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.SunPanelHome.Location = new System.Drawing.Point(10, 26);
+            this.SunPanelHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SunPanelHome.Location = new System.Drawing.Point(354, 26);
             this.SunPanelHome.Name = "SunPanelHome";
             this.SunPanelHome.Size = new System.Drawing.Size(37, 37);
             this.SunPanelHome.TabIndex = 4;
@@ -406,20 +413,20 @@
             this.StreakIconsLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.StreakIconsLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.StreakIconsLayoutHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.StreakIconsLayoutHome.Controls.Add(this.MonLabelHome, 1, 0);
-            this.StreakIconsLayoutHome.Controls.Add(this.SunPanelHome, 0, 1);
-            this.StreakIconsLayoutHome.Controls.Add(this.WedLabelHome, 3, 0);
-            this.StreakIconsLayoutHome.Controls.Add(this.TueLabelHome, 2, 0);
-            this.StreakIconsLayoutHome.Controls.Add(this.SatLabelHome, 6, 0);
-            this.StreakIconsLayoutHome.Controls.Add(this.FriLabelHome, 5, 0);
-            this.StreakIconsLayoutHome.Controls.Add(this.ThuLabelHome, 4, 0);
-            this.StreakIconsLayoutHome.Controls.Add(this.SatPanelHome, 6, 1);
-            this.StreakIconsLayoutHome.Controls.Add(this.FriPanelHome, 5, 1);
-            this.StreakIconsLayoutHome.Controls.Add(this.ThuPanelHome, 4, 1);
-            this.StreakIconsLayoutHome.Controls.Add(this.WedPanelHome, 3, 1);
-            this.StreakIconsLayoutHome.Controls.Add(this.TuePanelHome, 2, 1);
-            this.StreakIconsLayoutHome.Controls.Add(this.MonPanelHome, 1, 1);
-            this.StreakIconsLayoutHome.Controls.Add(this.SunLabelHome, 0, 0);
+            this.StreakIconsLayoutHome.Controls.Add(this.MonLabelHome, 0, 0);
+            this.StreakIconsLayoutHome.Controls.Add(this.SunPanelHome, 6, 1);
+            this.StreakIconsLayoutHome.Controls.Add(this.TueLabelHome, 1, 0);
+            this.StreakIconsLayoutHome.Controls.Add(this.WedLabelHome, 2, 0);
+            this.StreakIconsLayoutHome.Controls.Add(this.ThuLabelHome, 3, 0);
+            this.StreakIconsLayoutHome.Controls.Add(this.FriLabelHome, 4, 0);
+            this.StreakIconsLayoutHome.Controls.Add(this.SatLabelHome, 5, 0);
+            this.StreakIconsLayoutHome.Controls.Add(this.MonPanelHome, 0, 1);
+            this.StreakIconsLayoutHome.Controls.Add(this.TuePanelHome, 1, 1);
+            this.StreakIconsLayoutHome.Controls.Add(this.WedPanelHome, 2, 1);
+            this.StreakIconsLayoutHome.Controls.Add(this.ThuPanelHome, 3, 1);
+            this.StreakIconsLayoutHome.Controls.Add(this.SunLabelHome, 6, 0);
+            this.StreakIconsLayoutHome.Controls.Add(this.FriPanelHome, 4, 1);
+            this.StreakIconsLayoutHome.Controls.Add(this.SatPanelHome, 5, 1);
             this.StreakIconsLayoutHome.Location = new System.Drawing.Point(594, 38);
             this.StreakIconsLayoutHome.Name = "StreakIconsLayoutHome";
             this.StreakIconsLayoutHome.RowCount = 2;
@@ -435,7 +442,7 @@
             this.MonLabelHome.AutoSize = true;
             this.MonLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
             this.MonLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.MonLabelHome.Location = new System.Drawing.Point(72, 5);
+            this.MonLabelHome.Location = new System.Drawing.Point(15, 5);
             this.MonLabelHome.Name = "MonLabelHome";
             this.MonLabelHome.Size = new System.Drawing.Size(26, 18);
             this.MonLabelHome.TabIndex = 39;
@@ -448,7 +455,7 @@
             this.WedLabelHome.AutoSize = true;
             this.WedLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
             this.WedLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.WedLabelHome.Location = new System.Drawing.Point(186, 5);
+            this.WedLabelHome.Location = new System.Drawing.Point(129, 5);
             this.WedLabelHome.Name = "WedLabelHome";
             this.WedLabelHome.Size = new System.Drawing.Size(26, 18);
             this.WedLabelHome.TabIndex = 41;
@@ -461,7 +468,7 @@
             this.TueLabelHome.AutoSize = true;
             this.TueLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
             this.TueLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.TueLabelHome.Location = new System.Drawing.Point(131, 5);
+            this.TueLabelHome.Location = new System.Drawing.Point(74, 5);
             this.TueLabelHome.Name = "TueLabelHome";
             this.TueLabelHome.Size = new System.Drawing.Size(23, 18);
             this.TueLabelHome.TabIndex = 40;
@@ -474,7 +481,7 @@
             this.SatLabelHome.AutoSize = true;
             this.SatLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
             this.SatLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.SatLabelHome.Location = new System.Drawing.Point(362, 5);
+            this.SatLabelHome.Location = new System.Drawing.Point(303, 5);
             this.SatLabelHome.Name = "SatLabelHome";
             this.SatLabelHome.Size = new System.Drawing.Size(21, 18);
             this.SatLabelHome.TabIndex = 44;
@@ -487,7 +494,7 @@
             this.FriLabelHome.AutoSize = true;
             this.FriLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
             this.FriLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.FriLabelHome.Location = new System.Drawing.Point(303, 5);
+            this.FriLabelHome.Location = new System.Drawing.Point(246, 5);
             this.FriLabelHome.Name = "FriLabelHome";
             this.FriLabelHome.Size = new System.Drawing.Size(20, 18);
             this.FriLabelHome.TabIndex = 43;
@@ -500,7 +507,7 @@
             this.ThuLabelHome.AutoSize = true;
             this.ThuLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
             this.ThuLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.ThuLabelHome.Location = new System.Drawing.Point(245, 5);
+            this.ThuLabelHome.Location = new System.Drawing.Point(188, 5);
             this.ThuLabelHome.Name = "ThuLabelHome";
             this.ThuLabelHome.Size = new System.Drawing.Size(23, 18);
             this.ThuLabelHome.TabIndex = 42;
@@ -513,7 +520,7 @@
             this.SunLabelHome.AutoSize = true;
             this.SunLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
             this.SunLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.SunLabelHome.Location = new System.Drawing.Point(17, 5);
+            this.SunLabelHome.Location = new System.Drawing.Point(362, 5);
             this.SunLabelHome.Name = "SunLabelHome";
             this.SunLabelHome.Size = new System.Drawing.Size(22, 18);
             this.SunLabelHome.TabIndex = 45;
@@ -632,23 +639,23 @@
             this.dgvRecentTransactionsTabLay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRecentTransactionsTabLay.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
             this.dgvRecentTransactionsTabLay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DarkGreen;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRecentTransactionsTabLay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRecentTransactionsTabLay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRecentTransactionsTabLay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRecentTransactionsTabLay.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRecentTransactionsTabLay.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRecentTransactionsTabLay.EnableHeadersVisualStyles = false;
             this.dgvRecentTransactionsTabLay.GridColor = System.Drawing.Color.DarkGreen;
             this.dgvRecentTransactionsTabLay.Location = new System.Drawing.Point(3, 49);
