@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CentSible.Logic;
-
+using System.Globalization;
 
 namespace CentSible.Forms
 {
@@ -28,7 +28,10 @@ namespace CentSible.Forms
             InitializeComponent();
             _user = user;
 
-            var homeGroup = new Control[] { HomeButtonGoal, HomeTabLayGoal};
+            this.Activated += (s, e) => { if (_user != null) UpdateFilter(); };
+
+
+            var homeGroup = new Control[] { HomeButtonGoal, HomeTabLayGoal };
             UIHelper.WireHoverRecursive(HomeButtonGoal, homeGroup);
             UIHelper.WireHoverRecursive(HomeTabLayGoal, homeGroup);
 
@@ -69,7 +72,6 @@ namespace CentSible.Forms
             UpdateFilter();
         }
 
-
         private void UpdateGoalDate()
         {
             string month = SelectMonthDropGoal.SelectedIndex >= 0
@@ -78,7 +80,6 @@ namespace CentSible.Forms
             int year = (int)SelectYearDropGoal.Value;
             GoalDateLabelGoal.Text = $"{month} {year}";
         }
-
 
         private void UpdateDaysRemaining()
         {
@@ -95,6 +96,7 @@ namespace CentSible.Forms
                 (int)SelectYearDropGoal.Value);
             SetMode(_activeType);
         }
+
         private void SetMode(GoalCategory type)
         {
             _activeType = type;
@@ -107,31 +109,30 @@ namespace CentSible.Forms
 
             if (goal != null)
             {
-                TargetAmountTextGoal.Text = goal.TargetAmount.ToString();
-                CurrentAmountTextGoal.Text = goal.CurrentAmount.ToString();
+                
+                decimal truncCurrent = Math.Truncate((decimal)goal.CurrentAmount * 100) / 100;
+                decimal truncTarget = Math.Truncate((decimal)goal.TargetAmount * 100) / 100;
+                TargetAmountTextGoal.Text = truncTarget.ToString("F2");
+                CurrentAmountTextGoal.Text = truncCurrent.ToString("F2");
                 TargetDateDropDownGoal.Value = goal.TargetDate;
-
-                lblIndicatorSpent.Text = $"₱ {goal.CurrentAmount:N0}";
-                lblIndicatorTarget.Text = $"₱ {goal.TargetAmount:N0}";
+                lblIndicatorSpent.Text = $"₱ {truncCurrent.ToString("F2")}";
+                lblIndicatorTarget.Text = $"₱ {truncTarget.ToString("F2")}";
 
                 UpdateIndicators(goal);
                 IndicatorFlowLayGoal.Visible = true;
             }
             else
             {
-
-
                 TargetAmountTextGoal.Text = "";
                 CurrentAmountTextGoal.Text = "";
-                lblIndicatorSpent.Text = "₱ 0";
-                lblIndicatorTarget.Text = "₱ 0";
+                lblIndicatorSpent.Text = "₱ 0.00";
+                lblIndicatorTarget.Text = "₱ 0.00";
                 pbGoalProgress.Value = 0;
                 IndicatorPercentLabelGoal.Text = "0%";
                 MilestoneBarGoal.Value = 0;
                 MilestoneDescLabelGoal.Text = "No goal set for this period.";
                 DaysToGoLabelGoal.Text = "0 Days";
                 IndicatorDaysLabelGoal.Text = "0 Days";
-
             }
         }
 
@@ -146,25 +147,33 @@ namespace CentSible.Forms
             DaysToGoLabelGoal.Text = metrics.DaysText;
             IndicatorDaysLabelGoal.Text = metrics.DaysText;
         }
+
         private void btnUpdateGoal_Click(object sender, EventArgs e)
         {
-           
-            bool isTargetValid = double.TryParse(TargetAmountTextGoal.Text, out double target);
-            bool isCurrentValid = double.TryParse(CurrentAmountTextGoal.Text, out double current);
+            
+            bool isTargetValid = double.TryParse(TargetAmountTextGoal.Text,
+                                                NumberStyles.AllowDecimalPoint,
+                                                CultureInfo.InvariantCulture,
+                                                out double target);
+
+            bool isCurrentValid = double.TryParse(CurrentAmountTextGoal.Text,
+                                                 NumberStyles.AllowDecimalPoint,
+                                                 CultureInfo.InvariantCulture,
+                                                 out double current);
 
             if (!isTargetValid || !isCurrentValid)
             {
-                MessageBox.Show("Please enter valid numbers.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please Enter Valid Numbers.",
+                                "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             try
             {
-              
                 if (_goalLogic.ProcessGoalEntry(_user.AccountID, _activeType, target, current, TargetDateDropDownGoal.Value))
                 {
                     UpdateFilter();
-                    MessageBox.Show("Goal saved!");
+                    MessageBox.Show("Goal saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -202,7 +211,6 @@ namespace CentSible.Forms
             SetMode(GoalCategory.Savings);
         }
 
-
         private void cbSelectMonth_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateGoalDate();
@@ -237,9 +245,14 @@ namespace CentSible.Forms
         private void TranButtonGoal_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Transaction);
         private void SumButtonGoal_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Summary);
         private void PredButtonGoal_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Prediction);
-        private void LogoutButtonGoal_Click(object sender, EventArgs e) { _isNavigating = true; new LoginForms().Show(); this.Dispose(); }
+
+        private void LogoutButtonGoal_Click(object sender, EventArgs e)
+        {
+            _isNavigating = true;
+            new LoginForms().Show();
+            this.Dispose();
+        }
 
         private void GoalForm_FormClosing(object sender, FormClosingEventArgs e) => Navigator.Logout(this);
-
     }
 }

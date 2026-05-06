@@ -143,9 +143,9 @@
             // 
             chartArea1.AxisX.LabelStyle.Interval = 1D;
             chartArea1.AxisX.MajorGrid.Enabled = false;
-            chartArea1.AxisY.Interval = 500D;
+            chartArea1.AxisY.Interval = 1000D;
             chartArea1.AxisY.LabelStyle.Format = "₱ #,##0";
-            chartArea1.AxisY.Maximum = 5000D;
+            chartArea1.AxisY.Maximum = 10000D;
             chartArea1.AxisY.Minimum = 0D;
             chartArea1.Name = "ChartArea1";
             this.chartForecast.ChartAreas.Add(chartArea1);
@@ -309,16 +309,16 @@
             // 
             // PredButtonPred
             // 
-            this.PredButtonPred.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.PredButtonPred.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.PredButtonPred.FlatAppearance.BorderSize = 0;
+            this.PredButtonPred.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.PredButtonPred.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.PredButtonPred.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PredButtonPred.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.PredButtonPred.ForeColor = System.Drawing.Color.White;
-            this.PredButtonPred.Location = new System.Drawing.Point(66, 3);
+            this.PredButtonPred.Location = new System.Drawing.Point(67, 3);
             this.PredButtonPred.Name = "PredButtonPred";
-            this.PredButtonPred.Size = new System.Drawing.Size(114, 38);
+            this.PredButtonPred.Size = new System.Drawing.Size(113, 38);
             this.PredButtonPred.TabIndex = 11;
             this.PredButtonPred.Text = "Prediction";
             this.PredButtonPred.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

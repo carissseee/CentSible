@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CentSible.Models;
 using CentSible.Database;
 using System.Drawing;
+using System.Globalization;
 
 namespace CentSible.Logic
 {
@@ -13,44 +14,35 @@ namespace CentSible.Logic
     {
         private GoalDB _db = new GoalDB();
 
-        public class GoalDisplayMetrics
-        {
-            public int TotalPercent { get; set; }
-            public int MilestoneStep { get; set; }
-            public string StatusNote { get; set; }
-            public Color ThemeColor { get; set; }
-            public string DaysText { get; set; }
-            public string AmountText { get; set; }
-        }
-
         public bool ProcessGoalEntry(int accountId, GoalCategory type, double target, double current, DateTime date)
         {
-            
             if (target <= 0) throw new Exception("Target amount must be a positive value.");
 
-            
             Goal goalModel = new Goal
             {
                 AccountID = accountId,
                 GoalType = type,
-                TargetAmount = target,
-                CurrentAmount = current,
+                TargetAmount = (double)(Math.Truncate((decimal)target * 100) / 100),
+                CurrentAmount = (double)(Math.Truncate((decimal)current * 100) / 100),
                 TargetDate = date
             };
 
-            
             var existing = _db.GetGoalsByPeriod(accountId, date.Month, date.Year)
                               .Find(x => x.GoalType == type);
 
-            
             return existing != null ? _db.UpdateGoal(goalModel) : _db.AddGoal(goalModel);
         }
 
         public GoalDisplayMetrics GetCalculatedMetrics(Goal goal)
         {
             if (goal == null) return null;
-            double rawPercent = (goal.TargetAmount > 0) ? (goal.CurrentAmount / goal.TargetAmount) * 100 : 0;
+
+          
+            decimal truncCurrent = Math.Truncate((decimal)goal.CurrentAmount * 100) / 100;
+            decimal truncTarget = Math.Truncate((decimal)goal.TargetAmount * 100) / 100;
+            double rawPercent = (truncTarget > 0) ? (double)(truncCurrent / truncTarget) * 100 : 0;
             int cappedPercent = (int)Math.Min(rawPercent, 100);
+
             int days = (goal.TargetDate.Date - DateTime.Today).Days;
             bool isSpending = goal.GoalType == GoalCategory.Spending;
 
@@ -61,7 +53,7 @@ namespace CentSible.Logic
                 StatusNote = GetStatusNote(rawPercent, isSpending),
                 ThemeColor = isSpending ? Color.Crimson : Color.ForestGreen,
                 DaysText = days >= 0 ? $"{days} Days to Go" : "Overdue",
-                AmountText = $"₱ {goal.CurrentAmount:N0} / ₱ {goal.TargetAmount:N0}"
+                AmountText = $"₱ {truncCurrent.ToString("F2")} / ₱ {truncTarget.ToString("F2")}"
             };
         }
 
