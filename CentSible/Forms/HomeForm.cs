@@ -81,8 +81,7 @@ namespace CentSible.Forms
             if (_user == null) return;
 
             string monthYear = DateTime.Now.ToString("MMMM yyyy");
-            lblDashboardHeader.Text = $"Good day, {_user.Username}!" + Environment.NewLine +
-                                      $"Here’s your financial overview for {monthYear}";
+            lblDashboardHeader.Text = $"Good day, {_user.Username}!\nHere’s your financial overview\nfor {monthYear}";
         }
 
         private void UpdateRecentTransactionsTable()
