@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTransaction = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.cmbYear = new System.Windows.Forms.ComboBox();
@@ -100,7 +100,7 @@
             this.lblTransaction.AutoSize = true;
             this.lblTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTransaction.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblTransaction.Location = new System.Drawing.Point(189, 12);
+            this.lblTransaction.Location = new System.Drawing.Point(220, 20);
             this.lblTransaction.Name = "lblTransaction";
             this.lblTransaction.Size = new System.Drawing.Size(126, 25);
             this.lblTransaction.TabIndex = 2;
@@ -112,7 +112,7 @@
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblDate.Location = new System.Drawing.Point(201, 37);
+            this.lblDate.Location = new System.Drawing.Point(232, 45);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(94, 20);
             this.lblDate.TabIndex = 3;
@@ -143,7 +143,7 @@
             // 
             this.pnlBudget.Controls.Add(this.lblBudget2);
             this.pnlBudget.Controls.Add(this.lblBudget);
-            this.pnlBudget.Location = new System.Drawing.Point(194, 76);
+            this.pnlBudget.Location = new System.Drawing.Point(236, 76);
             this.pnlBudget.Name = "pnlBudget";
             this.pnlBudget.Size = new System.Drawing.Size(234, 73);
             this.pnlBudget.TabIndex = 6;
@@ -177,7 +177,7 @@
             // 
             this.pnlTotalSpent.Controls.Add(this.lblSpent2);
             this.pnlTotalSpent.Controls.Add(this.lblSpent);
-            this.pnlTotalSpent.Location = new System.Drawing.Point(476, 76);
+            this.pnlTotalSpent.Location = new System.Drawing.Point(509, 76);
             this.pnlTotalSpent.Name = "pnlTotalSpent";
             this.pnlTotalSpent.Size = new System.Drawing.Size(234, 73);
             this.pnlTotalSpent.TabIndex = 7;
@@ -211,9 +211,9 @@
             this.pnlRemaining.BackColor = System.Drawing.Color.DarkGreen;
             this.pnlRemaining.Controls.Add(this.lblRemaining2);
             this.pnlRemaining.Controls.Add(this.lblRemaining);
-            this.pnlRemaining.Location = new System.Drawing.Point(763, 76);
+            this.pnlRemaining.Location = new System.Drawing.Point(781, 76);
             this.pnlRemaining.Name = "pnlRemaining";
-            this.pnlRemaining.Size = new System.Drawing.Size(234, 73);
+            this.pnlRemaining.Size = new System.Drawing.Size(216, 73);
             this.pnlRemaining.TabIndex = 7;
             // 
             // lblRemaining2
@@ -242,7 +242,7 @@
             // 
             this.btnAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAll.ForeColor = System.Drawing.Color.DarkGreen;
-            this.btnAll.Location = new System.Drawing.Point(194, 194);
+            this.btnAll.Location = new System.Drawing.Point(236, 194);
             this.btnAll.Name = "btnAll";
             this.btnAll.Size = new System.Drawing.Size(69, 33);
             this.btnAll.TabIndex = 8;
@@ -254,7 +254,7 @@
             // 
             this.btnExpense.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExpense.ForeColor = System.Drawing.Color.DarkGreen;
-            this.btnExpense.Location = new System.Drawing.Point(282, 194);
+            this.btnExpense.Location = new System.Drawing.Point(311, 194);
             this.btnExpense.Name = "btnExpense";
             this.btnExpense.Size = new System.Drawing.Size(97, 33);
             this.btnExpense.TabIndex = 9;
@@ -266,7 +266,7 @@
             // 
             this.btnBudget.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBudget.ForeColor = System.Drawing.Color.DarkGreen;
-            this.btnBudget.Location = new System.Drawing.Point(405, 194);
+            this.btnBudget.Location = new System.Drawing.Point(414, 194);
             this.btnBudget.Name = "btnBudget";
             this.btnBudget.Size = new System.Drawing.Size(97, 33);
             this.btnBudget.TabIndex = 10;
@@ -293,14 +293,14 @@
             this.dgvTransaction.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
             this.dgvTransaction.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkGreen;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTransaction.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colDate,
@@ -311,22 +311,22 @@
             this.colSave,
             this.colDelete,
             this.colTransactionID});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTransaction.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTransaction.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvTransaction.EnableHeadersVisualStyles = false;
             this.dgvTransaction.GridColor = System.Drawing.Color.DarkGreen;
-            this.dgvTransaction.Location = new System.Drawing.Point(194, 249);
+            this.dgvTransaction.Location = new System.Drawing.Point(236, 249);
             this.dgvTransaction.Name = "dgvTransaction";
             this.dgvTransaction.RowHeadersVisible = false;
             this.dgvTransaction.RowHeadersWidth = 51;
             this.dgvTransaction.RowTemplate.Height = 24;
-            this.dgvTransaction.Size = new System.Drawing.Size(795, 249);
+            this.dgvTransaction.Size = new System.Drawing.Size(761, 249);
             this.dgvTransaction.TabIndex = 12;
             this.dgvTransaction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellContentClick);
             this.dgvTransaction.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellValueChanged);
