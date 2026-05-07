@@ -30,8 +30,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblCurrentStreak = new System.Windows.Forms.Label();
             this.lblStreakTitle = new System.Windows.Forms.Label();
             this.MonPanelHome = new System.Windows.Forms.Panel();
@@ -57,11 +57,11 @@
             this.HomeButtonHome = new System.Windows.Forms.Button();
             this.StreakIconsLayoutHome = new System.Windows.Forms.TableLayoutPanel();
             this.MonLabelHome = new System.Windows.Forms.Label();
-            this.WedLabelHome = new System.Windows.Forms.Label();
             this.TueLabelHome = new System.Windows.Forms.Label();
-            this.SatLabelHome = new System.Windows.Forms.Label();
-            this.FriLabelHome = new System.Windows.Forms.Label();
+            this.WedLabelHome = new System.Windows.Forms.Label();
             this.ThuLabelHome = new System.Windows.Forms.Label();
+            this.FriLabelHome = new System.Windows.Forms.Label();
+            this.SatLabelHome = new System.Windows.Forms.Label();
             this.SunLabelHome = new System.Windows.Forms.Label();
             this.SaveSpendTabLayHome = new System.Windows.Forms.TableLayoutPanel();
             this.SavingGoalLabelLayHome = new System.Windows.Forms.TableLayoutPanel();
@@ -126,7 +126,7 @@
             this.lblCurrentStreak.AutoSize = true;
             this.lblCurrentStreak.Font = new System.Drawing.Font("Sitka Text", 40F);
             this.lblCurrentStreak.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(94)))), ((int)(((byte)(36)))));
-            this.lblCurrentStreak.Location = new System.Drawing.Point(423, 163);
+            this.lblCurrentStreak.Location = new System.Drawing.Point(390, 144);
             this.lblCurrentStreak.Name = "lblCurrentStreak";
             this.lblCurrentStreak.Size = new System.Drawing.Size(82, 97);
             this.lblCurrentStreak.TabIndex = 1;
@@ -138,7 +138,7 @@
             this.lblStreakTitle.AutoSize = true;
             this.lblStreakTitle.Font = new System.Drawing.Font("Sitka Text", 10F);
             this.lblStreakTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.lblStreakTitle.Location = new System.Drawing.Point(436, 166);
+            this.lblStreakTitle.Location = new System.Drawing.Point(397, 144);
             this.lblStreakTitle.Name = "lblStreakTitle";
             this.lblStreakTitle.Size = new System.Drawing.Size(129, 24);
             this.lblStreakTitle.TabIndex = 2;
@@ -148,7 +148,7 @@
             // 
             this.MonPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MonPanelHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MonPanelHome.Location = new System.Drawing.Point(10, 26);
+            this.MonPanelHome.Location = new System.Drawing.Point(11, 26);
             this.MonPanelHome.Name = "MonPanelHome";
             this.MonPanelHome.Size = new System.Drawing.Size(37, 37);
             this.MonPanelHome.TabIndex = 3;
@@ -157,7 +157,7 @@
             // 
             this.TuePanelHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TuePanelHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TuePanelHome.Location = new System.Drawing.Point(67, 26);
+            this.TuePanelHome.Location = new System.Drawing.Point(71, 26);
             this.TuePanelHome.Name = "TuePanelHome";
             this.TuePanelHome.Size = new System.Drawing.Size(37, 37);
             this.TuePanelHome.TabIndex = 4;
@@ -166,7 +166,7 @@
             // 
             this.WedPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.WedPanelHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.WedPanelHome.Location = new System.Drawing.Point(124, 26);
+            this.WedPanelHome.Location = new System.Drawing.Point(131, 26);
             this.WedPanelHome.Name = "WedPanelHome";
             this.WedPanelHome.Size = new System.Drawing.Size(37, 37);
             this.WedPanelHome.TabIndex = 5;
@@ -175,7 +175,7 @@
             // 
             this.ThuPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ThuPanelHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ThuPanelHome.Location = new System.Drawing.Point(181, 26);
+            this.ThuPanelHome.Location = new System.Drawing.Point(191, 26);
             this.ThuPanelHome.Name = "ThuPanelHome";
             this.ThuPanelHome.Size = new System.Drawing.Size(37, 37);
             this.ThuPanelHome.TabIndex = 4;
@@ -184,7 +184,7 @@
             // 
             this.FriPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.FriPanelHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FriPanelHome.Location = new System.Drawing.Point(238, 26);
+            this.FriPanelHome.Location = new System.Drawing.Point(251, 26);
             this.FriPanelHome.Name = "FriPanelHome";
             this.FriPanelHome.Size = new System.Drawing.Size(37, 37);
             this.FriPanelHome.TabIndex = 4;
@@ -193,7 +193,7 @@
             // 
             this.SatPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.SatPanelHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SatPanelHome.Location = new System.Drawing.Point(295, 26);
+            this.SatPanelHome.Location = new System.Drawing.Point(311, 26);
             this.SatPanelHome.Name = "SatPanelHome";
             this.SatPanelHome.Size = new System.Drawing.Size(37, 37);
             this.SatPanelHome.TabIndex = 4;
@@ -202,7 +202,7 @@
             // 
             this.SunPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.SunPanelHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SunPanelHome.Location = new System.Drawing.Point(354, 26);
+            this.SunPanelHome.Location = new System.Drawing.Point(374, 26);
             this.SunPanelHome.Name = "SunPanelHome";
             this.SunPanelHome.Size = new System.Drawing.Size(37, 37);
             this.SunPanelHome.TabIndex = 4;
@@ -213,7 +213,7 @@
             this.LongestStreakLabelHome.AutoSize = true;
             this.LongestStreakLabelHome.Font = new System.Drawing.Font("Sitka Text", 10F);
             this.LongestStreakLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.LongestStreakLabelHome.Location = new System.Drawing.Point(604, 104);
+            this.LongestStreakLabelHome.Location = new System.Drawing.Point(597, 109);
             this.LongestStreakLabelHome.Name = "LongestStreakLabelHome";
             this.LongestStreakLabelHome.Size = new System.Drawing.Size(128, 24);
             this.LongestStreakLabelHome.TabIndex = 6;
@@ -226,7 +226,7 @@
             this.pbMilestone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
             this.pbMilestone.Location = new System.Drawing.Point(598, 136);
             this.pbMilestone.Name = "pbMilestone";
-            this.pbMilestone.Size = new System.Drawing.Size(391, 27);
+            this.pbMilestone.Size = new System.Drawing.Size(400, 27);
             this.pbMilestone.TabIndex = 7;
             // 
             // BarSpendingHome
@@ -374,9 +374,9 @@
             this.GoalButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GoalButtonHome.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.GoalButtonHome.ForeColor = System.Drawing.Color.White;
-            this.GoalButtonHome.Location = new System.Drawing.Point(66, 3);
+            this.GoalButtonHome.Location = new System.Drawing.Point(67, 3);
             this.GoalButtonHome.Name = "GoalButtonHome";
-            this.GoalButtonHome.Size = new System.Drawing.Size(114, 38);
+            this.GoalButtonHome.Size = new System.Drawing.Size(113, 38);
             this.GoalButtonHome.TabIndex = 11;
             this.GoalButtonHome.Text = "Goal";
             this.GoalButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -427,102 +427,102 @@
             this.StreakIconsLayoutHome.Controls.Add(this.SunLabelHome, 6, 0);
             this.StreakIconsLayoutHome.Controls.Add(this.FriPanelHome, 4, 1);
             this.StreakIconsLayoutHome.Controls.Add(this.SatPanelHome, 5, 1);
-            this.StreakIconsLayoutHome.Location = new System.Drawing.Point(594, 38);
+            this.StreakIconsLayoutHome.Location = new System.Drawing.Point(585, 38);
             this.StreakIconsLayoutHome.Name = "StreakIconsLayoutHome";
             this.StreakIconsLayoutHome.RowCount = 2;
             this.StreakIconsLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.StreakIconsLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.StreakIconsLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.StreakIconsLayoutHome.Size = new System.Drawing.Size(404, 68);
+            this.StreakIconsLayoutHome.Size = new System.Drawing.Size(425, 68);
             this.StreakIconsLayoutHome.TabIndex = 39;
             // 
             // MonLabelHome
             // 
             this.MonLabelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.MonLabelHome.AutoSize = true;
-            this.MonLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
+            this.MonLabelHome.Font = new System.Drawing.Font("Segoe UI Semibold", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MonLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.MonLabelHome.Location = new System.Drawing.Point(15, 5);
+            this.MonLabelHome.Location = new System.Drawing.Point(16, 6);
             this.MonLabelHome.Name = "MonLabelHome";
-            this.MonLabelHome.Size = new System.Drawing.Size(26, 18);
+            this.MonLabelHome.Size = new System.Drawing.Size(28, 17);
             this.MonLabelHome.TabIndex = 39;
             this.MonLabelHome.Text = "Mo";
             this.MonLabelHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // WedLabelHome
-            // 
-            this.WedLabelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.WedLabelHome.AutoSize = true;
-            this.WedLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
-            this.WedLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.WedLabelHome.Location = new System.Drawing.Point(129, 5);
-            this.WedLabelHome.Name = "WedLabelHome";
-            this.WedLabelHome.Size = new System.Drawing.Size(26, 18);
-            this.WedLabelHome.TabIndex = 41;
-            this.WedLabelHome.Text = "We";
-            this.WedLabelHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // TueLabelHome
             // 
             this.TueLabelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.TueLabelHome.AutoSize = true;
-            this.TueLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
+            this.TueLabelHome.Font = new System.Drawing.Font("Segoe UI Semibold", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TueLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.TueLabelHome.Location = new System.Drawing.Point(74, 5);
+            this.TueLabelHome.Location = new System.Drawing.Point(79, 6);
             this.TueLabelHome.Name = "TueLabelHome";
-            this.TueLabelHome.Size = new System.Drawing.Size(23, 18);
+            this.TueLabelHome.Size = new System.Drawing.Size(22, 17);
             this.TueLabelHome.TabIndex = 40;
             this.TueLabelHome.Text = "Tu";
             this.TueLabelHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // SatLabelHome
+            // WedLabelHome
             // 
-            this.SatLabelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.SatLabelHome.AutoSize = true;
-            this.SatLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
-            this.SatLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.SatLabelHome.Location = new System.Drawing.Point(303, 5);
-            this.SatLabelHome.Name = "SatLabelHome";
-            this.SatLabelHome.Size = new System.Drawing.Size(21, 18);
-            this.SatLabelHome.TabIndex = 44;
-            this.SatLabelHome.Text = "Sa";
-            this.SatLabelHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // FriLabelHome
-            // 
-            this.FriLabelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.FriLabelHome.AutoSize = true;
-            this.FriLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
-            this.FriLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.FriLabelHome.Location = new System.Drawing.Point(246, 5);
-            this.FriLabelHome.Name = "FriLabelHome";
-            this.FriLabelHome.Size = new System.Drawing.Size(20, 18);
-            this.FriLabelHome.TabIndex = 43;
-            this.FriLabelHome.Text = "Fr";
-            this.FriLabelHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.WedLabelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.WedLabelHome.AutoSize = true;
+            this.WedLabelHome.Font = new System.Drawing.Font("Segoe UI Semibold", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WedLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
+            this.WedLabelHome.Location = new System.Drawing.Point(136, 6);
+            this.WedLabelHome.Name = "WedLabelHome";
+            this.WedLabelHome.Size = new System.Drawing.Size(28, 17);
+            this.WedLabelHome.TabIndex = 41;
+            this.WedLabelHome.Text = "We";
+            this.WedLabelHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // ThuLabelHome
             // 
             this.ThuLabelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.ThuLabelHome.AutoSize = true;
-            this.ThuLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
+            this.ThuLabelHome.Font = new System.Drawing.Font("Segoe UI Semibold", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThuLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.ThuLabelHome.Location = new System.Drawing.Point(188, 5);
+            this.ThuLabelHome.Location = new System.Drawing.Point(198, 6);
             this.ThuLabelHome.Name = "ThuLabelHome";
-            this.ThuLabelHome.Size = new System.Drawing.Size(23, 18);
+            this.ThuLabelHome.Size = new System.Drawing.Size(23, 17);
             this.ThuLabelHome.TabIndex = 42;
             this.ThuLabelHome.Text = "Th";
             this.ThuLabelHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // FriLabelHome
+            // 
+            this.FriLabelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.FriLabelHome.AutoSize = true;
+            this.FriLabelHome.Font = new System.Drawing.Font("Segoe UI Semibold", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FriLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
+            this.FriLabelHome.Location = new System.Drawing.Point(260, 6);
+            this.FriLabelHome.Name = "FriLabelHome";
+            this.FriLabelHome.Size = new System.Drawing.Size(20, 17);
+            this.FriLabelHome.TabIndex = 43;
+            this.FriLabelHome.Text = "Fr";
+            this.FriLabelHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // SatLabelHome
+            // 
+            this.SatLabelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.SatLabelHome.AutoSize = true;
+            this.SatLabelHome.Font = new System.Drawing.Font("Segoe UI Semibold", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SatLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
+            this.SatLabelHome.Location = new System.Drawing.Point(319, 6);
+            this.SatLabelHome.Name = "SatLabelHome";
+            this.SatLabelHome.Size = new System.Drawing.Size(22, 17);
+            this.SatLabelHome.TabIndex = 44;
+            this.SatLabelHome.Text = "Sa";
+            this.SatLabelHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // SunLabelHome
             // 
             this.SunLabelHome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.SunLabelHome.AutoSize = true;
-            this.SunLabelHome.Font = new System.Drawing.Font("Sitka Text", 7.2F);
+            this.SunLabelHome.Font = new System.Drawing.Font("Segoe UI Semibold", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SunLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.SunLabelHome.Location = new System.Drawing.Point(362, 5);
+            this.SunLabelHome.Location = new System.Drawing.Point(381, 6);
             this.SunLabelHome.Name = "SunLabelHome";
-            this.SunLabelHome.Size = new System.Drawing.Size(22, 18);
+            this.SunLabelHome.Size = new System.Drawing.Size(23, 17);
             this.SunLabelHome.TabIndex = 45;
             this.SunLabelHome.Text = "Su";
             this.SunLabelHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -639,23 +639,23 @@
             this.dgvRecentTransactionsTabLay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRecentTransactionsTabLay.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
             this.dgvRecentTransactionsTabLay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkGreen;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRecentTransactionsTabLay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRecentTransactionsTabLay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvRecentTransactionsTabLay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRecentTransactionsTabLay.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRecentTransactionsTabLay.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvRecentTransactionsTabLay.EnableHeadersVisualStyles = false;
             this.dgvRecentTransactionsTabLay.GridColor = System.Drawing.Color.DarkGreen;
             this.dgvRecentTransactionsTabLay.Location = new System.Drawing.Point(3, 49);
@@ -664,18 +664,18 @@
             this.dgvRecentTransactionsTabLay.RowHeadersVisible = false;
             this.dgvRecentTransactionsTabLay.RowHeadersWidth = 51;
             this.dgvRecentTransactionsTabLay.RowTemplate.Height = 24;
-            this.dgvRecentTransactionsTabLay.Size = new System.Drawing.Size(339, 156);
+            this.dgvRecentTransactionsTabLay.Size = new System.Drawing.Size(343, 141);
             this.dgvRecentTransactionsTabLay.TabIndex = 40;
             // 
             // BudgetOverviewLblHome
             // 
             this.BudgetOverviewLblHome.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.BudgetOverviewLblHome.AutoSize = true;
-            this.BudgetOverviewLblHome.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BudgetOverviewLblHome.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BudgetOverviewLblHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(94)))), ((int)(((byte)(36)))));
-            this.BudgetOverviewLblHome.Location = new System.Drawing.Point(49, 8);
+            this.BudgetOverviewLblHome.Location = new System.Drawing.Point(49, 7);
             this.BudgetOverviewLblHome.Name = "BudgetOverviewLblHome";
-            this.BudgetOverviewLblHome.Size = new System.Drawing.Size(194, 30);
+            this.BudgetOverviewLblHome.Size = new System.Drawing.Size(193, 31);
             this.BudgetOverviewLblHome.TabIndex = 11;
             this.BudgetOverviewLblHome.Text = "Budget Overview";
             // 
@@ -683,11 +683,11 @@
             // 
             this.GoalProgLblHome.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.GoalProgLblHome.AutoSize = true;
-            this.GoalProgLblHome.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoalProgLblHome.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GoalProgLblHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(94)))), ((int)(((byte)(36)))));
-            this.GoalProgLblHome.Location = new System.Drawing.Point(49, 8);
+            this.GoalProgLblHome.Location = new System.Drawing.Point(49, 7);
             this.GoalProgLblHome.Name = "GoalProgLblHome";
-            this.GoalProgLblHome.Size = new System.Drawing.Size(212, 30);
+            this.GoalProgLblHome.Size = new System.Drawing.Size(214, 31);
             this.GoalProgLblHome.TabIndex = 11;
             this.GoalProgLblHome.Text = "Goals and Progress";
             // 
@@ -696,7 +696,7 @@
             this.lblDashboardHeader.AutoSize = true;
             this.lblDashboardHeader.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.lblDashboardHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(94)))), ((int)(((byte)(36)))));
-            this.lblDashboardHeader.Location = new System.Drawing.Point(226, 43);
+            this.lblDashboardHeader.Location = new System.Drawing.Point(226, 38);
             this.lblDashboardHeader.Name = "lblDashboardHeader";
             this.lblDashboardHeader.Size = new System.Drawing.Size(135, 25);
             this.lblDashboardHeader.TabIndex = 42;
@@ -760,15 +760,14 @@
             // PredTabLayHome
             // 
             this.PredTabLayHome.ColumnCount = 2;
-            this.PredTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
-            this.PredTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.PredTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.PredTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.PredTabLayHome.Controls.Add(this.PredPicBoxHome, 0, 0);
             this.PredTabLayHome.Controls.Add(this.PredButtonHome, 1, 0);
             this.PredTabLayHome.Location = new System.Drawing.Point(3, 203);
             this.PredTabLayHome.Name = "PredTabLayHome";
             this.PredTabLayHome.RowCount = 1;
-            this.PredTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PredTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PredTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.PredTabLayHome.Size = new System.Drawing.Size(183, 44);
             this.PredTabLayHome.TabIndex = 25;
             // 
@@ -786,15 +785,14 @@
             // SumTabLayHome
             // 
             this.SumTabLayHome.ColumnCount = 2;
-            this.SumTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
-            this.SumTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.SumTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.SumTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.SumTabLayHome.Controls.Add(this.SumPicBoxHome, 0, 0);
             this.SumTabLayHome.Controls.Add(this.SumButtonHome, 1, 0);
             this.SumTabLayHome.Location = new System.Drawing.Point(3, 153);
             this.SumTabLayHome.Name = "SumTabLayHome";
             this.SumTabLayHome.RowCount = 1;
-            this.SumTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SumTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SumTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.SumTabLayHome.Size = new System.Drawing.Size(183, 44);
             this.SumTabLayHome.TabIndex = 24;
             // 
@@ -812,15 +810,14 @@
             // TranTabLayHome
             // 
             this.TranTabLayHome.ColumnCount = 2;
-            this.TranTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
-            this.TranTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.TranTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.TranTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.TranTabLayHome.Controls.Add(this.TranPicBoxGoal, 0, 0);
             this.TranTabLayHome.Controls.Add(this.TranButtonHome, 1, 0);
             this.TranTabLayHome.Location = new System.Drawing.Point(3, 103);
             this.TranTabLayHome.Name = "TranTabLayHome";
             this.TranTabLayHome.RowCount = 1;
-            this.TranTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TranTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TranTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TranTabLayHome.Size = new System.Drawing.Size(183, 44);
             this.TranTabLayHome.TabIndex = 23;
             // 
@@ -838,15 +835,14 @@
             // GoalTabLayHome
             // 
             this.GoalTabLayHome.ColumnCount = 2;
-            this.GoalTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.63415F));
-            this.GoalTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.36585F));
+            this.GoalTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.GoalTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.GoalTabLayHome.Controls.Add(this.GoalPicBoxHome, 0, 0);
             this.GoalTabLayHome.Controls.Add(this.GoalButtonHome, 1, 0);
             this.GoalTabLayHome.Location = new System.Drawing.Point(3, 53);
             this.GoalTabLayHome.Name = "GoalTabLayHome";
             this.GoalTabLayHome.RowCount = 1;
-            this.GoalTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.GoalTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.GoalTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.GoalTabLayHome.Size = new System.Drawing.Size(183, 44);
             this.GoalTabLayHome.TabIndex = 22;
             // 
@@ -854,7 +850,7 @@
             // 
             this.GoalPicBoxHome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.GoalPicBoxHome.Image = global::CentSible.Properties.Resources.GoalForm;
-            this.GoalPicBoxHome.Location = new System.Drawing.Point(11, 3);
+            this.GoalPicBoxHome.Location = new System.Drawing.Point(12, 3);
             this.GoalPicBoxHome.Name = "GoalPicBoxHome";
             this.GoalPicBoxHome.Size = new System.Drawing.Size(40, 38);
             this.GoalPicBoxHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -865,15 +861,14 @@
             // 
             this.HomeTabLayHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.HomeTabLayHome.ColumnCount = 2;
-            this.HomeTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
-            this.HomeTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.HomeTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.HomeTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.HomeTabLayHome.Controls.Add(this.HomePicBoxHome, 0, 0);
             this.HomeTabLayHome.Controls.Add(this.HomeButtonHome, 1, 0);
             this.HomeTabLayHome.Location = new System.Drawing.Point(3, 3);
             this.HomeTabLayHome.Name = "HomeTabLayHome";
             this.HomeTabLayHome.RowCount = 1;
-            this.HomeTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.HomeTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.HomeTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.HomeTabLayHome.Size = new System.Drawing.Size(183, 44);
             this.HomeTabLayHome.TabIndex = 21;
             // 
@@ -891,7 +886,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CentSible.Properties.Resources.Streak;
-            this.pictureBox2.Location = new System.Drawing.Point(325, 116);
+            this.pictureBox2.Location = new System.Drawing.Point(283, 109);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(114, 123);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -925,7 +920,7 @@
             this.DaysLblHome.AutoSize = true;
             this.DaysLblHome.Font = new System.Drawing.Font("Sitka Text", 10F);
             this.DaysLblHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.DaysLblHome.Location = new System.Drawing.Point(469, 209);
+            this.DaysLblHome.Location = new System.Drawing.Point(436, 217);
             this.DaysLblHome.Name = "DaysLblHome";
             this.DaysLblHome.Size = new System.Drawing.Size(48, 24);
             this.DaysLblHome.TabIndex = 47;
@@ -948,9 +943,9 @@
             this.BudOverFlowLayHome.Controls.Add(this.pictureBox1);
             this.BudOverFlowLayHome.Controls.Add(this.BudgetOverviewLblHome);
             this.BudOverFlowLayHome.Controls.Add(this.dgvRecentTransactionsTabLay);
-            this.BudOverFlowLayHome.Location = new System.Drawing.Point(227, 273);
+            this.BudOverFlowLayHome.Location = new System.Drawing.Point(227, 286);
             this.BudOverFlowLayHome.Name = "BudOverFlowLayHome";
-            this.BudOverFlowLayHome.Size = new System.Drawing.Size(351, 208);
+            this.BudOverFlowLayHome.Size = new System.Drawing.Size(351, 195);
             this.BudOverFlowLayHome.TabIndex = 49;
             // 
             // HomeForm
@@ -966,9 +961,9 @@
             this.Controls.Add(this.pbMilestone);
             this.Controls.Add(this.DaysLblHome);
             this.Controls.Add(this.lblCurrentStreak);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.SidebarTableLayoutHome);
             this.Controls.Add(this.lblDashboardHeader);
+            this.Controls.Add(this.pictureBox2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1053, 557);
             this.MinimizeBox = false;

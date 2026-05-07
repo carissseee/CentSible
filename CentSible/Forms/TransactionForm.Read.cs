@@ -13,7 +13,7 @@ namespace CentSible.Forms
     {
         private void LoadTransactions()
         {
-            if (cmbMonth.SelectedIndex < 0 || cmbYear.SelectedItem == null)
+            if (cmbMonthTran.SelectedIndex < 0 || cmbYearTran.SelectedItem == null)
             {
                 return;
             }
@@ -24,9 +24,9 @@ namespace CentSible.Forms
             _editingRowIndex = -1;
             SetFilterButtons(true);
 
-            int month = cmbMonth.SelectedIndex + 1;
-            int year = int.Parse(cmbYear.SelectedItem.ToString());
-            lblDate.Text = new DateTime(year, month, 1).ToString("MMMM yyyy");
+            int month = cmbMonthTran.SelectedIndex + 1;
+            int year = int.Parse(cmbYearTran.SelectedItem.ToString());
+            lblDateTran.Text = new DateTime(year, month, 1).ToString("MMMM yyyy");
 
             transactions = transactionLogic.GetTransactions(_user.AccountID, month, year);
             lblBudget2.Text = "₱ " + transactionLogic.GetTotalBudget(transactions).ToString("N0");
