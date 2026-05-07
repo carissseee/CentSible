@@ -90,7 +90,8 @@ namespace CentSible.Forms
             {
                 dgvRecentTransactionsTabLay.DataSource = null;
                 var recent = _db.GetRecentTransactions(_user.AccountID, 5);
-                dgvRecentTransactionsTabLay.DataSource = recent.Select(t => {
+                dgvRecentTransactionsTabLay.DataSource = recent.Select(t =>
+                {
                     decimal truncAmount = Math.Truncate(t.Amount * 100) / 100;
 
                     return new
@@ -178,10 +179,10 @@ namespace CentSible.Forms
                 if (goal.TargetAmount <= 0) continue;
 
                 double raw = (goal.CurrentAmount / goal.TargetAmount) * 100;
-                int percent = (int)Math.Min(Math.Max(raw, 0), 100);       
+                int percent = (int)Math.Min(Math.Max(raw, 0), 100);
                 decimal truncCurrent = Math.Truncate((decimal)goal.CurrentAmount * 100) / 100;
-                decimal truncTarget = Math.Truncate((decimal)goal.TargetAmount * 100) / 100;     
-                string display = $"₱ {truncCurrent:F2} / ₱ {truncTarget:F2}";
+                decimal truncTarget = Math.Truncate((decimal)goal.TargetAmount * 100) / 100;
+                string display = $"₱ {truncCurrent:N2} / ₱ {truncTarget:N2}";
 
                 if (goal.GoalType == GoalCategory.Spending)
                 {
@@ -212,16 +213,18 @@ namespace CentSible.Forms
             }
         }
 
-        private void HomeForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (!_isNavigating && e.CloseReason == CloseReason.UserClosing) Application.Exit();
-        }
-
         private void GoalButtonHome_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Goal);
         private void TranButtonHome_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Transaction);
         private void SumButtonHome_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Summary);
         private void PredButtonHome_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Prediction);
 
         private void LogoutButtonHome_Click(object sender, EventArgs e) => Navigator.Logout(this);
+
+
+        private void HomeForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!_isNavigating && e.CloseReason == CloseReason.UserClosing) Application.Exit();
+        }
+
     }
 }

@@ -738,6 +738,7 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transaction";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Transaction_FormClosing);
             this.Load += new System.EventHandler(this.TransactionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxTran)).EndInit();
             this.pnlBudgetTran.ResumeLayout(false);

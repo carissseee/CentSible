@@ -63,6 +63,7 @@ namespace CentSible.Forms
             SelectYearDropGoal.ValueChanged -= numSelectYear_ValueChanged;
 
             SelectMonthDropGoal.SelectedIndex = DateTime.Now.Month - 1;
+            SelectYearDropGoal.Minimum = DateTime.Now.Year;
             SelectYearDropGoal.Value = DateTime.Now.Year;
 
             SelectMonthDropGoal.SelectedIndexChanged += cbSelectMonth_SelectedIndexChanged;
@@ -115,8 +116,8 @@ namespace CentSible.Forms
                 TargetAmountTextGoal.Text = truncTarget.ToString("F2");
                 CurrentAmountTextGoal.Text = truncCurrent.ToString("F2");
                 TargetDateDropDownGoal.Value = goal.TargetDate;
-                lblIndicatorSpent.Text = $"₱ {truncCurrent.ToString("F2")}";
-                lblIndicatorTarget.Text = $"₱ {truncTarget.ToString("F2")}";
+                lblIndicatorSpent.Text = $"₱ {truncCurrent.ToString("N2")}";
+                lblIndicatorTarget.Text = $"₱ {truncTarget.ToString("N2")}";
 
                 UpdateIndicators(goal);
                 IndicatorFlowLayGoal.Visible = true;
@@ -231,7 +232,7 @@ namespace CentSible.Forms
             int year = (int)SelectYearDropGoal.Value;
             int lastDay = DateTime.DaysInMonth(year, month);
 
-            TargetDateDropDownGoal.MinDate = new DateTime(2000, 1, 1);
+            TargetDateDropDownGoal.MinDate = new DateTime(DateTime.Now.Year, 1, 1);
             TargetDateDropDownGoal.MaxDate = new DateTime(3000, 12, 31);
 
             TargetDateDropDownGoal.Value = new DateTime(year, month, lastDay);
@@ -245,14 +246,12 @@ namespace CentSible.Forms
         private void TranButtonGoal_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Transaction);
         private void SumButtonGoal_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Summary);
         private void PredButtonGoal_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Prediction);
+        private void LogoutButtonGoal_Click(object sender, EventArgs e) => Navigator.Logout(this);
 
-        private void LogoutButtonGoal_Click(object sender, EventArgs e)
+      
+        private void GoalForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            _isNavigating = true;
-            new LoginForms().Show();
-            this.Dispose();
+            if (!_isNavigating && e.CloseReason == CloseReason.UserClosing) Application.Exit();
         }
-
-        private void GoalForm_FormClosing(object sender, FormClosingEventArgs e) => Navigator.Logout(this);
     }
 }

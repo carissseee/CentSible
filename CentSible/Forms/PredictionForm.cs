@@ -53,10 +53,9 @@ namespace CentSible.Forms
         {
             if (_user == null) return;
 
-            numSelectYearPred.Minimum = 2000;
-            numSelectYearPred.Maximum = 3000;
+            numSelectYearPred.Minimum = DateTime.Now.Year;
+            numSelectYearPred.Maximum = DateTime.Now.Year;
             numSelectYearPred.Value = DateTime.Now.Year;
-            numSelectYearPred.Enabled = false;    
             cbSelectMonthPred.SelectedIndex = DateTime.Now.Month - 1;      
             RunPrediction();
         }
@@ -139,10 +138,11 @@ namespace CentSible.Forms
 
         private void PredictionForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (e.CloseReason == CloseReason.UserClosing && Navigator.Home != null)
-                Application.Exit();
+            
+            if (!_isNavigating && e.CloseReason == CloseReason.UserClosing) Application.Exit();
         }
 
 
     }
 }
+
