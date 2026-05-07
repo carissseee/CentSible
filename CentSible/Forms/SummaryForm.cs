@@ -222,8 +222,7 @@ namespace CentSible.Forms
 
         private void SummaryForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (e.CloseReason == CloseReason.UserClosing && Navigator.Home == null) return;
-            if (e.CloseReason == CloseReason.UserClosing) Application.Exit();
+            if (!_isNavigating && e.CloseReason == CloseReason.UserClosing) Application.Exit();
         }
     }
 }
