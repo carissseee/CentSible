@@ -46,20 +46,16 @@
             this.IndicatorBarTopLayoutGoal = new System.Windows.Forms.TableLayoutPanel();
             this.MilestoneTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
             this.CentSibleLabelGoal = new System.Windows.Forms.Label();
-            this.MainLayoutGoal = new System.Windows.Forms.TableLayoutPanel();
-            this.HeaderGoal = new System.Windows.Forms.TableLayoutPanel();
+            this.HeadTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
             this.GoalDateLabelGoal = new System.Windows.Forms.Label();
             this.SelectMonthDropGoal = new System.Windows.Forms.ComboBox();
             this.btnSpendingTab = new System.Windows.Forms.Button();
             this.SelectYearDropGoal = new System.Windows.Forms.NumericUpDown();
             this.btnSavingTab = new System.Windows.Forms.Button();
-            this.SpendGoalIndiLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.GoalFlowLayGoal = new System.Windows.Forms.FlowLayoutPanel();
+            this.SpendFlowLayGoal = new System.Windows.Forms.FlowLayoutPanel();
             this.dynamicGoalLabel = new System.Windows.Forms.Label();
             this.Spacer1 = new System.Windows.Forms.Panel();
             this.SpendingGoalTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
-            this.TargetAmountTextGoal = new PlaceholderText.PlaceholderTextBox();
-            this.CurrentAmountTextGoal = new PlaceholderText.PlaceholderTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TargetDateLabelGoal = new System.Windows.Forms.Label();
             this.CurrentAmountLabelGoal = new System.Windows.Forms.Label();
@@ -91,15 +87,15 @@
             this.HomeTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
             this.HomeButtonGoal = new System.Windows.Forms.Button();
             this.HomePicBoxGoal = new System.Windows.Forms.PictureBox();
+            this.TargetAmountTextGoal = new PlaceholderText.PlaceholderTextBox();
+            this.CurrentAmountTextGoal = new PlaceholderText.PlaceholderTextBox();
             this.BarMainTabLayGoal.SuspendLayout();
             this.IndicatorBarBottomLayoutGoal.SuspendLayout();
             this.IndicatorBarTopLayoutGoal.SuspendLayout();
             this.MilestoneTabLayGoal.SuspendLayout();
-            this.MainLayoutGoal.SuspendLayout();
-            this.HeaderGoal.SuspendLayout();
+            this.HeadTabLayGoal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SelectYearDropGoal)).BeginInit();
-            this.SpendGoalIndiLayout.SuspendLayout();
-            this.GoalFlowLayGoal.SuspendLayout();
+            this.SpendFlowLayGoal.SuspendLayout();
             this.SpendingGoalTabLayGoal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TargetAmountPicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CurrentAmountPicbox)).BeginInit();
@@ -334,41 +330,26 @@
             this.CentSibleLabelGoal.Text = "CentSible";
             this.CentSibleLabelGoal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // MainLayoutGoal
+            // HeadTabLayGoal
             // 
-            this.MainLayoutGoal.ColumnCount = 1;
-            this.MainLayoutGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.MainLayoutGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.MainLayoutGoal.Controls.Add(this.HeaderGoal, 0, 0);
-            this.MainLayoutGoal.Controls.Add(this.SpendGoalIndiLayout, 0, 1);
-            this.MainLayoutGoal.Location = new System.Drawing.Point(198, 1);
-            this.MainLayoutGoal.Name = "MainLayoutGoal";
-            this.MainLayoutGoal.RowCount = 2;
-            this.MainLayoutGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.70234F));
-            this.MainLayoutGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.29766F));
-            this.MainLayoutGoal.Size = new System.Drawing.Size(839, 507);
-            this.MainLayoutGoal.TabIndex = 36;
-            // 
-            // HeaderGoal
-            // 
-            this.HeaderGoal.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.HeaderGoal.ColumnCount = 5;
-            this.HeaderGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.HeaderGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.HeaderGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.HeaderGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.HeaderGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.HeaderGoal.Controls.Add(this.GoalDateLabelGoal, 0, 0);
-            this.HeaderGoal.Controls.Add(this.SelectMonthDropGoal, 1, 0);
-            this.HeaderGoal.Controls.Add(this.btnSpendingTab, 3, 0);
-            this.HeaderGoal.Controls.Add(this.SelectYearDropGoal, 2, 0);
-            this.HeaderGoal.Controls.Add(this.btnSavingTab, 4, 0);
-            this.HeaderGoal.Location = new System.Drawing.Point(59, 3);
-            this.HeaderGoal.Name = "HeaderGoal";
-            this.HeaderGoal.RowCount = 1;
-            this.HeaderGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.HeaderGoal.Size = new System.Drawing.Size(720, 48);
-            this.HeaderGoal.TabIndex = 1;
+            this.HeadTabLayGoal.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.HeadTabLayGoal.ColumnCount = 5;
+            this.HeadTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.HeadTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.HeadTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.HeadTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.HeadTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.HeadTabLayGoal.Controls.Add(this.GoalDateLabelGoal, 0, 0);
+            this.HeadTabLayGoal.Controls.Add(this.SelectMonthDropGoal, 1, 0);
+            this.HeadTabLayGoal.Controls.Add(this.btnSpendingTab, 3, 0);
+            this.HeadTabLayGoal.Controls.Add(this.SelectYearDropGoal, 2, 0);
+            this.HeadTabLayGoal.Controls.Add(this.btnSavingTab, 4, 0);
+            this.HeadTabLayGoal.Location = new System.Drawing.Point(242, 12);
+            this.HeadTabLayGoal.Name = "HeadTabLayGoal";
+            this.HeadTabLayGoal.RowCount = 1;
+            this.HeadTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.HeadTabLayGoal.Size = new System.Drawing.Size(737, 48);
+            this.HeadTabLayGoal.TabIndex = 1;
             // 
             // GoalDateLabelGoal
             // 
@@ -376,7 +357,7 @@
             this.GoalDateLabelGoal.AutoSize = true;
             this.GoalDateLabelGoal.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.GoalDateLabelGoal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.GoalDateLabelGoal.Location = new System.Drawing.Point(29, 12);
+            this.GoalDateLabelGoal.Location = new System.Drawing.Point(30, 12);
             this.GoalDateLabelGoal.Name = "GoalDateLabelGoal";
             this.GoalDateLabelGoal.Size = new System.Drawing.Size(86, 23);
             this.GoalDateLabelGoal.TabIndex = 32;
@@ -401,7 +382,7 @@
             "October",
             "November",
             "December"});
-            this.SelectMonthDropGoal.Location = new System.Drawing.Point(169, 8);
+            this.SelectMonthDropGoal.Location = new System.Drawing.Point(174, 8);
             this.SelectMonthDropGoal.Name = "SelectMonthDropGoal";
             this.SelectMonthDropGoal.Size = new System.Drawing.Size(93, 31);
             this.SelectMonthDropGoal.TabIndex = 30;
@@ -413,7 +394,7 @@
             this.btnSpendingTab.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSpendingTab.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnSpendingTab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.btnSpendingTab.Location = new System.Drawing.Point(449, 8);
+            this.btnSpendingTab.Location = new System.Drawing.Point(460, 8);
             this.btnSpendingTab.Name = "btnSpendingTab";
             this.btnSpendingTab.Size = new System.Drawing.Size(109, 32);
             this.btnSpendingTab.TabIndex = 1;
@@ -426,7 +407,7 @@
             this.SelectYearDropGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.SelectYearDropGoal.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.SelectYearDropGoal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.SelectYearDropGoal.Location = new System.Drawing.Point(313, 9);
+            this.SelectYearDropGoal.Location = new System.Drawing.Point(320, 9);
             this.SelectYearDropGoal.Maximum = new decimal(new int[] {
             3000,
             0,
@@ -452,7 +433,7 @@
             this.btnSavingTab.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSavingTab.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnSavingTab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.btnSavingTab.Location = new System.Drawing.Point(593, 8);
+            this.btnSavingTab.Location = new System.Drawing.Point(608, 8);
             this.btnSavingTab.Name = "btnSavingTab";
             this.btnSavingTab.Size = new System.Drawing.Size(109, 32);
             this.btnSavingTab.TabIndex = 2;
@@ -460,33 +441,18 @@
             this.btnSavingTab.UseVisualStyleBackColor = true;
             this.btnSavingTab.Click += new System.EventHandler(this.btnSavingTab_Click);
             // 
-            // SpendGoalIndiLayout
+            // SpendFlowLayGoal
             // 
-            this.SpendGoalIndiLayout.ColumnCount = 2;
-            this.SpendGoalIndiLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.29822F));
-            this.SpendGoalIndiLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.70178F));
-            this.SpendGoalIndiLayout.Controls.Add(this.GoalFlowLayGoal, 0, 0);
-            this.SpendGoalIndiLayout.Controls.Add(this.IndicatorFlowLayGoal, 1, 0);
-            this.SpendGoalIndiLayout.Location = new System.Drawing.Point(3, 57);
-            this.SpendGoalIndiLayout.Name = "SpendGoalIndiLayout";
-            this.SpendGoalIndiLayout.RowCount = 1;
-            this.SpendGoalIndiLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SpendGoalIndiLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SpendGoalIndiLayout.Size = new System.Drawing.Size(833, 447);
-            this.SpendGoalIndiLayout.TabIndex = 0;
-            // 
-            // GoalFlowLayGoal
-            // 
-            this.GoalFlowLayGoal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.GoalFlowLayGoal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.GoalFlowLayGoal.Controls.Add(this.dynamicGoalLabel);
-            this.GoalFlowLayGoal.Controls.Add(this.Spacer1);
-            this.GoalFlowLayGoal.Controls.Add(this.SpendingGoalTabLayGoal);
-            this.GoalFlowLayGoal.Controls.Add(this.SaveButtonPanelGoal);
-            this.GoalFlowLayGoal.Location = new System.Drawing.Point(44, 3);
-            this.GoalFlowLayGoal.Name = "GoalFlowLayGoal";
-            this.GoalFlowLayGoal.Size = new System.Drawing.Size(355, 434);
-            this.GoalFlowLayGoal.TabIndex = 38;
+            this.SpendFlowLayGoal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SpendFlowLayGoal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SpendFlowLayGoal.Controls.Add(this.dynamicGoalLabel);
+            this.SpendFlowLayGoal.Controls.Add(this.Spacer1);
+            this.SpendFlowLayGoal.Controls.Add(this.SpendingGoalTabLayGoal);
+            this.SpendFlowLayGoal.Controls.Add(this.SaveButtonPanelGoal);
+            this.SpendFlowLayGoal.Location = new System.Drawing.Point(242, 73);
+            this.SpendFlowLayGoal.Name = "SpendFlowLayGoal";
+            this.SpendFlowLayGoal.Size = new System.Drawing.Size(354, 399);
+            this.SpendFlowLayGoal.TabIndex = 38;
             // 
             // dynamicGoalLabel
             // 
@@ -538,28 +504,6 @@
             this.SpendingGoalTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.SpendingGoalTabLayGoal.Size = new System.Drawing.Size(342, 233);
             this.SpendingGoalTabLayGoal.TabIndex = 37;
-            // 
-            // TargetAmountTextGoal
-            // 
-            this.TargetAmountTextGoal.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TargetAmountTextGoal.ForeColor = System.Drawing.Color.Gray;
-            this.TargetAmountTextGoal.Location = new System.Drawing.Point(231, 18);
-            this.TargetAmountTextGoal.Name = "TargetAmountTextGoal";
-            this.TargetAmountTextGoal.Placeholder = "₱";
-            this.TargetAmountTextGoal.PlaceholderColor = System.Drawing.Color.Gray;
-            this.TargetAmountTextGoal.Size = new System.Drawing.Size(68, 22);
-            this.TargetAmountTextGoal.TabIndex = 38;
-            // 
-            // CurrentAmountTextGoal
-            // 
-            this.CurrentAmountTextGoal.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.CurrentAmountTextGoal.ForeColor = System.Drawing.Color.Gray;
-            this.CurrentAmountTextGoal.Location = new System.Drawing.Point(231, 76);
-            this.CurrentAmountTextGoal.Name = "CurrentAmountTextGoal";
-            this.CurrentAmountTextGoal.Placeholder = "₱";
-            this.CurrentAmountTextGoal.PlaceholderColor = System.Drawing.Color.Gray;
-            this.CurrentAmountTextGoal.Size = new System.Drawing.Size(68, 22);
-            this.CurrentAmountTextGoal.TabIndex = 39;
             // 
             // label1
             // 
@@ -678,9 +622,9 @@
             this.IndicatorFlowLayGoal.Controls.Add(this.IndicatorBarTopLayoutGoal);
             this.IndicatorFlowLayGoal.Controls.Add(this.BarMainTabLayGoal);
             this.IndicatorFlowLayGoal.Controls.Add(this.MilestoneTabLayGoal);
-            this.IndicatorFlowLayGoal.Location = new System.Drawing.Point(405, 3);
+            this.IndicatorFlowLayGoal.Location = new System.Drawing.Point(630, 74);
             this.IndicatorFlowLayGoal.Name = "IndicatorFlowLayGoal";
-            this.IndicatorFlowLayGoal.Size = new System.Drawing.Size(355, 433);
+            this.IndicatorFlowLayGoal.Size = new System.Drawing.Size(354, 399);
             this.IndicatorFlowLayGoal.TabIndex = 39;
             // 
             // Spacer2
@@ -758,15 +702,14 @@
             // PredTabLayGoal
             // 
             this.PredTabLayGoal.ColumnCount = 2;
-            this.PredTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
-            this.PredTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.PredTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.PredTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.PredTabLayGoal.Controls.Add(this.PredPicBoxGoal, 0, 0);
             this.PredTabLayGoal.Controls.Add(this.PredButtonGoal, 1, 0);
             this.PredTabLayGoal.Location = new System.Drawing.Point(3, 203);
             this.PredTabLayGoal.Name = "PredTabLayGoal";
             this.PredTabLayGoal.RowCount = 1;
-            this.PredTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PredTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PredTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.PredTabLayGoal.Size = new System.Drawing.Size(183, 44);
             this.PredTabLayGoal.TabIndex = 25;
             // 
@@ -802,15 +745,14 @@
             // SumTabLayGoal
             // 
             this.SumTabLayGoal.ColumnCount = 2;
-            this.SumTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
-            this.SumTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.SumTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.SumTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.SumTabLayGoal.Controls.Add(this.SumPicBoxGoal, 0, 0);
             this.SumTabLayGoal.Controls.Add(this.SumButtonGoal, 1, 0);
             this.SumTabLayGoal.Location = new System.Drawing.Point(3, 153);
             this.SumTabLayGoal.Name = "SumTabLayGoal";
             this.SumTabLayGoal.RowCount = 1;
-            this.SumTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SumTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SumTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.SumTabLayGoal.Size = new System.Drawing.Size(183, 44);
             this.SumTabLayGoal.TabIndex = 24;
             // 
@@ -846,17 +788,17 @@
             // TranTabLayGoal
             // 
             this.TranTabLayGoal.ColumnCount = 2;
-            this.TranTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
-            this.TranTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.TranTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.TranTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.TranTabLayGoal.Controls.Add(this.TranButtonGoal, 1, 0);
             this.TranTabLayGoal.Controls.Add(this.TranPicBoxGoal, 0, 0);
             this.TranTabLayGoal.Location = new System.Drawing.Point(3, 103);
             this.TranTabLayGoal.Name = "TranTabLayGoal";
             this.TranTabLayGoal.RowCount = 1;
-            this.TranTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TranTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TranTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TranTabLayGoal.Size = new System.Drawing.Size(183, 44);
             this.TranTabLayGoal.TabIndex = 23;
+            this.TranButtonGoal.Click += new System.EventHandler(this.TranButtonGoal_Click);
             // 
             // TranButtonGoal
             // 
@@ -890,15 +832,14 @@
             // 
             this.GoalTabLayGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.GoalTabLayGoal.ColumnCount = 2;
-            this.GoalTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.63415F));
-            this.GoalTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.36585F));
+            this.GoalTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.GoalTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.GoalTabLayGoal.Controls.Add(this.GoalButtonGoal, 1, 0);
             this.GoalTabLayGoal.Controls.Add(this.GoalPicBoxGoal, 0, 0);
             this.GoalTabLayGoal.Location = new System.Drawing.Point(3, 53);
             this.GoalTabLayGoal.Name = "GoalTabLayGoal";
             this.GoalTabLayGoal.RowCount = 1;
-            this.GoalTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.GoalTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.GoalTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.GoalTabLayGoal.Size = new System.Drawing.Size(183, 44);
             this.GoalTabLayGoal.TabIndex = 22;
             // 
@@ -911,9 +852,9 @@
             this.GoalButtonGoal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GoalButtonGoal.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.GoalButtonGoal.ForeColor = System.Drawing.Color.White;
-            this.GoalButtonGoal.Location = new System.Drawing.Point(66, 3);
+            this.GoalButtonGoal.Location = new System.Drawing.Point(67, 3);
             this.GoalButtonGoal.Name = "GoalButtonGoal";
-            this.GoalButtonGoal.Size = new System.Drawing.Size(114, 38);
+            this.GoalButtonGoal.Size = new System.Drawing.Size(113, 38);
             this.GoalButtonGoal.TabIndex = 11;
             this.GoalButtonGoal.Text = "Goal";
             this.GoalButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -923,7 +864,7 @@
             // 
             this.GoalPicBoxGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.GoalPicBoxGoal.Image = global::CentSible.Properties.Resources.GoalForm;
-            this.GoalPicBoxGoal.Location = new System.Drawing.Point(11, 3);
+            this.GoalPicBoxGoal.Location = new System.Drawing.Point(12, 3);
             this.GoalPicBoxGoal.Name = "GoalPicBoxGoal";
             this.GoalPicBoxGoal.Size = new System.Drawing.Size(40, 38);
             this.GoalPicBoxGoal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -933,15 +874,14 @@
             // HomeTabLayGoal
             // 
             this.HomeTabLayGoal.ColumnCount = 2;
-            this.HomeTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
-            this.HomeTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.HomeTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.HomeTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.HomeTabLayGoal.Controls.Add(this.HomeButtonGoal, 1, 0);
             this.HomeTabLayGoal.Controls.Add(this.HomePicBoxGoal, 0, 0);
             this.HomeTabLayGoal.Location = new System.Drawing.Point(3, 3);
             this.HomeTabLayGoal.Name = "HomeTabLayGoal";
             this.HomeTabLayGoal.RowCount = 1;
-            this.HomeTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.HomeTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.HomeTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.HomeTabLayGoal.Size = new System.Drawing.Size(183, 44);
             this.HomeTabLayGoal.TabIndex = 21;
             // 
@@ -974,12 +914,36 @@
             this.HomePicBoxGoal.TabIndex = 15;
             this.HomePicBoxGoal.TabStop = false;
             // 
+            // TargetAmountTextGoal
+            // 
+            this.TargetAmountTextGoal.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TargetAmountTextGoal.ForeColor = System.Drawing.Color.Gray;
+            this.TargetAmountTextGoal.Location = new System.Drawing.Point(231, 18);
+            this.TargetAmountTextGoal.Name = "TargetAmountTextGoal";
+            this.TargetAmountTextGoal.Placeholder = "₱";
+            this.TargetAmountTextGoal.PlaceholderColor = System.Drawing.Color.Gray;
+            this.TargetAmountTextGoal.Size = new System.Drawing.Size(68, 22);
+            this.TargetAmountTextGoal.TabIndex = 38;
+            // 
+            // CurrentAmountTextGoal
+            // 
+            this.CurrentAmountTextGoal.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.CurrentAmountTextGoal.ForeColor = System.Drawing.Color.Gray;
+            this.CurrentAmountTextGoal.Location = new System.Drawing.Point(231, 76);
+            this.CurrentAmountTextGoal.Name = "CurrentAmountTextGoal";
+            this.CurrentAmountTextGoal.Placeholder = "₱";
+            this.CurrentAmountTextGoal.PlaceholderColor = System.Drawing.Color.Gray;
+            this.CurrentAmountTextGoal.Size = new System.Drawing.Size(68, 22);
+            this.CurrentAmountTextGoal.TabIndex = 39;
+            // 
             // GoalForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(1035, 510);
-            this.Controls.Add(this.MainLayoutGoal);
+            this.Controls.Add(this.HeadTabLayGoal);
+            this.Controls.Add(this.IndicatorFlowLayGoal);
+            this.Controls.Add(this.SpendFlowLayGoal);
             this.Controls.Add(this.SidebarTableLayoutGoal);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1053, 557);
@@ -997,13 +961,11 @@
             this.IndicatorBarTopLayoutGoal.PerformLayout();
             this.MilestoneTabLayGoal.ResumeLayout(false);
             this.MilestoneTabLayGoal.PerformLayout();
-            this.MainLayoutGoal.ResumeLayout(false);
-            this.HeaderGoal.ResumeLayout(false);
-            this.HeaderGoal.PerformLayout();
+            this.HeadTabLayGoal.ResumeLayout(false);
+            this.HeadTabLayGoal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SelectYearDropGoal)).EndInit();
-            this.SpendGoalIndiLayout.ResumeLayout(false);
-            this.GoalFlowLayGoal.ResumeLayout(false);
-            this.GoalFlowLayGoal.PerformLayout();
+            this.SpendFlowLayGoal.ResumeLayout(false);
+            this.SpendFlowLayGoal.PerformLayout();
             this.SpendingGoalTabLayGoal.ResumeLayout(false);
             this.SpendingGoalTabLayGoal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TargetAmountPicbox)).EndInit();
@@ -1044,8 +1006,6 @@
         private System.Windows.Forms.Label DaysRemainingLabelGoal;
         private System.Windows.Forms.Label dynamicIndicatorLabel;
         private System.Windows.Forms.Label CentSibleLabelGoal;
-        private System.Windows.Forms.TableLayoutPanel MainLayoutGoal;
-        private System.Windows.Forms.TableLayoutPanel SpendGoalIndiLayout;
         private System.Windows.Forms.TableLayoutPanel SpendingGoalTabLayGoal;
         private System.Windows.Forms.Label dynamicGoalLabel;
         private System.Windows.Forms.Label TargetAmountLabelGoal;
@@ -1058,14 +1018,14 @@
         private System.Windows.Forms.TableLayoutPanel IndicatorBarTopLayoutGoal;
         private System.Windows.Forms.TableLayoutPanel IndicatorBarBottomLayoutGoal;
         private System.Windows.Forms.TableLayoutPanel BarMainTabLayGoal;
-        private System.Windows.Forms.FlowLayoutPanel GoalFlowLayGoal;
+        private System.Windows.Forms.FlowLayoutPanel SpendFlowLayGoal;
         private System.Windows.Forms.PictureBox TargetAmountPicbox;
         private System.Windows.Forms.PictureBox CurrentAmountPicbox;
         private System.Windows.Forms.PictureBox TargetDatePicbox;
         private System.Windows.Forms.PictureBox RemainDaysPicbox;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.FlowLayoutPanel IndicatorFlowLayGoal;
-        private System.Windows.Forms.TableLayoutPanel HeaderGoal;
+        private System.Windows.Forms.TableLayoutPanel HeadTabLayGoal;
         private System.Windows.Forms.Label GoalDateLabelGoal;
         private System.Windows.Forms.ComboBox SelectMonthDropGoal;
         private System.Windows.Forms.Button btnSpendingTab;

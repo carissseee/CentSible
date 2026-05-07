@@ -18,11 +18,11 @@
       
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.cbSelectMonthPred = new System.Windows.Forms.ComboBox();
             this.numSelectYearPred = new System.Windows.Forms.NumericUpDown();
             this.lblPredSavingAmount = new System.Windows.Forms.Label();
@@ -30,7 +30,7 @@
             this.lblContextDate = new System.Windows.Forms.Label();
             this.chartForecast = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblPredictedSpending = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.SidebarTableLayoutPred = new System.Windows.Forms.FlowLayoutPanel();
             this.CentSibleTextPanelGoal = new System.Windows.Forms.Panel();
@@ -92,9 +92,9 @@
             "October",
             "November ",
             "December"});
-            this.cbSelectMonthPred.Location = new System.Drawing.Point(687, 45);
+            this.cbSelectMonthPred.Location = new System.Drawing.Point(687, 46);
             this.cbSelectMonthPred.Name = "cbSelectMonthPred";
-            this.cbSelectMonthPred.Size = new System.Drawing.Size(114, 27);
+            this.cbSelectMonthPred.Size = new System.Drawing.Size(120, 27);
             this.cbSelectMonthPred.TabIndex = 1;
             // 
             // numSelectYearPred
@@ -146,53 +146,53 @@
             // lblContextDate
             // 
             this.lblContextDate.AutoSize = true;
-            this.lblContextDate.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.lblContextDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.lblContextDate.Location = new System.Drawing.Point(279, 68);
+            this.lblContextDate.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContextDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(94)))), ((int)(((byte)(36)))));
+            this.lblContextDate.Location = new System.Drawing.Point(237, 44);
             this.lblContextDate.Name = "lblContextDate";
-            this.lblContextDate.Size = new System.Drawing.Size(95, 19);
+            this.lblContextDate.Size = new System.Drawing.Size(92, 17);
             this.lblContextDate.TabIndex = 5;
             this.lblContextDate.Text = "Dynamic Date";
             // 
             // chartForecast
             // 
-            chartArea3.AxisX.LabelStyle.Interval = 1D;
-            chartArea3.AxisX.MajorGrid.Enabled = false;
-            chartArea3.AxisY.Interval = 1000D;
-            chartArea3.AxisY.LabelStyle.Format = "₱ #,##0";
-            chartArea3.AxisY.Maximum = 10000D;
-            chartArea3.AxisY.Minimum = 0D;
-            chartArea3.Name = "ChartArea1";
-            this.chartForecast.ChartAreas.Add(chartArea3);
-            legend3.Name = "DefaultLegend";
-            this.chartForecast.Legends.Add(legend3);
-            this.chartForecast.Location = new System.Drawing.Point(230, 211);
+            chartArea2.AxisX.LabelStyle.Interval = 1D;
+            chartArea2.AxisX.MajorGrid.Enabled = false;
+            chartArea2.AxisY.Interval = 1000D;
+            chartArea2.AxisY.LabelStyle.Format = "₱ #,##0";
+            chartArea2.AxisY.Maximum = 10000D;
+            chartArea2.AxisY.Minimum = 0D;
+            chartArea2.Name = "ChartArea1";
+            this.chartForecast.ChartAreas.Add(chartArea2);
+            legend2.Name = "DefaultLegend";
+            this.chartForecast.Legends.Add(legend2);
+            this.chartForecast.Location = new System.Drawing.Point(190, 211);
             this.chartForecast.Name = "chartForecast";
-            series7.BorderWidth = 3;
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series7.Color = System.Drawing.Color.Red;
-            series7.Legend = "DefaultLegend";
-            series7.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series7.Name = "Expense";
-            series8.BorderWidth = 3;
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series8.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            series8.Legend = "DefaultLegend";
-            series8.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series8.Name = "Budget";
-            series9.BorderWidth = 3;
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series9.Color = System.Drawing.Color.Lime;
-            series9.Legend = "DefaultLegend";
-            series9.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series9.Name = "Saving";
-            this.chartForecast.Series.Add(series7);
-            this.chartForecast.Series.Add(series8);
-            this.chartForecast.Series.Add(series9);
-            this.chartForecast.Size = new System.Drawing.Size(769, 287);
+            series4.BorderWidth = 3;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Color = System.Drawing.Color.Red;
+            series4.Legend = "DefaultLegend";
+            series4.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series4.Name = "Expense";
+            series5.BorderWidth = 3;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            series5.Legend = "DefaultLegend";
+            series5.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series5.Name = "Budget";
+            series6.BorderWidth = 3;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Color = System.Drawing.Color.Lime;
+            series6.Legend = "DefaultLegend";
+            series6.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series6.Name = "Saving";
+            this.chartForecast.Series.Add(series4);
+            this.chartForecast.Series.Add(series5);
+            this.chartForecast.Series.Add(series6);
+            this.chartForecast.Size = new System.Drawing.Size(848, 287);
             this.chartForecast.TabIndex = 6;
             this.chartForecast.Text = "chart1";
             // 
@@ -200,30 +200,30 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(94)))), ((int)(((byte)(36)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
             this.label1.Location = new System.Drawing.Point(6, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 21);
             this.label1.TabIndex = 7;
             this.label1.Text = "Predicted Saving";
             // 
-            // label2
+            // lblPredictedSpending
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(6, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 21);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Predicted Spending";
+            this.lblPredictedSpending.AutoSize = true;
+            this.lblPredictedSpending.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.lblPredictedSpending.ForeColor = System.Drawing.Color.Red;
+            this.lblPredictedSpending.Location = new System.Drawing.Point(6, 3);
+            this.lblPredictedSpending.Name = "lblPredictedSpending";
+            this.lblPredictedSpending.Size = new System.Drawing.Size(159, 21);
+            this.lblPredictedSpending.TabIndex = 8;
+            this.lblPredictedSpending.Text = "Predicted Spending";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(94)))), ((int)(((byte)(36)))));
-            this.label3.Location = new System.Drawing.Point(523, 191);
+            this.label3.Location = new System.Drawing.Point(520, 191);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 23);
             this.label3.TabIndex = 9;
@@ -523,11 +523,11 @@
             // PredictionLblPred
             // 
             this.PredictionLblPred.AutoSize = true;
-            this.PredictionLblPred.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.PredictionLblPred.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(94)))), ((int)(((byte)(36)))));
-            this.PredictionLblPred.Location = new System.Drawing.Point(277, 35);
+            this.PredictionLblPred.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.PredictionLblPred.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.PredictionLblPred.Location = new System.Drawing.Point(231, 20);
             this.PredictionLblPred.Name = "PredictionLblPred";
-            this.PredictionLblPred.Size = new System.Drawing.Size(135, 35);
+            this.PredictionLblPred.Size = new System.Drawing.Size(120, 30);
             this.PredictionLblPred.TabIndex = 42;
             this.PredictionLblPred.Text = "Prediction";
             // 
@@ -536,9 +536,9 @@
             this.PredSaveTabLayPred.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.PredSaveTabLayPred.ColumnCount = 1;
             this.PredSaveTabLayPred.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PredSaveTabLayPred.Controls.Add(this.label1, 0, 0);
             this.PredSaveTabLayPred.Controls.Add(this.lblPredSavingAmount, 0, 1);
-            this.PredSaveTabLayPred.Location = new System.Drawing.Point(402, 109);
+            this.PredSaveTabLayPred.Controls.Add(this.label1, 0, 0);
+            this.PredSaveTabLayPred.Location = new System.Drawing.Point(332, 109);
             this.PredSaveTabLayPred.Name = "PredSaveTabLayPred";
             this.PredSaveTabLayPred.RowCount = 2;
             this.PredSaveTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -552,8 +552,8 @@
             this.PredSpendTabLayPred.ColumnCount = 1;
             this.PredSpendTabLayPred.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PredSpendTabLayPred.Controls.Add(this.lblPredSpendingAmount, 0, 1);
-            this.PredSpendTabLayPred.Controls.Add(this.label2, 0, 0);
-            this.PredSpendTabLayPred.Location = new System.Drawing.Point(598, 109);
+            this.PredSpendTabLayPred.Controls.Add(this.lblPredictedSpending, 0, 0);
+            this.PredSpendTabLayPred.Location = new System.Drawing.Point(661, 109);
             this.PredSpendTabLayPred.Name = "PredSpendTabLayPred";
             this.PredSpendTabLayPred.RowCount = 2;
             this.PredSpendTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -566,13 +566,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(1035, 510);
+            this.Controls.Add(this.lblContextDate);
             this.Controls.Add(this.PredSpendTabLayPred);
             this.Controls.Add(this.PredSaveTabLayPred);
             this.Controls.Add(this.PredictionLblPred);
             this.Controls.Add(this.SidebarTableLayoutPred);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.chartForecast);
-            this.Controls.Add(this.lblContextDate);
             this.Controls.Add(this.numSelectYearPred);
             this.Controls.Add(this.cbSelectMonthPred);
             this.MaximizeBox = false;
@@ -615,7 +615,7 @@
         private System.Windows.Forms.Label lblContextDate;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartForecast;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPredictedSpending;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.FlowLayoutPanel SidebarTableLayoutPred;
         private System.Windows.Forms.Panel CentSibleTextPanelGoal;

@@ -66,7 +66,7 @@ namespace CentSible.Logic
                 CurrentStreak = user.LoginStreak,
                 LongestStreak = user.LongestStreak,
                 IsMaster = mastered,
-                StatusColor = mastered ? Color.Gold : Color.OrangeRed,
+                StatusColor = mastered ? Color.FromArgb(62, 153, 66) : Color.FromArgb(62, 153, 66),
                 StreakText = mastered ? $"MONTHLY MASTER: {user.LongestStreak} Days" : $"Record: {user.LongestStreak}/{max} to Mastery"
             };
         }

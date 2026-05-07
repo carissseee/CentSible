@@ -58,22 +58,21 @@ namespace CentSible.Forms
                 return;
             }
 
-            TranButtonTran.BackColor = Color.FromArgb(212, 236, 204);
-            TranButtonTran.ForeColor = Color.Black;
 
-            cmbYear.SelectedIndexChanged -= cmbYear_SelectedIndexChanged;
-            cmbYear.Items.Add(DateTime.Now.Year.ToString());
-            cmbYear.SelectedIndex = 0;
-            cmbYear.SelectedIndexChanged += cmbYear_SelectedIndexChanged;
+
+            cmbYearTran.SelectedIndexChanged -= cmbYear_SelectedIndexChanged;
+            cmbYearTran.Items.Add(DateTime.Now.Year.ToString());
+            cmbYearTran.SelectedIndex = 0;
+            cmbYearTran.SelectedIndexChanged += cmbYear_SelectedIndexChanged;
 
             int currentMonth = DateTime.Now.Month;
-            cmbMonth.SelectedIndexChanged -= cmbMonth_SelectedIndexChanged;
+            cmbMonthTran.SelectedIndexChanged -= cmbMonth_SelectedIndexChanged;
             for (int i = 1; i <= currentMonth; i++)
             {
-                cmbMonth.Items.Add(new DateTime(2026, i, 1).ToString("MMMM"));
+                cmbMonthTran.Items.Add(new DateTime(2026, i, 1).ToString("MMMM"));
             }
-            cmbMonth.SelectedIndex = DateTime.Now.Month - 1;
-            cmbMonth.SelectedIndexChanged += cmbMonth_SelectedIndexChanged;
+            cmbMonthTran.SelectedIndex = DateTime.Now.Month - 1;
+            cmbMonthTran.SelectedIndexChanged += cmbMonth_SelectedIndexChanged;
 
             LoadTransactions();
         }
