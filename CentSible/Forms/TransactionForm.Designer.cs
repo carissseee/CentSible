@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PredPicBoxTran = new System.Windows.Forms.PictureBox();
             this.PredButtonTran = new System.Windows.Forms.Button();
             this.lblTransactionTran = new System.Windows.Forms.Label();
@@ -60,8 +60,6 @@
             this.dgvTransaction = new System.Windows.Forms.DataGridView();
             this.SideBarTabLayTran = new System.Windows.Forms.TableLayoutPanel();
             this.PredTabLayTran = new System.Windows.Forms.TableLayoutPanel();
-            this.PredButtonGoal = new System.Windows.Forms.Button();
-            this.PredPicBoxGoal = new System.Windows.Forms.PictureBox();
             this.LogoutButtonTran = new System.Windows.Forms.Button();
             this.SumTabLayTran = new System.Windows.Forms.TableLayoutPanel();
             this.SumPicBoxTran = new System.Windows.Forms.PictureBox();
@@ -75,6 +73,8 @@
             this.HomeTabLayTran = new System.Windows.Forms.TableLayoutPanel();
             this.HomeButtonTran = new System.Windows.Forms.Button();
             this.HomePicBoxTran = new System.Windows.Forms.PictureBox();
+            this.PredButtonGoal = new System.Windows.Forms.Button();
+            this.PredPicBoxGoal = new System.Windows.Forms.PictureBox();
             this.CentSibleTextPanelGoal = new System.Windows.Forms.Panel();
             this.CentSibleLabelTran = new System.Windows.Forms.Label();
             this.SidebarTableLayoutTran = new System.Windows.Forms.FlowLayoutPanel();
@@ -85,7 +85,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).BeginInit();
             this.SideBarTabLayTran.SuspendLayout();
             this.PredTabLayTran.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxGoal)).BeginInit();
             this.SumTabLayTran.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SumPicBoxTran)).BeginInit();
             this.TranTabLayTran.SuspendLayout();
@@ -94,6 +93,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxTran)).BeginInit();
             this.HomeTabLayTran.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxTran)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxGoal)).BeginInit();
             this.CentSibleTextPanelGoal.SuspendLayout();
             this.SidebarTableLayoutTran.SuspendLayout();
             this.SuspendLayout();
@@ -106,7 +106,7 @@
             this.PredPicBoxTran.Name = "PredPicBoxTran";
             this.PredPicBoxTran.Size = new System.Drawing.Size(40, 38);
             this.PredPicBoxTran.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PredPicBoxTran.TabIndex = 14;
+            this.PredPicBoxTran.TabIndex = 19;
             this.PredPicBoxTran.TabStop = false;
             // 
             // PredButtonTran
@@ -121,7 +121,7 @@
             this.PredButtonTran.Location = new System.Drawing.Point(67, 3);
             this.PredButtonTran.Name = "PredButtonTran";
             this.PredButtonTran.Size = new System.Drawing.Size(113, 38);
-            this.PredButtonTran.TabIndex = 13;
+            this.PredButtonTran.TabIndex = 14;
             this.PredButtonTran.Text = "Prediction";
             this.PredButtonTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PredButtonTran.UseVisualStyleBackColor = false;
@@ -154,21 +154,25 @@
             // 
             // cmbYearTran
             // 
+            this.cmbYearTran.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbYearTran.Location = new System.Drawing.Point(743, 50);
             this.cmbYearTran.MaximumSize = new System.Drawing.Size(150, 0);
             this.cmbYearTran.MinimumSize = new System.Drawing.Size(100, 0);
             this.cmbYearTran.Name = "cmbYearTran";
-            this.cmbYearTran.Size = new System.Drawing.Size(124, 24);
+            this.cmbYearTran.Size = new System.Drawing.Size(124, 25);
             this.cmbYearTran.TabIndex = 4;
             this.cmbYearTran.SelectedIndexChanged += new System.EventHandler(this.cmbYear_SelectedIndexChanged);
             // 
             // cmbMonthTran
             // 
+            this.cmbMonthTran.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cmbMonthTran.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMonthTran.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cmbMonthTran.Location = new System.Drawing.Point(873, 50);
             this.cmbMonthTran.MaximumSize = new System.Drawing.Size(150, 0);
             this.cmbMonthTran.MinimumSize = new System.Drawing.Size(100, 0);
             this.cmbMonthTran.Name = "cmbMonthTran";
-            this.cmbMonthTran.Size = new System.Drawing.Size(124, 24);
+            this.cmbMonthTran.Size = new System.Drawing.Size(124, 25);
             this.cmbMonthTran.TabIndex = 5;
             this.cmbMonthTran.SelectedIndexChanged += new System.EventHandler(this.cmbMonth_SelectedIndexChanged);
             // 
@@ -203,7 +207,7 @@
             this.pnlBudgetTran.Controls.Add(this.lblBudget);
             this.pnlBudgetTran.Location = new System.Drawing.Point(236, 108);
             this.pnlBudgetTran.Name = "pnlBudgetTran";
-            this.pnlBudgetTran.Size = new System.Drawing.Size(234, 73);
+            this.pnlBudgetTran.Size = new System.Drawing.Size(234, 61);
             this.pnlBudgetTran.TabIndex = 6;
             this.pnlBudgetTran.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBudget_Paint);
             // 
@@ -237,7 +241,7 @@
             this.pnlTotalSpentTran.Controls.Add(this.lblSpent);
             this.pnlTotalSpentTran.Location = new System.Drawing.Point(509, 108);
             this.pnlTotalSpentTran.Name = "pnlTotalSpentTran";
-            this.pnlTotalSpentTran.Size = new System.Drawing.Size(234, 73);
+            this.pnlTotalSpentTran.Size = new System.Drawing.Size(234, 61);
             this.pnlTotalSpentTran.TabIndex = 7;
             this.pnlTotalSpentTran.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTotalSpent_Paint);
             // 
@@ -271,7 +275,7 @@
             this.pnlRemainingTran.Controls.Add(this.lblRemaining);
             this.pnlRemainingTran.Location = new System.Drawing.Point(781, 108);
             this.pnlRemainingTran.Name = "pnlRemainingTran";
-            this.pnlRemainingTran.Size = new System.Drawing.Size(216, 73);
+            this.pnlRemainingTran.Size = new System.Drawing.Size(216, 61);
             this.pnlRemainingTran.TabIndex = 7;
             // 
             // btnAll
@@ -396,14 +400,14 @@
             this.dgvTransaction.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
             this.dgvTransaction.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTransaction.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colDate,
@@ -414,14 +418,14 @@
             this.colSave,
             this.colDelete,
             this.colTransactionID});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTransaction.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTransaction.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvTransaction.EnableHeadersVisualStyles = false;
             this.dgvTransaction.GridColor = System.Drawing.Color.DarkGreen;
             this.dgvTransaction.Location = new System.Drawing.Point(236, 240);
@@ -460,6 +464,20 @@
             this.SideBarTabLayTran.Size = new System.Drawing.Size(189, 441);
             this.SideBarTabLayTran.TabIndex = 11;
             // 
+            // PredTabLayTran
+            // 
+            this.PredTabLayTran.ColumnCount = 2;
+            this.PredTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.PredTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.PredTabLayTran.Controls.Add(this.PredPicBoxTran, 0, 0);
+            this.PredTabLayTran.Controls.Add(this.PredButtonTran, 1, 0);
+            this.PredTabLayTran.Location = new System.Drawing.Point(3, 203);
+            this.PredTabLayTran.Name = "PredTabLayTran";
+            this.PredTabLayTran.RowCount = 1;
+            this.PredTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.PredTabLayTran.Size = new System.Drawing.Size(183, 44);
+            this.PredTabLayTran.TabIndex = 25;
+            // 
             // LogoutButtonTran
             // 
             this.LogoutButtonTran.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -477,49 +495,6 @@
             this.LogoutButtonTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LogoutButtonTran.UseVisualStyleBackColor = false;
             this.LogoutButtonTran.Click += new System.EventHandler(this.LogoutButtonTran_Click);
-            // 
-            // PredTabLayTran
-            // 
-            this.PredTabLayTran.ColumnCount = 2;
-            this.PredTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.PredTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
-            this.PredTabLayTran.Controls.Add(this.PredPicBoxTran, 0, 0);
-            this.PredTabLayTran.Controls.Add(this.PredButtonTran, 1, 0);
-            this.PredTabLayTran.Location = new System.Drawing.Point(3, 203);
-            this.PredTabLayTran.Name = "PredTabLayTran";
-            this.PredTabLayTran.RowCount = 1;
-            this.PredTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.PredTabLayTran.Size = new System.Drawing.Size(183, 44);
-            this.PredTabLayTran.TabIndex = 25;
-            // 
-            // PredPicBoxTran
-            // 
-            this.PredPicBoxTran.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PredPicBoxTran.Image = global::CentSible.Properties.Resources.PredictionForm;
-            this.PredPicBoxTran.Location = new System.Drawing.Point(12, 3);
-            this.PredPicBoxTran.Name = "PredPicBoxTran";
-            this.PredPicBoxTran.Size = new System.Drawing.Size(40, 38);
-            this.PredPicBoxTran.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PredPicBoxTran.TabIndex = 19;
-            this.PredPicBoxTran.TabStop = false;
-            // 
-            // PredButtonTran
-            // 
-            this.PredButtonTran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            this.PredButtonTran.FlatAppearance.BorderSize = 0;
-            this.PredButtonTran.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
-            this.PredButtonTran.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
-            this.PredButtonTran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PredButtonTran.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.PredButtonTran.ForeColor = System.Drawing.Color.White;
-            this.PredButtonTran.Location = new System.Drawing.Point(67, 3);
-            this.PredButtonTran.Name = "PredButtonTran";
-            this.PredButtonTran.Size = new System.Drawing.Size(113, 38);
-            this.PredButtonTran.TabIndex = 14;
-            this.PredButtonTran.Text = "Prediction";
-            this.PredButtonTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.PredButtonTran.UseVisualStyleBackColor = false;
-            this.PredButtonTran.Click += new System.EventHandler(this.PredButtonTran_Click);
             // 
             // SumTabLayTran
             // 
@@ -690,6 +665,21 @@
             this.HomePicBoxTran.TabIndex = 15;
             this.HomePicBoxTran.TabStop = false;
             // 
+            // PredButtonGoal
+            // 
+            this.PredButtonGoal.Location = new System.Drawing.Point(0, 0);
+            this.PredButtonGoal.Name = "PredButtonGoal";
+            this.PredButtonGoal.Size = new System.Drawing.Size(75, 23);
+            this.PredButtonGoal.TabIndex = 0;
+            // 
+            // PredPicBoxGoal
+            // 
+            this.PredPicBoxGoal.Location = new System.Drawing.Point(0, 0);
+            this.PredPicBoxGoal.Name = "PredPicBoxGoal";
+            this.PredPicBoxGoal.Size = new System.Drawing.Size(100, 50);
+            this.PredPicBoxGoal.TabIndex = 0;
+            this.PredPicBoxGoal.TabStop = false;
+            // 
             // CentSibleTextPanelGoal
             // 
             this.CentSibleTextPanelGoal.Controls.Add(this.CentSibleLabelTran);
@@ -757,7 +747,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).EndInit();
             this.SideBarTabLayTran.ResumeLayout(false);
             this.PredTabLayTran.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxGoal)).EndInit();
             this.SumTabLayTran.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SumPicBoxTran)).EndInit();
             this.TranTabLayTran.ResumeLayout(false);
@@ -766,6 +755,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxTran)).EndInit();
             this.HomeTabLayTran.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxTran)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxGoal)).EndInit();
             this.CentSibleTextPanelGoal.ResumeLayout(false);
             this.SidebarTableLayoutTran.ResumeLayout(false);
             this.ResumeLayout(false);
