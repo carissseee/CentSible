@@ -29,33 +29,35 @@
        
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SummaryForm));
             this.lblSummary = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.cmbYear = new System.Windows.Forms.ComboBox();
             this.cmbMonth = new System.Windows.Forms.ComboBox();
             this.chartSummary = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlBreakdown = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblOTotal = new System.Windows.Forms.Label();
+            this.pnlFood = new System.Windows.Forms.Panel();
             this.lblLTotal = new System.Windows.Forms.Label();
+            this.pnlTransportation = new System.Windows.Forms.Panel();
             this.lblHTotal = new System.Windows.Forms.Label();
+            this.pnlUtilities = new System.Windows.Forms.Panel();
             this.lblUTotal = new System.Windows.Forms.Label();
+            this.pnlHealth = new System.Windows.Forms.Panel();
             this.lblTTotal = new System.Windows.Forms.Label();
+            this.pnlLeisure = new System.Windows.Forms.Panel();
             this.lblFTotal = new System.Windows.Forms.Label();
+            this.pnlOthers = new System.Windows.Forms.Panel();
             this.lblOthers = new System.Windows.Forms.Label();
+            this.lblFood = new System.Windows.Forms.Label();
             this.lblLeisure = new System.Windows.Forms.Label();
+            this.lblTransportation = new System.Windows.Forms.Label();
             this.lblHealth = new System.Windows.Forms.Label();
             this.lblUtilities = new System.Windows.Forms.Label();
-            this.lblTransportation = new System.Windows.Forms.Label();
-            this.lblFood = new System.Windows.Forms.Label();
-            this.pnlOthers = new System.Windows.Forms.Panel();
-            this.pnlLeisure = new System.Windows.Forms.Panel();
-            this.pnlHealth = new System.Windows.Forms.Panel();
-            this.pnlUtilities = new System.Windows.Forms.Panel();
-            this.pnlTransportation = new System.Windows.Forms.Panel();
-            this.pnlFood = new System.Windows.Forms.Panel();
             this.lblBreakdown = new System.Windows.Forms.Label();
             this.pnlSummary = new System.Windows.Forms.Panel();
             this.lblMSummary = new System.Windows.Forms.Label();
@@ -80,9 +82,9 @@
             this.HomeTabLaySum = new System.Windows.Forms.TableLayoutPanel();
             this.HomeButtonSum = new System.Windows.Forms.Button();
             this.HomePicBoxSum = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.chartSummary)).BeginInit();
             this.pnlBreakdown.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.pnlSummary.SuspendLayout();
             this.SidebarTableLayoutSum.SuspendLayout();
             this.CentSibleTextPanelGoal.SuspendLayout();
@@ -97,7 +99,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxSum)).BeginInit();
             this.HomeTabLaySum.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxSum)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblSummary
@@ -151,19 +152,19 @@
             this.chartSummary.BorderlineColor = System.Drawing.Color.DarkGreen;
             this.chartSummary.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartSummary.BorderlineWidth = 2;
-            chartArea2.Name = "ChartArea1";
-            this.chartSummary.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartSummary.Legends.Add(legend2);
-            this.chartSummary.Location = new System.Drawing.Point(516, 75);
+            chartArea1.Name = "ChartArea1";
+            this.chartSummary.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartSummary.Legends.Add(legend1);
+            this.chartSummary.Location = new System.Drawing.Point(482, 75);
             this.chartSummary.Name = "chartSummary";
             this.chartSummary.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartSummary.Series.Add(series2);
-            this.chartSummary.Size = new System.Drawing.Size(507, 412);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartSummary.Series.Add(series1);
+            this.chartSummary.Size = new System.Drawing.Size(541, 412);
             this.chartSummary.TabIndex = 5;
             this.chartSummary.Text = "Category Breakdown";
             // 
@@ -172,10 +173,46 @@
             this.pnlBreakdown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlBreakdown.Controls.Add(this.tableLayoutPanel1);
             this.pnlBreakdown.Controls.Add(this.lblBreakdown);
-            this.pnlBreakdown.Location = new System.Drawing.Point(236, 75);
+            this.pnlBreakdown.Location = new System.Drawing.Point(215, 75);
             this.pnlBreakdown.Name = "pnlBreakdown";
             this.pnlBreakdown.Size = new System.Drawing.Size(261, 276);
             this.pnlBreakdown.TabIndex = 6;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.86275F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.64706F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel1.Controls.Add(this.lblOTotal, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.pnlFood, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblLTotal, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.pnlTransportation, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblHTotal, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.pnlUtilities, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblUTotal, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.pnlHealth, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lblTTotal, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.pnlLeisure, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lblFTotal, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pnlOthers, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lblOthers, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lblFood, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblLeisure, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lblTransportation, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblHealth, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lblUtilities, 1, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 26);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(255, 247);
+            this.tableLayoutPanel1.TabIndex = 41;
             // 
             // lblOTotal
             // 
@@ -190,6 +227,14 @@
             this.lblOTotal.Text = "₱ 0.00";
             this.lblOTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // pnlFood
+            // 
+            this.pnlFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
+            this.pnlFood.Location = new System.Drawing.Point(3, 3);
+            this.pnlFood.Name = "pnlFood";
+            this.pnlFood.Size = new System.Drawing.Size(37, 35);
+            this.pnlFood.TabIndex = 1;
+            // 
             // lblLTotal
             // 
             this.lblLTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -202,6 +247,14 @@
             this.lblLTotal.TabIndex = 14;
             this.lblLTotal.Text = "₱ 0.00";
             this.lblLTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pnlTransportation
+            // 
+            this.pnlTransportation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(182)))), ((int)(((byte)(172)))));
+            this.pnlTransportation.Location = new System.Drawing.Point(3, 44);
+            this.pnlTransportation.Name = "pnlTransportation";
+            this.pnlTransportation.Size = new System.Drawing.Size(37, 35);
+            this.pnlTransportation.TabIndex = 2;
             // 
             // lblHTotal
             // 
@@ -216,6 +269,14 @@
             this.lblHTotal.Text = "₱ 0.00";
             this.lblHTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // pnlUtilities
+            // 
+            this.pnlUtilities.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(203)))), ((int)(((byte)(196)))));
+            this.pnlUtilities.Location = new System.Drawing.Point(3, 85);
+            this.pnlUtilities.Name = "pnlUtilities";
+            this.pnlUtilities.Size = new System.Drawing.Size(37, 35);
+            this.pnlUtilities.TabIndex = 2;
+            // 
             // lblUTotal
             // 
             this.lblUTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -228,6 +289,14 @@
             this.lblUTotal.TabIndex = 12;
             this.lblUTotal.Text = "₱ 0.00";
             this.lblUTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pnlHealth
+            // 
+            this.pnlHealth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(141)))), ((int)(((byte)(184)))));
+            this.pnlHealth.Location = new System.Drawing.Point(3, 126);
+            this.pnlHealth.Name = "pnlHealth";
+            this.pnlHealth.Size = new System.Drawing.Size(37, 35);
+            this.pnlHealth.TabIndex = 2;
             // 
             // lblTTotal
             // 
@@ -242,6 +311,14 @@
             this.lblTTotal.Text = "₱ 0.00";
             this.lblTTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // pnlLeisure
+            // 
+            this.pnlLeisure.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(123)))));
+            this.pnlLeisure.Location = new System.Drawing.Point(3, 167);
+            this.pnlLeisure.Name = "pnlLeisure";
+            this.pnlLeisure.Size = new System.Drawing.Size(37, 35);
+            this.pnlLeisure.TabIndex = 2;
+            // 
             // lblFTotal
             // 
             this.lblFTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -254,6 +331,14 @@
             this.lblFTotal.TabIndex = 10;
             this.lblFTotal.Text = "₱ 0.00";
             this.lblFTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pnlOthers
+            // 
+            this.pnlOthers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));
+            this.pnlOthers.Location = new System.Drawing.Point(3, 208);
+            this.pnlOthers.Name = "pnlOthers";
+            this.pnlOthers.Size = new System.Drawing.Size(37, 36);
+            this.pnlOthers.TabIndex = 3;
             // 
             // lblOthers
             // 
@@ -268,6 +353,19 @@
             this.lblOthers.Text = "Others";
             this.lblOthers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // lblFood
+            // 
+            this.lblFood.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblFood.AutoSize = true;
+            this.lblFood.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFood.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblFood.Location = new System.Drawing.Point(46, 12);
+            this.lblFood.Name = "lblFood";
+            this.lblFood.Size = new System.Drawing.Size(39, 17);
+            this.lblFood.TabIndex = 4;
+            this.lblFood.Text = "Food";
+            this.lblFood.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // lblLeisure
             // 
             this.lblLeisure.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -280,6 +378,19 @@
             this.lblLeisure.TabIndex = 8;
             this.lblLeisure.Text = "Leisure";
             this.lblLeisure.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTransportation
+            // 
+            this.lblTransportation.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblTransportation.AutoSize = true;
+            this.lblTransportation.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransportation.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblTransportation.Location = new System.Drawing.Point(46, 53);
+            this.lblTransportation.Name = "lblTransportation";
+            this.lblTransportation.Size = new System.Drawing.Size(77, 17);
+            this.lblTransportation.TabIndex = 5;
+            this.lblTransportation.Text = "Transaction";
+            this.lblTransportation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblHealth
             // 
@@ -307,80 +418,6 @@
             this.lblUtilities.Text = "Utilities";
             this.lblUtilities.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblTransportation
-            // 
-            this.lblTransportation.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblTransportation.AutoSize = true;
-            this.lblTransportation.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTransportation.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblTransportation.Location = new System.Drawing.Point(46, 53);
-            this.lblTransportation.Name = "lblTransportation";
-            this.lblTransportation.Size = new System.Drawing.Size(77, 17);
-            this.lblTransportation.TabIndex = 5;
-            this.lblTransportation.Text = "Transaction";
-            this.lblTransportation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblFood
-            // 
-            this.lblFood.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblFood.AutoSize = true;
-            this.lblFood.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFood.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblFood.Location = new System.Drawing.Point(46, 12);
-            this.lblFood.Name = "lblFood";
-            this.lblFood.Size = new System.Drawing.Size(39, 17);
-            this.lblFood.TabIndex = 4;
-            this.lblFood.Text = "Food";
-            this.lblFood.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pnlOthers
-            // 
-            this.pnlOthers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));
-            this.pnlOthers.Location = new System.Drawing.Point(3, 208);
-            this.pnlOthers.Name = "pnlOthers";
-            this.pnlOthers.Size = new System.Drawing.Size(37, 36);
-            this.pnlOthers.TabIndex = 3;
-            // 
-            // pnlLeisure
-            // 
-            this.pnlLeisure.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(123)))));
-            this.pnlLeisure.Location = new System.Drawing.Point(3, 167);
-            this.pnlLeisure.Name = "pnlLeisure";
-            this.pnlLeisure.Size = new System.Drawing.Size(37, 35);
-            this.pnlLeisure.TabIndex = 2;
-            // 
-            // pnlHealth
-            // 
-            this.pnlHealth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(141)))), ((int)(((byte)(184)))));
-            this.pnlHealth.Location = new System.Drawing.Point(3, 126);
-            this.pnlHealth.Name = "pnlHealth";
-            this.pnlHealth.Size = new System.Drawing.Size(37, 35);
-            this.pnlHealth.TabIndex = 2;
-            // 
-            // pnlUtilities
-            // 
-            this.pnlUtilities.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(203)))), ((int)(((byte)(196)))));
-            this.pnlUtilities.Location = new System.Drawing.Point(3, 85);
-            this.pnlUtilities.Name = "pnlUtilities";
-            this.pnlUtilities.Size = new System.Drawing.Size(37, 35);
-            this.pnlUtilities.TabIndex = 2;
-            // 
-            // pnlTransportation
-            // 
-            this.pnlTransportation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(182)))), ((int)(((byte)(172)))));
-            this.pnlTransportation.Location = new System.Drawing.Point(3, 44);
-            this.pnlTransportation.Name = "pnlTransportation";
-            this.pnlTransportation.Size = new System.Drawing.Size(37, 35);
-            this.pnlTransportation.TabIndex = 2;
-            // 
-            // pnlFood
-            // 
-            this.pnlFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
-            this.pnlFood.Location = new System.Drawing.Point(3, 3);
-            this.pnlFood.Name = "pnlFood";
-            this.pnlFood.Size = new System.Drawing.Size(37, 35);
-            this.pnlFood.TabIndex = 1;
-            // 
             // lblBreakdown
             // 
             this.lblBreakdown.AutoSize = true;
@@ -397,18 +434,18 @@
             this.pnlSummary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlSummary.Controls.Add(this.lblMSummary);
             this.pnlSummary.Controls.Add(this.lblReport);
-            this.pnlSummary.Location = new System.Drawing.Point(236, 357);
+            this.pnlSummary.Location = new System.Drawing.Point(215, 357);
             this.pnlSummary.Name = "pnlSummary";
             this.pnlSummary.Size = new System.Drawing.Size(261, 130);
             this.pnlSummary.TabIndex = 7;
             // 
             // lblMSummary
             // 
-            this.lblMSummary.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMSummary.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMSummary.ForeColor = System.Drawing.Color.DarkGreen;
             this.lblMSummary.Location = new System.Drawing.Point(6, 24);
             this.lblMSummary.Name = "lblMSummary";
-            this.lblMSummary.Size = new System.Drawing.Size(249, 104);
+            this.lblMSummary.Size = new System.Drawing.Size(249, 89);
             this.lblMSummary.TabIndex = 16;
             this.lblMSummary.Text = "Report";
             // 
@@ -714,42 +751,6 @@
             this.HomePicBoxSum.TabIndex = 15;
             this.HomePicBoxSum.TabStop = false;
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.86275F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.64706F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tableLayoutPanel1.Controls.Add(this.lblOTotal, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.pnlFood, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblLTotal, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.pnlTransportation, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblHTotal, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.pnlUtilities, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblUTotal, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.pnlHealth, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lblTTotal, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.pnlLeisure, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lblFTotal, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pnlOthers, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.lblOthers, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.lblFood, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblLeisure, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lblTransportation, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblHealth, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lblUtilities, 1, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 26);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(255, 247);
-            this.tableLayoutPanel1.TabIndex = 41;
-            // 
             // SummaryForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -763,6 +764,7 @@
             this.Controls.Add(this.cmbYear);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblSummary);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1053, 557);
             this.MinimizeBox = false;
@@ -775,6 +777,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartSummary)).EndInit();
             this.pnlBreakdown.ResumeLayout(false);
             this.pnlBreakdown.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.pnlSummary.ResumeLayout(false);
             this.pnlSummary.PerformLayout();
             this.SidebarTableLayoutSum.ResumeLayout(false);
@@ -790,8 +794,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxSum)).EndInit();
             this.HomeTabLaySum.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxSum)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
