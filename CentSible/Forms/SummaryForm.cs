@@ -153,8 +153,8 @@ namespace CentSible.Forms
                 else
                 {
                     lblMSummary.Text = "In " + monthName + ", total expenditures reached ₱" + totalSpent.ToString("N0") + ". " +
-                                       "The largest shre went to " + highestCategories[0] + " (" + highestPercent + "%), " +
-                                       "while the smallest portion was " + lowestCategories[0] + lowestCategories[0] + " (" + lowestPercent + "&).";
+                                       "The largest share went to " + highestCategories[0] + " (" + highestPercent + "%), " +
+                                       "while the smallest portion was " + lowestCategories[0] +" (" + lowestPercent + "%).";
                 }
                 return;
             }

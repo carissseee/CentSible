@@ -29,9 +29,9 @@
        
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lblSummary = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.cmbYear = new System.Windows.Forms.ComboBox();
@@ -80,6 +80,7 @@
             this.HomeTabLaySum = new System.Windows.Forms.TableLayoutPanel();
             this.HomeButtonSum = new System.Windows.Forms.Button();
             this.HomePicBoxSum = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.chartSummary)).BeginInit();
             this.pnlBreakdown.SuspendLayout();
             this.pnlSummary.SuspendLayout();
@@ -96,45 +97,51 @@
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxSum)).BeginInit();
             this.HomeTabLaySum.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxSum)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblSummary
             // 
             this.lblSummary.AutoSize = true;
-            this.lblSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSummary.Location = new System.Drawing.Point(201, 9);
+            this.lblSummary.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.lblSummary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.lblSummary.Location = new System.Drawing.Point(231, 20);
             this.lblSummary.Name = "lblSummary";
-            this.lblSummary.Size = new System.Drawing.Size(121, 29);
+            this.lblSummary.Size = new System.Drawing.Size(112, 30);
             this.lblSummary.TabIndex = 1;
             this.lblSummary.Text = "Summary";
             // 
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold);
             this.lblDate.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblDate.Location = new System.Drawing.Point(212, 38);
+            this.lblDate.Location = new System.Drawing.Point(237, 44);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(96, 18);
+            this.lblDate.Size = new System.Drawing.Size(78, 17);
             this.lblDate.TabIndex = 2;
             this.lblDate.Text = "March 2026";
             // 
             // cmbYear
             // 
+            this.cmbYear.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbYear.ForeColor = System.Drawing.Color.DarkGreen;
             this.cmbYear.FormattingEnabled = true;
-            this.cmbYear.Location = new System.Drawing.Point(723, 16);
+            this.cmbYear.Location = new System.Drawing.Point(757, 42);
             this.cmbYear.Name = "cmbYear";
-            this.cmbYear.Size = new System.Drawing.Size(121, 24);
+            this.cmbYear.Size = new System.Drawing.Size(121, 25);
             this.cmbYear.TabIndex = 3;
             this.cmbYear.Text = "Year";
             this.cmbYear.SelectedIndexChanged += new System.EventHandler(this.cmbYear_SelectedIndexChanged);
             // 
             // cmbMonth
             // 
+            this.cmbMonth.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMonth.ForeColor = System.Drawing.Color.DarkGreen;
             this.cmbMonth.FormattingEnabled = true;
-            this.cmbMonth.Location = new System.Drawing.Point(868, 16);
+            this.cmbMonth.Location = new System.Drawing.Point(902, 42);
             this.cmbMonth.Name = "cmbMonth";
-            this.cmbMonth.Size = new System.Drawing.Size(121, 24);
+            this.cmbMonth.Size = new System.Drawing.Size(121, 25);
             this.cmbMonth.TabIndex = 4;
             this.cmbMonth.Text = "Month";
             this.cmbMonth.SelectedIndexChanged += new System.EventHandler(this.cmbMonth_SelectedIndexChanged);
@@ -144,253 +151,275 @@
             this.chartSummary.BorderlineColor = System.Drawing.Color.DarkGreen;
             this.chartSummary.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartSummary.BorderlineWidth = 2;
-            chartArea1.Name = "ChartArea1";
-            this.chartSummary.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartSummary.Legends.Add(legend1);
-            this.chartSummary.Location = new System.Drawing.Point(627, 75);
+            chartArea2.Name = "ChartArea1";
+            this.chartSummary.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartSummary.Legends.Add(legend2);
+            this.chartSummary.Location = new System.Drawing.Point(516, 75);
             this.chartSummary.Name = "chartSummary";
             this.chartSummary.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartSummary.Series.Add(series1);
-            this.chartSummary.Size = new System.Drawing.Size(362, 412);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartSummary.Series.Add(series2);
+            this.chartSummary.Size = new System.Drawing.Size(507, 412);
             this.chartSummary.TabIndex = 5;
             this.chartSummary.Text = "Category Breakdown";
             // 
             // pnlBreakdown
             // 
-            this.pnlBreakdown.Controls.Add(this.lblOTotal);
-            this.pnlBreakdown.Controls.Add(this.lblLTotal);
-            this.pnlBreakdown.Controls.Add(this.lblHTotal);
-            this.pnlBreakdown.Controls.Add(this.lblUTotal);
-            this.pnlBreakdown.Controls.Add(this.lblTTotal);
-            this.pnlBreakdown.Controls.Add(this.lblFTotal);
-            this.pnlBreakdown.Controls.Add(this.lblOthers);
-            this.pnlBreakdown.Controls.Add(this.lblLeisure);
-            this.pnlBreakdown.Controls.Add(this.lblHealth);
-            this.pnlBreakdown.Controls.Add(this.lblUtilities);
-            this.pnlBreakdown.Controls.Add(this.lblTransportation);
-            this.pnlBreakdown.Controls.Add(this.lblFood);
-            this.pnlBreakdown.Controls.Add(this.pnlOthers);
-            this.pnlBreakdown.Controls.Add(this.pnlLeisure);
-            this.pnlBreakdown.Controls.Add(this.pnlHealth);
-            this.pnlBreakdown.Controls.Add(this.pnlUtilities);
-            this.pnlBreakdown.Controls.Add(this.pnlTransportation);
-            this.pnlBreakdown.Controls.Add(this.pnlFood);
+            this.pnlBreakdown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlBreakdown.Controls.Add(this.tableLayoutPanel1);
             this.pnlBreakdown.Controls.Add(this.lblBreakdown);
-            this.pnlBreakdown.Location = new System.Drawing.Point(215, 75);
+            this.pnlBreakdown.Location = new System.Drawing.Point(236, 75);
             this.pnlBreakdown.Name = "pnlBreakdown";
-            this.pnlBreakdown.Size = new System.Drawing.Size(377, 276);
+            this.pnlBreakdown.Size = new System.Drawing.Size(261, 276);
             this.pnlBreakdown.TabIndex = 6;
             // 
             // lblOTotal
             // 
+            this.lblOTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblOTotal.AutoSize = true;
-            this.lblOTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOTotal.Location = new System.Drawing.Point(286, 238);
+            this.lblOTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOTotal.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblOTotal.Location = new System.Drawing.Point(208, 217);
             this.lblOTotal.Name = "lblOTotal";
-            this.lblOTotal.Size = new System.Drawing.Size(49, 16);
+            this.lblOTotal.Size = new System.Drawing.Size(44, 17);
             this.lblOTotal.TabIndex = 15;
             this.lblOTotal.Text = "₱ 0.00";
+            this.lblOTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblLTotal
             // 
+            this.lblLTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblLTotal.AutoSize = true;
-            this.lblLTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLTotal.Location = new System.Drawing.Point(286, 201);
+            this.lblLTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLTotal.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblLTotal.Location = new System.Drawing.Point(208, 176);
             this.lblLTotal.Name = "lblLTotal";
-            this.lblLTotal.Size = new System.Drawing.Size(49, 16);
+            this.lblLTotal.Size = new System.Drawing.Size(44, 17);
             this.lblLTotal.TabIndex = 14;
             this.lblLTotal.Text = "₱ 0.00";
+            this.lblLTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblHTotal
             // 
+            this.lblHTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblHTotal.AutoSize = true;
-            this.lblHTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHTotal.Location = new System.Drawing.Point(286, 163);
+            this.lblHTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHTotal.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblHTotal.Location = new System.Drawing.Point(208, 135);
             this.lblHTotal.Name = "lblHTotal";
-            this.lblHTotal.Size = new System.Drawing.Size(49, 16);
+            this.lblHTotal.Size = new System.Drawing.Size(44, 17);
             this.lblHTotal.TabIndex = 13;
             this.lblHTotal.Text = "₱ 0.00";
+            this.lblHTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblUTotal
             // 
+            this.lblUTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblUTotal.AutoSize = true;
-            this.lblUTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUTotal.Location = new System.Drawing.Point(286, 126);
+            this.lblUTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUTotal.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblUTotal.Location = new System.Drawing.Point(208, 94);
             this.lblUTotal.Name = "lblUTotal";
-            this.lblUTotal.Size = new System.Drawing.Size(49, 16);
+            this.lblUTotal.Size = new System.Drawing.Size(44, 17);
             this.lblUTotal.TabIndex = 12;
             this.lblUTotal.Text = "₱ 0.00";
+            this.lblUTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblTTotal
             // 
+            this.lblTTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblTTotal.AutoSize = true;
-            this.lblTTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTTotal.Location = new System.Drawing.Point(286, 85);
+            this.lblTTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTTotal.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblTTotal.Location = new System.Drawing.Point(208, 53);
             this.lblTTotal.Name = "lblTTotal";
-            this.lblTTotal.Size = new System.Drawing.Size(49, 16);
+            this.lblTTotal.Size = new System.Drawing.Size(44, 17);
             this.lblTTotal.TabIndex = 11;
             this.lblTTotal.Text = "₱ 0.00";
+            this.lblTTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblFTotal
             // 
+            this.lblFTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblFTotal.AutoSize = true;
-            this.lblFTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFTotal.Location = new System.Drawing.Point(286, 45);
+            this.lblFTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFTotal.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblFTotal.Location = new System.Drawing.Point(208, 12);
             this.lblFTotal.Name = "lblFTotal";
-            this.lblFTotal.Size = new System.Drawing.Size(49, 16);
+            this.lblFTotal.Size = new System.Drawing.Size(44, 17);
             this.lblFTotal.TabIndex = 10;
             this.lblFTotal.Text = "₱ 0.00";
+            this.lblFTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblOthers
             // 
+            this.lblOthers.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblOthers.AutoSize = true;
-            this.lblOthers.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOthers.Location = new System.Drawing.Point(81, 238);
+            this.lblOthers.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOthers.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblOthers.Location = new System.Drawing.Point(46, 217);
             this.lblOthers.Name = "lblOthers";
-            this.lblOthers.Size = new System.Drawing.Size(52, 16);
+            this.lblOthers.Size = new System.Drawing.Size(49, 17);
             this.lblOthers.TabIndex = 9;
             this.lblOthers.Text = "Others";
+            this.lblOthers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblLeisure
             // 
+            this.lblLeisure.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblLeisure.AutoSize = true;
-            this.lblLeisure.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLeisure.Location = new System.Drawing.Point(81, 201);
+            this.lblLeisure.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLeisure.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblLeisure.Location = new System.Drawing.Point(46, 176);
             this.lblLeisure.Name = "lblLeisure";
-            this.lblLeisure.Size = new System.Drawing.Size(58, 16);
+            this.lblLeisure.Size = new System.Drawing.Size(50, 17);
             this.lblLeisure.TabIndex = 8;
             this.lblLeisure.Text = "Leisure";
+            this.lblLeisure.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblHealth
             // 
+            this.lblHealth.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblHealth.AutoSize = true;
-            this.lblHealth.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHealth.Location = new System.Drawing.Point(81, 163);
+            this.lblHealth.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHealth.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblHealth.Location = new System.Drawing.Point(46, 135);
             this.lblHealth.Name = "lblHealth";
-            this.lblHealth.Size = new System.Drawing.Size(52, 16);
+            this.lblHealth.Size = new System.Drawing.Size(48, 17);
             this.lblHealth.TabIndex = 7;
             this.lblHealth.Text = "Health";
+            this.lblHealth.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblUtilities
             // 
+            this.lblUtilities.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblUtilities.AutoSize = true;
-            this.lblUtilities.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUtilities.Location = new System.Drawing.Point(81, 123);
+            this.lblUtilities.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUtilities.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblUtilities.Location = new System.Drawing.Point(46, 94);
             this.lblUtilities.Name = "lblUtilities";
-            this.lblUtilities.Size = new System.Drawing.Size(59, 16);
+            this.lblUtilities.Size = new System.Drawing.Size(52, 17);
             this.lblUtilities.TabIndex = 6;
             this.lblUtilities.Text = "Utilities";
+            this.lblUtilities.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblTransportation
             // 
+            this.lblTransportation.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblTransportation.AutoSize = true;
-            this.lblTransportation.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTransportation.Location = new System.Drawing.Point(81, 85);
+            this.lblTransportation.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransportation.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblTransportation.Location = new System.Drawing.Point(46, 53);
             this.lblTransportation.Name = "lblTransportation";
-            this.lblTransportation.Size = new System.Drawing.Size(89, 16);
+            this.lblTransportation.Size = new System.Drawing.Size(77, 17);
             this.lblTransportation.TabIndex = 5;
             this.lblTransportation.Text = "Transaction";
+            this.lblTransportation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblFood
             // 
+            this.lblFood.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblFood.AutoSize = true;
-            this.lblFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFood.Location = new System.Drawing.Point(81, 45);
+            this.lblFood.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFood.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblFood.Location = new System.Drawing.Point(46, 12);
             this.lblFood.Name = "lblFood";
-            this.lblFood.Size = new System.Drawing.Size(43, 16);
+            this.lblFood.Size = new System.Drawing.Size(39, 17);
             this.lblFood.TabIndex = 4;
             this.lblFood.Text = "Food";
+            this.lblFood.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pnlOthers
             // 
             this.pnlOthers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));
-            this.pnlOthers.Location = new System.Drawing.Point(27, 231);
+            this.pnlOthers.Location = new System.Drawing.Point(3, 208);
             this.pnlOthers.Name = "pnlOthers";
-            this.pnlOthers.Size = new System.Drawing.Size(39, 33);
+            this.pnlOthers.Size = new System.Drawing.Size(37, 36);
             this.pnlOthers.TabIndex = 3;
             // 
             // pnlLeisure
             // 
             this.pnlLeisure.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(123)))));
-            this.pnlLeisure.Location = new System.Drawing.Point(27, 192);
+            this.pnlLeisure.Location = new System.Drawing.Point(3, 167);
             this.pnlLeisure.Name = "pnlLeisure";
-            this.pnlLeisure.Size = new System.Drawing.Size(39, 33);
+            this.pnlLeisure.Size = new System.Drawing.Size(37, 35);
             this.pnlLeisure.TabIndex = 2;
             // 
             // pnlHealth
             // 
             this.pnlHealth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(141)))), ((int)(((byte)(184)))));
-            this.pnlHealth.Location = new System.Drawing.Point(27, 153);
+            this.pnlHealth.Location = new System.Drawing.Point(3, 126);
             this.pnlHealth.Name = "pnlHealth";
-            this.pnlHealth.Size = new System.Drawing.Size(39, 33);
+            this.pnlHealth.Size = new System.Drawing.Size(37, 35);
             this.pnlHealth.TabIndex = 2;
             // 
             // pnlUtilities
             // 
             this.pnlUtilities.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(203)))), ((int)(((byte)(196)))));
-            this.pnlUtilities.Location = new System.Drawing.Point(27, 114);
+            this.pnlUtilities.Location = new System.Drawing.Point(3, 85);
             this.pnlUtilities.Name = "pnlUtilities";
-            this.pnlUtilities.Size = new System.Drawing.Size(39, 33);
+            this.pnlUtilities.Size = new System.Drawing.Size(37, 35);
             this.pnlUtilities.TabIndex = 2;
             // 
             // pnlTransportation
             // 
             this.pnlTransportation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(182)))), ((int)(((byte)(172)))));
-            this.pnlTransportation.Location = new System.Drawing.Point(27, 75);
+            this.pnlTransportation.Location = new System.Drawing.Point(3, 44);
             this.pnlTransportation.Name = "pnlTransportation";
-            this.pnlTransportation.Size = new System.Drawing.Size(39, 33);
+            this.pnlTransportation.Size = new System.Drawing.Size(37, 35);
             this.pnlTransportation.TabIndex = 2;
             // 
             // pnlFood
             // 
             this.pnlFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
-            this.pnlFood.Location = new System.Drawing.Point(27, 36);
+            this.pnlFood.Location = new System.Drawing.Point(3, 3);
             this.pnlFood.Name = "pnlFood";
-            this.pnlFood.Size = new System.Drawing.Size(39, 33);
+            this.pnlFood.Size = new System.Drawing.Size(37, 35);
             this.pnlFood.TabIndex = 1;
             // 
             // lblBreakdown
             // 
             this.lblBreakdown.AutoSize = true;
-            this.lblBreakdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBreakdown.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblBreakdown.Location = new System.Drawing.Point(14, 12);
+            this.lblBreakdown.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBreakdown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.lblBreakdown.Location = new System.Drawing.Point(5, 0);
             this.lblBreakdown.Name = "lblBreakdown";
-            this.lblBreakdown.Size = new System.Drawing.Size(184, 20);
+            this.lblBreakdown.Size = new System.Drawing.Size(173, 23);
             this.lblBreakdown.TabIndex = 0;
             this.lblBreakdown.Text = "Spending Breakdown";
             // 
             // pnlSummary
             // 
+            this.pnlSummary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlSummary.Controls.Add(this.lblMSummary);
             this.pnlSummary.Controls.Add(this.lblReport);
-            this.pnlSummary.Location = new System.Drawing.Point(215, 357);
+            this.pnlSummary.Location = new System.Drawing.Point(236, 357);
             this.pnlSummary.Name = "pnlSummary";
-            this.pnlSummary.Size = new System.Drawing.Size(377, 130);
+            this.pnlSummary.Size = new System.Drawing.Size(261, 130);
             this.pnlSummary.TabIndex = 7;
             // 
             // lblMSummary
             // 
-            this.lblMSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMSummary.Location = new System.Drawing.Point(24, 32);
+            this.lblMSummary.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMSummary.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblMSummary.Location = new System.Drawing.Point(6, 24);
             this.lblMSummary.Name = "lblMSummary";
-            this.lblMSummary.Size = new System.Drawing.Size(335, 84);
+            this.lblMSummary.Size = new System.Drawing.Size(249, 104);
             this.lblMSummary.TabIndex = 16;
             this.lblMSummary.Text = "Report";
             // 
             // lblReport
             // 
             this.lblReport.AutoSize = true;
-            this.lblReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReport.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblReport.Location = new System.Drawing.Point(14, 12);
+            this.lblReport.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.lblReport.Location = new System.Drawing.Point(5, 1);
             this.lblReport.Name = "lblReport";
-            this.lblReport.Size = new System.Drawing.Size(149, 20);
+            this.lblReport.Size = new System.Drawing.Size(141, 23);
             this.lblReport.TabIndex = 0;
             this.lblReport.Text = "Summary Report";
             // 
@@ -539,16 +568,16 @@
             // 
             // SumButtonSum
             // 
-            this.SumButtonSum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.SumButtonSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.SumButtonSum.FlatAppearance.BorderSize = 0;
+            this.SumButtonSum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.SumButtonSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.SumButtonSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SumButtonSum.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.SumButtonSum.ForeColor = System.Drawing.Color.White;
-            this.SumButtonSum.Location = new System.Drawing.Point(66, 3);
+            this.SumButtonSum.Location = new System.Drawing.Point(67, 3);
             this.SumButtonSum.Name = "SumButtonSum";
-            this.SumButtonSum.Size = new System.Drawing.Size(114, 38);
+            this.SumButtonSum.Size = new System.Drawing.Size(113, 38);
             this.SumButtonSum.TabIndex = 11;
             this.SumButtonSum.Text = "Summary";
             this.SumButtonSum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -658,9 +687,9 @@
             // 
             // HomeButtonSum
             // 
-            this.HomeButtonSum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.HomeButtonSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
             this.HomeButtonSum.FlatAppearance.BorderSize = 0;
+            this.HomeButtonSum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.HomeButtonSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
             this.HomeButtonSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeButtonSum.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -684,6 +713,42 @@
             this.HomePicBoxSum.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.HomePicBoxSum.TabIndex = 15;
             this.HomePicBoxSum.TabStop = false;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.86275F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.64706F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel1.Controls.Add(this.lblOTotal, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.pnlFood, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblLTotal, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.pnlTransportation, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblHTotal, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.pnlUtilities, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblUTotal, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.pnlHealth, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lblTTotal, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.pnlLeisure, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lblFTotal, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pnlOthers, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lblOthers, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lblFood, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblLeisure, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lblTransportation, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblHealth, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lblUtilities, 1, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 26);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(255, 247);
+            this.tableLayoutPanel1.TabIndex = 41;
             // 
             // SummaryForm
             // 
@@ -725,6 +790,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxSum)).EndInit();
             this.HomeTabLaySum.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxSum)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -778,5 +845,6 @@
         private System.Windows.Forms.TableLayoutPanel HomeTabLaySum;
         private System.Windows.Forms.Button HomeButtonSum;
         private System.Windows.Forms.PictureBox HomePicBoxSum;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
