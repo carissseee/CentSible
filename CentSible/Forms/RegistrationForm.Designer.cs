@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
             this.CreateUserLabelRegis = new System.Windows.Forms.Label();
             this.CreatePassLabelRegis = new System.Windows.Forms.Label();
             this.ConfirmPassLabelRegis = new System.Windows.Forms.Label();
@@ -180,7 +181,7 @@
             this.CreatePassTextRegis.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.CreatePassTextRegis.ForeColor = System.Drawing.Color.Gray;
             this.CreatePassTextRegis.Location = new System.Drawing.Point(301, 47);
-            this.CreatePassTextRegis.Name = "CreatePassTextRegis";         
+            this.CreatePassTextRegis.Name = "CreatePassTextRegis";
             this.CreatePassTextRegis.Placeholder = "Enter password";
             this.CreatePassTextRegis.PlaceholderColor = System.Drawing.Color.Gray;
             this.CreatePassTextRegis.Size = new System.Drawing.Size(308, 22);
@@ -204,6 +205,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.MainLayoutRegis);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(818, 497);
             this.MinimizeBox = false;

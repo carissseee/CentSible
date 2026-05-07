@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GoalForm));
             this.IndicatorPercentLabelGoal = new System.Windows.Forms.Label();
             this.pbGoalProgress = new System.Windows.Forms.ProgressBar();
             this.MilestoneBarGoal = new System.Windows.Forms.ProgressBar();
@@ -56,6 +57,8 @@
             this.dynamicGoalLabel = new System.Windows.Forms.Label();
             this.Spacer1 = new System.Windows.Forms.Panel();
             this.SpendingGoalTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
+            this.TargetAmountTextGoal = new PlaceholderText.PlaceholderTextBox();
+            this.CurrentAmountTextGoal = new PlaceholderText.PlaceholderTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TargetDateLabelGoal = new System.Windows.Forms.Label();
             this.CurrentAmountLabelGoal = new System.Windows.Forms.Label();
@@ -87,8 +90,6 @@
             this.HomeTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
             this.HomeButtonGoal = new System.Windows.Forms.Button();
             this.HomePicBoxGoal = new System.Windows.Forms.PictureBox();
-            this.TargetAmountTextGoal = new PlaceholderText.PlaceholderTextBox();
-            this.CurrentAmountTextGoal = new PlaceholderText.PlaceholderTextBox();
             this.BarMainTabLayGoal.SuspendLayout();
             this.IndicatorBarBottomLayoutGoal.SuspendLayout();
             this.IndicatorBarTopLayoutGoal.SuspendLayout();
@@ -505,6 +506,28 @@
             this.SpendingGoalTabLayGoal.Size = new System.Drawing.Size(342, 233);
             this.SpendingGoalTabLayGoal.TabIndex = 37;
             // 
+            // TargetAmountTextGoal
+            // 
+            this.TargetAmountTextGoal.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TargetAmountTextGoal.ForeColor = System.Drawing.Color.Gray;
+            this.TargetAmountTextGoal.Location = new System.Drawing.Point(231, 18);
+            this.TargetAmountTextGoal.Name = "TargetAmountTextGoal";
+            this.TargetAmountTextGoal.Placeholder = "₱";
+            this.TargetAmountTextGoal.PlaceholderColor = System.Drawing.Color.Gray;
+            this.TargetAmountTextGoal.Size = new System.Drawing.Size(68, 22);
+            this.TargetAmountTextGoal.TabIndex = 38;
+            // 
+            // CurrentAmountTextGoal
+            // 
+            this.CurrentAmountTextGoal.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.CurrentAmountTextGoal.ForeColor = System.Drawing.Color.Gray;
+            this.CurrentAmountTextGoal.Location = new System.Drawing.Point(231, 76);
+            this.CurrentAmountTextGoal.Name = "CurrentAmountTextGoal";
+            this.CurrentAmountTextGoal.Placeholder = "₱";
+            this.CurrentAmountTextGoal.PlaceholderColor = System.Drawing.Color.Gray;
+            this.CurrentAmountTextGoal.Size = new System.Drawing.Size(68, 22);
+            this.CurrentAmountTextGoal.TabIndex = 39;
+            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -798,7 +821,6 @@
             this.TranTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TranTabLayGoal.Size = new System.Drawing.Size(183, 44);
             this.TranTabLayGoal.TabIndex = 23;
-            this.TranButtonGoal.Click += new System.EventHandler(this.TranButtonGoal_Click);
             // 
             // TranButtonGoal
             // 
@@ -816,6 +838,7 @@
             this.TranButtonGoal.Text = "Transactions";
             this.TranButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TranButtonGoal.UseVisualStyleBackColor = false;
+            this.TranButtonGoal.Click += new System.EventHandler(this.TranButtonGoal_Click);
             // 
             // TranPicBoxGoal
             // 
@@ -914,28 +937,6 @@
             this.HomePicBoxGoal.TabIndex = 15;
             this.HomePicBoxGoal.TabStop = false;
             // 
-            // TargetAmountTextGoal
-            // 
-            this.TargetAmountTextGoal.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TargetAmountTextGoal.ForeColor = System.Drawing.Color.Gray;
-            this.TargetAmountTextGoal.Location = new System.Drawing.Point(231, 18);
-            this.TargetAmountTextGoal.Name = "TargetAmountTextGoal";
-            this.TargetAmountTextGoal.Placeholder = "₱";
-            this.TargetAmountTextGoal.PlaceholderColor = System.Drawing.Color.Gray;
-            this.TargetAmountTextGoal.Size = new System.Drawing.Size(68, 22);
-            this.TargetAmountTextGoal.TabIndex = 38;
-            // 
-            // CurrentAmountTextGoal
-            // 
-            this.CurrentAmountTextGoal.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.CurrentAmountTextGoal.ForeColor = System.Drawing.Color.Gray;
-            this.CurrentAmountTextGoal.Location = new System.Drawing.Point(231, 76);
-            this.CurrentAmountTextGoal.Name = "CurrentAmountTextGoal";
-            this.CurrentAmountTextGoal.Placeholder = "₱";
-            this.CurrentAmountTextGoal.PlaceholderColor = System.Drawing.Color.Gray;
-            this.CurrentAmountTextGoal.Size = new System.Drawing.Size(68, 22);
-            this.CurrentAmountTextGoal.TabIndex = 39;
-            // 
             // GoalForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -945,6 +946,7 @@
             this.Controls.Add(this.IndicatorFlowLayGoal);
             this.Controls.Add(this.SpendFlowLayGoal);
             this.Controls.Add(this.SidebarTableLayoutGoal);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1053, 557);
             this.MinimizeBox = false;
