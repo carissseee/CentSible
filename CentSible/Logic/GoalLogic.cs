@@ -14,7 +14,7 @@ namespace CentSible.Logic
     {
         private GoalDB _db = new GoalDB();
 
-        public bool ProcessGoalEntry(int accountId, GoalCategory type, double target, double current, DateTime date)
+        public bool ProcessGoalEntry(int accountId, GoalCategory type, decimal target, decimal current, DateTime date)
         {
             if (target <= 0) throw new Exception("Target amount must be a positive value.");
 
@@ -22,8 +22,10 @@ namespace CentSible.Logic
             {
                 AccountID = accountId,
                 GoalType = type,
-                TargetAmount = (double)(Math.Truncate((decimal)target * 100) / 100),
-                CurrentAmount = (double)(Math.Truncate((decimal)current * 100) / 100),
+                //TargetAmount = (double)(Math.Truncate((decimal)target * 100) / 100),
+                //CurrentAmount = (double)(Math.Truncate((decimal)current * 100) / 100),
+                TargetAmount = Math.Truncate(target * 100) / 100,
+                CurrentAmount = Math.Truncate(current * 100) / 100,
                 TargetDate = date
             };
 
@@ -37,9 +39,11 @@ namespace CentSible.Logic
         {
             if (goal == null) return null;
 
-          
-            decimal truncCurrent = Math.Truncate((decimal)goal.CurrentAmount * 100) / 100;
-            decimal truncTarget = Math.Truncate((decimal)goal.TargetAmount * 100) / 100;
+
+            //decimal truncCurrent = Math.Truncate((decimal)goal.CurrentAmount * 100) / 100;
+            //decimal truncTarget = Math.Truncate((decimal)goal.TargetAmount * 100) / 100;
+            decimal truncCurrent = Math.Truncate(goal.CurrentAmount * 100) / 100;
+            decimal truncTarget = Math.Truncate(goal.TargetAmount * 100) / 100;
             double rawPercent = (truncTarget > 0) ? (double)(truncCurrent / truncTarget) * 100 : 0;
             int cappedPercent = (int)Math.Min(rawPercent, 100);
 

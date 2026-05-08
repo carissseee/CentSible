@@ -16,8 +16,8 @@ namespace CentSible.Models
         public int GoalID { get; set; }
         public int AccountID { get; set; }
         public GoalCategory GoalType { get; set; }
-        public double TargetAmount { get; set; }
-        public double CurrentAmount { get; set; }
+        public decimal TargetAmount { get; set; }
+        public decimal CurrentAmount { get; set; }
         public DateTime TargetDate { get; set; }
     }
 }
