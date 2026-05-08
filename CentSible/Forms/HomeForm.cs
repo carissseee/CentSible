@@ -178,10 +178,11 @@ namespace CentSible.Forms
             {
                 if (goal.TargetAmount <= 0) continue;
 
-                double raw = (goal.CurrentAmount / goal.TargetAmount) * 100;
+               
+                double raw = (double)(goal.CurrentAmount / goal.TargetAmount) * 100;
                 int percent = (int)Math.Min(Math.Max(raw, 0), 100);
-                decimal truncCurrent = Math.Truncate((decimal)goal.CurrentAmount * 100) / 100;
-                decimal truncTarget = Math.Truncate((decimal)goal.TargetAmount * 100) / 100;
+                decimal truncCurrent = Math.Truncate(goal.CurrentAmount * 100) / 100;
+                decimal truncTarget = Math.Truncate(goal.TargetAmount * 100) / 100;
                 string display = $"₱ {truncCurrent:N2} / ₱ {truncTarget:N2}";
 
                 if (goal.GoalType == GoalCategory.Spending)

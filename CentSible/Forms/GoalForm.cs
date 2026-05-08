@@ -152,15 +152,15 @@ namespace CentSible.Forms
         private void btnUpdateGoal_Click(object sender, EventArgs e)
         {
             
-            bool isTargetValid = double.TryParse(TargetAmountTextGoal.Text,
+            bool isTargetValid = decimal.TryParse(TargetAmountTextGoal.Text,
                                                 NumberStyles.AllowDecimalPoint,
                                                 CultureInfo.InvariantCulture,
-                                                out double target);
+                                                out decimal target);
 
-            bool isCurrentValid = double.TryParse(CurrentAmountTextGoal.Text,
+            bool isCurrentValid = decimal.TryParse(CurrentAmountTextGoal.Text,
                                                  NumberStyles.AllowDecimalPoint,
                                                  CultureInfo.InvariantCulture,
-                                                 out double current);
+                                                 out decimal current);
 
             if (!isTargetValid || !isCurrentValid)
             {
