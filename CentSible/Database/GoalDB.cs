@@ -32,8 +32,6 @@ namespace CentSible.Database
                             GoalID = Convert.ToInt32(rdr["goalID"]),
                             AccountID = Convert.ToInt32(rdr["accountID"]),                       
                             GoalType = (GoalCategory)Enum.Parse(typeof(GoalCategory), rdr["goalType"].ToString(), true),
-                            //TargetAmount = Convert.ToDouble(rdr["targetAmount"]),
-                            //CurrentAmount = Convert.ToDouble(rdr["currentAmount"]),
                             TargetAmount = rdr.GetDecimal("targetAmount"),
                             CurrentAmount = rdr.GetDecimal("currentAmount"),
                             TargetDate = Convert.ToDateTime(rdr["targetDate"])

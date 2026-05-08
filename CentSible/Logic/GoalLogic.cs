@@ -17,31 +17,31 @@ namespace CentSible.Logic
         public bool ProcessGoalEntry(int accountId, GoalCategory type, decimal target, decimal current, DateTime date)
         {
             if (target <= 0) throw new Exception("Target amount must be a positive value.");
+            if (target > 99999999.99m) throw new Exception("Target amount is too large. Maximum allowed is ₱ 99,999,999.99");
+            if (current < 0) throw new Exception("Current amount cannot be negative.");
+            if (current > 99999999.99m) throw new Exception("Current amount is too large. Maximum allowed is ₱ 99,999,999.99");
 
             Goal goalModel = new Goal
             {
                 AccountID = accountId,
                 GoalType = type,
-                //TargetAmount = (double)(Math.Truncate((decimal)target * 100) / 100),
-                //CurrentAmount = (double)(Math.Truncate((decimal)current * 100) / 100),
                 TargetAmount = Math.Truncate(target * 100) / 100,
                 CurrentAmount = Math.Truncate(current * 100) / 100,
                 TargetDate = date
+
             };
 
             var existing = _db.GetGoalsByPeriod(accountId, date.Month, date.Year)
                               .Find(x => x.GoalType == type);
 
             return existing != null ? _db.UpdateGoal(goalModel) : _db.AddGoal(goalModel);
+
         }
 
         public GoalDisplayMetrics GetCalculatedMetrics(Goal goal)
         {
             if (goal == null) return null;
 
-
-            //decimal truncCurrent = Math.Truncate((decimal)goal.CurrentAmount * 100) / 100;
-            //decimal truncTarget = Math.Truncate((decimal)goal.TargetAmount * 100) / 100;
             decimal truncCurrent = Math.Truncate(goal.CurrentAmount * 100) / 100;
             decimal truncTarget = Math.Truncate(goal.TargetAmount * 100) / 100;
             double rawPercent = (truncTarget > 0) ? (double)(truncCurrent / truncTarget) * 100 : 0;
