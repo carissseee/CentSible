@@ -161,6 +161,7 @@ namespace CentSible.Forms
             pbMilestone.Value = Math.Min(metrics.LongestStreak, metrics.MaxGoal);
             LongestStreakLabelHome.Text = metrics.StreakText;
             LongestStreakLabelHome.ForeColor = metrics.StatusColor;
+            pbMilestone.ForeColor = metrics.StatusColor;
             pbMilestone.Refresh();
         }
 
