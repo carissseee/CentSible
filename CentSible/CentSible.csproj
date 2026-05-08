@@ -259,8 +259,5 @@
   <ItemGroup>
     <None Include="Icons\Streak.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Icons\centsible.gif" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
