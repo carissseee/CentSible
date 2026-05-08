@@ -233,7 +233,7 @@
             // BarSpendingHome
             // 
             this.BarSpendingHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BarSpendingHome.Location = new System.Drawing.Point(23, 182);
+            this.BarSpendingHome.Location = new System.Drawing.Point(23, 40);
             this.BarSpendingHome.Name = "BarSpendingHome";
             this.BarSpendingHome.Size = new System.Drawing.Size(354, 23);
             this.BarSpendingHome.TabIndex = 8;
@@ -243,7 +243,7 @@
             this.BarSavingHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BarSavingHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
             this.BarSavingHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
-            this.BarSavingHome.Location = new System.Drawing.Point(23, 40);
+            this.BarSavingHome.Location = new System.Drawing.Point(23, 111);
             this.BarSavingHome.Name = "BarSavingHome";
             this.BarSavingHome.Size = new System.Drawing.Size(354, 20);
             this.BarSavingHome.TabIndex = 10;
@@ -536,9 +536,9 @@
             this.SaveSpendTabLayHome.Controls.Add(this.SavingGoalLabelLayHome, 0, 2);
             this.SaveSpendTabLayHome.Controls.Add(this.SpentLabelLayHome, 0, 4);
             this.SaveSpendTabLayHome.Controls.Add(this.SpendingGoalLabelLayHome, 0, 0);
-            this.SaveSpendTabLayHome.Controls.Add(this.BarSavingHome, 0, 1);
-            this.SaveSpendTabLayHome.Controls.Add(this.BarSpentHome, 0, 3);
-            this.SaveSpendTabLayHome.Controls.Add(this.BarSpendingHome, 0, 5);
+            this.SaveSpendTabLayHome.Controls.Add(this.BarSpentHome, 0, 5);
+            this.SaveSpendTabLayHome.Controls.Add(this.BarSpendingHome, 0, 1);
+            this.SaveSpendTabLayHome.Controls.Add(this.BarSavingHome, 0, 3);
             this.SaveSpendTabLayHome.Location = new System.Drawing.Point(3, 49);
             this.SaveSpendTabLayHome.Name = "SaveSpendTabLayHome";
             this.SaveSpendTabLayHome.RowCount = 6;
@@ -628,7 +628,7 @@
             // BarSpentHome
             // 
             this.BarSpentHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BarSpentHome.Location = new System.Drawing.Point(23, 111);
+            this.BarSpentHome.Location = new System.Drawing.Point(23, 182);
             this.BarSpentHome.Name = "BarSpentHome";
             this.BarSpentHome.Size = new System.Drawing.Size(354, 20);
             this.BarSpentHome.TabIndex = 8;
@@ -676,9 +676,9 @@
             this.BudgetOverviewLblHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
             this.BudgetOverviewLblHome.Location = new System.Drawing.Point(49, 8);
             this.BudgetOverviewLblHome.Name = "BudgetOverviewLblHome";
-            this.BudgetOverviewLblHome.Size = new System.Drawing.Size(186, 30);
+            this.BudgetOverviewLblHome.Size = new System.Drawing.Size(208, 30);
             this.BudgetOverviewLblHome.TabIndex = 11;
-            this.BudgetOverviewLblHome.Text = "Budget Overview";
+            this.BudgetOverviewLblHome.Text = "Recent Transactions";
             // 
             // GoalProgLblHome
             // 
@@ -688,9 +688,9 @@
             this.GoalProgLblHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
             this.GoalProgLblHome.Location = new System.Drawing.Point(49, 8);
             this.GoalProgLblHome.Name = "GoalProgLblHome";
-            this.GoalProgLblHome.Size = new System.Drawing.Size(201, 30);
+            this.GoalProgLblHome.Size = new System.Drawing.Size(186, 30);
             this.GoalProgLblHome.TabIndex = 11;
-            this.GoalProgLblHome.Text = "Goals and Progress";
+            this.GoalProgLblHome.Text = "Budget Overview";
             // 
             // lblDashboardHeader
             // 

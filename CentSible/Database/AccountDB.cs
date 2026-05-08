@@ -14,17 +14,16 @@ namespace CentSible.Database
     public class AccountDB
     {
         
-
-        public Account GetAccount(string username, string password)
+        public Account GetAccount(string username)
         {
             using (MySqlConnection conn = new MySqlConnection(DBConfig.ConnectionString))
             {
                 conn.Open();
-                string query = "SELECT * FROM account WHERE username = @u AND BINARY password = @p";
+                
+                string query = "SELECT * FROM account WHERE username = @u";
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@u", username);
-                    cmd.Parameters.AddWithValue("@p", password);
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
@@ -33,6 +32,7 @@ namespace CentSible.Database
                             {
                                 AccountID = reader.GetInt32("accountID"),
                                 Username = reader.GetString("username"),
+                                Password = reader.GetString("password"),
                                 LoginStreak = reader.GetInt32("loginStreak"),
                                 LongestStreak = reader.GetInt32("longestStreak"),
                                 LastLoginDate = reader.IsDBNull(reader.GetOrdinal("lastLoginDate")) ? (DateTime?)null : reader.GetDateTime("lastLoginDate"),

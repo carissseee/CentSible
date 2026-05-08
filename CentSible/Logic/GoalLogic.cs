@@ -16,10 +16,22 @@ namespace CentSible.Logic
 
         public bool ProcessGoalEntry(int accountId, GoalCategory type, decimal target, decimal current, DateTime date)
         {
-            if (target <= 0) throw new Exception("Target amount must be a positive value.");
-            if (target > 99999999.99m) throw new Exception("Target amount is too large. Maximum allowed is ₱ 99,999,999.99");
-            if (current < 0) throw new Exception("Current amount cannot be negative.");
-            if (current > 99999999.99m) throw new Exception("Current amount is too large. Maximum allowed is ₱ 99,999,999.99");
+            if (target <= 0)
+            {
+                throw new Exception("Target amount must be a positive value.");
+            }
+            if (target > 99999999.99m)
+            {
+                throw new Exception("Target amount is too large. Maximum allowed is ₱ 99,999,999.99");
+            }
+            if (current < 0)
+            {
+                throw new Exception("Current amount cannot be negative.");
+            }
+            if (current > 99999999.99m)
+            {
+                throw new Exception("Current amount is too large. Maximum allowed is ₱ 99,999,999.99");
+            }
 
             Goal goalModel = new Goal
             {
@@ -40,7 +52,10 @@ namespace CentSible.Logic
 
         public GoalDisplayMetrics GetCalculatedMetrics(Goal goal)
         {
-            if (goal == null) return null;
+            if (goal == null)
+            {
+                return null;
+            }
 
             decimal truncCurrent = Math.Truncate(goal.CurrentAmount * 100) / 100;
             decimal truncTarget = Math.Truncate(goal.TargetAmount * 100) / 100;
@@ -63,19 +78,42 @@ namespace CentSible.Logic
 
         private int CalculateMilestoneStep(double percent)
         {
-            if (percent >= 100) return 100;
-            if (percent >= 80) return 80;
-            if (percent >= 60) return 60;
-            if (percent >= 40) return 40;
-            if (percent >= 20) return 20;
+            if (percent >= 100)
+            {
+                return 100;
+            }
+                if (percent >= 80) return 80;
+            if (percent >= 60)
+            {
+                return 60;
+            }
+
+            if (percent >= 40) 
+            {
+                return 40;
+            }
+
+            if (percent >= 20) {
+                return 20;
+            }
+
             return 0;
         }
 
         private string GetStatusNote(double percent, bool isSpending)
         {
-            if (percent >= 100) return isSpending ? "STOP! Limit reached." : "Success! Goal achieved.";
-            if (percent >= 75) return isSpending ? "DANGER: Almost at the limit!" : "Final stretch! Almost there.";
-            if (percent >= 50) return isSpending ? "Warning: Half of budget used." : "Halfway! Keep it up.";
+            if (percent >= 100)
+            {
+                return isSpending ? "STOP! Limit reached." : "Success! Goal achieved.";
+            }
+            if (percent >= 75)
+            {
+                return isSpending ? "DANGER: Almost at the limit!" : "Final stretch! Almost there.";
+            }
+            if (percent >= 50)
+            {
+                return isSpending ? "Warning: Half of budget used." : "Halfway! Keep it up.";
+            }
             return isSpending ? "Safe: Well within limit." : "Every peso counts!";
         }
 
