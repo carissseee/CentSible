@@ -15,8 +15,8 @@ namespace CentSible.Database
         {
             List<Transaction> list = new List<Transaction>();
 
-            MySqlConnection conn = new MySqlConnection(DBConfig.ConnectionString);
-            conn.Open();
+            MySqlConnection conn = DBConfig.GetConnection();
+
 
             
             string query = "SELECT * FROM `transaction` WHERE accountID = @accountID " +
@@ -54,8 +54,7 @@ namespace CentSible.Database
         {
             List<Transaction> list = new List<Transaction>();
 
-            MySqlConnection conn = new MySqlConnection(DBConfig.ConnectionString);
-            conn.Open();
+            MySqlConnection conn = DBConfig.GetConnection();
 
             string query = "SELECT * FROM `transaction` " + "WHERE accountID = @accountID " + "AND MONTH(`date`) = @month " + "AND YEAR(`date`) = @year " + "ORDER BY date ASC";
 
@@ -89,8 +88,8 @@ namespace CentSible.Database
 
         public void AddTransaction(Transaction tran)
         {
-            MySqlConnection conn = new MySqlConnection(DBConfig.ConnectionString);
-            conn.Open();
+            MySqlConnection conn = DBConfig.GetConnection();
+ 
 
             string query = "INSERT INTO `transaction` (accountID, description, transactionType, category, amount, date) " + "VALUES (@accountID, @description, @transactionType, @category, @amount, @date)";
 
@@ -109,8 +108,7 @@ namespace CentSible.Database
 
         public void DeleteTransaction(int transactionID)
         {
-            MySqlConnection conn = new MySqlConnection(DBConfig.ConnectionString);
-            conn.Open();
+            MySqlConnection conn = DBConfig.GetConnection();
 
             string query = "DELETE FROM `transaction` WHERE transactionID = @transactionID";
 
@@ -124,8 +122,8 @@ namespace CentSible.Database
 
         public void UpdateTransaction(Transaction tran)
         {
-            MySqlConnection conn = new MySqlConnection(DBConfig.ConnectionString);
-            conn.Open();
+            MySqlConnection conn = DBConfig.GetConnection();
+
 
             string query = "UPDATE `transaction` SET " +
                            "description = @description, " +

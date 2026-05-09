@@ -79,6 +79,8 @@
             this.CentSibleTextPanelGoal = new System.Windows.Forms.Panel();
             this.CentSibleLabelTran = new System.Windows.Forms.Label();
             this.SidebarTableLayoutTran = new System.Windows.Forms.FlowLayoutPanel();
+            this.BudgetPanTran = new System.Windows.Forms.Panel();
+            this.SpenPanTran = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxTran)).BeginInit();
             this.pnlBudgetTran.SuspendLayout();
             this.pnlTotalSpentTran.SuspendLayout();
@@ -97,6 +99,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxGoal)).BeginInit();
             this.CentSibleTextPanelGoal.SuspendLayout();
             this.SidebarTableLayoutTran.SuspendLayout();
+            this.BudgetPanTran.SuspendLayout();
+            this.SpenPanTran.SuspendLayout();
             this.SuspendLayout();
             // 
             // PredPicBoxTran
@@ -131,11 +135,11 @@
             // lblTransactionTran
             // 
             this.lblTransactionTran.AutoSize = true;
-            this.lblTransactionTran.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.lblTransactionTran.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.lblTransactionTran.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
             this.lblTransactionTran.Location = new System.Drawing.Point(231, 20);
             this.lblTransactionTran.Name = "lblTransactionTran";
-            this.lblTransactionTran.Size = new System.Drawing.Size(132, 30);
+            this.lblTransactionTran.Size = new System.Drawing.Size(149, 35);
             this.lblTransactionTran.TabIndex = 2;
             this.lblTransactionTran.Text = "Transaction";
             this.lblTransactionTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -146,7 +150,7 @@
             this.lblDateTran.AutoSize = true;
             this.lblDateTran.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateTran.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblDateTran.Location = new System.Drawing.Point(237, 44);
+            this.lblDateTran.Location = new System.Drawing.Point(237, 52);
             this.lblDateTran.Name = "lblDateTran";
             this.lblDateTran.Size = new System.Drawing.Size(68, 17);
             this.lblDateTran.TabIndex = 3;
@@ -156,11 +160,12 @@
             // cmbYearTran
             // 
             this.cmbYearTran.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbYearTran.Location = new System.Drawing.Point(743, 50);
+            this.cmbYearTran.ForeColor = System.Drawing.Color.DarkGreen;
+            this.cmbYearTran.Location = new System.Drawing.Point(650, 44);
             this.cmbYearTran.MaximumSize = new System.Drawing.Size(150, 0);
             this.cmbYearTran.MinimumSize = new System.Drawing.Size(100, 0);
             this.cmbYearTran.Name = "cmbYearTran";
-            this.cmbYearTran.Size = new System.Drawing.Size(124, 25);
+            this.cmbYearTran.Size = new System.Drawing.Size(105, 25);
             this.cmbYearTran.TabIndex = 4;
             this.cmbYearTran.SelectedIndexChanged += new System.EventHandler(this.cmbYear_SelectedIndexChanged);
             // 
@@ -168,8 +173,8 @@
             // 
             this.cmbMonthTran.Cursor = System.Windows.Forms.Cursors.Default;
             this.cmbMonthTran.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbMonthTran.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.cmbMonthTran.Location = new System.Drawing.Point(873, 50);
+            this.cmbMonthTran.ForeColor = System.Drawing.Color.DarkGreen;
+            this.cmbMonthTran.Location = new System.Drawing.Point(761, 44);
             this.cmbMonthTran.MaximumSize = new System.Drawing.Size(150, 0);
             this.cmbMonthTran.MinimumSize = new System.Drawing.Size(100, 0);
             this.cmbMonthTran.Name = "cmbMonthTran";
@@ -203,12 +208,12 @@
             // 
             // pnlBudgetTran
             // 
-            this.pnlBudgetTran.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlBudgetTran.BackColor = System.Drawing.Color.White;
             this.pnlBudgetTran.Controls.Add(this.lblBudget2);
             this.pnlBudgetTran.Controls.Add(this.lblBudget);
-            this.pnlBudgetTran.Location = new System.Drawing.Point(236, 108);
+            this.pnlBudgetTran.Location = new System.Drawing.Point(3, 2);
             this.pnlBudgetTran.Name = "pnlBudgetTran";
-            this.pnlBudgetTran.Size = new System.Drawing.Size(234, 61);
+            this.pnlBudgetTran.Size = new System.Drawing.Size(196, 61);
             this.pnlBudgetTran.TabIndex = 6;
             this.pnlBudgetTran.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBudget_Paint);
             // 
@@ -237,12 +242,12 @@
             // 
             // pnlTotalSpentTran
             // 
-            this.pnlTotalSpentTran.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTotalSpentTran.BackColor = System.Drawing.Color.White;
             this.pnlTotalSpentTran.Controls.Add(this.lblSpent2);
             this.pnlTotalSpentTran.Controls.Add(this.lblSpent);
-            this.pnlTotalSpentTran.Location = new System.Drawing.Point(509, 108);
+            this.pnlTotalSpentTran.Location = new System.Drawing.Point(3, 2);
             this.pnlTotalSpentTran.Name = "pnlTotalSpentTran";
-            this.pnlTotalSpentTran.Size = new System.Drawing.Size(234, 61);
+            this.pnlTotalSpentTran.Size = new System.Drawing.Size(196, 61);
             this.pnlTotalSpentTran.TabIndex = 7;
             this.pnlTotalSpentTran.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTotalSpent_Paint);
             // 
@@ -274,9 +279,9 @@
             this.pnlRemainingTran.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlRemainingTran.Controls.Add(this.lblRemaining2);
             this.pnlRemainingTran.Controls.Add(this.lblRemaining);
-            this.pnlRemainingTran.Location = new System.Drawing.Point(781, 108);
+            this.pnlRemainingTran.Location = new System.Drawing.Point(687, 110);
             this.pnlRemainingTran.Name = "pnlRemainingTran";
-            this.pnlRemainingTran.Size = new System.Drawing.Size(216, 61);
+            this.pnlRemainingTran.Size = new System.Drawing.Size(198, 61);
             this.pnlRemainingTran.TabIndex = 7;
             // 
             // btnAll
@@ -320,7 +325,7 @@
             this.btnAddTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(94)))), ((int)(((byte)(36)))));
             this.btnAddTransaction.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTransaction.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnAddTransaction.Location = new System.Drawing.Point(781, 201);
+            this.btnAddTransaction.Location = new System.Drawing.Point(669, 201);
             this.btnAddTransaction.Name = "btnAddTransaction";
             this.btnAddTransaction.Size = new System.Drawing.Size(216, 33);
             this.btnAddTransaction.TabIndex = 11;
@@ -429,12 +434,12 @@
             this.dgvTransaction.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTransaction.EnableHeadersVisualStyles = false;
             this.dgvTransaction.GridColor = System.Drawing.Color.DarkGreen;
-            this.dgvTransaction.Location = new System.Drawing.Point(236, 240);
+            this.dgvTransaction.Location = new System.Drawing.Point(240, 240);
             this.dgvTransaction.Name = "dgvTransaction";
             this.dgvTransaction.RowHeadersVisible = false;
             this.dgvTransaction.RowHeadersWidth = 51;
             this.dgvTransaction.RowTemplate.Height = 24;
-            this.dgvTransaction.Size = new System.Drawing.Size(761, 258);
+            this.dgvTransaction.Size = new System.Drawing.Size(645, 258);
             this.dgvTransaction.TabIndex = 12;
             this.dgvTransaction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellContentClick);
             this.dgvTransaction.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellValueChanged);
@@ -712,10 +717,30 @@
             this.SidebarTableLayoutTran.Size = new System.Drawing.Size(200, 521);
             this.SidebarTableLayoutTran.TabIndex = 39;
             // 
+            // BudgetPanTran
+            // 
+            this.BudgetPanTran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(151)))), ((int)(((byte)(107)))));
+            this.BudgetPanTran.Controls.Add(this.pnlBudgetTran);
+            this.BudgetPanTran.Location = new System.Drawing.Point(236, 108);
+            this.BudgetPanTran.Name = "BudgetPanTran";
+            this.BudgetPanTran.Size = new System.Drawing.Size(202, 66);
+            this.BudgetPanTran.TabIndex = 42;
+            // 
+            // SpenPanTran
+            // 
+            this.SpenPanTran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(151)))), ((int)(((byte)(107)))));
+            this.SpenPanTran.Controls.Add(this.pnlTotalSpentTran);
+            this.SpenPanTran.Location = new System.Drawing.Point(463, 108);
+            this.SpenPanTran.Name = "SpenPanTran";
+            this.SpenPanTran.Size = new System.Drawing.Size(202, 66);
+            this.SpenPanTran.TabIndex = 43;
+            // 
             // TransactionForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1035, 510);
+            this.ClientSize = new System.Drawing.Size(932, 510);
+            this.Controls.Add(this.SpenPanTran);
+            this.Controls.Add(this.BudgetPanTran);
             this.Controls.Add(this.SidebarTableLayoutTran);
             this.Controls.Add(this.dgvTransaction);
             this.Controls.Add(this.btnAddTransaction);
@@ -723,17 +748,15 @@
             this.Controls.Add(this.btnExpense);
             this.Controls.Add(this.btnAll);
             this.Controls.Add(this.pnlRemainingTran);
-            this.Controls.Add(this.pnlTotalSpentTran);
-            this.Controls.Add(this.pnlBudgetTran);
             this.Controls.Add(this.cmbMonthTran);
             this.Controls.Add(this.cmbYearTran);
             this.Controls.Add(this.lblDateTran);
             this.Controls.Add(this.lblTransactionTran);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1053, 557);
+            this.MaximumSize = new System.Drawing.Size(950, 557);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1053, 557);
+            this.MinimumSize = new System.Drawing.Size(950, 557);
             this.Name = "TransactionForm";
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -761,6 +784,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxGoal)).EndInit();
             this.CentSibleTextPanelGoal.ResumeLayout(false);
             this.SidebarTableLayoutTran.ResumeLayout(false);
+            this.BudgetPanTran.ResumeLayout(false);
+            this.SpenPanTran.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -815,5 +840,7 @@
         private System.Windows.Forms.PictureBox PredPicBoxGoal;
         private System.Windows.Forms.Button PredButtonGoal;
         private System.Windows.Forms.TableLayoutPanel PredTabLayTran;
+        private System.Windows.Forms.Panel BudgetPanTran;
+        private System.Windows.Forms.Panel SpenPanTran;
     }
 }
