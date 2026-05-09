@@ -13,7 +13,7 @@ namespace CentSible.Database
         public List<Goal> GetGoalsByPeriod(int accountId, int month, int year)
         {
             List<Goal> list = new List<Goal>();
-            using (MySqlConnection conn = new MySqlConnection(DBConfig.ConnectionString))
+            using (MySqlConnection conn = DBConfig.GetConnection())
             {
                 
                 string query = "SELECT * FROM goals WHERE accountID = @id AND MONTH(targetDate) = @m AND YEAR(targetDate) = @y";
@@ -22,7 +22,6 @@ namespace CentSible.Database
                 cmd.Parameters.AddWithValue("@m", month);
                 cmd.Parameters.AddWithValue("@y", year);
 
-                conn.Open();
                 using (MySqlDataReader rdr = cmd.ExecuteReader())
                 {
                     while (rdr.Read())
@@ -44,7 +43,7 @@ namespace CentSible.Database
 
         public bool AddGoal(Goal g)
         {
-            using (MySqlConnection conn = new MySqlConnection(DBConfig.ConnectionString))
+            using (MySqlConnection conn = DBConfig.GetConnection())
             {
                 
                 string query = "INSERT INTO goals (accountID, goalType, targetAmount, currentAmount, targetDate) " +
@@ -57,14 +56,14 @@ namespace CentSible.Database
                 cmd.Parameters.AddWithValue("@current", g.CurrentAmount);
                 cmd.Parameters.AddWithValue("@date", g.TargetDate);
 
-                conn.Open();
+
                 return cmd.ExecuteNonQuery() > 0;
             }
         }
 
         public bool UpdateGoal(Goal g)
         {
-            using (MySqlConnection conn = new MySqlConnection(DBConfig.ConnectionString))
+            using (MySqlConnection conn = DBConfig.GetConnection())
             {
                 
                 string query = "UPDATE goals SET targetAmount = @target, currentAmount = @current, targetDate = @date " +
@@ -77,7 +76,7 @@ namespace CentSible.Database
                 cmd.Parameters.AddWithValue("@id", g.AccountID);
                 cmd.Parameters.AddWithValue("@type", g.GoalType.ToString());
 
-                conn.Open();
+ 
                 return cmd.ExecuteNonQuery() > 0;
             }
         }

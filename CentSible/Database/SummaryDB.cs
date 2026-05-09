@@ -14,9 +14,7 @@ namespace CentSible.Database
         {
             Dictionary<string, decimal> result = new Dictionary<string, decimal>();
 
-            MySqlConnection conn = new MySqlConnection(DBConfig.ConnectionString);
-            conn.Open();
-
+            MySqlConnection conn = DBConfig.GetConnection();
             string query = "SELECT category, SUM(amount) AS total " +
                            "FROM `transaction` " +
                            "WHERE accountID = @accountID " +

@@ -16,10 +16,8 @@ namespace CentSible.Database
         
         public Account GetAccount(string username)
         {
-            using (MySqlConnection conn = new MySqlConnection(DBConfig.ConnectionString))
+            using (MySqlConnection conn = DBConfig.GetConnection())
             {
-                conn.Open();
-                
                 string query = "SELECT * FROM account WHERE username = @u";
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
@@ -47,9 +45,8 @@ namespace CentSible.Database
 
         public void UpdateStreakAndDate(int id, int streak, int longestStreak)
         {
-            using (MySqlConnection conn = new MySqlConnection(DBConfig.ConnectionString))
+            using (MySqlConnection conn = DBConfig.GetConnection())
             {
-                conn.Open();
                 string query = "UPDATE account SET loginStreak = @s, longestStreak = @ls, lastLoginDate = @d WHERE accountID = @id";
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
@@ -64,9 +61,8 @@ namespace CentSible.Database
 
         public void RegisterAccount(Account user)
         {
-            using (MySqlConnection conn = new MySqlConnection(DBConfig.ConnectionString))
+            using (MySqlConnection conn = DBConfig.GetConnection())
             {
-                conn.Open();
                 string query = "INSERT INTO account (username, password, loginStreak, longestStreak, lastLoginDate) " +
                                "VALUES (@u, @p, @s, @ls, NULL)";
 

@@ -89,15 +89,13 @@
             this.GoalPicBoxHome = new System.Windows.Forms.PictureBox();
             this.HomeTabLayHome = new System.Windows.Forms.TableLayoutPanel();
             this.HomePicBoxHome = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.GoalprogPicBoxHome = new System.Windows.Forms.PictureBox();
             this.DaysLblHome = new System.Windows.Forms.Label();
             this.GoalProgFlowLayHome = new System.Windows.Forms.FlowLayoutPanel();
             this.BudOverFlowLayHome = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlSteak = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -121,14 +119,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxHome)).BeginInit();
             this.HomeTabLayHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxHome)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GoalprogPicBoxHome)).BeginInit();
             this.GoalProgFlowLayHome.SuspendLayout();
             this.BudOverFlowLayHome.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlSteak.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -140,7 +136,7 @@
             this.lblCurrentStreak.AutoSize = true;
             this.lblCurrentStreak.Font = new System.Drawing.Font("Sitka Text", 40F);
             this.lblCurrentStreak.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(94)))), ((int)(((byte)(36)))));
-            this.lblCurrentStreak.Location = new System.Drawing.Point(161, 55);
+            this.lblCurrentStreak.Location = new System.Drawing.Point(120, 58);
             this.lblCurrentStreak.Name = "lblCurrentStreak";
             this.lblCurrentStreak.Size = new System.Drawing.Size(82, 97);
             this.lblCurrentStreak.TabIndex = 1;
@@ -150,19 +146,19 @@
             // 
             this.lblStreakTitle.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblStreakTitle.AutoSize = true;
-            this.lblStreakTitle.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStreakTitle.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.lblStreakTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.lblStreakTitle.Location = new System.Drawing.Point(166, 55);
+            this.lblStreakTitle.Location = new System.Drawing.Point(38, 19);
             this.lblStreakTitle.Name = "lblStreakTitle";
-            this.lblStreakTitle.Size = new System.Drawing.Size(119, 23);
+            this.lblStreakTitle.Size = new System.Drawing.Size(199, 30);
             this.lblStreakTitle.TabIndex = 2;
-            this.lblStreakTitle.Text = "Current Streak";
+            this.lblStreakTitle.Text = "CURRENT STREAK";
             // 
             // MonPanelHome
             // 
             this.MonPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MonPanelHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MonPanelHome.Location = new System.Drawing.Point(11, 26);
+            this.MonPanelHome.Location = new System.Drawing.Point(9, 26);
             this.MonPanelHome.Name = "MonPanelHome";
             this.MonPanelHome.Size = new System.Drawing.Size(37, 35);
             this.MonPanelHome.TabIndex = 3;
@@ -171,7 +167,7 @@
             // 
             this.TuePanelHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TuePanelHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TuePanelHome.Location = new System.Drawing.Point(70, 26);
+            this.TuePanelHome.Location = new System.Drawing.Point(65, 26);
             this.TuePanelHome.Name = "TuePanelHome";
             this.TuePanelHome.Size = new System.Drawing.Size(37, 35);
             this.TuePanelHome.TabIndex = 4;
@@ -180,7 +176,7 @@
             // 
             this.WedPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.WedPanelHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.WedPanelHome.Location = new System.Drawing.Point(129, 26);
+            this.WedPanelHome.Location = new System.Drawing.Point(121, 26);
             this.WedPanelHome.Name = "WedPanelHome";
             this.WedPanelHome.Size = new System.Drawing.Size(37, 35);
             this.WedPanelHome.TabIndex = 5;
@@ -189,7 +185,7 @@
             // 
             this.ThuPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ThuPanelHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ThuPanelHome.Location = new System.Drawing.Point(188, 26);
+            this.ThuPanelHome.Location = new System.Drawing.Point(177, 26);
             this.ThuPanelHome.Name = "ThuPanelHome";
             this.ThuPanelHome.Size = new System.Drawing.Size(37, 35);
             this.ThuPanelHome.TabIndex = 4;
@@ -198,7 +194,7 @@
             // 
             this.FriPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.FriPanelHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FriPanelHome.Location = new System.Drawing.Point(247, 26);
+            this.FriPanelHome.Location = new System.Drawing.Point(233, 26);
             this.FriPanelHome.Name = "FriPanelHome";
             this.FriPanelHome.Size = new System.Drawing.Size(37, 35);
             this.FriPanelHome.TabIndex = 4;
@@ -207,7 +203,7 @@
             // 
             this.SatPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.SatPanelHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SatPanelHome.Location = new System.Drawing.Point(306, 26);
+            this.SatPanelHome.Location = new System.Drawing.Point(289, 26);
             this.SatPanelHome.Name = "SatPanelHome";
             this.SatPanelHome.Size = new System.Drawing.Size(37, 35);
             this.SatPanelHome.TabIndex = 4;
@@ -216,7 +212,7 @@
             // 
             this.SunPanelHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.SunPanelHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SunPanelHome.Location = new System.Drawing.Point(367, 26);
+            this.SunPanelHome.Location = new System.Drawing.Point(347, 26);
             this.SunPanelHome.Name = "SunPanelHome";
             this.SunPanelHome.Size = new System.Drawing.Size(37, 35);
             this.SunPanelHome.TabIndex = 4;
@@ -225,11 +221,11 @@
             // 
             this.LongestStreakLabelHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LongestStreakLabelHome.AutoSize = true;
-            this.LongestStreakLabelHome.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LongestStreakLabelHome.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LongestStreakLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.LongestStreakLabelHome.Location = new System.Drawing.Point(3, 82);
+            this.LongestStreakLabelHome.Location = new System.Drawing.Point(3, 95);
             this.LongestStreakLabelHome.Name = "LongestStreakLabelHome";
-            this.LongestStreakLabelHome.Size = new System.Drawing.Size(121, 23);
+            this.LongestStreakLabelHome.Size = new System.Drawing.Size(130, 23);
             this.LongestStreakLabelHome.TabIndex = 6;
             this.LongestStreakLabelHome.Text = "Longest Streak";
             // 
@@ -238,17 +234,17 @@
             this.pbMilestone.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pbMilestone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
             this.pbMilestone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
-            this.pbMilestone.Location = new System.Drawing.Point(8, 119);
+            this.pbMilestone.Location = new System.Drawing.Point(12, 119);
             this.pbMilestone.Name = "pbMilestone";
-            this.pbMilestone.Size = new System.Drawing.Size(411, 27);
+            this.pbMilestone.Size = new System.Drawing.Size(375, 27);
             this.pbMilestone.TabIndex = 7;
             // 
             // BarSpendingHome
             // 
             this.BarSpendingHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BarSpendingHome.Location = new System.Drawing.Point(23, 40);
+            this.BarSpendingHome.Location = new System.Drawing.Point(3, 29);
             this.BarSpendingHome.Name = "BarSpendingHome";
-            this.BarSpendingHome.Size = new System.Drawing.Size(354, 23);
+            this.BarSpendingHome.Size = new System.Drawing.Size(278, 20);
             this.BarSpendingHome.TabIndex = 8;
             // 
             // BarSavingHome
@@ -256,20 +252,20 @@
             this.BarSavingHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BarSavingHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
             this.BarSavingHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
-            this.BarSavingHome.Location = new System.Drawing.Point(23, 111);
+            this.BarSavingHome.Location = new System.Drawing.Point(3, 79);
             this.BarSavingHome.Name = "BarSavingHome";
-            this.BarSavingHome.Size = new System.Drawing.Size(354, 20);
+            this.BarSavingHome.Size = new System.Drawing.Size(278, 20);
             this.BarSavingHome.TabIndex = 10;
             // 
             // SpendStatLabelHome
             // 
             this.SpendStatLabelHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SpendStatLabelHome.AutoSize = true;
-            this.SpendStatLabelHome.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpendStatLabelHome.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SpendStatLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.SpendStatLabelHome.Location = new System.Drawing.Point(310, 8);
+            this.SpendStatLabelHome.Location = new System.Drawing.Point(212, 3);
             this.SpendStatLabelHome.Name = "SpendStatLabelHome";
-            this.SpendStatLabelHome.Size = new System.Drawing.Size(82, 23);
+            this.SpendStatLabelHome.Size = new System.Drawing.Size(63, 17);
             this.SpendStatLabelHome.TabIndex = 11;
             this.SpendStatLabelHome.Text = "Spending";
             this.SpendStatLabelHome.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -278,11 +274,11 @@
             // 
             this.SaveStatLabelHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SaveStatLabelHome.AutoSize = true;
-            this.SaveStatLabelHome.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveStatLabelHome.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveStatLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.SaveStatLabelHome.Location = new System.Drawing.Point(312, 0);
+            this.SaveStatLabelHome.Location = new System.Drawing.Point(230, 1);
             this.SaveStatLabelHome.Name = "SaveStatLabelHome";
-            this.SaveStatLabelHome.Size = new System.Drawing.Size(58, 20);
+            this.SaveStatLabelHome.Size = new System.Drawing.Size(45, 17);
             this.SaveStatLabelHome.TabIndex = 12;
             this.SaveStatLabelHome.Text = "saving";
             this.SaveStatLabelHome.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -291,11 +287,11 @@
             // 
             this.SpendGoalLabelHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.SpendGoalLabelHome.AutoSize = true;
-            this.SpendGoalLabelHome.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpendGoalLabelHome.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SpendGoalLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.SpendGoalLabelHome.Location = new System.Drawing.Point(3, 8);
+            this.SpendGoalLabelHome.Location = new System.Drawing.Point(3, 3);
             this.SpendGoalLabelHome.Name = "SpendGoalLabelHome";
-            this.SpendGoalLabelHome.Size = new System.Drawing.Size(122, 23);
+            this.SpendGoalLabelHome.Size = new System.Drawing.Size(94, 17);
             this.SpendGoalLabelHome.TabIndex = 13;
             this.SpendGoalLabelHome.Text = "Spending Goal";
             // 
@@ -303,11 +299,11 @@
             // 
             this.SaveGoalLabelHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.SaveGoalLabelHome.AutoSize = true;
-            this.SaveGoalLabelHome.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveGoalLabelHome.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveGoalLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.SaveGoalLabelHome.Location = new System.Drawing.Point(3, 0);
+            this.SaveGoalLabelHome.Location = new System.Drawing.Point(3, 1);
             this.SaveGoalLabelHome.Name = "SaveGoalLabelHome";
-            this.SaveGoalLabelHome.Size = new System.Drawing.Size(100, 20);
+            this.SaveGoalLabelHome.Size = new System.Drawing.Size(77, 17);
             this.SaveGoalLabelHome.TabIndex = 14;
             this.SaveGoalLabelHome.Text = "Saving Goal";
             // 
@@ -441,13 +437,13 @@
             this.StreakIconsLayoutHome.Controls.Add(this.SunLabelHome, 6, 0);
             this.StreakIconsLayoutHome.Controls.Add(this.FriPanelHome, 4, 1);
             this.StreakIconsLayoutHome.Controls.Add(this.SatPanelHome, 5, 1);
-            this.StreakIconsLayoutHome.Location = new System.Drawing.Point(3, 3);
+            this.StreakIconsLayoutHome.Location = new System.Drawing.Point(0, 3);
             this.StreakIconsLayoutHome.Name = "StreakIconsLayoutHome";
             this.StreakIconsLayoutHome.RowCount = 2;
             this.StreakIconsLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.StreakIconsLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.StreakIconsLayoutHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.StreakIconsLayoutHome.Size = new System.Drawing.Size(417, 64);
+            this.StreakIconsLayoutHome.Size = new System.Drawing.Size(396, 70);
             this.StreakIconsLayoutHome.TabIndex = 39;
             // 
             // MonLabelHome
@@ -456,7 +452,7 @@
             this.MonLabelHome.AutoSize = true;
             this.MonLabelHome.Font = new System.Drawing.Font("Segoe UI Semibold", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MonLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.MonLabelHome.Location = new System.Drawing.Point(17, 8);
+            this.MonLabelHome.Location = new System.Drawing.Point(15, 8);
             this.MonLabelHome.Name = "MonLabelHome";
             this.MonLabelHome.Size = new System.Drawing.Size(25, 15);
             this.MonLabelHome.TabIndex = 39;
@@ -469,7 +465,7 @@
             this.TueLabelHome.AutoSize = true;
             this.TueLabelHome.Font = new System.Drawing.Font("Segoe UI Semibold", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TueLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.TueLabelHome.Location = new System.Drawing.Point(78, 8);
+            this.TueLabelHome.Location = new System.Drawing.Point(74, 8);
             this.TueLabelHome.Name = "TueLabelHome";
             this.TueLabelHome.Size = new System.Drawing.Size(20, 15);
             this.TueLabelHome.TabIndex = 40;
@@ -482,7 +478,7 @@
             this.WedLabelHome.AutoSize = true;
             this.WedLabelHome.Font = new System.Drawing.Font("Segoe UI Semibold", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WedLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.WedLabelHome.Location = new System.Drawing.Point(135, 8);
+            this.WedLabelHome.Location = new System.Drawing.Point(127, 8);
             this.WedLabelHome.Name = "WedLabelHome";
             this.WedLabelHome.Size = new System.Drawing.Size(25, 15);
             this.WedLabelHome.TabIndex = 41;
@@ -495,7 +491,7 @@
             this.ThuLabelHome.AutoSize = true;
             this.ThuLabelHome.Font = new System.Drawing.Font("Segoe UI Semibold", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThuLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.ThuLabelHome.Location = new System.Drawing.Point(196, 8);
+            this.ThuLabelHome.Location = new System.Drawing.Point(185, 8);
             this.ThuLabelHome.Name = "ThuLabelHome";
             this.ThuLabelHome.Size = new System.Drawing.Size(21, 15);
             this.ThuLabelHome.TabIndex = 42;
@@ -508,7 +504,7 @@
             this.FriLabelHome.AutoSize = true;
             this.FriLabelHome.Font = new System.Drawing.Font("Segoe UI Semibold", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FriLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.FriLabelHome.Location = new System.Drawing.Point(257, 8);
+            this.FriLabelHome.Location = new System.Drawing.Point(243, 8);
             this.FriLabelHome.Name = "FriLabelHome";
             this.FriLabelHome.Size = new System.Drawing.Size(17, 15);
             this.FriLabelHome.TabIndex = 43;
@@ -521,7 +517,7 @@
             this.SatLabelHome.AutoSize = true;
             this.SatLabelHome.Font = new System.Drawing.Font("Segoe UI Semibold", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SatLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.SatLabelHome.Location = new System.Drawing.Point(314, 8);
+            this.SatLabelHome.Location = new System.Drawing.Point(298, 8);
             this.SatLabelHome.Name = "SatLabelHome";
             this.SatLabelHome.Size = new System.Drawing.Size(20, 15);
             this.SatLabelHome.TabIndex = 44;
@@ -534,7 +530,7 @@
             this.SunLabelHome.AutoSize = true;
             this.SunLabelHome.Font = new System.Drawing.Font("Segoe UI Semibold", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SunLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.SunLabelHome.Location = new System.Drawing.Point(375, 8);
+            this.SunLabelHome.Location = new System.Drawing.Point(355, 8);
             this.SunLabelHome.Name = "SunLabelHome";
             this.SunLabelHome.Size = new System.Drawing.Size(21, 15);
             this.SunLabelHome.TabIndex = 45;
@@ -552,7 +548,7 @@
             this.SaveSpendTabLayHome.Controls.Add(this.BarSpentHome, 0, 5);
             this.SaveSpendTabLayHome.Controls.Add(this.BarSpendingHome, 0, 1);
             this.SaveSpendTabLayHome.Controls.Add(this.BarSavingHome, 0, 3);
-            this.SaveSpendTabLayHome.Location = new System.Drawing.Point(3, 49);
+            this.SaveSpendTabLayHome.Location = new System.Drawing.Point(3, 26);
             this.SaveSpendTabLayHome.Name = "SaveSpendTabLayHome";
             this.SaveSpendTabLayHome.RowCount = 6;
             this.SaveSpendTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.58242F));
@@ -561,7 +557,7 @@
             this.SaveSpendTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.58242F));
             this.SaveSpendTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.93407F));
             this.SaveSpendTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.38461F));
-            this.SaveSpendTabLayHome.Size = new System.Drawing.Size(401, 214);
+            this.SaveSpendTabLayHome.Size = new System.Drawing.Size(284, 153);
             this.SaveSpendTabLayHome.TabIndex = 40;
             // 
             // SavingGoalLabelLayHome
@@ -572,12 +568,12 @@
             this.SavingGoalLabelLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SavingGoalLabelLayHome.Controls.Add(this.SaveGoalLabelHome, 0, 0);
             this.SavingGoalLabelLayHome.Controls.Add(this.SaveStatLabelHome, 1, 0);
-            this.SavingGoalLabelLayHome.Location = new System.Drawing.Point(14, 85);
+            this.SavingGoalLabelLayHome.Location = new System.Drawing.Point(3, 55);
             this.SavingGoalLabelLayHome.Name = "SavingGoalLabelLayHome";
             this.SavingGoalLabelLayHome.RowCount = 1;
             this.SavingGoalLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SavingGoalLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SavingGoalLabelLayHome.Size = new System.Drawing.Size(373, 20);
+            this.SavingGoalLabelLayHome.Size = new System.Drawing.Size(278, 18);
             this.SavingGoalLabelLayHome.TabIndex = 0;
             // 
             // SpentLabelLayHome
@@ -588,23 +584,23 @@
             this.SpentLabelLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SpentLabelLayHome.Controls.Add(this.SpentLabelHome, 0, 0);
             this.SpentLabelLayHome.Controls.Add(this.MoneySpentLabelHome, 1, 0);
-            this.SpentLabelLayHome.Location = new System.Drawing.Point(12, 156);
+            this.SpentLabelLayHome.Location = new System.Drawing.Point(3, 105);
             this.SpentLabelLayHome.Name = "SpentLabelLayHome";
             this.SpentLabelLayHome.RowCount = 1;
             this.SpentLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SpentLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SpentLabelLayHome.Size = new System.Drawing.Size(376, 20);
+            this.SpentLabelLayHome.Size = new System.Drawing.Size(278, 18);
             this.SpentLabelLayHome.TabIndex = 0;
             // 
             // SpentLabelHome
             // 
             this.SpentLabelHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.SpentLabelHome.AutoSize = true;
-            this.SpentLabelHome.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpentLabelHome.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SpentLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.SpentLabelHome.Location = new System.Drawing.Point(3, 0);
+            this.SpentLabelHome.Location = new System.Drawing.Point(3, 1);
             this.SpentLabelHome.Name = "SpentLabelHome";
-            this.SpentLabelHome.Size = new System.Drawing.Size(54, 20);
+            this.SpentLabelHome.Size = new System.Drawing.Size(41, 17);
             this.SpentLabelHome.TabIndex = 13;
             this.SpentLabelHome.Text = "Spent";
             // 
@@ -612,11 +608,11 @@
             // 
             this.MoneySpentLabelHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.MoneySpentLabelHome.AutoSize = true;
-            this.MoneySpentLabelHome.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MoneySpentLabelHome.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MoneySpentLabelHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.MoneySpentLabelHome.Location = new System.Drawing.Point(267, 0);
+            this.MoneySpentLabelHome.Location = new System.Drawing.Point(194, 1);
             this.MoneySpentLabelHome.Name = "MoneySpentLabelHome";
-            this.MoneySpentLabelHome.Size = new System.Drawing.Size(106, 20);
+            this.MoneySpentLabelHome.Size = new System.Drawing.Size(81, 17);
             this.MoneySpentLabelHome.TabIndex = 11;
             this.MoneySpentLabelHome.Text = "MoneySpent";
             this.MoneySpentLabelHome.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -635,15 +631,15 @@
             this.SpendingGoalLabelLayHome.RowCount = 1;
             this.SpendingGoalLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SpendingGoalLabelLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SpendingGoalLabelLayHome.Size = new System.Drawing.Size(395, 31);
+            this.SpendingGoalLabelLayHome.Size = new System.Drawing.Size(278, 20);
             this.SpendingGoalLabelLayHome.TabIndex = 0;
             // 
             // BarSpentHome
             // 
             this.BarSpentHome.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BarSpentHome.Location = new System.Drawing.Point(23, 182);
+            this.BarSpentHome.Location = new System.Drawing.Point(3, 129);
             this.BarSpentHome.Name = "BarSpentHome";
-            this.BarSpentHome.Size = new System.Drawing.Size(354, 20);
+            this.BarSpentHome.Size = new System.Drawing.Size(278, 20);
             this.BarSpentHome.TabIndex = 8;
             // 
             // dgvRecentTransactionsTabLay
@@ -672,24 +668,24 @@
             this.dgvRecentTransactionsTabLay.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRecentTransactionsTabLay.EnableHeadersVisualStyles = false;
             this.dgvRecentTransactionsTabLay.GridColor = System.Drawing.Color.DarkGreen;
-            this.dgvRecentTransactionsTabLay.Location = new System.Drawing.Point(-3, 47);
+            this.dgvRecentTransactionsTabLay.Location = new System.Drawing.Point(10, 31);
             this.dgvRecentTransactionsTabLay.Name = "dgvRecentTransactionsTabLay";
             this.dgvRecentTransactionsTabLay.ReadOnly = true;
             this.dgvRecentTransactionsTabLay.RowHeadersVisible = false;
             this.dgvRecentTransactionsTabLay.RowHeadersWidth = 51;
             this.dgvRecentTransactionsTabLay.RowTemplate.Height = 24;
-            this.dgvRecentTransactionsTabLay.Size = new System.Drawing.Size(350, 141);
+            this.dgvRecentTransactionsTabLay.Size = new System.Drawing.Size(333, 141);
             this.dgvRecentTransactionsTabLay.TabIndex = 40;
             // 
             // BudgetOverviewLblHome
             // 
             this.BudgetOverviewLblHome.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.BudgetOverviewLblHome.AutoSize = true;
-            this.BudgetOverviewLblHome.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BudgetOverviewLblHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            this.BudgetOverviewLblHome.Location = new System.Drawing.Point(50, 13);
+            this.BudgetOverviewLblHome.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BudgetOverviewLblHome.ForeColor = System.Drawing.Color.DarkGreen;
+            this.BudgetOverviewLblHome.Location = new System.Drawing.Point(6, 2);
             this.BudgetOverviewLblHome.Name = "BudgetOverviewLblHome";
-            this.BudgetOverviewLblHome.Size = new System.Drawing.Size(208, 30);
+            this.BudgetOverviewLblHome.Size = new System.Drawing.Size(162, 23);
             this.BudgetOverviewLblHome.TabIndex = 11;
             this.BudgetOverviewLblHome.Text = "Recent Transactions";
             // 
@@ -697,11 +693,11 @@
             // 
             this.GoalProgLblHome.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.GoalProgLblHome.AutoSize = true;
-            this.GoalProgLblHome.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GoalProgLblHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            this.GoalProgLblHome.Location = new System.Drawing.Point(49, 8);
+            this.GoalProgLblHome.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoalProgLblHome.ForeColor = System.Drawing.Color.DarkGreen;
+            this.GoalProgLblHome.Location = new System.Drawing.Point(3, 0);
             this.GoalProgLblHome.Name = "GoalProgLblHome";
-            this.GoalProgLblHome.Size = new System.Drawing.Size(186, 30);
+            this.GoalProgLblHome.Size = new System.Drawing.Size(143, 23);
             this.GoalProgLblHome.TabIndex = 11;
             this.GoalProgLblHome.Text = "Budget Overview";
             // 
@@ -897,44 +893,13 @@
             this.HomePicBoxHome.TabIndex = 15;
             this.HomePicBoxHome.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::CentSible.Properties.Resources.Streak;
-            this.pictureBox2.Location = new System.Drawing.Point(54, 20);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(114, 123);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 46;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CentSible.Properties.Resources.Current1;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 45;
-            this.pictureBox1.TabStop = false;
-            // 
-            // GoalprogPicBoxHome
-            // 
-            this.GoalprogPicBoxHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.GoalprogPicBoxHome.Image = global::CentSible.Properties.Resources.Target1;
-            this.GoalprogPicBoxHome.Location = new System.Drawing.Point(3, 3);
-            this.GoalprogPicBoxHome.Name = "GoalprogPicBoxHome";
-            this.GoalprogPicBoxHome.Size = new System.Drawing.Size(40, 40);
-            this.GoalprogPicBoxHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.GoalprogPicBoxHome.TabIndex = 44;
-            this.GoalprogPicBoxHome.TabStop = false;
-            // 
             // DaysLblHome
             // 
             this.DaysLblHome.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.DaysLblHome.AutoSize = true;
             this.DaysLblHome.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DaysLblHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.DaysLblHome.Location = new System.Drawing.Point(205, 128);
+            this.DaysLblHome.Location = new System.Drawing.Point(163, 108);
             this.DaysLblHome.Name = "DaysLblHome";
             this.DaysLblHome.Size = new System.Drawing.Size(46, 23);
             this.DaysLblHome.TabIndex = 47;
@@ -943,42 +908,39 @@
             // GoalProgFlowLayHome
             // 
             this.GoalProgFlowLayHome.BackColor = System.Drawing.Color.White;
-            this.GoalProgFlowLayHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.GoalProgFlowLayHome.Controls.Add(this.GoalprogPicBoxHome);
             this.GoalProgFlowLayHome.Controls.Add(this.GoalProgLblHome);
             this.GoalProgFlowLayHome.Controls.Add(this.SaveSpendTabLayHome);
-            this.GoalProgFlowLayHome.Location = new System.Drawing.Point(4, 3);
+            this.GoalProgFlowLayHome.Location = new System.Drawing.Point(2, 3);
             this.GoalProgFlowLayHome.Name = "GoalProgFlowLayHome";
-            this.GoalProgFlowLayHome.Size = new System.Drawing.Size(424, 274);
+            this.GoalProgFlowLayHome.Size = new System.Drawing.Size(289, 185);
             this.GoalProgFlowLayHome.TabIndex = 48;
             // 
             // BudOverFlowLayHome
             // 
-            this.BudOverFlowLayHome.BackColor = System.Drawing.Color.Green;
+            this.BudOverFlowLayHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
             this.BudOverFlowLayHome.Controls.Add(this.panel2);
-            this.BudOverFlowLayHome.Location = new System.Drawing.Point(227, 290);
+            this.BudOverFlowLayHome.Location = new System.Drawing.Point(227, 294);
             this.BudOverFlowLayHome.Name = "BudOverFlowLayHome";
-            this.BudOverFlowLayHome.Size = new System.Drawing.Size(350, 191);
+            this.BudOverFlowLayHome.Size = new System.Drawing.Size(360, 191);
             this.BudOverFlowLayHome.TabIndex = 49;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.BudgetOverviewLblHome);
             this.panel2.Controls.Add(this.dgvRecentTransactionsTabLay);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(345, 185);
+            this.panel2.Size = new System.Drawing.Size(353, 185);
             this.panel2.TabIndex = 0;
             // 
             // pnlSteak
             // 
-            this.pnlSteak.BackColor = System.Drawing.Color.DarkGreen;
+            this.pnlSteak.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));
             this.pnlSteak.Controls.Add(this.panel1);
-            this.pnlSteak.Location = new System.Drawing.Point(227, 86);
+            this.pnlSteak.Location = new System.Drawing.Point(230, 98);
             this.pnlSteak.Name = "pnlSteak";
-            this.pnlSteak.Size = new System.Drawing.Size(350, 174);
+            this.pnlSteak.Size = new System.Drawing.Size(247, 174);
             this.pnlSteak.TabIndex = 50;
             // 
             // panel1
@@ -986,40 +948,53 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.lblStreakTitle);
             this.panel1.Controls.Add(this.DaysLblHome);
-            this.panel1.Controls.Add(this.lblCurrentStreak);
             this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.lblCurrentStreak);
             this.panel1.Location = new System.Drawing.Point(4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(342, 168);
+            this.panel1.Size = new System.Drawing.Size(240, 168);
             this.panel1.TabIndex = 48;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CentSible.Properties.Resources.Streak;
+            this.pictureBox2.Location = new System.Drawing.Point(27, 52);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(109, 113);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 46;
+            this.pictureBox2.TabStop = false;
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Green;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(591, 20);
+            this.panel3.Location = new System.Drawing.Point(501, 98);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(430, 174);
+            this.panel3.Size = new System.Drawing.Size(402, 175);
             this.panel3.TabIndex = 51;
             // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.StreakIconsLayoutHome);
             this.panel4.Controls.Add(this.LongestStreakLabelHome);
             this.panel4.Controls.Add(this.pbMilestone);
-            this.panel4.Location = new System.Drawing.Point(4, 5);
+            this.panel4.Location = new System.Drawing.Point(3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(423, 164);
+            this.panel4.Size = new System.Drawing.Size(396, 170);
             this.panel4.TabIndex = 0;
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.Green;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(242)))), ((int)(((byte)(209)))));
             this.panel5.Controls.Add(this.GoalProgFlowLayHome);
-            this.panel5.Location = new System.Drawing.Point(591, 200);
+            this.panel5.Location = new System.Drawing.Point(609, 294);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(430, 280);
+            this.panel5.Size = new System.Drawing.Size(294, 191);
             this.panel5.TabIndex = 52;
             // 
             // lblFinancialOverview
@@ -1037,7 +1012,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1035, 510);
+            this.ClientSize = new System.Drawing.Size(932, 510);
             this.Controls.Add(this.lblFinancialOverview);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
@@ -1047,9 +1022,9 @@
             this.Controls.Add(this.lblDashboardHeader);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1053, 557);
+            this.MaximumSize = new System.Drawing.Size(950, 557);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1053, 557);
+            this.MinimumSize = new System.Drawing.Size(950, 557);
             this.Name = "HomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
@@ -1079,9 +1054,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxHome)).EndInit();
             this.HomeTabLayHome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxHome)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GoalprogPicBoxHome)).EndInit();
             this.GoalProgFlowLayHome.ResumeLayout(false);
             this.GoalProgFlowLayHome.PerformLayout();
             this.BudOverFlowLayHome.ResumeLayout(false);
@@ -1090,6 +1062,7 @@
             this.pnlSteak.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -1156,8 +1129,6 @@
         private System.Windows.Forms.TableLayoutPanel SaveSpendTabLayHome;
         private System.Windows.Forms.Label GoalProgLblHome;
         private System.Windows.Forms.Label BudgetOverviewLblHome;
-        private System.Windows.Forms.PictureBox GoalprogPicBoxHome;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label DaysLblHome;
         private System.Windows.Forms.FlowLayoutPanel GoalProgFlowLayHome;

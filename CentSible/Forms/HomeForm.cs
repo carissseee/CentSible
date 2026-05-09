@@ -117,6 +117,7 @@ namespace CentSible.Forms
         private void UpdateStreakDisplay()
         {
             lblCurrentStreak.Text = _user.LoginStreak.ToString();
+            DaysLblHome.Text = _user.LoginStreak == 1 ? "Day" : "Days";
         }
 
         private void UpdateTotalSpent()
