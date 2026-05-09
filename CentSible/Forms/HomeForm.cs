@@ -107,6 +107,21 @@ namespace CentSible.Forms
                 dgvRecentTransactionsTabLay.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvRecentTransactionsTabLay.AllowUserToAddRows = false;
                 dgvRecentTransactionsTabLay.RowHeadersVisible = false;
+
+                foreach (DataGridViewRow row in dgvRecentTransactionsTabLay.Rows)
+                {
+                    string amount = row.Cells["Amount"].Value?.ToString();
+                    if (amount == null) { continue; }
+
+                    if (amount.StartsWith("+ ₱"))
+                    {
+                        row.Cells["Amount"].Style.ForeColor = Color.FromArgb(46, 125, 50);
+                    }
+                    else if (amount.StartsWith("- ₱"))
+                    {
+                        row.Cells["Amount"].Style.ForeColor = Color.Red;
+                    }
+                }
             }
             catch (Exception ex)
             {
