@@ -58,23 +58,134 @@ namespace CentSible.Forms
                 return;
             }
 
+            TranButtonTran.BackColor = Color.FromArgb(212, 236, 204);
+            TranButtonTran.ForeColor = Color.Black;
 
-
-            cmbYearTran.SelectedIndexChanged -= cmbYear_SelectedIndexChanged;
             cmbYearTran.Items.Add(DateTime.Now.Year.ToString());
             cmbYearTran.SelectedIndex = 0;
-            cmbYearTran.SelectedIndexChanged += cmbYear_SelectedIndexChanged;
 
             int currentMonth = DateTime.Now.Month;
-            cmbMonthTran.SelectedIndexChanged -= cmbMonth_SelectedIndexChanged;
             for (int i = 1; i <= currentMonth; i++)
             {
-                cmbMonthTran.Items.Add(new DateTime(2026, i, 1).ToString("MMMM"));
+                cmbMonthTran.Items.Add(new DateTime(2000, i, 1).ToString("MMMM"));
             }
-            cmbMonthTran.SelectedIndex = DateTime.Now.Month - 1;
-            cmbMonthTran.SelectedIndexChanged += cmbMonth_SelectedIndexChanged;
+            cmbMonthTran.SelectedIndex = currentMonth - 1;
+
+            dgvTransaction.DataError += (s, ex) => { ex.Cancel = true; };
 
             LoadTransactions();
+        }
+        private void SetFilterButtons(bool enabled)
+        {
+            btnAll.Enabled = enabled;
+            btnExpense.Enabled = enabled;
+            btnBudget.Enabled = enabled;
+        }
+        private void LoadTransactions()
+        {
+            if (cmbMonthTran.SelectedIndex < 0 || cmbYearTran.SelectedItem == null)
+            {
+                return;
+            }
+
+            dgvTransaction.Rows.Clear();
+            _isAddingNew = false;
+            _isEditing = false;
+            _editingRowIndex = -1;
+            SetFilterButtons(true);
+
+            int month = cmbMonthTran.SelectedIndex + 1;
+            int year = int.Parse(cmbYearTran.SelectedItem.ToString());
+
+            lblDateTran.Text = new DateTime(year, month, 1).ToString("MMMM yyyy");
+
+            transactions = transactionLogic.GetTransactions(_user.AccountID, month, year);
+            lblBudget2.Text = "₱ " + transactionLogic.GetTotalBudget(transactions).ToString("N2");
+            lblSpent2.Text = "₱ " + transactionLogic.GetTotalSpent(transactions).ToString("N2");
+            lblRemaining2.Text = "₱ " + transactionLogic.GetRemainingBudget(transactions).ToString("N2");
+
+            foreach (Transaction t in transactions)
+            {
+                string sign = "";
+                if (t.TransactionType == TransactionType.Budget)
+                {
+                    sign = "+₱";
+                }
+                else
+                {
+                    sign = "-₱";
+                }
+
+                dgvTransaction.Rows.Add(
+                    t.Date.ToString("MMM d"),
+                    t.Description,
+                    t.TransactionType.ToString(),
+                    t.Category.ToString(),
+                    sign + t.Amount.ToString("N2"),
+                    "💾",
+                    "🗑️",
+                    t.TransactionID
+                );
+            }
+        }
+
+        private void DisplayTransactions(List<Transaction> list)
+        {
+            dgvTransaction.Rows.Clear();
+            foreach (Transaction t in list)
+            {
+                string sign = "";
+                if (t.TransactionType == TransactionType.Budget)
+                {
+                    sign = "+₱";
+                }
+                else
+                {
+                    sign = "-₱";
+                }
+
+                dgvTransaction.Rows.Add(
+                    t.Date.ToString("MMM d"),
+                    t.Description,
+                    t.TransactionType.ToString(),
+                    t.Category.ToString(),
+                    sign + t.Amount.ToString("N2"),
+                    "💾",
+                    "🗑️",
+                    t.TransactionID
+                );
+            }
+        }
+        private void btnAddTransaction_Click(object sender, EventArgs e)
+        {
+            if (_isAddingNew == true)
+            {
+                MessageBox.Show("Please save the current new transaction first.");
+                return;
+            }
+            if (_isEditing == true)
+            {
+                MessageBox.Show("Please save the current edited transaction first.");
+                return;
+            }
+
+            _isAddingNew = true;
+            SetFilterButtons(false);
+
+            dgvTransaction.Rows.Add(
+                DateTime.Now.ToString("MMM d"),
+                "",
+                "",
+                "",
+                "",
+                "💾",
+                "❌",
+                -1
+            );
+
+            int newRowIndex = dgvTransaction.Rows.Count - 1;
+            dgvTransaction.CurrentCell = dgvTransaction.Rows[newRowIndex].Cells["colDescription"];
+            dgvTransaction.BeginEdit(true);
         }
         private void dgvTransaction_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -84,25 +195,69 @@ namespace CentSible.Forms
             }
 
             var row = dgvTransaction.Rows[e.RowIndex];
-
             var idValue = row.Cells["colTransactionID"].Value;
-            int transactionID = (idValue != null && idValue.ToString() != "")? Convert.ToInt32(idValue) : -1;
+            int transactionID = (idValue != null && idValue.ToString() != "") ? Convert.ToInt32(idValue) : -1;
+            int month = cmbMonthTran.SelectedIndex + 1;
+            int year = int.Parse(cmbYearTran.SelectedItem.ToString());
 
             if (e.ColumnIndex == dgvTransaction.Columns["colSave"].Index)
             {
                 if (transactionID == -1)
                 {
-                    SaveNewTransaction(e.RowIndex);
+                    string error = transactionLogic.AddNewTransaction(_user.AccountID,
+                        row.Cells["colDescription"].Value?.ToString(),
+                        row.Cells["colType"].Value?.ToString(),
+                        row.Cells["colCategory"].Value?.ToString(),
+                        row.Cells["colAmount"].Value?.ToString(),
+                        transactions
+                    );
+
+                    if (error != "")
+                    {
+                        MessageBox.Show(error);
+                        return;
+                    }
+
+                    LoadTransactions();
                 }
                 else
                 {
                     if (_isEditing == true && _editingRowIndex == e.RowIndex)
                     {
-                        SaveEditedTransaction(e.RowIndex);
+                        string error = transactionLogic.UpdateExistingTransaction(_user.AccountID,
+                            transactionID,
+                            row.Cells["colDescription"].Value?.ToString(),
+                            row.Cells["colType"].Value?.ToString(),
+                            row.Cells["colCategory"].Value?.ToString(),
+                            row.Cells["colAmount"].Value?.ToString(),
+                            month,
+                            year
+                        );
+
+                        if (error != "")
+                        {
+                            MessageBox.Show(error);
+                            return;
+                        }
+
+                        LoadTransactions();
                     }
                     else
                     {
-                        EditTransaction(e.RowIndex);
+                        _isEditing = true;
+                        _editingRowIndex = e.RowIndex;
+                        SetFilterButtons(false);
+
+                        string rawAmount = row.Cells["colAmount"].Value?.ToString()
+                            .Replace("+₱", "")
+                            .Replace("-₱", "")
+                            .Replace(",", "")
+                            .Trim();
+                        row.Cells["colAmount"].Value = rawAmount;
+                        row.Cells["colDelete"].Value = "❌";
+
+                        dgvTransaction.CurrentCell = dgvTransaction.Rows[e.RowIndex].Cells["colDescription"];
+                        dgvTransaction.BeginEdit(true);
                     }
                 }
             }
@@ -110,13 +265,31 @@ namespace CentSible.Forms
             if (e.ColumnIndex == dgvTransaction.Columns["colDelete"].Index)
             {
                 string deleteValue = row.Cells["colDelete"].Value?.ToString();
+
                 if (deleteValue == "❌")
                 {
-                    CancelTransaction(e.RowIndex);
+                    if (transactionID == -1)
+                    {
+                        dgvTransaction.Rows.RemoveAt(e.RowIndex);
+                        _isAddingNew = false;
+                    }
+                    else
+                    {
+                        _isEditing = false;
+                        _editingRowIndex = -1;
+                        LoadTransactions();
+                    }
+                    SetFilterButtons(true);
                 }
                 else
                 {
-                    DeleteTransaction(e.RowIndex);
+                    DialogResult confirm = MessageBox.Show("Are you sure you want to delete this transaction?", "Delete Transaction", MessageBoxButtons.YesNo);
+
+                    if (confirm == DialogResult.Yes)
+                    {
+                        transactionLogic.DeleteTransaction(transactionID);
+                        LoadTransactions();
+                    }
                 }
             }
         }
@@ -133,13 +306,16 @@ namespace CentSible.Forms
             {
                 return;
             }
+
             if (e.ColumnIndex != dgvTransaction.Columns["colType"].Index)
             {
                 return;
             }
+
             string selectedType = dgvTransaction.Rows[e.RowIndex].Cells["colType"].Value?.ToString();
 
             DataGridViewComboBoxCell categoryCell = (DataGridViewComboBoxCell)dgvTransaction.Rows[e.RowIndex].Cells["colCategory"];
+
             categoryCell.Items.Clear();
 
             if (selectedType == "Budget")
@@ -157,13 +333,14 @@ namespace CentSible.Forms
                 categoryCell.Items.Add("Leisure");
                 categoryCell.Items.Add("Others");
             }
+
             categoryCell.Value = null;
         }
-        private void cmbYear_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbYearTran_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadTransactions();
         }
-        private void cmbMonth_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbMonthTran_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadTransactions();
         }
@@ -173,13 +350,11 @@ namespace CentSible.Forms
         }
         private void btnExpense_Click(object sender, EventArgs e)
         {
-            List<Transaction> filtered = transactionLogic.GetByType(transactions, TransactionType.Expense);
-            DisplayTransactions(filtered);
+            DisplayTransactions(transactionLogic.GetByType(transactions, TransactionType.Expense));
         }
         private void btnBudget_Click(object sender, EventArgs e)
         {
-            List<Transaction> filtered = transactionLogic.GetByType(transactions, TransactionType.Budget);
-            DisplayTransactions(filtered);
+            DisplayTransactions(transactionLogic.GetByType(transactions, TransactionType.Budget));
         }
         private void HomeButtonTran_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Home);
         private void GoalButtonTran_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Goal);
@@ -191,14 +366,5 @@ namespace CentSible.Forms
             if (!_isNavigating && e.CloseReason == CloseReason.UserClosing)
                 Application.Exit();
         }
-        private void lblDate_Click(object sender, EventArgs e) { }
-        private void panel1_Paint(object sender, PaintEventArgs e) { }
-        private void dgvTransaction_Click(object sender, EventArgs e) { }
-        private void lblTransaction_Click(object sender, EventArgs e) { }
-        private void pnlBudget_Paint(object sender, PaintEventArgs e) { }
-        private void lblBudget_Click(object sender, EventArgs e) { }
-        private void pnlTotalSpent_Paint(object sender, PaintEventArgs e) { }
-        private void lblSpent_Click(object sender, EventArgs e) { }
-        private void lblBudget2_Click_1(object sender, EventArgs e) { }
     }
 }
