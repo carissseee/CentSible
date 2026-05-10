@@ -50,15 +50,15 @@
             this.btnExpense = new System.Windows.Forms.Button();
             this.btnBudget = new System.Windows.Forms.Button();
             this.btnAddTransaction = new System.Windows.Forms.Button();
-            this.colTransactionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colSave = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCategory = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colType = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTransaction = new System.Windows.Forms.DataGridView();
+            this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colType = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colCategory = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSave = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colTransactionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SideBarTabLayTran = new System.Windows.Forms.TableLayoutPanel();
             this.PredTabLayTran = new System.Windows.Forms.TableLayoutPanel();
             this.LogoutButtonTran = new System.Windows.Forms.Button();
@@ -143,7 +143,7 @@
             this.lblTransactionTran.TabIndex = 2;
             this.lblTransactionTran.Text = "Transaction";
             this.lblTransactionTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTransactionTran.Click += new System.EventHandler(this.lblTransaction_Click);
+            //this.lblTransactionTran.Click += new System.EventHandler(this.lblTransaction_Click);
             // 
             // lblDateTran
             // 
@@ -155,7 +155,7 @@
             this.lblDateTran.Size = new System.Drawing.Size(68, 17);
             this.lblDateTran.TabIndex = 3;
             this.lblDateTran.Text = "April 2026";
-            this.lblDateTran.Click += new System.EventHandler(this.lblDate_Click);
+            //this.lblDateTran.Click += new System.EventHandler(this.lblDate_Click);
             // 
             // cmbYearTran
             // 
@@ -167,7 +167,7 @@
             this.cmbYearTran.Name = "cmbYearTran";
             this.cmbYearTran.Size = new System.Drawing.Size(105, 25);
             this.cmbYearTran.TabIndex = 4;
-            this.cmbYearTran.SelectedIndexChanged += new System.EventHandler(this.cmbYear_SelectedIndexChanged);
+            this.cmbYearTran.SelectedIndexChanged += new System.EventHandler(this.cmbYearTran_SelectedIndexChanged);
             // 
             // cmbMonthTran
             // 
@@ -180,7 +180,7 @@
             this.cmbMonthTran.Name = "cmbMonthTran";
             this.cmbMonthTran.Size = new System.Drawing.Size(124, 25);
             this.cmbMonthTran.TabIndex = 5;
-            this.cmbMonthTran.SelectedIndexChanged += new System.EventHandler(this.cmbMonth_SelectedIndexChanged);
+            this.cmbMonthTran.SelectedIndexChanged += new System.EventHandler(this.cmbMonthTran_SelectedIndexChanged);
             // 
             // lblBudget
             // 
@@ -192,7 +192,7 @@
             this.lblBudget.Size = new System.Drawing.Size(109, 19);
             this.lblBudget.TabIndex = 0;
             this.lblBudget.Text = "Monthly Budget";
-            this.lblBudget.Click += new System.EventHandler(this.lblBudget_Click);
+            //this.lblBudget.Click += new System.EventHandler(this.lblBudget_Click);
             // 
             // lblBudget2
             // 
@@ -204,8 +204,8 @@
             this.lblBudget2.Size = new System.Drawing.Size(73, 30);
             this.lblBudget2.TabIndex = 1;
             this.lblBudget2.Text = "₱ 0.00";
-            this.lblBudget2.Click += new System.EventHandler(this.lblBudget2_Click_1);
-            // 
+            //this.lblBudget2.Click += new System.EventHandler(this.lblBudget2_Click_1);
+            //// 
             // pnlBudgetTran
             // 
             this.pnlBudgetTran.BackColor = System.Drawing.Color.White;
@@ -215,7 +215,7 @@
             this.pnlBudgetTran.Name = "pnlBudgetTran";
             this.pnlBudgetTran.Size = new System.Drawing.Size(196, 61);
             this.pnlBudgetTran.TabIndex = 6;
-            this.pnlBudgetTran.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBudget_Paint);
+            //this.pnlBudgetTran.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBudget_Paint);
             // 
             // lblSpent
             // 
@@ -227,7 +227,7 @@
             this.lblSpent.Size = new System.Drawing.Size(77, 19);
             this.lblSpent.TabIndex = 2;
             this.lblSpent.Text = "Total Spent";
-            this.lblSpent.Click += new System.EventHandler(this.lblSpent_Click);
+            //this.lblSpent.Click += new System.EventHandler(this.lblSpent_Click);
             // 
             // lblSpent2
             // 
@@ -249,7 +249,7 @@
             this.pnlTotalSpentTran.Name = "pnlTotalSpentTran";
             this.pnlTotalSpentTran.Size = new System.Drawing.Size(196, 61);
             this.pnlTotalSpentTran.TabIndex = 7;
-            this.pnlTotalSpentTran.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTotalSpent_Paint);
+            //this.pnlTotalSpentTran.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTotalSpent_Paint);
             // 
             // lblRemaining
             // 
@@ -333,76 +333,12 @@
             this.btnAddTransaction.UseVisualStyleBackColor = false;
             this.btnAddTransaction.Click += new System.EventHandler(this.btnAddTransaction_Click);
             // 
-            // colTransactionID
-            // 
-            this.colTransactionID.HeaderText = "";
-            this.colTransactionID.MinimumWidth = 6;
-            this.colTransactionID.Name = "colTransactionID";
-            this.colTransactionID.Visible = false;
-            // 
-            // colDelete
-            // 
-            this.colDelete.HeaderText = "Actions";
-            this.colDelete.MinimumWidth = 6;
-            this.colDelete.Name = "colDelete";
-            // 
-            // colSave
-            // 
-            this.colSave.HeaderText = "";
-            this.colSave.MinimumWidth = 6;
-            this.colSave.Name = "colSave";
-            this.colSave.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colSave.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // colAmount
-            // 
-            this.colAmount.HeaderText = "Amount";
-            this.colAmount.MinimumWidth = 6;
-            this.colAmount.Name = "colAmount";
-            // 
-            // colCategory
-            // 
-            this.colCategory.HeaderText = "Category";
-            this.colCategory.Items.AddRange(new object[] {
-            "Income",
-            "Allowance",
-            "Food",
-            "Transportation",
-            "Utilities",
-            "Miscellaneous",
-            "Health",
-            "Leisure",
-            "Others"});
-            this.colCategory.MinimumWidth = 6;
-            this.colCategory.Name = "colCategory";
-            this.colCategory.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colCategory.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // colType
-            // 
-            this.colType.HeaderText = "Type";
-            this.colType.Items.AddRange(new object[] {
-            "Expense",
-            "Budget"});
-            this.colType.MinimumWidth = 6;
-            this.colType.Name = "colType";
-            this.colType.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // colDescription
-            // 
-            this.colDescription.HeaderText = "Description";
-            this.colDescription.MinimumWidth = 6;
-            this.colDescription.Name = "colDescription";
-            // 
-            // colDate
-            // 
-            this.colDate.HeaderText = "Date";
-            this.colDate.MinimumWidth = 6;
-            this.colDate.Name = "colDate";
-            // 
             // dgvTransaction
             // 
             this.dgvTransaction.AllowUserToAddRows = false;
+            this.dgvTransaction.AllowUserToDeleteRows = false;
+            this.dgvTransaction.AllowUserToResizeColumns = false;
+            this.dgvTransaction.AllowUserToResizeRows = false;
             this.dgvTransaction.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
             this.dgvTransaction.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -441,10 +377,77 @@
             this.dgvTransaction.RowTemplate.Height = 24;
             this.dgvTransaction.Size = new System.Drawing.Size(645, 258);
             this.dgvTransaction.TabIndex = 12;
-            this.dgvTransaction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellContentClick);
-            this.dgvTransaction.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellValueChanged);
             this.dgvTransaction.CurrentCellDirtyStateChanged += new System.EventHandler(this.dgvTransaction_CurrentCellDirtyStateChanged);
-            this.dgvTransaction.Click += new System.EventHandler(this.dgvTransaction_Click);
+            dgvTransaction.CellValueChanged += dgvTransaction_CellValueChanged;
+            dgvTransaction.CellContentClick += dgvTransaction_CellContentClick;
+            //this.dgvTransaction.Click += new System.EventHandler(this.dgvTransaction_Click);
+            // 
+            // colDate
+            // 
+            this.colDate.HeaderText = "Date";
+            this.colDate.MinimumWidth = 6;
+            this.colDate.Name = "colDate";
+            // 
+            // colDescription
+            // 
+            this.colDescription.HeaderText = "Description";
+            this.colDescription.MinimumWidth = 6;
+            this.colDescription.Name = "colDescription";
+            // 
+            // colType
+            // 
+            this.colType.HeaderText = "Type";
+            this.colType.Items.AddRange(new object[] {
+            "Expense",
+            "Budget"});
+            this.colType.MinimumWidth = 6;
+            this.colType.Name = "colType";
+            this.colType.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // colCategory
+            // 
+            this.colCategory.HeaderText = "Category";
+            this.colCategory.Items.AddRange(new object[] {
+            "Income",
+            "Allowance",
+            "Food",
+            "Transportation",
+            "Utilities",
+            "Miscellaneous",
+            "Health",
+            "Leisure",
+            "Others"});
+            this.colCategory.MinimumWidth = 6;
+            this.colCategory.Name = "colCategory";
+            this.colCategory.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colCategory.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // colAmount
+            // 
+            this.colAmount.HeaderText = "Amount";
+            this.colAmount.MinimumWidth = 6;
+            this.colAmount.Name = "colAmount";
+            // 
+            // colSave
+            // 
+            this.colSave.HeaderText = "Save/Edit";
+            this.colSave.MinimumWidth = 6;
+            this.colSave.Name = "colSave";
+            this.colSave.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colSave.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // colDelete
+            // 
+            this.colDelete.HeaderText = "Delete";
+            this.colDelete.MinimumWidth = 6;
+            this.colDelete.Name = "colDelete";
+            // 
+            // colTransactionID
+            // 
+            this.colTransactionID.HeaderText = "";
+            this.colTransactionID.MinimumWidth = 6;
+            this.colTransactionID.Name = "colTransactionID";
+            this.colTransactionID.Visible = false;
             // 
             // SideBarTabLayTran
             // 
@@ -811,14 +814,6 @@
         private System.Windows.Forms.Button btnExpense;
         private System.Windows.Forms.Button btnBudget;
         private System.Windows.Forms.Button btnAddTransaction;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTransactionID;
-        private System.Windows.Forms.DataGridViewButtonColumn colDelete;
-        private System.Windows.Forms.DataGridViewButtonColumn colSave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAmount;
-        private System.Windows.Forms.DataGridViewComboBoxColumn colCategory;
-        private System.Windows.Forms.DataGridViewComboBoxColumn colType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDescription;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDate;
         private System.Windows.Forms.DataGridView dgvTransaction;
         private System.Windows.Forms.TableLayoutPanel SideBarTabLayTran;
         private System.Windows.Forms.Button LogoutButtonTran;
@@ -842,5 +837,13 @@
         private System.Windows.Forms.TableLayoutPanel PredTabLayTran;
         private System.Windows.Forms.Panel BudgetPanTran;
         private System.Windows.Forms.Panel SpenPanTran;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDescription;
+        private System.Windows.Forms.DataGridViewComboBoxColumn colType;
+        private System.Windows.Forms.DataGridViewComboBoxColumn colCategory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAmount;
+        private System.Windows.Forms.DataGridViewButtonColumn colSave;
+        private System.Windows.Forms.DataGridViewButtonColumn colDelete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTransactionID;
     }
 }

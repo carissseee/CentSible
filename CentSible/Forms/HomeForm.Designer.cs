@@ -645,6 +645,9 @@
             // dgvRecentTransactionsTabLay
             // 
             this.dgvRecentTransactionsTabLay.AllowUserToAddRows = false;
+            this.dgvRecentTransactionsTabLay.AllowUserToDeleteRows = false;
+            this.dgvRecentTransactionsTabLay.AllowUserToResizeColumns = false;
+            this.dgvRecentTransactionsTabLay.AllowUserToResizeRows = false;
             this.dgvRecentTransactionsTabLay.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.dgvRecentTransactionsTabLay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRecentTransactionsTabLay.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
