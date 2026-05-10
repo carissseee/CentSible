@@ -63,6 +63,12 @@ namespace CentSible.Logic
                 throw new Exception("Passwords do not match.");
             }
 
+            if (db.IsUsernameTaken(username.Trim()))
+            {
+                throw new Exception("Username already exists.");
+            }
+
+
             Account newUser = new Account
             {
                 Username = username.Trim(),
