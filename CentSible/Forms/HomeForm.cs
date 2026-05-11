@@ -29,20 +29,20 @@ namespace CentSible.Forms
             _user = user;
             _goalLogic = new GoalLogic();
 
-            var goalGroup = new Control[] { GoalButtonHome, GoalTabLayHome };
-            UIHelper.WireHoverRecursive(GoalButtonHome, goalGroup);
+            var goalGroup = new Control[] { GoalBtnHome, GoalTabLayHome };
+            UIHelper.WireHoverRecursive(GoalBtnHome, goalGroup);
             UIHelper.WireHoverRecursive(GoalTabLayHome, goalGroup);
 
-            var sumGroup = new Control[] { SumButtonHome, SumTabLayHome };
-            UIHelper.WireHoverRecursive(SumButtonHome, sumGroup);
+            var sumGroup = new Control[] { SumBtnHome, SumTabLayHome };
+            UIHelper.WireHoverRecursive(SumBtnHome, sumGroup);
             UIHelper.WireHoverRecursive(SumTabLayHome, sumGroup);
 
-            var tranGroup = new Control[] { TranButtonHome, TranTabLayHome };
-            UIHelper.WireHoverRecursive(TranButtonHome, tranGroup);
+            var tranGroup = new Control[] { TranBtnHome, TranTabLayHome };
+            UIHelper.WireHoverRecursive(TranBtnHome, tranGroup);
             UIHelper.WireHoverRecursive(TranTabLayHome, tranGroup);
 
-            var predGroup = new Control[] { PredButtonHome, PredTabLayHome };
-            UIHelper.WireHoverRecursive(PredButtonHome, predGroup);
+            var predGroup = new Control[] { PredBtnHome, PredTabLayHome };
+            UIHelper.WireHoverRecursive(PredBtnHome, predGroup);
             UIHelper.WireHoverRecursive(PredTabLayHome, predGroup);
 
             UIHelper.WireClickRecursive(GoalTabLayHome, GoalButtonHome_Click);
@@ -81,17 +81,17 @@ namespace CentSible.Forms
             if (_user == null) return;
 
             string monthYear = DateTime.Now.ToString("MMMM yyyy");
-            lblDashboardHeader.Text = $"Good day, {_user.Username}!";
-            lblFinancialOverview.Text = $"Here’s your financial overview for {monthYear}";
+            GoodMorningLblHome.Text = $"Good day, {_user.Username}!";
+            FinancialOverviewLblHome.Text = $"Here’s your financial overview for {monthYear}";
         }
 
         private void UpdateRecentTransactionsTable()
         {
             try
             {
-                dgvRecentTransactionsTabLay.DataSource = null;
+                RecentTranDGVHome.DataSource = null;
                 var recent = _db.GetRecentTransactions(_user.AccountID, 5);
-                dgvRecentTransactionsTabLay.DataSource = recent.Select(t =>
+                RecentTranDGVHome.DataSource = recent.Select(t =>
                 {
                     decimal truncAmount = Math.Truncate(t.Amount * 100) / 100;
 
@@ -104,9 +104,9 @@ namespace CentSible.Forms
                     };
                 }).ToList();
 
-                dgvRecentTransactionsTabLay.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dgvRecentTransactionsTabLay.AllowUserToAddRows = false;
-                dgvRecentTransactionsTabLay.RowHeadersVisible = false;
+                RecentTranDGVHome.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                RecentTranDGVHome.AllowUserToAddRows = false;
+                RecentTranDGVHome.RowHeadersVisible = false;
             }
             catch (Exception ex)
             {
