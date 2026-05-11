@@ -138,12 +138,12 @@ namespace CentSible.Forms
                     MoneySpentLabelHome.Text = $"₱ {truncSpent:F2} / ₱ {truncBudget:F2}";
                     double rawPercent = (double)(totalSpent / totalBudget) * 100;
                     int percent = (int)Math.Min(Math.Max(rawPercent, 0), 100);
-                    BarSpentHome.Value = percent;
+                    SpentBarHome.Value = percent;
                 }
                 else
                 {
                     MoneySpentLabelHome.Text = $"₱ {truncSpent:F2} / ₱ 0.00";
-                    BarSpentHome.Value = 0;
+                    SpentBarHome.Value = 0;
                 }
             }
             catch (Exception ex)
@@ -158,13 +158,13 @@ namespace CentSible.Forms
 
             var metrics = _accountLogic.GetStreakMetrics(_user);
 
-            pbMilestone.Minimum = 0;
-            pbMilestone.Maximum = metrics.MaxGoal;
-            pbMilestone.Value = Math.Min(metrics.LongestStreak, metrics.MaxGoal);
-            LongestStreakLabelHome.Text = metrics.StreakText;
-            LongestStreakLabelHome.ForeColor = metrics.StatusColor;
-            pbMilestone.ForeColor = metrics.StatusColor;
-            pbMilestone.Refresh();
+            MilestoneBarHome.Minimum = 0;
+            MilestoneBarHome.Maximum = metrics.MaxGoal;
+            MilestoneBarHome.Value = Math.Min(metrics.LongestStreak, metrics.MaxGoal);
+            LongestStreakLblHome.Text = metrics.StreakText;
+            LongestStreakLblHome.ForeColor = metrics.StatusColor;
+            MilestoneBarHome.ForeColor = metrics.StatusColor;
+            MilestoneBarHome.Refresh();
         }
 
         private void UpdateHomeDashboard()
@@ -172,8 +172,9 @@ namespace CentSible.Forms
             var goals = _goalLogic.GetGoals(_user.AccountID, DateTime.Now.Month, DateTime.Now.Year);
             string month = DateTime.Now.ToString("MMMM");
 
-            BarSpendingHome.Value = 0;
-            BarSavingHome.Value = 0;
+
+            SpendBarHome.Value = 0;
+            SavingBarHome.Value = 0;
             SpendStatLabelHome.Text = $"No spending goal set for {month}";
             SaveStatLabelHome.Text = $"No savings goal set for {month}";
 
@@ -190,12 +191,12 @@ namespace CentSible.Forms
 
                 if (goal.GoalType == GoalCategory.Spending)
                 {
-                    BarSpendingHome.Value = percent;
+                    SpendBarHome.Value = percent;
                     SpendStatLabelHome.Text = display;
                 }
                 else if (goal.GoalType == GoalCategory.Savings)
                 {
-                    BarSavingHome.Value = percent;
+                    SavingBarHome.Value = percent;
                     SaveStatLabelHome.Text = display;
                 }
             }
