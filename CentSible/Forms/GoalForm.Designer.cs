@@ -946,8 +946,7 @@
             this.Name = "GoalForm";
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Goal";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GoalForm_FormClosing);
+            this.Text = "Goal";       
             this.Load += new System.EventHandler(this.GoalForm_Load);
             this.SpendingGoalTabLayGoal.ResumeLayout(false);
             this.SpendingGoalTabLayGoal.PerformLayout();

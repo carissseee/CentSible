@@ -163,7 +163,7 @@
             this.TransactionLblTran.TabIndex = 2;
             this.TransactionLblTran.Text = "Transaction";
             this.TransactionLblTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.TransactionLblTran.Click += new System.EventHandler(this.lblTransaction_Click);
+            //this.TransactionLblTran.Click += new System.EventHandler(this.lblTransaction_Click);
             // 
             // CurrentDateTran
             // 
@@ -175,7 +175,7 @@
             this.CurrentDateTran.Size = new System.Drawing.Size(68, 17);
             this.CurrentDateTran.TabIndex = 3;
             this.CurrentDateTran.Text = "April 2026";
-            this.CurrentDateTran.Click += new System.EventHandler(this.lblDate_Click);
+            //this.CurrentDateTran.Click += new System.EventHandler(this.lblDate_Click);
             // 
             // cmbYearTran
             // 
@@ -212,7 +212,7 @@
             this.MonthlyBudgetLblTran.Size = new System.Drawing.Size(109, 19);
             this.MonthlyBudgetLblTran.TabIndex = 0;
             this.MonthlyBudgetLblTran.Text = "Monthly Budget";
-            this.MonthlyBudgetLblTran.Click += new System.EventHandler(this.lblBudget_Click);
+            //this.MonthlyBudgetLblTran.Click += new System.EventHandler(this.lblBudget_Click);
             // 
             // PBudgetLblTran
             // 
@@ -224,7 +224,7 @@
             this.PBudgetLblTran.Size = new System.Drawing.Size(73, 30);
             this.PBudgetLblTran.TabIndex = 1;
             this.PBudgetLblTran.Text = "₱ 0.00";
-            this.PBudgetLblTran.Click += new System.EventHandler(this.PBudgetLblTran_Click_1);
+            //this.PBudgetLblTran.Click += new System.EventHandler(this.PBudgetLblTran_Click_1);
             // 
             // RemainingBudgetLblTran
             // 
@@ -713,7 +713,7 @@
             this.TotalSpentLblTran.Size = new System.Drawing.Size(77, 19);
             this.TotalSpentLblTran.TabIndex = 2;
             this.TotalSpentLblTran.Text = "Total Spent";
-            this.TotalSpentLblTran.Click += new System.EventHandler(this.lblSpent_Click);
+            //this.TotalSpentLblTran.Click += new System.EventHandler(this.lblSpent_Click);
             // 
             // PSpentLblTran
             // 
@@ -864,7 +864,6 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transaction";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Transaction_FormClosing);
             this.Load += new System.EventHandler(this.TransactionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(LogPicBoxTran)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxTran)).EndInit();

@@ -15,48 +15,38 @@ using Guna.UI2.WinForms;
 
 namespace CentSible.Forms
 {
-    public partial class GoalForm : Form
+    public partial class GoalForm : BaseNavForm
     {
-        private Form _home;
-        private Account _user;
-        private bool _isNavigating = false;
         private List<Models.Goal> _allGoals;
         private GoalLogic _goalLogic = new GoalLogic();
         private GoalCategory _activeType = GoalCategory.Spending;
 
-        public GoalForm(Account user)
+        public GoalForm(Account user) : base(user)
         {
             InitializeComponent();
-            _user = user;
-
             this.Activated += (s, e) => { if (_user != null) UpdateFilter(); };
+            InitializeNavigation();  
+        }
 
-
+        protected override void InitializeNavigation()
+        {
             var homeGroup = new Control[] { HomeButtonGoal, HomeTabLayGoal };
-            UIHelper.WireHoverRecursive(HomeButtonGoal, homeGroup);
-            UIHelper.WireHoverRecursive(HomeTabLayGoal, homeGroup);
-
             var sumGroup = new Control[] { SumButtonGoal, SumTabLayGoal };
-            UIHelper.WireHoverRecursive(SumButtonGoal, sumGroup);
-            UIHelper.WireHoverRecursive(SumTabLayGoal, sumGroup);
-
             var tranGroup = new Control[] { TranButtonGoal, TranTabLayGoal };
-            UIHelper.WireHoverRecursive(TranButtonGoal, tranGroup);
-            UIHelper.WireHoverRecursive(TranTabLayGoal, tranGroup);
-
             var predGroup = new Control[] { PredButtonGoal, PredTabLayGoal };
-            UIHelper.WireHoverRecursive(PredButtonGoal, predGroup);
-            UIHelper.WireHoverRecursive(PredTabLayGoal, predGroup);
-
             var logGroup = new Control[] { LogoutButtonGoal, LogTabLayGoal };
-            UIHelper.WireHoverRecursive(LogoutButtonGoal, logGroup);
-            UIHelper.WireHoverRecursive(LogTabLayGoal, logGroup);
 
-            UIHelper.WireClickRecursive(HomeTabLayGoal, HomeButtonGoal_Click);
-            UIHelper.WireClickRecursive(SumTabLayGoal, SumButtonGoal_Click);
-            UIHelper.WireClickRecursive(TranTabLayGoal, TranButtonGoal_Click);
-            UIHelper.WireClickRecursive(PredTabLayGoal, PredButtonGoal_Click);
-            UIHelper.WireClickRecursive(LogTabLayGoal, LogoutButtonGoal_Click);
+            UIHelper.WireHoverRecursive(HomeButtonGoal, homeGroup);
+            UIHelper.WireHoverRecursive(SumButtonGoal, sumGroup);
+            UIHelper.WireHoverRecursive(TranButtonGoal, tranGroup);
+            UIHelper.WireHoverRecursive(PredButtonGoal, predGroup);
+            UIHelper.WireHoverRecursive(LogoutButtonGoal, logGroup);
+
+            UIHelper.WireClickRecursive(HomeTabLayGoal, (s, e) => PerformNavigation(() => Navigator.SwitchTo(this, Navigator.Home)));
+            UIHelper.WireClickRecursive(SumTabLayGoal, (s, e) => PerformNavigation(() => Navigator.SwitchTo(this, Navigator.Summary)));
+            UIHelper.WireClickRecursive(TranTabLayGoal, (s, e) => PerformNavigation(() => Navigator.SwitchTo(this, Navigator.Transaction)));
+            UIHelper.WireClickRecursive(PredTabLayGoal, (s, e) => PerformNavigation(() => Navigator.SwitchTo(this, Navigator.Prediction)));
+            UIHelper.WireClickRecursive(LogTabLayGoal, (s, e) => Navigator.Logout(this));
         }
 
         private void GoalForm_Load(object sender, EventArgs e)
@@ -251,11 +241,5 @@ namespace CentSible.Forms
         private void SumButtonGoal_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Summary);
         private void PredButtonGoal_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Prediction);
         private void LogoutButtonGoal_Click(object sender, EventArgs e) => Navigator.Logout(this);
-
-      
-        private void GoalForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (!_isNavigating && e.CloseReason == CloseReason.UserClosing) Application.Exit();
-        }
     }
 }

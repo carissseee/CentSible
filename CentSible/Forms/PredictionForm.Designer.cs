@@ -741,7 +741,6 @@
             this.Name = "PredictionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prediction";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PredictionForm_FormClosing);
             this.Load += new System.EventHandler(this.PredictionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numSelectYearPred)).EndInit();
             this.SidebarTableLayoutPred.ResumeLayout(false);
