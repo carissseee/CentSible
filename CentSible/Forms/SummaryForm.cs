@@ -41,10 +41,15 @@ namespace CentSible.Forms
             UIHelper.WireHoverRecursive(PredButtonSum, predGroup);
             UIHelper.WireHoverRecursive(PredTabLaySum, predGroup);
 
+            var logGroup = new Control[] { LogoutBtnSum, LogTabLaySum };
+            UIHelper.WireHoverRecursive(LogoutBtnSum, logGroup);
+            UIHelper.WireHoverRecursive(LogTabLaySum, logGroup);
+
             UIHelper.WireClickRecursive(HomeTabLaySum, HomeButtonSum_Click);
             UIHelper.WireClickRecursive(GoalTabLaySum, GoalButtonSum_Click);
             UIHelper.WireClickRecursive(SumTabLaySum, TranButtonSum_Click);
             UIHelper.WireClickRecursive(PredTabLaySum, PredButtonSum_Click);
+            UIHelper.WireClickRecursive(LogTabLaySum, LogoutBtnSum_Click);
         }
 
         private void SummaryForm_Load(object sender, EventArgs e)
@@ -218,7 +223,7 @@ namespace CentSible.Forms
         private void GoalButtonSum_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Goal);
         private void TranButtonSum_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Transaction);
         private void PredButtonSum_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Prediction);
-        private void LogoutButtonSum_Click(object sender, EventArgs e) => Navigator.Logout(this);
+        private void LogoutBtnSum_Click(object sender, EventArgs e) => Navigator.Logout(this);
 
         private void SummaryForm_FormClosing(object sender, FormClosingEventArgs e)
         {

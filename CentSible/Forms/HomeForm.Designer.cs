@@ -291,7 +291,7 @@
             this.LogoutBtnHome.Text = "Logout";
             this.LogoutBtnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LogoutBtnHome.UseVisualStyleBackColor = false;
-            this.LogoutBtnHome.Click += new System.EventHandler(this.LogoutButtonHome_Click);
+            this.LogoutBtnHome.Click += new System.EventHandler(this.LogoutBtnHome_Click);
             // 
             // PredBtnHome
             // 
@@ -850,7 +850,7 @@
             // LogPicBoxHome
             // 
             this.LogPicBoxHome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LogPicBoxHome.Image = global::CentSible.Properties.Resources.PredictionForm;
+            this.LogPicBoxHome.Image = global::CentSible.Properties.Resources.LogoutForm;
             this.LogPicBoxHome.Location = new System.Drawing.Point(13, 3);
             this.LogPicBoxHome.Name = "LogPicBoxHome";
             this.LogPicBoxHome.Size = new System.Drawing.Size(40, 30);
@@ -893,7 +893,7 @@
             // 
             // StreakPnlHome
             // 
-            this.StreakPnlHome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));
+            this.StreakPnlHome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.StreakPnlHome.BorderRadius = 10;
             this.StreakPnlHome.BorderThickness = 3;
             this.StreakPnlHome.Controls.Add(this.MilestoneBarHome);
@@ -1023,7 +1023,7 @@
             // 
             // RecentTranPnlHome
             // 
-            this.RecentTranPnlHome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));
+            this.RecentTranPnlHome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.RecentTranPnlHome.BorderRadius = 10;
             this.RecentTranPnlHome.BorderThickness = 3;
             this.RecentTranPnlHome.Controls.Add(this.RecentTranLblHome);

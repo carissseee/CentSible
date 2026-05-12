@@ -36,7 +36,6 @@
             this.CentSibleTextPanelGoal = new System.Windows.Forms.Panel();
             this.CentSibleLabelPred = new System.Windows.Forms.Label();
             this.SideBarTabLayPred = new System.Windows.Forms.TableLayoutPanel();
-            this.LogoutButtonPred = new System.Windows.Forms.Button();
             this.PredTabLayPred = new System.Windows.Forms.TableLayoutPanel();
             this.PredPicBoxPred = new System.Windows.Forms.PictureBox();
             this.PredButtonPred = new System.Windows.Forms.Button();
@@ -52,6 +51,9 @@
             this.HomeTabLayPred = new System.Windows.Forms.TableLayoutPanel();
             this.HomeButtonPred = new System.Windows.Forms.Button();
             this.HomePicBoxPred = new System.Windows.Forms.PictureBox();
+            this.LogTabLayPred = new System.Windows.Forms.TableLayoutPanel();
+            this.LogPicBoxPred = new System.Windows.Forms.PictureBox();
+            this.LogoutBtnPred = new System.Windows.Forms.Button();
             this.PredictionLblPred = new System.Windows.Forms.Label();
             this.LegendTabLayPred = new System.Windows.Forms.TableLayoutPanel();
             this.ExpenseLblPred = new System.Windows.Forms.Label();
@@ -79,6 +81,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxPred)).BeginInit();
             this.HomeTabLayPred.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxPred)).BeginInit();
+            this.LogTabLayPred.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogPicBoxPred)).BeginInit();
             this.LegendTabLayPred.SuspendLayout();
             this.PredSavePnlPred.SuspendLayout();
             this.PredSpendPnlPred.SuspendLayout();
@@ -236,12 +240,12 @@
             this.SideBarTabLayPred.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.SideBarTabLayPred.ColumnCount = 1;
             this.SideBarTabLayPred.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.SideBarTabLayPred.Controls.Add(this.LogoutButtonPred, 1, 6);
             this.SideBarTabLayPred.Controls.Add(this.PredTabLayPred, 0, 4);
             this.SideBarTabLayPred.Controls.Add(this.SumTabLayPred, 0, 3);
             this.SideBarTabLayPred.Controls.Add(this.TranTabLayPred, 0, 2);
             this.SideBarTabLayPred.Controls.Add(this.GoalTabLayPred, 0, 1);
             this.SideBarTabLayPred.Controls.Add(this.HomeTabLayPred, 0, 0);
+            this.SideBarTabLayPred.Controls.Add(this.LogTabLayPred, 0, 6);
             this.SideBarTabLayPred.Location = new System.Drawing.Point(3, 69);
             this.SideBarTabLayPred.Name = "SideBarTabLayPred";
             this.SideBarTabLayPred.RowCount = 7;
@@ -254,24 +258,6 @@
             this.SideBarTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.SideBarTabLayPred.Size = new System.Drawing.Size(195, 411);
             this.SideBarTabLayPred.TabIndex = 11;
-            // 
-            // LogoutButtonPred
-            // 
-            this.LogoutButtonPred.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.LogoutButtonPred.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            this.LogoutButtonPred.FlatAppearance.BorderSize = 0;
-            this.LogoutButtonPred.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
-            this.LogoutButtonPred.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LogoutButtonPred.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.LogoutButtonPred.ForeColor = System.Drawing.Color.White;
-            this.LogoutButtonPred.Location = new System.Drawing.Point(3, 369);
-            this.LogoutButtonPred.Name = "LogoutButtonPred";
-            this.LogoutButtonPred.Size = new System.Drawing.Size(183, 39);
-            this.LogoutButtonPred.TabIndex = 15;
-            this.LogoutButtonPred.Text = "Logout";
-            this.LogoutButtonPred.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogoutButtonPred.UseVisualStyleBackColor = false;
-            this.LogoutButtonPred.Click += new System.EventHandler(this.LogoutButtonPred_Click);
             // 
             // PredTabLayPred
             // 
@@ -491,6 +477,50 @@
             this.HomePicBoxPred.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.HomePicBoxPred.TabIndex = 15;
             this.HomePicBoxPred.TabStop = false;
+            // 
+            // LogTabLayPred
+            // 
+            this.LogTabLayPred.ColumnCount = 2;
+            this.LogTabLayPred.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
+            this.LogTabLayPred.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.LogTabLayPred.Controls.Add(this.LogPicBoxPred, 0, 0);
+            this.LogTabLayPred.Controls.Add(this.LogoutBtnPred, 1, 0);
+            this.LogTabLayPred.Location = new System.Drawing.Point(3, 369);
+            this.LogTabLayPred.Name = "LogTabLayPred";
+            this.LogTabLayPred.RowCount = 1;
+            this.LogTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.LogTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.LogTabLayPred.Size = new System.Drawing.Size(183, 38);
+            this.LogTabLayPred.TabIndex = 25;
+            // 
+            // LogPicBoxPred
+            // 
+            this.LogPicBoxPred.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LogPicBoxPred.Image = global::CentSible.Properties.Resources.LogoutForm;
+            this.LogPicBoxPred.Location = new System.Drawing.Point(12, 3);
+            this.LogPicBoxPred.Name = "LogPicBoxPred";
+            this.LogPicBoxPred.Size = new System.Drawing.Size(40, 32);
+            this.LogPicBoxPred.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LogPicBoxPred.TabIndex = 18;
+            this.LogPicBoxPred.TabStop = false;
+            // 
+            // LogoutBtnPred
+            // 
+            this.LogoutBtnPred.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.LogoutBtnPred.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.LogoutBtnPred.FlatAppearance.BorderSize = 0;
+            this.LogoutBtnPred.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
+            this.LogoutBtnPred.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogoutBtnPred.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.LogoutBtnPred.ForeColor = System.Drawing.Color.White;
+            this.LogoutBtnPred.Location = new System.Drawing.Point(67, 3);
+            this.LogoutBtnPred.Name = "LogoutBtnPred";
+            this.LogoutBtnPred.Size = new System.Drawing.Size(113, 32);
+            this.LogoutBtnPred.TabIndex = 15;
+            this.LogoutBtnPred.Text = "Logout";
+            this.LogoutBtnPred.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LogoutBtnPred.UseVisualStyleBackColor = false;
+            this.LogoutBtnPred.Click += new System.EventHandler(this.LogoutBtnPred_Click);
             // 
             // PredictionLblPred
             // 
@@ -727,6 +757,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxPred)).EndInit();
             this.HomeTabLayPred.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxPred)).EndInit();
+            this.LogTabLayPred.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LogPicBoxPred)).EndInit();
             this.LegendTabLayPred.ResumeLayout(false);
             this.LegendTabLayPred.PerformLayout();
             this.PredSavePnlPred.ResumeLayout(false);
@@ -753,7 +785,7 @@
         private System.Windows.Forms.Panel CentSibleTextPanelGoal;
         private System.Windows.Forms.Label CentSibleLabelPred;
         private System.Windows.Forms.TableLayoutPanel SideBarTabLayPred;
-        private System.Windows.Forms.Button LogoutButtonPred;
+        private System.Windows.Forms.Button LogoutBtnPred;
         private System.Windows.Forms.TableLayoutPanel PredTabLayPred;
         private System.Windows.Forms.PictureBox PredPicBoxPred;
         private System.Windows.Forms.Button PredButtonPred;
@@ -782,5 +814,7 @@
         private Guna.UI2.WinForms.Guna2Panel LegendPnlPred;
         private Guna.UI2.WinForms.Guna2Panel ForecastPnlPred;
         private System.Windows.Forms.DataVisualization.Charting.Chart ForecastChrtPred;
+        private System.Windows.Forms.TableLayoutPanel LogTabLayPred;
+        private System.Windows.Forms.PictureBox LogPicBoxPred;
     }
 }

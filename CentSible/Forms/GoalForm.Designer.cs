@@ -61,9 +61,6 @@
             this.SidebarTableLayoutGoal = new System.Windows.Forms.FlowLayoutPanel();
             this.CentSibleTextPanelGoal = new System.Windows.Forms.Panel();
             this.SideBarTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.LogoutButtonGoal = new System.Windows.Forms.Button();
             this.PredTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
             this.PredPicBoxGoal = new System.Windows.Forms.PictureBox();
             this.PredButtonGoal = new System.Windows.Forms.Button();
@@ -79,6 +76,9 @@
             this.HomeTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
             this.HomeButtonGoal = new System.Windows.Forms.Button();
             this.HomePicBoxGoal = new System.Windows.Forms.PictureBox();
+            this.LogTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LogoutButtonGoal = new System.Windows.Forms.Button();
             this.GoalsLblGoal = new System.Windows.Forms.Label();
             this.GoalPnlGoal = new Guna.UI2.WinForms.Guna2Panel();
             this.IndicatorPnlGoal = new Guna.UI2.WinForms.Guna2Panel();
@@ -95,8 +95,6 @@
             this.SidebarTableLayoutGoal.SuspendLayout();
             this.CentSibleTextPanelGoal.SuspendLayout();
             this.SideBarTabLayGoal.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PredTabLayGoal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxGoal)).BeginInit();
             this.SumTabLayGoal.SuspendLayout();
@@ -107,6 +105,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxGoal)).BeginInit();
             this.HomeTabLayGoal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxGoal)).BeginInit();
+            this.LogTabLayGoal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GoalPnlGoal.SuspendLayout();
             this.IndicatorPnlGoal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SelectYearDropGoal)).BeginInit();
@@ -511,12 +511,12 @@
             this.SideBarTabLayGoal.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.SideBarTabLayGoal.ColumnCount = 1;
             this.SideBarTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.SideBarTabLayGoal.Controls.Add(this.tableLayoutPanel1, 0, 5);
             this.SideBarTabLayGoal.Controls.Add(this.PredTabLayGoal, 0, 4);
             this.SideBarTabLayGoal.Controls.Add(this.SumTabLayGoal, 0, 3);
             this.SideBarTabLayGoal.Controls.Add(this.TranTabLayGoal, 0, 2);
             this.SideBarTabLayGoal.Controls.Add(this.GoalTabLayGoal, 0, 1);
             this.SideBarTabLayGoal.Controls.Add(this.HomeTabLayGoal, 0, 0);
+            this.SideBarTabLayGoal.Controls.Add(this.LogTabLayGoal, 0, 6);
             this.SideBarTabLayGoal.Location = new System.Drawing.Point(3, 69);
             this.SideBarTabLayGoal.Name = "SideBarTabLayGoal";
             this.SideBarTabLayGoal.RowCount = 7;
@@ -529,49 +529,6 @@
             this.SideBarTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.SideBarTabLayGoal.Size = new System.Drawing.Size(195, 411);
             this.SideBarTabLayGoal.TabIndex = 11;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.LogoutButtonGoal, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 223);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(189, 38);
-            this.tableLayoutPanel1.TabIndex = 62;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::CentSible.Properties.Resources.PredictionForm;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            // 
-            // LogoutButtonGoal
-            // 
-            this.LogoutButtonGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            this.LogoutButtonGoal.FlatAppearance.BorderSize = 0;
-            this.LogoutButtonGoal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
-            this.LogoutButtonGoal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LogoutButtonGoal.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.LogoutButtonGoal.ForeColor = System.Drawing.Color.White;
-            this.LogoutButtonGoal.Location = new System.Drawing.Point(69, 3);
-            this.LogoutButtonGoal.Name = "LogoutButtonGoal";
-            this.LogoutButtonGoal.Size = new System.Drawing.Size(117, 32);
-            this.LogoutButtonGoal.TabIndex = 15;
-            this.LogoutButtonGoal.Text = "Logout";
-            this.LogoutButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogoutButtonGoal.UseVisualStyleBackColor = false;
-            this.LogoutButtonGoal.Click += new System.EventHandler(this.LogoutButtonGoal_Click);
             // 
             // PredTabLayGoal
             // 
@@ -789,6 +746,49 @@
             this.HomePicBoxGoal.TabIndex = 15;
             this.HomePicBoxGoal.TabStop = false;
             // 
+            // LogTabLayGoal
+            // 
+            this.LogTabLayGoal.ColumnCount = 2;
+            this.LogTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.LogTabLayGoal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.LogTabLayGoal.Controls.Add(this.pictureBox1, 0, 0);
+            this.LogTabLayGoal.Controls.Add(this.LogoutButtonGoal, 1, 0);
+            this.LogTabLayGoal.Location = new System.Drawing.Point(3, 369);
+            this.LogTabLayGoal.Name = "LogTabLayGoal";
+            this.LogTabLayGoal.RowCount = 1;
+            this.LogTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.LogTabLayGoal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.LogTabLayGoal.Size = new System.Drawing.Size(189, 38);
+            this.LogTabLayGoal.TabIndex = 62;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::CentSible.Properties.Resources.LogoutForm;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // LogoutButtonGoal
+            // 
+            this.LogoutButtonGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.LogoutButtonGoal.FlatAppearance.BorderSize = 0;
+            this.LogoutButtonGoal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
+            this.LogoutButtonGoal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogoutButtonGoal.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.LogoutButtonGoal.ForeColor = System.Drawing.Color.White;
+            this.LogoutButtonGoal.Location = new System.Drawing.Point(69, 3);
+            this.LogoutButtonGoal.Name = "LogoutButtonGoal";
+            this.LogoutButtonGoal.Size = new System.Drawing.Size(117, 32);
+            this.LogoutButtonGoal.TabIndex = 15;
+            this.LogoutButtonGoal.Text = "Logout";
+            this.LogoutButtonGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LogoutButtonGoal.UseVisualStyleBackColor = false;
+            this.LogoutButtonGoal.Click += new System.EventHandler(this.LogoutButtonGoal_Click);
+            // 
             // GoalsLblGoal
             // 
             this.GoalsLblGoal.AutoSize = true;
@@ -958,8 +958,6 @@
             this.SidebarTableLayoutGoal.ResumeLayout(false);
             this.CentSibleTextPanelGoal.ResumeLayout(false);
             this.SideBarTabLayGoal.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PredTabLayGoal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxGoal)).EndInit();
             this.SumTabLayGoal.ResumeLayout(false);
@@ -970,6 +968,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxGoal)).EndInit();
             this.HomeTabLayGoal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxGoal)).EndInit();
+            this.LogTabLayGoal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.GoalPnlGoal.ResumeLayout(false);
             this.GoalPnlGoal.PerformLayout();
             this.IndicatorPnlGoal.ResumeLayout(false);
@@ -1035,7 +1035,7 @@
         private Guna.UI2.WinForms.Guna2Button SpendingBtnGoal;
         private Guna.UI2.WinForms.Guna2Button SavingBtnGoal;
         private System.Windows.Forms.Label CurrentDateGoal;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel LogTabLayGoal;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox SelectMonthDropGoal;
         private System.Windows.Forms.NumericUpDown SelectYearDropGoal;

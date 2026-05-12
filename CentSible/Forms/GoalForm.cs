@@ -48,10 +48,15 @@ namespace CentSible.Forms
             UIHelper.WireHoverRecursive(PredButtonGoal, predGroup);
             UIHelper.WireHoverRecursive(PredTabLayGoal, predGroup);
 
+            var logGroup = new Control[] { LogoutButtonGoal, LogTabLayGoal };
+            UIHelper.WireHoverRecursive(LogoutButtonGoal, logGroup);
+            UIHelper.WireHoverRecursive(LogTabLayGoal, logGroup);
+
             UIHelper.WireClickRecursive(HomeTabLayGoal, HomeButtonGoal_Click);
             UIHelper.WireClickRecursive(SumTabLayGoal, SumButtonGoal_Click);
             UIHelper.WireClickRecursive(TranTabLayGoal, TranButtonGoal_Click);
             UIHelper.WireClickRecursive(PredTabLayGoal, PredButtonGoal_Click);
+            UIHelper.WireClickRecursive(LogTabLayGoal, LogoutButtonGoal_Click);
         }
 
         private void GoalForm_Load(object sender, EventArgs e)

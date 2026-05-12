@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.PictureBox LogPicBoxTran;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransactionForm));
             this.PredPicBoxTran = new System.Windows.Forms.PictureBox();
             this.PredButtonTran = new System.Windows.Forms.Button();
@@ -55,7 +56,7 @@
             this.dgvTransaction = new System.Windows.Forms.DataGridView();
             this.SideBarTabLayTran = new System.Windows.Forms.TableLayoutPanel();
             this.PredTabLayTran = new System.Windows.Forms.TableLayoutPanel();
-            this.LogoutButtonTran = new System.Windows.Forms.Button();
+            this.LogoutBtnTran = new System.Windows.Forms.Button();
             this.SumTabLayTran = new System.Windows.Forms.TableLayoutPanel();
             this.SumPicBoxTran = new System.Windows.Forms.PictureBox();
             this.SumButtonTran = new System.Windows.Forms.Button();
@@ -79,6 +80,8 @@
             this.TotalSpentPnlTran = new Guna.UI2.WinForms.Guna2Panel();
             this.REmainingBudgetPnlTran = new Guna.UI2.WinForms.Guna2Panel();
             this.AddTransactionBtnTran = new Guna.UI2.WinForms.Guna2Button();
+            this.LogTabLayTran = new System.Windows.Forms.TableLayoutPanel();
+            LogPicBoxTran = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PredPicBoxTran)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).BeginInit();
             this.SideBarTabLayTran.SuspendLayout();
@@ -97,6 +100,8 @@
             this.MonthlyBudgetPnlTran.SuspendLayout();
             this.TotalSpentPnlTran.SuspendLayout();
             this.REmainingBudgetPnlTran.SuspendLayout();
+            this.LogTabLayTran.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(LogPicBoxTran)).BeginInit();
             this.SuspendLayout();
             // 
             // PredPicBoxTran
@@ -381,11 +386,11 @@
             this.SideBarTabLayTran.ColumnCount = 1;
             this.SideBarTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.SideBarTabLayTran.Controls.Add(this.PredTabLayTran, 0, 4);
-            this.SideBarTabLayTran.Controls.Add(this.LogoutButtonTran, 1, 6);
             this.SideBarTabLayTran.Controls.Add(this.SumTabLayTran, 0, 3);
             this.SideBarTabLayTran.Controls.Add(this.TranTabLayTran, 0, 2);
             this.SideBarTabLayTran.Controls.Add(this.GoalTabLayTran, 0, 1);
             this.SideBarTabLayTran.Controls.Add(this.HomeTabLayTran, 0, 0);
+            this.SideBarTabLayTran.Controls.Add(this.LogTabLayTran, 0, 6);
             this.SideBarTabLayTran.Location = new System.Drawing.Point(3, 69);
             this.SideBarTabLayTran.Name = "SideBarTabLayTran";
             this.SideBarTabLayTran.RowCount = 7;
@@ -410,26 +415,27 @@
             this.PredTabLayTran.Name = "PredTabLayTran";
             this.PredTabLayTran.RowCount = 1;
             this.PredTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.PredTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.PredTabLayTran.Size = new System.Drawing.Size(183, 38);
             this.PredTabLayTran.TabIndex = 25;
             // 
-            // LogoutButtonTran
+            // LogoutBtnTran
             // 
-            this.LogoutButtonTran.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.LogoutButtonTran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            this.LogoutButtonTran.FlatAppearance.BorderSize = 0;
-            this.LogoutButtonTran.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
-            this.LogoutButtonTran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LogoutButtonTran.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.LogoutButtonTran.ForeColor = System.Drawing.Color.White;
-            this.LogoutButtonTran.Location = new System.Drawing.Point(3, 369);
-            this.LogoutButtonTran.Name = "LogoutButtonTran";
-            this.LogoutButtonTran.Size = new System.Drawing.Size(183, 39);
-            this.LogoutButtonTran.TabIndex = 15;
-            this.LogoutButtonTran.Text = "Logout";
-            this.LogoutButtonTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogoutButtonTran.UseVisualStyleBackColor = false;
-            this.LogoutButtonTran.Click += new System.EventHandler(this.LogoutButtonTran_Click);
+            this.LogoutBtnTran.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.LogoutBtnTran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.LogoutBtnTran.FlatAppearance.BorderSize = 0;
+            this.LogoutBtnTran.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
+            this.LogoutBtnTran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogoutBtnTran.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.LogoutBtnTran.ForeColor = System.Drawing.Color.White;
+            this.LogoutBtnTran.Location = new System.Drawing.Point(67, 3);
+            this.LogoutBtnTran.Name = "LogoutBtnTran";
+            this.LogoutBtnTran.Size = new System.Drawing.Size(113, 32);
+            this.LogoutBtnTran.TabIndex = 15;
+            this.LogoutBtnTran.Text = "Logout";
+            this.LogoutBtnTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LogoutBtnTran.UseVisualStyleBackColor = false;
+            this.LogoutBtnTran.Click += new System.EventHandler(this.LogoutButtonTran_Click);
             // 
             // SumTabLayTran
             // 
@@ -726,6 +732,32 @@
             this.AddTransactionBtnTran.Text = "+ Add Transaction";
             this.AddTransactionBtnTran.Click += new System.EventHandler(this.AddTransactionBtnTran_Click);
             // 
+            // LogTabLayTran
+            // 
+            this.LogTabLayTran.ColumnCount = 2;
+            this.LogTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.LogTabLayTran.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.LogTabLayTran.Controls.Add(this.LogoutBtnTran, 1, 0);
+            this.LogTabLayTran.Controls.Add(LogPicBoxTran, 0, 0);
+            this.LogTabLayTran.Location = new System.Drawing.Point(3, 369);
+            this.LogTabLayTran.Name = "LogTabLayTran";
+            this.LogTabLayTran.RowCount = 1;
+            this.LogTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.LogTabLayTran.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.LogTabLayTran.Size = new System.Drawing.Size(183, 38);
+            this.LogTabLayTran.TabIndex = 61;
+            // 
+            // LogPicBoxTran
+            // 
+            LogPicBoxTran.Anchor = System.Windows.Forms.AnchorStyles.None;
+            LogPicBoxTran.Image = global::CentSible.Properties.Resources.LogoutForm;
+            LogPicBoxTran.Location = new System.Drawing.Point(12, 3);
+            LogPicBoxTran.Name = "LogPicBoxTran";
+            LogPicBoxTran.Size = new System.Drawing.Size(40, 32);
+            LogPicBoxTran.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            LogPicBoxTran.TabIndex = 19;
+            LogPicBoxTran.TabStop = false;
+            // 
             // TransactionForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -775,6 +807,8 @@
             this.TotalSpentPnlTran.PerformLayout();
             this.REmainingBudgetPnlTran.ResumeLayout(false);
             this.REmainingBudgetPnlTran.PerformLayout();
+            this.LogTabLayTran.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(LogPicBoxTran)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -804,7 +838,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colDate;
         private System.Windows.Forms.DataGridView dgvTransaction;
         private System.Windows.Forms.TableLayoutPanel SideBarTabLayTran;
-        private System.Windows.Forms.Button LogoutButtonTran;
+        private System.Windows.Forms.Button LogoutBtnTran;
         private System.Windows.Forms.TableLayoutPanel SumTabLayTran;
         private System.Windows.Forms.PictureBox SumPicBoxTran;
         private System.Windows.Forms.Button SumButtonTran;
@@ -829,5 +863,6 @@
         private Guna.UI2.WinForms.Guna2Panel TotalSpentPnlTran;
         private Guna.UI2.WinForms.Guna2Panel REmainingBudgetPnlTran;
         private Guna.UI2.WinForms.Guna2Button AddTransactionBtnTran;
+        private System.Windows.Forms.TableLayoutPanel LogTabLayTran;
     }
 }

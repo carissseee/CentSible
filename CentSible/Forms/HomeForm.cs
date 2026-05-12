@@ -53,7 +53,7 @@ namespace CentSible.Forms
             UIHelper.WireClickRecursive(SumTabLayHome, SumButtonHome_Click);
             UIHelper.WireClickRecursive(TranTabLayHome, TranButtonHome_Click);
             UIHelper.WireClickRecursive(PredTabLayHome, PredButtonHome_Click);
-            UIHelper.WireClickRecursive(LogTabLayHome, LogoutButtonHome_Click);
+            UIHelper.WireClickRecursive(LogTabLayHome, LogoutBtnHome_Click);
         }
 
         private void HomeForm_Load(object sender, EventArgs e)
@@ -228,7 +228,7 @@ namespace CentSible.Forms
         private void SumButtonHome_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Summary);
         private void PredButtonHome_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Prediction);
 
-        private void LogoutButtonHome_Click(object sender, EventArgs e) => Navigator.Logout(this);
+        private void LogoutBtnHome_Click(object sender, EventArgs e) => Navigator.Logout(this);
 
 
         private void HomeForm_FormClosing(object sender, FormClosingEventArgs e)

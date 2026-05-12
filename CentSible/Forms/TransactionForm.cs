@@ -46,10 +46,15 @@ namespace CentSible.Forms
             UIHelper.WireHoverRecursive(PredButtonTran, predGroup);
             UIHelper.WireHoverRecursive(PredTabLayTran, predGroup);
 
+            var logGroup = new Control[] { LogoutBtnTran, LogTabLayTran };
+            UIHelper.WireHoverRecursive(LogoutBtnTran, logGroup);
+            UIHelper.WireHoverRecursive(LogTabLayTran, logGroup);
+
             UIHelper.WireClickRecursive(HomeTabLayTran, HomeButtonTran_Click);
             UIHelper.WireClickRecursive(GoalTabLayTran, GoalButtonTran_Click);
             UIHelper.WireClickRecursive(SumTabLayTran, SumButtonTran_Click);
             UIHelper.WireClickRecursive(PredTabLayTran, PredButtonTran_Click);
+            UIHelper.WireClickRecursive(LogTabLayTran, LogoutButtonTran_Click);
         }
         private void TransactionForm_Load(object sender, EventArgs e)
         {
