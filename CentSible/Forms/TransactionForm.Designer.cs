@@ -46,6 +46,14 @@
             this.ExpenseBtnTran = new System.Windows.Forms.Button();
             this.BudgetBtnTran = new System.Windows.Forms.Button();
             this.dgvTransaction = new System.Windows.Forms.DataGridView();
+            this.colDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colType = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colCategory = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSave = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colTransactionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SideBarTabLayTran = new System.Windows.Forms.TableLayoutPanel();
             this.PredTabLayTran = new System.Windows.Forms.TableLayoutPanel();
             this.SumTabLayTran = new System.Windows.Forms.TableLayoutPanel();
@@ -179,7 +187,7 @@
             this.cmbYearTran.Name = "cmbYearTran";
             this.cmbYearTran.Size = new System.Drawing.Size(105, 25);
             this.cmbYearTran.TabIndex = 4;
-            this.cmbYearTran.SelectedIndexChanged += new System.EventHandler(this.cmbYear_SelectedIndexChanged);
+            this.cmbYearTran.SelectedIndexChanged += new System.EventHandler(this.cmbYearTran_SelectedIndexChanged);
             // 
             // cmbMonthTran
             // 
@@ -192,7 +200,7 @@
             this.cmbMonthTran.Name = "cmbMonthTran";
             this.cmbMonthTran.Size = new System.Drawing.Size(124, 25);
             this.cmbMonthTran.TabIndex = 5;
-            this.cmbMonthTran.SelectedIndexChanged += new System.EventHandler(this.cmbMonth_SelectedIndexChanged);
+            this.cmbMonthTran.SelectedIndexChanged += new System.EventHandler(this.cmbMonthTran_SelectedIndexChanged);
             // 
             // MonthlyBudgetLblTran
             // 
@@ -281,6 +289,9 @@
             // dgvTransaction
             // 
             this.dgvTransaction.AllowUserToAddRows = false;
+            this.dgvTransaction.AllowUserToDeleteRows = false;
+            this.dgvTransaction.AllowUserToResizeColumns = false;
+            this.dgvTransaction.AllowUserToResizeRows = false;
             this.dgvTransaction.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(253)))), ((int)(((byte)(244)))));
             this.dgvTransaction.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -319,10 +330,77 @@
             this.dgvTransaction.RowTemplate.Height = 24;
             this.dgvTransaction.Size = new System.Drawing.Size(645, 226);
             this.dgvTransaction.TabIndex = 12;
-            this.dgvTransaction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellContentClick);
-            this.dgvTransaction.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellValueChanged);
             this.dgvTransaction.CurrentCellDirtyStateChanged += new System.EventHandler(this.dgvTransaction_CurrentCellDirtyStateChanged);
-            this.dgvTransaction.Click += new System.EventHandler(this.dgvTransaction_Click);
+            dgvTransaction.CellValueChanged += dgvTransaction_CellValueChanged;
+            dgvTransaction.CellContentClick += dgvTransaction_CellContentClick;
+            //this.dgvTransaction.Click += new System.EventHandler(this.dgvTransaction_Click);
+            // 
+            // colDate
+            // 
+            this.colDate.HeaderText = "Date";
+            this.colDate.MinimumWidth = 6;
+            this.colDate.Name = "colDate";
+            // 
+            // colDescription
+            // 
+            this.colDescription.HeaderText = "Description";
+            this.colDescription.MinimumWidth = 6;
+            this.colDescription.Name = "colDescription";
+            // 
+            // colType
+            // 
+            this.colType.HeaderText = "Type";
+            this.colType.Items.AddRange(new object[] {
+            "Expense",
+            "Budget"});
+            this.colType.MinimumWidth = 6;
+            this.colType.Name = "colType";
+            this.colType.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // colCategory
+            // 
+            this.colCategory.HeaderText = "Category";
+            this.colCategory.Items.AddRange(new object[] {
+            "Income",
+            "Allowance",
+            "Food",
+            "Transportation",
+            "Utilities",
+            "Miscellaneous",
+            "Health",
+            "Leisure",
+            "Others"});
+            this.colCategory.MinimumWidth = 6;
+            this.colCategory.Name = "colCategory";
+            this.colCategory.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colCategory.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // colAmount
+            // 
+            this.colAmount.HeaderText = "Amount";
+            this.colAmount.MinimumWidth = 6;
+            this.colAmount.Name = "colAmount";
+            // 
+            // colSave
+            // 
+            this.colSave.HeaderText = "Save/Edit";
+            this.colSave.MinimumWidth = 6;
+            this.colSave.Name = "colSave";
+            this.colSave.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colSave.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // colDelete
+            // 
+            this.colDelete.HeaderText = "Delete";
+            this.colDelete.MinimumWidth = 6;
+            this.colDelete.Name = "colDelete";
+            // 
+            // colTransactionID
+            // 
+            this.colTransactionID.HeaderText = "";
+            this.colTransactionID.MinimumWidth = 6;
+            this.colTransactionID.Name = "colTransactionID";
+            this.colTransactionID.Visible = false;
             // 
             // SideBarTabLayTran
             // 

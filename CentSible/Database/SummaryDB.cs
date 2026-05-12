@@ -13,9 +13,9 @@ namespace CentSible.Database
         public Dictionary<string, decimal> GetSpendingByCategory(int accountID, int month, int year)
         {
             Dictionary<string, decimal> result = new Dictionary<string, decimal>();
-
-            MySqlConnection conn = DBConfig.GetConnection();
-            string query = "SELECT category, SUM(amount) AS total " +
+            using (MySqlConnection conn = DBConfig.GetConnection())
+            {
+                string query = "SELECT category, SUM(amount) AS total " +
                            "FROM `transaction` " +
                            "WHERE accountID = @accountID " +
                            "AND transactionType = 'Expense' " +
@@ -23,25 +23,22 @@ namespace CentSible.Database
                            "AND YEAR(`date`) = @year " +
                            "GROUP BY category";
 
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@accountID", accountID);
-            cmd.Parameters.AddWithValue("@month", month);
-            cmd.Parameters.AddWithValue("@year", year);
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@accountID", accountID);
+                cmd.Parameters.AddWithValue("@month", month);
+                cmd.Parameters.AddWithValue("@year", year);
 
-            MySqlDataReader data = cmd.ExecuteReader();
+                using (MySqlDataReader data = cmd.ExecuteReader())
+                {
+                    while (data.Read())
+                    {
+                        string category = data.GetString("category");
+                        decimal total = data.GetDecimal("total");
 
-            while (data.Read())
-            {
-                string category = data.GetString("category");
-                decimal total = data.GetDecimal("total");
-
-                result.Add(category, total);
+                        result.Add(category, total);
+                    }
+                }             
             }
-
-            data.Close();
-            cmd.Dispose();
-            conn.Close();
-
             return result;
         }
     }

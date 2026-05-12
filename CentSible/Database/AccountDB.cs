@@ -13,7 +13,7 @@ namespace CentSible.Database
 {
     public class AccountDB
     {
-        
+
         public Account GetAccount(string username)
         {
             using (MySqlConnection conn = DBConfig.GetConnection())
@@ -34,7 +34,7 @@ namespace CentSible.Database
                                 LoginStreak = reader.GetInt32("loginStreak"),
                                 LongestStreak = reader.GetInt32("longestStreak"),
                                 LastLoginDate = reader.IsDBNull(reader.GetOrdinal("lastLoginDate")) ? (DateTime?)null : reader.GetDateTime("lastLoginDate"),
-                                CreatedAt = reader.IsDBNull(reader.GetOrdinal("createdAt"))  ? (DateTime?)null: reader.GetDateTime("createdAt")
+                                CreatedAt = reader.IsDBNull(reader.GetOrdinal("createdAt")) ? (DateTime?)null : reader.GetDateTime("createdAt")
                             };
                         }
                     }
@@ -73,6 +73,20 @@ namespace CentSible.Database
                     cmd.Parameters.AddWithValue("@s", user.LoginStreak);
                     cmd.Parameters.AddWithValue("@ls", user.LongestStreak);
                     cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public bool IsUsernameTaken(string username)
+        {
+            using (MySqlConnection conn = DBConfig.GetConnection())
+            {
+                string query = "SELECT COUNT(*) FROM account WHERE username = @u";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@u", username);
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    return count > 0;
                 }
             }
         }
