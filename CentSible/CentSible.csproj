@@ -127,10 +127,8 @@
     <Compile Include="Logic\TransactionLogic.cs" />
     <Compile Include="Logic\UIHelper.cs" />
     <Compile Include="Models\Account.cs" />
-    <Compile Include="Models\Budget.cs" />
     <Compile Include="Models\Goal.cs" />
     <Compile Include="Models\GoalDisplayMetrics.cs" />
-    <Compile Include="Models\MonthlySummary.cs" />
     <Compile Include="Models\Prediction.cs" />
     <Compile Include="Models\StreakMetrics.cs" />
     <Compile Include="Models\Transaction.cs" />
