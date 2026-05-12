@@ -402,7 +402,7 @@
             this.StreakIconsTabLayHome.Controls.Add(this.FriPanelHome, 4, 0);
             this.StreakIconsTabLayHome.Controls.Add(this.WedPanelHome, 2, 0);
             this.StreakIconsTabLayHome.Controls.Add(this.TuePanelHome, 1, 0);
-            this.StreakIconsTabLayHome.Location = new System.Drawing.Point(12, 29);
+            this.StreakIconsTabLayHome.Location = new System.Drawing.Point(12, 37);
             this.StreakIconsTabLayHome.Name = "StreakIconsTabLayHome";
             this.StreakIconsTabLayHome.RowCount = 2;
             this.StreakIconsTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));

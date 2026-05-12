@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CentSible.Logic;
 using System.Globalization;
+using Guna.UI2.WinForms;
 
 namespace CentSible.Forms
 {
@@ -57,7 +58,7 @@ namespace CentSible.Forms
         {
             if (_user == null) return;
 
-            SetActiveTabButton(btnSpendingTab);
+            SetActiveTabButton(SpendingBtnGoal);
 
             SelectMonthDropGoal.SelectedIndexChanged -= cbSelectMonth_SelectedIndexChanged;
             SelectYearDropGoal.ValueChanged -= numSelectYear_ValueChanged;
@@ -85,7 +86,7 @@ namespace CentSible.Forms
         private void UpdateDaysRemaining()
         {
             int days = (TargetDateDropDownGoal.Value.Date - DateTime.Today).Days;
-            DaysRemainingLabelGoal.Text = days >= 0 ? $"{days} Days" : "Overdue";
+            DaysRemainingLblGoal.Text = days >= 0 ? $"{days} Days" : "Overdue";
         }
 
         private void UpdateFilter()
@@ -103,8 +104,8 @@ namespace CentSible.Forms
             _activeType = type;
             string modeText = (type == GoalCategory.Spending) ? "Spending" : "Saving";
 
-            dynamicGoalLabel.Text = $"{modeText} Goal";
-            dynamicIndicatorLabel.Text = $"{modeText} Indicator";
+            SpendLblGoal.Text = $"{modeText} Goal";
+            IndicatorLblGoal.Text = $"{modeText} Indicator";
 
             var goal = _allGoals?.Find(g => g.GoalType == type);
 
@@ -113,27 +114,27 @@ namespace CentSible.Forms
                 
                 decimal truncCurrent = Math.Truncate((decimal)goal.CurrentAmount * 100) / 100;
                 decimal truncTarget = Math.Truncate((decimal)goal.TargetAmount * 100) / 100;
-                TargetAmountTextGoal.Text = truncTarget.ToString("F2");
-                CurrentAmountTextGoal.Text = truncCurrent.ToString("F2");
+                TargetAmountTxtGoal.Text = truncTarget.ToString("F2");
+                CurrentAmountTxtGoal.Text = truncCurrent.ToString("F2");
                 TargetDateDropDownGoal.Value = goal.TargetDate;
-                lblIndicatorSpent.Text = $"₱ {truncCurrent.ToString("N2")}";
-                lblIndicatorTarget.Text = $"₱ {truncTarget.ToString("N2")}";
+                IndicatorLblSpent.Text = $"₱ {truncCurrent.ToString("N2")}";
+                IndicatorLblTarget.Text = $"₱ {truncTarget.ToString("N2")}";
 
                 UpdateIndicators(goal);
-                IndicatorFlowLayGoal.Visible = true;
+                IndicatorPnlGoal.Visible = true;
             }
             else
             {
-                TargetAmountTextGoal.Text = "";
-                CurrentAmountTextGoal.Text = "";
-                lblIndicatorSpent.Text = "₱ 0.00";
-                lblIndicatorTarget.Text = "₱ 0.00";
-                pbGoalProgress.Value = 0;
-                IndicatorPercentLabelGoal.Text = "0%";
+                TargetAmountTxtGoal.Text = "";
+                CurrentAmountTxtGoal.Text = "";
+                IndicatorLblSpent.Text = "₱ 0.00";
+                IndicatorLblTarget.Text = "₱ 0.00";
+                CurrentBarGoal.Value = 0;
+                IndicatorPercentLblGoal.Text = "0%";
                 MilestoneBarGoal.Value = 0;
-                MilestoneDescLabelGoal.Text = "No goal set for this period.";
-                DaysToGoLabelGoal.Text = "0 Days";
-                IndicatorDaysLabelGoal.Text = "0 Days";
+                MilestoneDescLblGoal.Text = "No goal set for this period.";
+                DaysToGoLblGoal.Text = "0 Days";
+                IndicatorDaysLblGoal.Text = "0 Days";
             }
         }
 
@@ -141,23 +142,23 @@ namespace CentSible.Forms
         {
             var metrics = _goalLogic.GetCalculatedMetrics(goal);
 
-            pbGoalProgress.Value = metrics.TotalPercent;
-            IndicatorPercentLabelGoal.Text = $"{metrics.TotalPercent}%";
+            CurrentBarGoal.Value = metrics.TotalPercent;
+            IndicatorPercentLblGoal.Text = $"{metrics.TotalPercent}%";
             MilestoneBarGoal.Value = metrics.MilestoneStep;
-            MilestoneDescLabelGoal.Text = metrics.StatusNote;
-            DaysToGoLabelGoal.Text = metrics.DaysText;
-            IndicatorDaysLabelGoal.Text = metrics.DaysText;
+            MilestoneDescLblGoal.Text = metrics.StatusNote;
+            DaysToGoLblGoal.Text = metrics.DaysText;
+            IndicatorDaysLblGoal.Text = metrics.DaysText;
         }
 
-        private void btnUpdateGoal_Click(object sender, EventArgs e)
+        private void SaveBtnGoal_Click(object sender, EventArgs e)
         {
             
-            bool isTargetValid = decimal.TryParse(TargetAmountTextGoal.Text,
+            bool isTargetValid = decimal.TryParse(TargetAmountTxtGoal.Text,
                                                 NumberStyles.AllowDecimalPoint,
                                                 CultureInfo.InvariantCulture,
                                                 out decimal target);
 
-            bool isCurrentValid = decimal.TryParse(CurrentAmountTextGoal.Text,
+            bool isCurrentValid = decimal.TryParse(CurrentAmountTxtGoal.Text,
                                                  NumberStyles.AllowDecimalPoint,
                                                  CultureInfo.InvariantCulture,
                                                  out decimal current);
@@ -183,32 +184,30 @@ namespace CentSible.Forms
             }
         }
 
-        private Button _activeTabButton = null;
+        private Guna2Button _activeTabButton = null;
 
-        private void SetActiveTabButton(Button btn)
+        private void SetActiveTabButton(Guna2Button btn)
         {
             if (_activeTabButton != null)
             {
-                _activeTabButton.BackColor = SystemColors.Control;
+                _activeTabButton.FillColor = SystemColors.Control;
                 _activeTabButton.ForeColor = SystemColors.ControlText;
-                _activeTabButton.FlatStyle = FlatStyle.Standard;
             }
 
-            btn.FlatStyle = FlatStyle.Flat;
-            btn.BackColor = Color.Green;
+            btn.FillColor = Color.DarkGreen;
             btn.ForeColor = Color.White;
             _activeTabButton = btn;
         }
 
-        private void btnSpendingTab_Click(object sender, EventArgs e)
+        private void SpendingBtnGoal_Click(object sender, EventArgs e)
         {
-            SetActiveTabButton(btnSpendingTab);
+            SetActiveTabButton(SpendingBtnGoal);
             SetMode(GoalCategory.Spending);
         }
 
-        private void btnSavingTab_Click(object sender, EventArgs e)
+        private void SavingBtnGoal_Click(object sender, EventArgs e)
         {
-            SetActiveTabButton(btnSavingTab);
+            SetActiveTabButton(SavingBtnGoal);
             SetMode(GoalCategory.Savings);
         }
 
