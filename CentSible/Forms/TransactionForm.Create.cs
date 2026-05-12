@@ -10,7 +10,7 @@ namespace CentSible.Forms
 {
     public partial class TransactionForm
     {
-        private void btnAddTransaction_Click(object sender, EventArgs e)
+        private void AddTransaction(object sender, EventArgs e)
         {
             if (_isAddingNew == true)
             {

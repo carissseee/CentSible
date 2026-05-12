@@ -29,9 +29,9 @@ namespace CentSible.Forms
             lblDateTran.Text = new DateTime(year, month, 1).ToString("MMMM yyyy");
 
             transactions = transactionLogic.GetTransactions(_user.AccountID, month, year);
-            lblBudget2.Text = "₱ " + transactionLogic.GetTotalBudget(transactions).ToString("N0");
-            lblSpent2.Text = "₱ " + transactionLogic.GetTotalSpent(transactions).ToString("N0");
-            lblRemaining2.Text = "₱ " + transactionLogic.GetRemainingBudget(transactions).ToString("N0");
+            PBudgetLblTran.Text = "₱ " + transactionLogic.GetTotalBudget(transactions).ToString("N0");
+            PSpentLblTran.Text = "₱ " + transactionLogic.GetTotalSpent(transactions).ToString("N0");
+            PRemainingLblTran.Text = "₱ " + transactionLogic.GetRemainingBudget(transactions).ToString("N0");
 
             foreach (Transaction transaction in transactions)
             {
@@ -89,9 +89,9 @@ namespace CentSible.Forms
 
         private void SetFilterButtons(bool enabled)
         {
-            btnAll.Enabled = enabled;
-            btnExpense.Enabled = enabled;
-            btnBudget.Enabled = enabled;
+            AllBtnTran.Enabled = enabled;
+            ExpenseBtnTran.Enabled = enabled;
+            BudgetBtnTran.Enabled = enabled;
         }
     }
 }

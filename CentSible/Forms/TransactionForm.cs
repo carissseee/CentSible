@@ -200,5 +200,15 @@ namespace CentSible.Forms
         private void pnlTotalSpent_Paint(object sender, PaintEventArgs e) { }
         private void lblSpent_Click(object sender, EventArgs e) { }
         private void lblBudget2_Click_1(object sender, EventArgs e) { }
+
+        private void SpenPanTran_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void AddTransactionBtnTran_Click(object sender, EventArgs e)
+        {
+            AddTransaction(sender, e);
+        }
     }
 }
