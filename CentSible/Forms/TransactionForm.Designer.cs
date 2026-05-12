@@ -33,8 +33,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransactionForm));
             this.PredPicBoxTran = new System.Windows.Forms.PictureBox();
             this.PredButtonTran = new System.Windows.Forms.Button();
-            this.lblTransactionTran = new System.Windows.Forms.Label();
-            this.lblDateTran = new System.Windows.Forms.Label();
+            this.TransactionLblTran = new System.Windows.Forms.Label();
+            this.CurrentDateTran = new System.Windows.Forms.Label();
             this.cmbYearTran = new System.Windows.Forms.ComboBox();
             this.cmbMonthTran = new System.Windows.Forms.ComboBox();
             this.MonthlyBudgetLblTran = new System.Windows.Forms.Label();
@@ -128,30 +128,30 @@
             this.PredButtonTran.UseVisualStyleBackColor = false;
             this.PredButtonTran.Click += new System.EventHandler(this.PredButtonTran_Click);
             // 
-            // lblTransactionTran
+            // TransactionLblTran
             // 
-            this.lblTransactionTran.AutoSize = true;
-            this.lblTransactionTran.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.lblTransactionTran.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            this.lblTransactionTran.Location = new System.Drawing.Point(231, 20);
-            this.lblTransactionTran.Name = "lblTransactionTran";
-            this.lblTransactionTran.Size = new System.Drawing.Size(149, 35);
-            this.lblTransactionTran.TabIndex = 2;
-            this.lblTransactionTran.Text = "Transaction";
-            this.lblTransactionTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTransactionTran.Click += new System.EventHandler(this.lblTransaction_Click);
+            this.TransactionLblTran.AutoSize = true;
+            this.TransactionLblTran.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.TransactionLblTran.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.TransactionLblTran.Location = new System.Drawing.Point(231, 20);
+            this.TransactionLblTran.Name = "TransactionLblTran";
+            this.TransactionLblTran.Size = new System.Drawing.Size(149, 35);
+            this.TransactionLblTran.TabIndex = 2;
+            this.TransactionLblTran.Text = "Transaction";
+            this.TransactionLblTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TransactionLblTran.Click += new System.EventHandler(this.lblTransaction_Click);
             // 
-            // lblDateTran
+            // CurrentDateTran
             // 
-            this.lblDateTran.AutoSize = true;
-            this.lblDateTran.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateTran.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblDateTran.Location = new System.Drawing.Point(237, 52);
-            this.lblDateTran.Name = "lblDateTran";
-            this.lblDateTran.Size = new System.Drawing.Size(68, 17);
-            this.lblDateTran.TabIndex = 3;
-            this.lblDateTran.Text = "April 2026";
-            this.lblDateTran.Click += new System.EventHandler(this.lblDate_Click);
+            this.CurrentDateTran.AutoSize = true;
+            this.CurrentDateTran.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentDateTran.ForeColor = System.Drawing.Color.DarkGreen;
+            this.CurrentDateTran.Location = new System.Drawing.Point(237, 52);
+            this.CurrentDateTran.Name = "CurrentDateTran";
+            this.CurrentDateTran.Size = new System.Drawing.Size(68, 17);
+            this.CurrentDateTran.TabIndex = 3;
+            this.CurrentDateTran.Text = "April 2026";
+            this.CurrentDateTran.Click += new System.EventHandler(this.lblDate_Click);
             // 
             // cmbYearTran
             // 
@@ -741,8 +741,8 @@
             this.Controls.Add(this.AllBtnTran);
             this.Controls.Add(this.cmbMonthTran);
             this.Controls.Add(this.cmbYearTran);
-            this.Controls.Add(this.lblDateTran);
-            this.Controls.Add(this.lblTransactionTran);
+            this.Controls.Add(this.CurrentDateTran);
+            this.Controls.Add(this.TransactionLblTran);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(950, 525);
@@ -783,8 +783,8 @@
         #endregion
         private System.Windows.Forms.PictureBox PredPicBoxTran;
         private System.Windows.Forms.Button PredButtonTran;
-        private System.Windows.Forms.Label lblTransactionTran;
-        private System.Windows.Forms.Label lblDateTran;
+        private System.Windows.Forms.Label TransactionLblTran;
+        private System.Windows.Forms.Label CurrentDateTran;
         private System.Windows.Forms.ComboBox cmbYearTran;
         private System.Windows.Forms.ComboBox cmbMonthTran;
         private System.Windows.Forms.Label MonthlyBudgetLblTran;

@@ -26,7 +26,7 @@ namespace CentSible.Forms
 
             int month = cmbMonthTran.SelectedIndex + 1;
             int year = int.Parse(cmbYearTran.SelectedItem.ToString());
-            lblDateTran.Text = new DateTime(year, month, 1).ToString("MMMM yyyy");
+            CurrentDateTran.Text = new DateTime(year, month, 1).ToString("MMMM yyyy");
 
             transactions = transactionLogic.GetTransactions(_user.AccountID, month, year);
             PBudgetLblTran.Text = "₱ " + transactionLogic.GetTotalBudget(transactions).ToString("N0");

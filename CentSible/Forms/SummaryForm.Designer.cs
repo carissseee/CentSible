@@ -33,13 +33,12 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SummaryForm));
-            this.lblSummary = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
+            this.SummaryLblSum = new System.Windows.Forms.Label();
+            this.CurrentDateSum = new System.Windows.Forms.Label();
             this.cmbYear = new System.Windows.Forms.ComboBox();
             this.cmbMonth = new System.Windows.Forms.ComboBox();
             this.chartSummary = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.pnlBreakdown = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.BreakdownTabLaySum = new System.Windows.Forms.TableLayoutPanel();
             this.lblOTotal = new System.Windows.Forms.Label();
             this.pnlFood = new System.Windows.Forms.Panel();
             this.lblLTotal = new System.Windows.Forms.Label();
@@ -58,10 +57,9 @@
             this.lblTransportation = new System.Windows.Forms.Label();
             this.lblHealth = new System.Windows.Forms.Label();
             this.lblUtilities = new System.Windows.Forms.Label();
-            this.lblBreakdown = new System.Windows.Forms.Label();
-            this.pnlSummary = new System.Windows.Forms.Panel();
-            this.lblMSummary = new System.Windows.Forms.Label();
-            this.lblReport = new System.Windows.Forms.Label();
+            this.BreakdownLblSum = new System.Windows.Forms.Label();
+            this.ReportLblSum = new System.Windows.Forms.Label();
+            this.SummaryReportLblSum = new System.Windows.Forms.Label();
             this.SidebarTableLayoutSum = new System.Windows.Forms.FlowLayoutPanel();
             this.CentSibleTextPanelGoal = new System.Windows.Forms.Panel();
             this.CentSibleLabelSum = new System.Windows.Forms.Label();
@@ -82,10 +80,11 @@
             this.HomeTabLaySum = new System.Windows.Forms.TableLayoutPanel();
             this.HomeButtonSum = new System.Windows.Forms.Button();
             this.HomePicBoxSum = new System.Windows.Forms.PictureBox();
+            this.SummaryChrtSum = new Guna.UI2.WinForms.Guna2Panel();
+            this.SpendBreakdownPnlSum = new Guna.UI2.WinForms.Guna2Panel();
+            this.SumReportPnlSum = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.chartSummary)).BeginInit();
-            this.pnlBreakdown.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.pnlSummary.SuspendLayout();
+            this.BreakdownTabLaySum.SuspendLayout();
             this.SidebarTableLayoutSum.SuspendLayout();
             this.CentSibleTextPanelGoal.SuspendLayout();
             this.SideBarTabLaySum.SuspendLayout();
@@ -99,29 +98,32 @@
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxSum)).BeginInit();
             this.HomeTabLaySum.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxSum)).BeginInit();
+            this.SummaryChrtSum.SuspendLayout();
+            this.SpendBreakdownPnlSum.SuspendLayout();
+            this.SumReportPnlSum.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblSummary
+            // SummaryLblSum
             // 
-            this.lblSummary.AutoSize = true;
-            this.lblSummary.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.lblSummary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            this.lblSummary.Location = new System.Drawing.Point(231, 20);
-            this.lblSummary.Name = "lblSummary";
-            this.lblSummary.Size = new System.Drawing.Size(127, 35);
-            this.lblSummary.TabIndex = 1;
-            this.lblSummary.Text = "Summary";
+            this.SummaryLblSum.AutoSize = true;
+            this.SummaryLblSum.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.SummaryLblSum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.SummaryLblSum.Location = new System.Drawing.Point(231, 20);
+            this.SummaryLblSum.Name = "SummaryLblSum";
+            this.SummaryLblSum.Size = new System.Drawing.Size(127, 35);
+            this.SummaryLblSum.TabIndex = 1;
+            this.SummaryLblSum.Text = "Summary";
             // 
-            // lblDate
+            // CurrentDateSum
             // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold);
-            this.lblDate.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblDate.Location = new System.Drawing.Point(237, 52);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(78, 17);
-            this.lblDate.TabIndex = 2;
-            this.lblDate.Text = "March 2026";
+            this.CurrentDateSum.AutoSize = true;
+            this.CurrentDateSum.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold);
+            this.CurrentDateSum.ForeColor = System.Drawing.Color.DarkGreen;
+            this.CurrentDateSum.Location = new System.Drawing.Point(237, 52);
+            this.CurrentDateSum.Name = "CurrentDateSum";
+            this.CurrentDateSum.Size = new System.Drawing.Size(78, 17);
+            this.CurrentDateSum.TabIndex = 2;
+            this.CurrentDateSum.Text = "March 2026";
             // 
             // cmbYear
             // 
@@ -149,14 +151,14 @@
             // 
             // chartSummary
             // 
-            this.chartSummary.BorderlineColor = System.Drawing.Color.DarkGreen;
+            this.chartSummary.BorderlineColor = System.Drawing.Color.DarkKhaki;
             this.chartSummary.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            this.chartSummary.BorderlineWidth = 2;
+            this.chartSummary.BorderlineWidth = 0;
             chartArea1.Name = "ChartArea1";
             this.chartSummary.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartSummary.Legends.Add(legend1);
-            this.chartSummary.Location = new System.Drawing.Point(518, 75);
+            this.chartSummary.Location = new System.Drawing.Point(9, 17);
             this.chartSummary.Name = "chartSummary";
             this.chartSummary.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
@@ -164,55 +166,45 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chartSummary.Series.Add(series1);
-            this.chartSummary.Size = new System.Drawing.Size(379, 412);
+            this.chartSummary.Size = new System.Drawing.Size(362, 381);
             this.chartSummary.TabIndex = 5;
             this.chartSummary.Text = "Category Breakdown";
             // 
-            // pnlBreakdown
+            // BreakdownTabLaySum
             // 
-            this.pnlBreakdown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlBreakdown.Controls.Add(this.tableLayoutPanel1);
-            this.pnlBreakdown.Controls.Add(this.lblBreakdown);
-            this.pnlBreakdown.Location = new System.Drawing.Point(237, 75);
-            this.pnlBreakdown.Name = "pnlBreakdown";
-            this.pnlBreakdown.Size = new System.Drawing.Size(261, 265);
-            this.pnlBreakdown.TabIndex = 6;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.08779F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.56878F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.34343F));
-            this.tableLayoutPanel1.Controls.Add(this.lblOTotal, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.pnlFood, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblLTotal, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.pnlTransportation, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblHTotal, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.pnlUtilities, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblUTotal, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.pnlHealth, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lblTTotal, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.pnlLeisure, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lblFTotal, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pnlOthers, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.lblOthers, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.lblFood, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblLeisure, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lblTransportation, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblHealth, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lblUtilities, 1, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 26);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(255, 234);
-            this.tableLayoutPanel1.TabIndex = 41;
+            this.BreakdownTabLaySum.ColumnCount = 3;
+            this.BreakdownTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.08779F));
+            this.BreakdownTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.56878F));
+            this.BreakdownTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.34343F));
+            this.BreakdownTabLaySum.Controls.Add(this.lblOTotal, 2, 5);
+            this.BreakdownTabLaySum.Controls.Add(this.pnlFood, 0, 0);
+            this.BreakdownTabLaySum.Controls.Add(this.lblLTotal, 2, 4);
+            this.BreakdownTabLaySum.Controls.Add(this.pnlTransportation, 0, 1);
+            this.BreakdownTabLaySum.Controls.Add(this.lblHTotal, 2, 3);
+            this.BreakdownTabLaySum.Controls.Add(this.pnlUtilities, 0, 2);
+            this.BreakdownTabLaySum.Controls.Add(this.lblUTotal, 2, 2);
+            this.BreakdownTabLaySum.Controls.Add(this.pnlHealth, 0, 3);
+            this.BreakdownTabLaySum.Controls.Add(this.lblTTotal, 2, 1);
+            this.BreakdownTabLaySum.Controls.Add(this.pnlLeisure, 0, 4);
+            this.BreakdownTabLaySum.Controls.Add(this.lblFTotal, 2, 0);
+            this.BreakdownTabLaySum.Controls.Add(this.pnlOthers, 0, 5);
+            this.BreakdownTabLaySum.Controls.Add(this.lblOthers, 1, 5);
+            this.BreakdownTabLaySum.Controls.Add(this.lblFood, 1, 0);
+            this.BreakdownTabLaySum.Controls.Add(this.lblLeisure, 1, 4);
+            this.BreakdownTabLaySum.Controls.Add(this.lblTransportation, 1, 1);
+            this.BreakdownTabLaySum.Controls.Add(this.lblHealth, 1, 3);
+            this.BreakdownTabLaySum.Controls.Add(this.lblUtilities, 1, 2);
+            this.BreakdownTabLaySum.Location = new System.Drawing.Point(10, 32);
+            this.BreakdownTabLaySum.Name = "BreakdownTabLaySum";
+            this.BreakdownTabLaySum.RowCount = 6;
+            this.BreakdownTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.BreakdownTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.BreakdownTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.BreakdownTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.19457F));
+            this.BreakdownTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.64706F));
+            this.BreakdownTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.93213F));
+            this.BreakdownTabLaySum.Size = new System.Drawing.Size(238, 221);
+            this.BreakdownTabLaySum.TabIndex = 41;
             // 
             // lblOTotal
             // 
@@ -220,7 +212,7 @@
             this.lblOTotal.AutoSize = true;
             this.lblOTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOTotal.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblOTotal.Location = new System.Drawing.Point(208, 203);
+            this.lblOTotal.Location = new System.Drawing.Point(191, 194);
             this.lblOTotal.Name = "lblOTotal";
             this.lblOTotal.Size = new System.Drawing.Size(44, 17);
             this.lblOTotal.TabIndex = 15;
@@ -232,7 +224,7 @@
             this.pnlFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
             this.pnlFood.Location = new System.Drawing.Point(3, 3);
             this.pnlFood.Name = "pnlFood";
-            this.pnlFood.Size = new System.Drawing.Size(37, 32);
+            this.pnlFood.Size = new System.Drawing.Size(37, 30);
             this.pnlFood.TabIndex = 1;
             // 
             // lblLTotal
@@ -241,7 +233,7 @@
             this.lblLTotal.AutoSize = true;
             this.lblLTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLTotal.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblLTotal.Location = new System.Drawing.Point(208, 162);
+            this.lblLTotal.Location = new System.Drawing.Point(191, 157);
             this.lblLTotal.Name = "lblLTotal";
             this.lblLTotal.Size = new System.Drawing.Size(44, 17);
             this.lblLTotal.TabIndex = 14;
@@ -251,9 +243,9 @@
             // pnlTransportation
             // 
             this.pnlTransportation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(182)))), ((int)(((byte)(172)))));
-            this.pnlTransportation.Location = new System.Drawing.Point(3, 41);
+            this.pnlTransportation.Location = new System.Drawing.Point(3, 39);
             this.pnlTransportation.Name = "pnlTransportation";
-            this.pnlTransportation.Size = new System.Drawing.Size(37, 32);
+            this.pnlTransportation.Size = new System.Drawing.Size(37, 30);
             this.pnlTransportation.TabIndex = 2;
             // 
             // lblHTotal
@@ -262,7 +254,7 @@
             this.lblHTotal.AutoSize = true;
             this.lblHTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHTotal.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblHTotal.Location = new System.Drawing.Point(208, 124);
+            this.lblHTotal.Location = new System.Drawing.Point(191, 118);
             this.lblHTotal.Name = "lblHTotal";
             this.lblHTotal.Size = new System.Drawing.Size(44, 17);
             this.lblHTotal.TabIndex = 13;
@@ -272,9 +264,9 @@
             // pnlUtilities
             // 
             this.pnlUtilities.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(203)))), ((int)(((byte)(196)))));
-            this.pnlUtilities.Location = new System.Drawing.Point(3, 79);
+            this.pnlUtilities.Location = new System.Drawing.Point(3, 75);
             this.pnlUtilities.Name = "pnlUtilities";
-            this.pnlUtilities.Size = new System.Drawing.Size(37, 32);
+            this.pnlUtilities.Size = new System.Drawing.Size(37, 30);
             this.pnlUtilities.TabIndex = 2;
             // 
             // lblUTotal
@@ -283,7 +275,7 @@
             this.lblUTotal.AutoSize = true;
             this.lblUTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUTotal.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblUTotal.Location = new System.Drawing.Point(208, 86);
+            this.lblUTotal.Location = new System.Drawing.Point(191, 81);
             this.lblUTotal.Name = "lblUTotal";
             this.lblUTotal.Size = new System.Drawing.Size(44, 17);
             this.lblUTotal.TabIndex = 12;
@@ -293,7 +285,7 @@
             // pnlHealth
             // 
             this.pnlHealth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(141)))), ((int)(((byte)(184)))));
-            this.pnlHealth.Location = new System.Drawing.Point(3, 117);
+            this.pnlHealth.Location = new System.Drawing.Point(3, 111);
             this.pnlHealth.Name = "pnlHealth";
             this.pnlHealth.Size = new System.Drawing.Size(37, 32);
             this.pnlHealth.TabIndex = 2;
@@ -304,7 +296,7 @@
             this.lblTTotal.AutoSize = true;
             this.lblTTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTTotal.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblTTotal.Location = new System.Drawing.Point(208, 48);
+            this.lblTTotal.Location = new System.Drawing.Point(191, 45);
             this.lblTTotal.Name = "lblTTotal";
             this.lblTTotal.Size = new System.Drawing.Size(44, 17);
             this.lblTTotal.TabIndex = 11;
@@ -314,9 +306,9 @@
             // pnlLeisure
             // 
             this.pnlLeisure.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(123)))));
-            this.pnlLeisure.Location = new System.Drawing.Point(3, 155);
+            this.pnlLeisure.Location = new System.Drawing.Point(3, 149);
             this.pnlLeisure.Name = "pnlLeisure";
-            this.pnlLeisure.Size = new System.Drawing.Size(37, 32);
+            this.pnlLeisure.Size = new System.Drawing.Size(37, 33);
             this.pnlLeisure.TabIndex = 2;
             // 
             // lblFTotal
@@ -325,7 +317,7 @@
             this.lblFTotal.AutoSize = true;
             this.lblFTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFTotal.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblFTotal.Location = new System.Drawing.Point(208, 10);
+            this.lblFTotal.Location = new System.Drawing.Point(191, 9);
             this.lblFTotal.Name = "lblFTotal";
             this.lblFTotal.Size = new System.Drawing.Size(44, 17);
             this.lblFTotal.TabIndex = 10;
@@ -335,9 +327,9 @@
             // pnlOthers
             // 
             this.pnlOthers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));
-            this.pnlOthers.Location = new System.Drawing.Point(3, 193);
+            this.pnlOthers.Location = new System.Drawing.Point(3, 188);
             this.pnlOthers.Name = "pnlOthers";
-            this.pnlOthers.Size = new System.Drawing.Size(37, 37);
+            this.pnlOthers.Size = new System.Drawing.Size(37, 30);
             this.pnlOthers.TabIndex = 3;
             // 
             // lblOthers
@@ -346,7 +338,7 @@
             this.lblOthers.AutoSize = true;
             this.lblOthers.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOthers.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblOthers.Location = new System.Drawing.Point(49, 203);
+            this.lblOthers.Location = new System.Drawing.Point(46, 194);
             this.lblOthers.Name = "lblOthers";
             this.lblOthers.Size = new System.Drawing.Size(49, 17);
             this.lblOthers.TabIndex = 9;
@@ -359,7 +351,7 @@
             this.lblFood.AutoSize = true;
             this.lblFood.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFood.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblFood.Location = new System.Drawing.Point(49, 10);
+            this.lblFood.Location = new System.Drawing.Point(46, 9);
             this.lblFood.Name = "lblFood";
             this.lblFood.Size = new System.Drawing.Size(39, 17);
             this.lblFood.TabIndex = 4;
@@ -372,7 +364,7 @@
             this.lblLeisure.AutoSize = true;
             this.lblLeisure.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLeisure.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblLeisure.Location = new System.Drawing.Point(49, 162);
+            this.lblLeisure.Location = new System.Drawing.Point(46, 157);
             this.lblLeisure.Name = "lblLeisure";
             this.lblLeisure.Size = new System.Drawing.Size(50, 17);
             this.lblLeisure.TabIndex = 8;
@@ -385,7 +377,7 @@
             this.lblTransportation.AutoSize = true;
             this.lblTransportation.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTransportation.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblTransportation.Location = new System.Drawing.Point(49, 48);
+            this.lblTransportation.Location = new System.Drawing.Point(46, 45);
             this.lblTransportation.Name = "lblTransportation";
             this.lblTransportation.Size = new System.Drawing.Size(77, 17);
             this.lblTransportation.TabIndex = 5;
@@ -398,7 +390,7 @@
             this.lblHealth.AutoSize = true;
             this.lblHealth.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHealth.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblHealth.Location = new System.Drawing.Point(49, 124);
+            this.lblHealth.Location = new System.Drawing.Point(46, 118);
             this.lblHealth.Name = "lblHealth";
             this.lblHealth.Size = new System.Drawing.Size(48, 17);
             this.lblHealth.TabIndex = 7;
@@ -411,54 +403,44 @@
             this.lblUtilities.AutoSize = true;
             this.lblUtilities.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUtilities.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblUtilities.Location = new System.Drawing.Point(49, 86);
+            this.lblUtilities.Location = new System.Drawing.Point(46, 81);
             this.lblUtilities.Name = "lblUtilities";
             this.lblUtilities.Size = new System.Drawing.Size(52, 17);
             this.lblUtilities.TabIndex = 6;
             this.lblUtilities.Text = "Utilities";
             this.lblUtilities.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblBreakdown
+            // BreakdownLblSum
             // 
-            this.lblBreakdown.AutoSize = true;
-            this.lblBreakdown.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBreakdown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            this.lblBreakdown.Location = new System.Drawing.Point(5, 0);
-            this.lblBreakdown.Name = "lblBreakdown";
-            this.lblBreakdown.Size = new System.Drawing.Size(173, 23);
-            this.lblBreakdown.TabIndex = 0;
-            this.lblBreakdown.Text = "Spending Breakdown";
+            this.BreakdownLblSum.AutoSize = true;
+            this.BreakdownLblSum.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BreakdownLblSum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.BreakdownLblSum.Location = new System.Drawing.Point(9, 5);
+            this.BreakdownLblSum.Name = "BreakdownLblSum";
+            this.BreakdownLblSum.Size = new System.Drawing.Size(173, 23);
+            this.BreakdownLblSum.TabIndex = 0;
+            this.BreakdownLblSum.Text = "Spending Breakdown";
             // 
-            // pnlSummary
+            // ReportLblSum
             // 
-            this.pnlSummary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlSummary.Controls.Add(this.lblMSummary);
-            this.pnlSummary.Controls.Add(this.lblReport);
-            this.pnlSummary.Location = new System.Drawing.Point(237, 357);
-            this.pnlSummary.Name = "pnlSummary";
-            this.pnlSummary.Size = new System.Drawing.Size(261, 130);
-            this.pnlSummary.TabIndex = 7;
+            this.ReportLblSum.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ReportLblSum.ForeColor = System.Drawing.Color.DarkGreen;
+            this.ReportLblSum.Location = new System.Drawing.Point(10, 32);
+            this.ReportLblSum.Name = "ReportLblSum";
+            this.ReportLblSum.Size = new System.Drawing.Size(238, 81);
+            this.ReportLblSum.TabIndex = 16;
+            this.ReportLblSum.Text = "Report";
             // 
-            // lblMSummary
+            // SummaryReportLblSum
             // 
-            this.lblMSummary.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMSummary.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblMSummary.Location = new System.Drawing.Point(6, 24);
-            this.lblMSummary.Name = "lblMSummary";
-            this.lblMSummary.Size = new System.Drawing.Size(249, 89);
-            this.lblMSummary.TabIndex = 16;
-            this.lblMSummary.Text = "Report";
-            // 
-            // lblReport
-            // 
-            this.lblReport.AutoSize = true;
-            this.lblReport.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            this.lblReport.Location = new System.Drawing.Point(5, 1);
-            this.lblReport.Name = "lblReport";
-            this.lblReport.Size = new System.Drawing.Size(141, 23);
-            this.lblReport.TabIndex = 0;
-            this.lblReport.Text = "Summary Report";
+            this.SummaryReportLblSum.AutoSize = true;
+            this.SummaryReportLblSum.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SummaryReportLblSum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.SummaryReportLblSum.Location = new System.Drawing.Point(9, 5);
+            this.SummaryReportLblSum.Name = "SummaryReportLblSum";
+            this.SummaryReportLblSum.Size = new System.Drawing.Size(141, 23);
+            this.SummaryReportLblSum.TabIndex = 0;
+            this.SummaryReportLblSum.Text = "Summary Report";
             // 
             // SidebarTableLayoutSum
             // 
@@ -751,19 +733,57 @@
             this.HomePicBoxSum.TabIndex = 15;
             this.HomePicBoxSum.TabStop = false;
             // 
+            // SummaryChrtSum
+            // 
+            this.SummaryChrtSum.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
+            this.SummaryChrtSum.BorderRadius = 10;
+            this.SummaryChrtSum.BorderThickness = 2;
+            this.SummaryChrtSum.Controls.Add(this.chartSummary);
+            this.SummaryChrtSum.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));
+            this.SummaryChrtSum.Location = new System.Drawing.Point(518, 76);
+            this.SummaryChrtSum.Name = "SummaryChrtSum";
+            this.SummaryChrtSum.Size = new System.Drawing.Size(379, 411);
+            this.SummaryChrtSum.TabIndex = 58;
+            // 
+            // SpendBreakdownPnlSum
+            // 
+            this.SpendBreakdownPnlSum.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
+            this.SpendBreakdownPnlSum.BorderRadius = 10;
+            this.SpendBreakdownPnlSum.BorderThickness = 3;
+            this.SpendBreakdownPnlSum.Controls.Add(this.BreakdownTabLaySum);
+            this.SpendBreakdownPnlSum.Controls.Add(this.BreakdownLblSum);
+            this.SpendBreakdownPnlSum.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));
+            this.SpendBreakdownPnlSum.Location = new System.Drawing.Point(237, 76);
+            this.SpendBreakdownPnlSum.Name = "SpendBreakdownPnlSum";
+            this.SpendBreakdownPnlSum.Size = new System.Drawing.Size(261, 264);
+            this.SpendBreakdownPnlSum.TabIndex = 59;
+            // 
+            // SumReportPnlSum
+            // 
+            this.SumReportPnlSum.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));
+            this.SumReportPnlSum.BorderRadius = 10;
+            this.SumReportPnlSum.BorderThickness = 2;
+            this.SumReportPnlSum.Controls.Add(this.SummaryReportLblSum);
+            this.SumReportPnlSum.Controls.Add(this.ReportLblSum);
+            this.SumReportPnlSum.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));
+            this.SumReportPnlSum.Location = new System.Drawing.Point(237, 357);
+            this.SumReportPnlSum.Name = "SumReportPnlSum";
+            this.SumReportPnlSum.Size = new System.Drawing.Size(261, 130);
+            this.SumReportPnlSum.TabIndex = 59;
+            // 
             // SummaryForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(932, 510);
+            this.Controls.Add(this.SumReportPnlSum);
+            this.Controls.Add(this.SpendBreakdownPnlSum);
+            this.Controls.Add(this.SummaryChrtSum);
             this.Controls.Add(this.SidebarTableLayoutSum);
-            this.Controls.Add(this.pnlSummary);
-            this.Controls.Add(this.pnlBreakdown);
-            this.Controls.Add(this.chartSummary);
             this.Controls.Add(this.cmbMonth);
             this.Controls.Add(this.cmbYear);
-            this.Controls.Add(this.lblDate);
-            this.Controls.Add(this.lblSummary);
+            this.Controls.Add(this.CurrentDateSum);
+            this.Controls.Add(this.SummaryLblSum);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(950, 557);
@@ -775,12 +795,8 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SummaryForm_FormClosing);
             this.Load += new System.EventHandler(this.SummaryForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chartSummary)).EndInit();
-            this.pnlBreakdown.ResumeLayout(false);
-            this.pnlBreakdown.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.pnlSummary.ResumeLayout(false);
-            this.pnlSummary.PerformLayout();
+            this.BreakdownTabLaySum.ResumeLayout(false);
+            this.BreakdownTabLaySum.PerformLayout();
             this.SidebarTableLayoutSum.ResumeLayout(false);
             this.CentSibleTextPanelGoal.ResumeLayout(false);
             this.SideBarTabLaySum.ResumeLayout(false);
@@ -794,20 +810,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxSum)).EndInit();
             this.HomeTabLaySum.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxSum)).EndInit();
+            this.SummaryChrtSum.ResumeLayout(false);
+            this.SpendBreakdownPnlSum.ResumeLayout(false);
+            this.SpendBreakdownPnlSum.PerformLayout();
+            this.SumReportPnlSum.ResumeLayout(false);
+            this.SumReportPnlSum.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
         #endregion
-        private System.Windows.Forms.Label lblSummary;
-        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label SummaryLblSum;
+        private System.Windows.Forms.Label CurrentDateSum;
         private System.Windows.Forms.ComboBox cmbYear;
         private System.Windows.Forms.ComboBox cmbMonth;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartSummary;
-        private System.Windows.Forms.Panel pnlBreakdown;
-        private System.Windows.Forms.Panel pnlSummary;
-        private System.Windows.Forms.Label lblReport;
-        private System.Windows.Forms.Label lblBreakdown;
+        private System.Windows.Forms.Label SummaryReportLblSum;
+        private System.Windows.Forms.Label BreakdownLblSum;
         private System.Windows.Forms.Panel pnlFood;
         private System.Windows.Forms.Label lblFood;
         private System.Windows.Forms.Panel pnlOthers;
@@ -826,7 +845,7 @@
         private System.Windows.Forms.Label lblHTotal;
         private System.Windows.Forms.Label lblUTotal;
         private System.Windows.Forms.Label lblTTotal;
-        private System.Windows.Forms.Label lblMSummary;
+        private System.Windows.Forms.Label ReportLblSum;
         private System.Windows.Forms.FlowLayoutPanel SidebarTableLayoutSum;
         private System.Windows.Forms.Panel CentSibleTextPanelGoal;
         private System.Windows.Forms.Label CentSibleLabelSum;
@@ -847,6 +866,9 @@
         private System.Windows.Forms.TableLayoutPanel HomeTabLaySum;
         private System.Windows.Forms.Button HomeButtonSum;
         private System.Windows.Forms.PictureBox HomePicBoxSum;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel BreakdownTabLaySum;
+        private Guna.UI2.WinForms.Guna2Panel SummaryChrtSum;
+        private Guna.UI2.WinForms.Guna2Panel SpendBreakdownPnlSum;
+        private Guna.UI2.WinForms.Guna2Panel SumReportPnlSum;
     }
 }
