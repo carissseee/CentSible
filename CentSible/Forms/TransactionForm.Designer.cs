@@ -187,7 +187,7 @@
             this.cmbYearTran.Name = "cmbYearTran";
             this.cmbYearTran.Size = new System.Drawing.Size(105, 25);
             this.cmbYearTran.TabIndex = 4;
-            this.cmbYearTran.SelectedIndexChanged += new System.EventHandler(this.cmbYearTran_SelectedIndexChanged);
+            this.cmbYearTran.SelectedIndexChanged += new System.EventHandler(this.cmbYear_SelectedIndexChanged);
             // 
             // cmbMonthTran
             // 

@@ -166,111 +166,31 @@ namespace CentSible.Forms
             }
         }
 
-
         private void dgvTransaction_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0)
-            {
-                return;
-            }
+            if (e.RowIndex < 0) return;
 
             var row = dgvTransaction.Rows[e.RowIndex];
             var idValue = row.Cells["colTransactionID"].Value;
             int transactionID = (idValue != null && idValue.ToString() != "") ? Convert.ToInt32(idValue) : -1;
-            int month = cmbMonthTran.SelectedIndex + 1;
-            int year = int.Parse(cmbYearTran.SelectedItem.ToString());
 
             if (e.ColumnIndex == dgvTransaction.Columns["colSave"].Index)
             {
                 if (transactionID == -1)
-                {
-                    string error = transactionLogic.AddNewTransaction(_user.AccountID,
-                        row.Cells["colDescription"].Value?.ToString(),
-                        row.Cells["colType"].Value?.ToString(),
-                        row.Cells["colCategory"].Value?.ToString(),
-                        row.Cells["colAmount"].Value?.ToString(),
-                        transactions
-                    );
-
-                    if (error != "")
-                    {
-                        MessageBox.Show(error);
-                        return;
-                    }
-
-                    LoadTransactions();
-                }
+                    SaveNewTransaction(e.RowIndex);
+                else if (_isEditing && _editingRowIndex == e.RowIndex)
+                    SaveEditedTransaction(e.RowIndex);
                 else
-                {
-                    if (_isEditing == true && _editingRowIndex == e.RowIndex)
-                    {
-                        string error = transactionLogic.UpdateExistingTransaction(_user.AccountID,
-                            transactionID,
-                            row.Cells["colDescription"].Value?.ToString(),
-                            row.Cells["colType"].Value?.ToString(),
-                            row.Cells["colCategory"].Value?.ToString(),
-                            row.Cells["colAmount"].Value?.ToString(),
-                            month,
-                            year
-                        );
-
-                        if (error != "")
-                        {
-                            MessageBox.Show(error);
-                            return;
-                        }
-
-                        LoadTransactions();
-                    }
-                    else
-                    {
-                        _isEditing = true;
-                        _editingRowIndex = e.RowIndex;
-                        SetFilterButtons(false);
-
-                        string rawAmount = row.Cells["colAmount"].Value?.ToString()
-                            .Replace("+₱", "")
-                            .Replace("-₱", "")
-                            .Replace(",", "")
-                            .Trim();
-                        row.Cells["colAmount"].Value = rawAmount;
-                        row.Cells["colDelete"].Value = "❌";
-
-                        dgvTransaction.CurrentCell = dgvTransaction.Rows[e.RowIndex].Cells["colDescription"];
-                        dgvTransaction.BeginEdit(true);
-                    }
-                }
+                    EditTransaction(e.RowIndex);
             }
 
             if (e.ColumnIndex == dgvTransaction.Columns["colDelete"].Index)
             {
                 string deleteValue = row.Cells["colDelete"].Value?.ToString();
-
                 if (deleteValue == "❌")
-                {
-                    if (transactionID == -1)
-                    {
-                        dgvTransaction.Rows.RemoveAt(e.RowIndex);
-                        _isAddingNew = false;
-                    }
-                    else
-                    {
-                        _isEditing = false;
-                        _editingRowIndex = -1;
-                        LoadTransactions();
-                    }
-                    SetFilterButtons(true);
-                }
+                    CancelTransaction(e.RowIndex);
                 else
-                {
-                    DialogResult confirm = MessageBox.Show("Are you sure you want to delete this transaction?", "Delete Transaction", MessageBoxButtons.YesNo);
-
-                    if (confirm == DialogResult.Yes)
-                    {
-                        transactionLogic.DeleteTransaction(transactionID);
-                        LoadTransactions();
-                    }
-                }
+                    DeleteTransaction(e.RowIndex);
             }
         }
         private void dgvTransaction_CurrentCellDirtyStateChanged(object sender, EventArgs e)
@@ -353,35 +273,16 @@ namespace CentSible.Forms
         {
             var row = dgvTransaction.Rows[rowIndex];
 
-            string description = row.Cells["colDescription"].Value?.ToString();
-            string type = row.Cells["colType"].Value?.ToString();
-            string category = row.Cells["colCategory"].Value?.ToString();
-            string amountStr = row.Cells["colAmount"].Value?.ToString();
+            string error = transactionLogic.AddNewTransaction(
+                _user.AccountID,
+                row.Cells["colDescription"].Value?.ToString(),
+                row.Cells["colType"].Value?.ToString(),
+                row.Cells["colCategory"].Value?.ToString(),
+                row.Cells["colAmount"].Value?.ToString(),
+                transactions
+            );
 
-            if (string.IsNullOrWhiteSpace(description) || string.IsNullOrWhiteSpace(type) ||
-                string.IsNullOrWhiteSpace(category) || string.IsNullOrWhiteSpace(amountStr))
-            {
-                MessageBox.Show("Please fill in all fields.");
-                return;
-            }
-
-            if (!decimal.TryParse(amountStr, out decimal amount) || amount <= 0)
-            {
-                MessageBox.Show("Please enter a valid amount.");
-                return;
-            }
-
-            Transaction t = new Transaction
-            {
-                AccountID = _user.AccountID,
-                Date = DateTime.Now,
-                Description = description,
-                TransactionType = (TransactionType)Enum.Parse(typeof(TransactionType), type),
-                Category = (Category)Enum.Parse(typeof(Category), category),
-                Amount = amount
-            };
-
-            transactionLogic.AddTransaction(t);
+            if (error != "") { MessageBox.Show(error); return; }
             LoadTransactions();
         }
 
@@ -389,39 +290,24 @@ namespace CentSible.Forms
         {
             var row = dgvTransaction.Rows[rowIndex];
             int transactionID = Convert.ToInt32(row.Cells["colTransactionID"].Value);
+            int month = cmbMonthTran.SelectedIndex + 1;
+            int year = int.Parse(cmbYearTran.SelectedItem.ToString());
 
-            string description = row.Cells["colDescription"].Value?.ToString();
-            string type = row.Cells["colType"].Value?.ToString();
-            string category = row.Cells["colCategory"].Value?.ToString();
-            string amountStr = row.Cells["colAmount"].Value?.ToString();
+            string error = transactionLogic.UpdateExistingTransaction(
+                _user.AccountID,
+                transactionID,
+                row.Cells["colDescription"].Value?.ToString(),
+                row.Cells["colType"].Value?.ToString(),
+                row.Cells["colCategory"].Value?.ToString(),
+                row.Cells["colAmount"].Value?.ToString(),
+                month,
+                year
+            );
 
-            if (string.IsNullOrWhiteSpace(description) || string.IsNullOrWhiteSpace(type) ||
-                string.IsNullOrWhiteSpace(category) || string.IsNullOrWhiteSpace(amountStr))
-            {
-                MessageBox.Show("Please fill in all fields.");
-                return;
-            }
-
-            if (!decimal.TryParse(amountStr, out decimal amount) || amount <= 0)
-            {
-                MessageBox.Show("Please enter a valid amount.");
-                return;
-            }
-
-            Transaction t = new Transaction
-            {
-                TransactionID = transactionID,
-                AccountID = _user.AccountID,
-                Date = DateTime.Now,
-                Description = description,
-                TransactionType = (TransactionType)Enum.Parse(typeof(TransactionType), type),
-                Category = (Category)Enum.Parse(typeof(Category), category),
-                Amount = amount
-            };
-
-            transactionLogic.UpdateTransaction(t);
+            if (error != "") { MessageBox.Show(error); return; }
             LoadTransactions();
         }
+
         private void EditTransaction(int rowIndex)
         {
             if (_isAddingNew)
