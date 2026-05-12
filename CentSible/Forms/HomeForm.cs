@@ -29,26 +29,31 @@ namespace CentSible.Forms
             _user = user;
             _goalLogic = new GoalLogic();
 
-            var goalGroup = new Control[] { GoalButtonHome, GoalTabLayHome };
-            UIHelper.WireHoverRecursive(GoalButtonHome, goalGroup);
+            var goalGroup = new Control[] { GoalBtnHome, GoalTabLayHome };
+            UIHelper.WireHoverRecursive(GoalBtnHome, goalGroup);
             UIHelper.WireHoverRecursive(GoalTabLayHome, goalGroup);
 
-            var sumGroup = new Control[] { SumButtonHome, SumTabLayHome };
-            UIHelper.WireHoverRecursive(SumButtonHome, sumGroup);
+            var sumGroup = new Control[] { SumBtnHome, SumTabLayHome };
+            UIHelper.WireHoverRecursive(SumBtnHome, sumGroup);
             UIHelper.WireHoverRecursive(SumTabLayHome, sumGroup);
 
-            var tranGroup = new Control[] { TranButtonHome, TranTabLayHome };
-            UIHelper.WireHoverRecursive(TranButtonHome, tranGroup);
+            var tranGroup = new Control[] { TranBtnHome, TranTabLayHome };
+            UIHelper.WireHoverRecursive(TranBtnHome, tranGroup);
             UIHelper.WireHoverRecursive(TranTabLayHome, tranGroup);
 
-            var predGroup = new Control[] { PredButtonHome, PredTabLayHome };
-            UIHelper.WireHoverRecursive(PredButtonHome, predGroup);
+            var predGroup = new Control[] { PredBtnHome, PredTabLayHome };
+            UIHelper.WireHoverRecursive(PredBtnHome, predGroup);
             UIHelper.WireHoverRecursive(PredTabLayHome, predGroup);
+
+            var logGroup = new Control[] { LogoutBtnHome, LogTabLayHome };
+            UIHelper.WireHoverRecursive(LogoutBtnHome, logGroup);
+            UIHelper.WireHoverRecursive(LogTabLayHome, logGroup);
 
             UIHelper.WireClickRecursive(GoalTabLayHome, GoalButtonHome_Click);
             UIHelper.WireClickRecursive(SumTabLayHome, SumButtonHome_Click);
             UIHelper.WireClickRecursive(TranTabLayHome, TranButtonHome_Click);
             UIHelper.WireClickRecursive(PredTabLayHome, PredButtonHome_Click);
+            UIHelper.WireClickRecursive(LogTabLayHome, LogoutBtnHome_Click);
         }
 
         private void HomeForm_Load(object sender, EventArgs e)
@@ -81,17 +86,17 @@ namespace CentSible.Forms
             if (_user == null) return;
 
             string monthYear = DateTime.Now.ToString("MMMM yyyy");
-            lblDashboardHeader.Text = $"Good day, {_user.Username}!";
-            lblFinancialOverview.Text = $"Here’s your financial overview for {monthYear}";
+            GoodMorningLblHome.Text = $"Good day, {_user.Username}!";
+            FinancialOverviewLblHome.Text = $"Here’s your financial overview for {monthYear}";
         }
 
         private void UpdateRecentTransactionsTable()
         {
             try
             {
-                dgvRecentTransactionsTabLay.DataSource = null;
+                RecentTranDGVHome.DataSource = null;
                 var recent = _db.GetRecentTransactions(_user.AccountID, 5);
-                dgvRecentTransactionsTabLay.DataSource = recent.Select(t =>
+                RecentTranDGVHome.DataSource = recent.Select(t =>
                 {
                     decimal truncAmount = Math.Truncate(t.Amount * 100) / 100;
 
@@ -104,24 +109,9 @@ namespace CentSible.Forms
                     };
                 }).ToList();
 
-                dgvRecentTransactionsTabLay.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dgvRecentTransactionsTabLay.AllowUserToAddRows = false;
-                dgvRecentTransactionsTabLay.RowHeadersVisible = false;
-
-                foreach (DataGridViewRow row in dgvRecentTransactionsTabLay.Rows)
-                {
-                    string amount = row.Cells["Amount"].Value?.ToString();
-                    if (amount == null) { continue; }
-
-                    if (amount.StartsWith("+ ₱"))
-                    {
-                        row.Cells["Amount"].Style.ForeColor = Color.FromArgb(46, 125, 50);
-                    }
-                    else if (amount.StartsWith("- ₱"))
-                    {
-                        row.Cells["Amount"].Style.ForeColor = Color.Red;
-                    }
-                }
+                RecentTranDGVHome.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                RecentTranDGVHome.AllowUserToAddRows = false;
+                RecentTranDGVHome.RowHeadersVisible = false;
             }
             catch (Exception ex)
             {
@@ -131,7 +121,7 @@ namespace CentSible.Forms
 
         private void UpdateStreakDisplay()
         {
-            lblCurrentStreak.Text = _user.LoginStreak.ToString();
+            CurrentStreakLblHome.Text = _user.LoginStreak.ToString();
             DaysLblHome.Text = _user.LoginStreak == 1 ? "Day" : "Days";
         }
 
@@ -153,12 +143,12 @@ namespace CentSible.Forms
                     MoneySpentLabelHome.Text = $"₱ {truncSpent:F2} / ₱ {truncBudget:F2}";
                     double rawPercent = (double)(totalSpent / totalBudget) * 100;
                     int percent = (int)Math.Min(Math.Max(rawPercent, 0), 100);
-                    BarSpentHome.Value = percent;
+                    SpentBarHome.Value = percent;
                 }
                 else
                 {
                     MoneySpentLabelHome.Text = $"₱ {truncSpent:F2} / ₱ 0.00";
-                    BarSpentHome.Value = 0;
+                    SpentBarHome.Value = 0;
                 }
             }
             catch (Exception ex)
@@ -173,13 +163,13 @@ namespace CentSible.Forms
 
             var metrics = _accountLogic.GetStreakMetrics(_user);
 
-            pbMilestone.Minimum = 0;
-            pbMilestone.Maximum = metrics.MaxGoal;
-            pbMilestone.Value = Math.Min(metrics.LongestStreak, metrics.MaxGoal);
-            LongestStreakLabelHome.Text = metrics.StreakText;
-            LongestStreakLabelHome.ForeColor = metrics.StatusColor;
-            pbMilestone.ForeColor = metrics.StatusColor;
-            pbMilestone.Refresh();
+            MilestoneBarHome.Minimum = 0;
+            MilestoneBarHome.Maximum = metrics.MaxGoal;
+            MilestoneBarHome.Value = Math.Min(metrics.LongestStreak, metrics.MaxGoal);
+            LongestStreakLblHome.Text = metrics.StreakText;
+            LongestStreakLblHome.ForeColor = metrics.StatusColor;
+            MilestoneBarHome.ForeColor = metrics.StatusColor;
+            MilestoneBarHome.Refresh();
         }
 
         private void UpdateHomeDashboard()
@@ -187,8 +177,9 @@ namespace CentSible.Forms
             var goals = _goalLogic.GetGoals(_user.AccountID, DateTime.Now.Month, DateTime.Now.Year);
             string month = DateTime.Now.ToString("MMMM");
 
-            BarSpendingHome.Value = 0;
-            BarSavingHome.Value = 0;
+
+            SpendBarHome.Value = 0;
+            SavingBarHome.Value = 0;
             SpendStatLabelHome.Text = $"No spending goal set for {month}";
             SaveStatLabelHome.Text = $"No savings goal set for {month}";
 
@@ -205,12 +196,12 @@ namespace CentSible.Forms
 
                 if (goal.GoalType == GoalCategory.Spending)
                 {
-                    BarSpendingHome.Value = percent;
+                    SpendBarHome.Value = percent;
                     SpendStatLabelHome.Text = display;
                 }
                 else if (goal.GoalType == GoalCategory.Savings)
                 {
-                    BarSavingHome.Value = percent;
+                    SavingBarHome.Value = percent;
                     SaveStatLabelHome.Text = display;
                 }
             }
@@ -237,7 +228,7 @@ namespace CentSible.Forms
         private void SumButtonHome_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Summary);
         private void PredButtonHome_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Prediction);
 
-        private void LogoutButtonHome_Click(object sender, EventArgs e) => Navigator.Logout(this);
+        private void LogoutBtnHome_Click(object sender, EventArgs e) => Navigator.Logout(this);
 
 
         private void HomeForm_FormClosing(object sender, FormClosingEventArgs e)

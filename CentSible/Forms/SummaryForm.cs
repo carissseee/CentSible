@@ -41,10 +41,15 @@ namespace CentSible.Forms
             UIHelper.WireHoverRecursive(PredButtonSum, predGroup);
             UIHelper.WireHoverRecursive(PredTabLaySum, predGroup);
 
+            var logGroup = new Control[] { LogoutBtnSum, LogTabLaySum };
+            UIHelper.WireHoverRecursive(LogoutBtnSum, logGroup);
+            UIHelper.WireHoverRecursive(LogTabLaySum, logGroup);
+
             UIHelper.WireClickRecursive(HomeTabLaySum, HomeButtonSum_Click);
             UIHelper.WireClickRecursive(GoalTabLaySum, GoalButtonSum_Click);
             UIHelper.WireClickRecursive(SumTabLaySum, TranButtonSum_Click);
             UIHelper.WireClickRecursive(PredTabLaySum, PredButtonSum_Click);
+            UIHelper.WireClickRecursive(LogTabLaySum, LogoutBtnSum_Click);
         }
 
         private void SummaryForm_Load(object sender, EventArgs e)
@@ -95,7 +100,7 @@ namespace CentSible.Forms
 
             int month = cmbMonth.SelectedIndex + 1;
             int year = int.Parse(cmbYear.SelectedItem.ToString());
-            lblDate.Text = new DateTime(year, month, 1).ToString("MMMM yyyy");
+            CurrentDateSum.Text = new DateTime(year, month, 1).ToString("MMMM yyyy");
 
             Dictionary<string, decimal> spending = summaryLogic.GetSpendingByCategory(_user.AccountID, month, year);
 
@@ -123,7 +128,7 @@ namespace CentSible.Forms
             string monthName = new DateTime(year, month, 1).ToString("MMMM");
             if (totalSpent == 0)
             {  
-                lblMSummary.Text = "In " + monthName + ", there are no recorded expenses yet.";
+                ReportLblSum.Text = "In " + monthName + ", there are no recorded expenses yet.";
                 return;
             }
 
@@ -132,7 +137,7 @@ namespace CentSible.Forms
             decimal onlyPercent = summaryLogic.GetPercentage(GetCategoryAmount(spending, onlyCategory), totalSpent);
             if (spending.Count == 1)
             {
-                lblMSummary.Text = "In " + monthName + ", total expenditures reached ₱" + totalSpent.ToString("N0") + ". " +
+                ReportLblSum.Text = "In " + monthName + ", total expenditures reached ₱" + totalSpent.ToString("N0") + ". " +
                                    "All spending went to " + onlyCategory + " (" + onlyPercent + "%).";
                 return;
             }
@@ -146,13 +151,13 @@ namespace CentSible.Forms
             {
                 if (highestCategories.Count == 2)
                 {
-                   lblMSummary.Text = "In " + monthName + ", total expenditures reached ₱" + totalSpent.ToString("N0") + ". " +
+                   ReportLblSum.Text = "In " + monthName + ", total expenditures reached ₱" + totalSpent.ToString("N0") + ". " +
                                        "Spending was equally split between " + highestCategories[0] + " and " + highestCategories[1] +
                                        " (both at " + tiedPercent + "%).";
                 }
                 else
                 {
-                    lblMSummary.Text = "In " + monthName + ", total expenditures reached ₱" + totalSpent.ToString("N0") + ". " +
+                    ReportLblSum.Text = "In " + monthName + ", total expenditures reached ₱" + totalSpent.ToString("N0") + ". " +
                                        "The largest share went to " + highestCategories[0] + " (" + highestPercent + "%), " +
                                        "while the smallest portion was " + lowestCategories[0] +" (" + lowestPercent + "%).";
                 }
@@ -162,7 +167,7 @@ namespace CentSible.Forms
             {
                 if (highestCategories.Count == spending.Count)
                 {
-                    lblMSummary.Text = "In " + monthName + ", total expenditures reached ₱" + totalSpent.ToString("N0") + ". " +
+                    ReportLblSum.Text = "In " + monthName + ", total expenditures reached ₱" + totalSpent.ToString("N0") + ". " +
                                        "Spending was equally distributed accross all " + spending.Count + " categories at " + highestPercent + "% each.";
                     return;
                 }
@@ -197,7 +202,7 @@ namespace CentSible.Forms
                     lowestText = allText + " and " + lowestCategories[lowestCategories.Count - 1] + " (all tied at " + lowestPercent + "%)";
                 }
 
-                lblMSummary.Text = "In " + monthName + ", total expenditures reached ₱" + totalSpent.ToString("N0") + ". " +
+                ReportLblSum.Text = "In " + monthName + ", total expenditures reached ₱" + totalSpent.ToString("N0") + ". " +
                                    "The largest share went to " + highestText + ", " + "while the smallest portion went to " + lowestText + ". " +
                                    "Overall spending was recorded accross " + spending.Count + " categories.";
 
@@ -218,7 +223,7 @@ namespace CentSible.Forms
         private void GoalButtonSum_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Goal);
         private void TranButtonSum_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Transaction);
         private void PredButtonSum_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Prediction);
-        private void LogoutButtonSum_Click(object sender, EventArgs e) => Navigator.Logout(this);
+        private void LogoutBtnSum_Click(object sender, EventArgs e) => Navigator.Logout(this);
 
         private void SummaryForm_FormClosing(object sender, FormClosingEventArgs e)
         {
