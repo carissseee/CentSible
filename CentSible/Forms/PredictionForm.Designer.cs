@@ -152,7 +152,7 @@
             this.PredSpendLblPred.ForeColor = System.Drawing.Color.Red;
             this.PredSpendLblPred.Location = new System.Drawing.Point(5, 30);
             this.PredSpendLblPred.Name = "PredSpendLblPred";
-            this.PredSpendLblPred.Size = new System.Drawing.Size(185, 31);
+            this.PredSpendLblPred.Size = new System.Drawing.Size(177, 30);
             this.PredSpendLblPred.TabIndex = 4;
             this.PredSpendLblPred.Text = "Predicted Spend";
             // 
@@ -257,6 +257,7 @@
             // 
             // LogoutButtonPred
             // 
+            this.LogoutButtonPred.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LogoutButtonPred.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
             this.LogoutButtonPred.FlatAppearance.BorderSize = 0;
             this.LogoutButtonPred.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
@@ -504,7 +505,7 @@
             // 
             // LegendTabLayPred
             // 
-            this.LegendTabLayPred.BackColor = System.Drawing.Color.White;
+            this.LegendTabLayPred.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
             this.LegendTabLayPred.ColumnCount = 2;
             this.LegendTabLayPred.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.LegendTabLayPred.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -642,12 +643,16 @@
             // 
             // ForecastChrtPred
             // 
+            this.ForecastChrtPred.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
+            this.ForecastChrtPred.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
+            this.ForecastChrtPred.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
             chartArea1.AxisX.LabelStyle.Interval = 1D;
             chartArea1.AxisX.MajorGrid.Enabled = false;
             chartArea1.AxisY.Interval = 1000D;
             chartArea1.AxisY.LabelStyle.Format = "₱ #,##0";
             chartArea1.AxisY.Maximum = 10000D;
             chartArea1.AxisY.Minimum = 0D;
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
             chartArea1.Name = "ChartArea1";
             this.ForecastChrtPred.ChartAreas.Add(chartArea1);
             legend1.Enabled = false;

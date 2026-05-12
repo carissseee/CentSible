@@ -151,14 +151,19 @@
             // 
             // chartSummary
             // 
-            this.chartSummary.BorderlineColor = System.Drawing.Color.DarkKhaki;
+            this.chartSummary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
+            this.chartSummary.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
+            this.chartSummary.BorderlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
             this.chartSummary.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartSummary.BorderlineWidth = 0;
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
+            chartArea1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
             chartArea1.Name = "ChartArea1";
             this.chartSummary.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
             legend1.Name = "Legend1";
             this.chartSummary.Legends.Add(legend1);
-            this.chartSummary.Location = new System.Drawing.Point(8, 17);
+            this.chartSummary.Location = new System.Drawing.Point(3, 55);
             this.chartSummary.Name = "chartSummary";
             this.chartSummary.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
@@ -166,7 +171,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chartSummary.Series.Add(series1);
-            this.chartSummary.Size = new System.Drawing.Size(363, 381);
+            this.chartSummary.Size = new System.Drawing.Size(374, 292);
             this.chartSummary.TabIndex = 5;
             this.chartSummary.Text = "Category Breakdown";
             // 

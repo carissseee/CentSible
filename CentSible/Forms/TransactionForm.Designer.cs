@@ -426,7 +426,7 @@
             this.LogoutButtonTran.Name = "LogoutButtonTran";
             this.LogoutButtonTran.Size = new System.Drawing.Size(183, 39);
             this.LogoutButtonTran.TabIndex = 15;
-            this.LogoutButtonTran.Text = " Logout";
+            this.LogoutButtonTran.Text = "Logout";
             this.LogoutButtonTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LogoutButtonTran.UseVisualStyleBackColor = false;
             this.LogoutButtonTran.Click += new System.EventHandler(this.LogoutButtonTran_Click);

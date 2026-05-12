@@ -33,7 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
-            this.lblCurrentStreak = new System.Windows.Forms.Label();
+            this.CurrentStreakLblHome = new System.Windows.Forms.Label();
             this.lblStreakTitle = new System.Windows.Forms.Label();
             this.MonPanelHome = new System.Windows.Forms.Panel();
             this.TuePanelHome = new System.Windows.Forms.Panel();
@@ -84,8 +84,10 @@
             this.GoalPicBoxHome = new System.Windows.Forms.PictureBox();
             this.HomeTabLayHome = new System.Windows.Forms.TableLayoutPanel();
             this.HomePicBoxHome = new System.Windows.Forms.PictureBox();
+            this.LogTabLayHome = new System.Windows.Forms.TableLayoutPanel();
+            this.LogPicBoxHome = new System.Windows.Forms.PictureBox();
             this.DaysLblHome = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.StreakPicBoxHome = new System.Windows.Forms.PictureBox();
             this.FinancialOverviewLblHome = new System.Windows.Forms.Label();
             this.StreakPnlHome = new Guna.UI2.WinForms.Guna2Panel();
             this.MilestoneBarHome = new Guna.UI2.WinForms.Guna2ProgressBar();
@@ -115,24 +117,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxHome)).BeginInit();
             this.HomeTabLayHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxHome)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.LogTabLayHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogPicBoxHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StreakPicBoxHome)).BeginInit();
             this.StreakPnlHome.SuspendLayout();
             this.OverviwPnlHome.SuspendLayout();
             this.CurrentStreakPnlHome.SuspendLayout();
             this.RecentTranPnlHome.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblCurrentStreak
+            // CurrentStreakLblHome
             // 
-            this.lblCurrentStreak.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblCurrentStreak.AutoSize = true;
-            this.lblCurrentStreak.Font = new System.Drawing.Font("Sitka Text", 40F);
-            this.lblCurrentStreak.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(94)))), ((int)(((byte)(36)))));
-            this.lblCurrentStreak.Location = new System.Drawing.Point(144, 31);
-            this.lblCurrentStreak.Name = "lblCurrentStreak";
-            this.lblCurrentStreak.Size = new System.Drawing.Size(84, 97);
-            this.lblCurrentStreak.TabIndex = 1;
-            this.lblCurrentStreak.Text = "8";
+            this.CurrentStreakLblHome.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.CurrentStreakLblHome.AutoSize = true;
+            this.CurrentStreakLblHome.Font = new System.Drawing.Font("Sitka Text", 40F);
+            this.CurrentStreakLblHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(94)))), ((int)(((byte)(36)))));
+            this.CurrentStreakLblHome.Location = new System.Drawing.Point(144, 31);
+            this.CurrentStreakLblHome.Name = "CurrentStreakLblHome";
+            this.CurrentStreakLblHome.Size = new System.Drawing.Size(84, 97);
+            this.CurrentStreakLblHome.TabIndex = 1;
+            this.CurrentStreakLblHome.Text = "8";
             // 
             // lblStreakTitle
             // 
@@ -280,11 +284,11 @@
             this.LogoutBtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogoutBtnHome.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.LogoutBtnHome.ForeColor = System.Drawing.Color.White;
-            this.LogoutBtnHome.Location = new System.Drawing.Point(3, 370);
+            this.LogoutBtnHome.Location = new System.Drawing.Point(69, 3);
             this.LogoutBtnHome.Name = "LogoutBtnHome";
-            this.LogoutBtnHome.Size = new System.Drawing.Size(183, 38);
+            this.LogoutBtnHome.Size = new System.Drawing.Size(117, 30);
             this.LogoutBtnHome.TabIndex = 15;
-            this.LogoutBtnHome.Text = " Logout";
+            this.LogoutBtnHome.Text = "Logout";
             this.LogoutBtnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LogoutBtnHome.UseVisualStyleBackColor = false;
             this.LogoutBtnHome.Click += new System.EventHandler(this.LogoutButtonHome_Click);
@@ -687,7 +691,7 @@
             this.SideBarTabLayHome.Controls.Add(this.TranTabLayHome, 0, 2);
             this.SideBarTabLayHome.Controls.Add(this.GoalTabLayHome, 0, 1);
             this.SideBarTabLayHome.Controls.Add(this.HomeTabLayHome, 0, 0);
-            this.SideBarTabLayHome.Controls.Add(this.LogoutBtnHome, 0, 6);
+            this.SideBarTabLayHome.Controls.Add(this.LogTabLayHome, 0, 6);
             this.SideBarTabLayHome.Location = new System.Drawing.Point(3, 69);
             this.SideBarTabLayHome.Name = "SideBarTabLayHome";
             this.SideBarTabLayHome.RowCount = 7;
@@ -712,6 +716,7 @@
             this.PredTabLayHome.Name = "PredTabLayHome";
             this.PredTabLayHome.RowCount = 1;
             this.PredTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.PredTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.PredTabLayHome.Size = new System.Drawing.Size(189, 36);
             this.PredTabLayHome.TabIndex = 25;
             // 
@@ -827,6 +832,32 @@
             this.HomePicBoxHome.TabIndex = 15;
             this.HomePicBoxHome.TabStop = false;
             // 
+            // LogTabLayHome
+            // 
+            this.LogTabLayHome.ColumnCount = 2;
+            this.LogTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.LogTabLayHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.LogTabLayHome.Controls.Add(this.LogPicBoxHome, 0, 0);
+            this.LogTabLayHome.Controls.Add(this.LogoutBtnHome, 1, 0);
+            this.LogTabLayHome.Location = new System.Drawing.Point(3, 369);
+            this.LogTabLayHome.Name = "LogTabLayHome";
+            this.LogTabLayHome.RowCount = 1;
+            this.LogTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.LogTabLayHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.LogTabLayHome.Size = new System.Drawing.Size(189, 36);
+            this.LogTabLayHome.TabIndex = 57;
+            // 
+            // LogPicBoxHome
+            // 
+            this.LogPicBoxHome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LogPicBoxHome.Image = global::CentSible.Properties.Resources.PredictionForm;
+            this.LogPicBoxHome.Location = new System.Drawing.Point(13, 3);
+            this.LogPicBoxHome.Name = "LogPicBoxHome";
+            this.LogPicBoxHome.Size = new System.Drawing.Size(40, 30);
+            this.LogPicBoxHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LogPicBoxHome.TabIndex = 19;
+            this.LogPicBoxHome.TabStop = false;
+            // 
             // DaysLblHome
             // 
             this.DaysLblHome.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -839,15 +870,15 @@
             this.DaysLblHome.TabIndex = 47;
             this.DaysLblHome.Text = "Days";
             // 
-            // pictureBox2
+            // StreakPicBoxHome
             // 
-            this.pictureBox2.Image = global::CentSible.Properties.Resources.Streak;
-            this.pictureBox2.Location = new System.Drawing.Point(13, 29);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(109, 113);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 46;
-            this.pictureBox2.TabStop = false;
+            this.StreakPicBoxHome.Image = global::CentSible.Properties.Resources.Streak;
+            this.StreakPicBoxHome.Location = new System.Drawing.Point(13, 29);
+            this.StreakPicBoxHome.Name = "StreakPicBoxHome";
+            this.StreakPicBoxHome.Size = new System.Drawing.Size(109, 113);
+            this.StreakPicBoxHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.StreakPicBoxHome.TabIndex = 46;
+            this.StreakPicBoxHome.TabStop = false;
             // 
             // FinancialOverviewLblHome
             // 
@@ -970,8 +1001,8 @@
             this.CurrentStreakPnlHome.Controls.Add(this.KeepItUpLblHome);
             this.CurrentStreakPnlHome.Controls.Add(this.DaysLblHome);
             this.CurrentStreakPnlHome.Controls.Add(this.lblStreakTitle);
-            this.CurrentStreakPnlHome.Controls.Add(this.lblCurrentStreak);
-            this.CurrentStreakPnlHome.Controls.Add(this.pictureBox2);
+            this.CurrentStreakPnlHome.Controls.Add(this.CurrentStreakLblHome);
+            this.CurrentStreakPnlHome.Controls.Add(this.StreakPicBoxHome);
             this.CurrentStreakPnlHome.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));
             this.CurrentStreakPnlHome.Location = new System.Drawing.Point(227, 98);
             this.CurrentStreakPnlHome.Name = "CurrentStreakPnlHome";
@@ -1048,7 +1079,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxHome)).EndInit();
             this.HomeTabLayHome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxHome)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.LogTabLayHome.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LogPicBoxHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StreakPicBoxHome)).EndInit();
             this.StreakPnlHome.ResumeLayout(false);
             this.StreakPnlHome.PerformLayout();
             this.OverviwPnlHome.ResumeLayout(false);
@@ -1063,7 +1096,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label lblCurrentStreak;
+        private System.Windows.Forms.Label CurrentStreakLblHome;
         private System.Windows.Forms.Label lblStreakTitle;
         private System.Windows.Forms.Panel MonPanelHome;
         private System.Windows.Forms.Panel TuePanelHome;
@@ -1114,7 +1147,7 @@
         private System.Windows.Forms.Label GoodMorningLblHome;
         private System.Windows.Forms.Label BudgetOverviewLblHome;
         private System.Windows.Forms.Label RecentTranLblHome;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox StreakPicBoxHome;
         private System.Windows.Forms.Label DaysLblHome;
         private System.Windows.Forms.Label FinancialOverviewLblHome;
         private Guna.UI2.WinForms.Guna2Panel StreakPnlHome;
@@ -1128,5 +1161,7 @@
         private Guna.UI2.WinForms.Guna2ProgressBar SavingBarHome;
         private Guna.UI2.WinForms.Guna2ProgressBar SpentBarHome;
         private Guna.UI2.WinForms.Guna2ProgressBar MilestoneBarHome;
+        private System.Windows.Forms.TableLayoutPanel LogTabLayHome;
+        private System.Windows.Forms.PictureBox LogPicBoxHome;
     }
 }

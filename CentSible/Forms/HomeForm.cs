@@ -45,10 +45,15 @@ namespace CentSible.Forms
             UIHelper.WireHoverRecursive(PredBtnHome, predGroup);
             UIHelper.WireHoverRecursive(PredTabLayHome, predGroup);
 
+            var logGroup = new Control[] { LogoutBtnHome, LogTabLayHome };
+            UIHelper.WireHoverRecursive(LogoutBtnHome, logGroup);
+            UIHelper.WireHoverRecursive(LogTabLayHome, logGroup);
+
             UIHelper.WireClickRecursive(GoalTabLayHome, GoalButtonHome_Click);
             UIHelper.WireClickRecursive(SumTabLayHome, SumButtonHome_Click);
             UIHelper.WireClickRecursive(TranTabLayHome, TranButtonHome_Click);
             UIHelper.WireClickRecursive(PredTabLayHome, PredButtonHome_Click);
+            UIHelper.WireClickRecursive(LogTabLayHome, LogoutButtonHome_Click);
         }
 
         private void HomeForm_Load(object sender, EventArgs e)
@@ -116,7 +121,7 @@ namespace CentSible.Forms
 
         private void UpdateStreakDisplay()
         {
-            lblCurrentStreak.Text = _user.LoginStreak.ToString();
+            CurrentStreakLblHome.Text = _user.LoginStreak.ToString();
             DaysLblHome.Text = _user.LoginStreak == 1 ? "Day" : "Days";
         }
 
