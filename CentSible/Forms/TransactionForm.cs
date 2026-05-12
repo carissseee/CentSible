@@ -63,7 +63,9 @@ namespace CentSible.Forms
                 return;
             }
 
-
+            TranButtonTran.BackColor = Color.FromArgb(52, 110, 60);
+            TranButtonTran.ForeColor = Color.Black;
+            dgvTransaction.DataError += (s, ex) => { ex.Cancel = true; };
 
             cmbYearTran.SelectedIndexChanged -= cmbYear_SelectedIndexChanged;
             cmbYearTran.Items.Add(DateTime.Now.Year.ToString());
@@ -81,6 +83,91 @@ namespace CentSible.Forms
 
             LoadTransactions();
         }
+
+        private void SetFilterButtons(bool enabled)
+        {
+            AllBtnTran.Enabled = enabled;
+            ExpenseBtnTran.Enabled = enabled;
+            BudgetBtnTran.Enabled = enabled;
+        }
+
+        private void LoadTransactions()
+        {
+            if (cmbMonthTran.SelectedIndex < 0 || cmbYearTran.SelectedItem == null)
+            {
+                return;
+            }
+
+            dgvTransaction.Rows.Clear();
+            _isAddingNew = false;
+            _isEditing = false;
+            _editingRowIndex = -1;
+            SetFilterButtons(true);
+
+            int month = cmbMonthTran.SelectedIndex + 1;
+            int year = int.Parse(cmbYearTran.SelectedItem.ToString());
+
+            CurrentDateTran.Text = new DateTime(year, month, 1).ToString("MMMM yyyy");
+
+            transactions = transactionLogic.GetTransactions(_user.AccountID, month, year);
+            PBudgetLblTran.Text = "₱ " + transactionLogic.GetTotalBudget(transactions).ToString("N2");
+            PSpentLblTran.Text = "₱ " + transactionLogic.GetTotalSpent(transactions).ToString("N2");
+            PRemainingLblTran.Text = "₱ " + transactionLogic.GetRemainingBudget(transactions).ToString("N2");
+
+            foreach (Transaction t in transactions)
+            {
+                string sign = "";
+                if (t.TransactionType == TransactionType.Budget)
+                {
+                    sign = "+₱";
+                }
+                else
+                {
+                    sign = "-₱";
+                }
+
+                dgvTransaction.Rows.Add(
+                    t.Date.ToString("MMM d"),
+                    t.Description,
+                    t.TransactionType.ToString(),
+                    t.Category.ToString(),
+                    sign + t.Amount.ToString("N2"),
+                    "💾",
+                    "🗑️",
+                    t.TransactionID
+                );
+            }
+        }
+
+        private void DisplayTransactions(List<Transaction> list)
+        {
+            dgvTransaction.Rows.Clear();
+            foreach (Transaction t in list)
+            {
+                string sign = "";
+                if (t.TransactionType == TransactionType.Budget)
+                {
+                    sign = "+₱";
+                }
+                else
+                {
+                    sign = "-₱";
+                }
+
+                dgvTransaction.Rows.Add(
+                    t.Date.ToString("MMM d"),
+                    t.Description,
+                    t.TransactionType.ToString(),
+                    t.Category.ToString(),
+                    sign + t.Amount.ToString("N2"),
+                    "💾",
+                    "🗑️",
+                    t.TransactionID
+                );
+            }
+        }
+
+
         private void dgvTransaction_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0)
@@ -164,6 +251,180 @@ namespace CentSible.Forms
             }
             categoryCell.Value = null;
         }
+
+        private void AddTransaction(object sender, EventArgs e)
+        {
+            if (_isAddingNew)
+            {
+                MessageBox.Show("Please save the current new transaction first.");
+                return;
+            }
+            if (_isEditing)
+            {
+                MessageBox.Show("Please save the current edited transaction first.");
+                return;
+            }
+
+            _isAddingNew = true;
+            SetFilterButtons(false);
+
+            dgvTransaction.Rows.Add(
+                DateTime.Now.ToString("MMM d"),
+                "",
+                "",
+                "",
+                "",
+                "💾",
+                "❌",
+                -1
+            );
+
+            int newRowIndex = dgvTransaction.Rows.Count - 1;
+            dgvTransaction.CurrentCell = dgvTransaction.Rows[newRowIndex].Cells["colDescription"];
+            dgvTransaction.BeginEdit(true);
+        }
+
+        private void SaveNewTransaction(int rowIndex)
+        {
+            var row = dgvTransaction.Rows[rowIndex];
+
+            string description = row.Cells["colDescription"].Value?.ToString();
+            string type = row.Cells["colType"].Value?.ToString();
+            string category = row.Cells["colCategory"].Value?.ToString();
+            string amountStr = row.Cells["colAmount"].Value?.ToString();
+
+            if (string.IsNullOrWhiteSpace(description) || string.IsNullOrWhiteSpace(type) ||
+                string.IsNullOrWhiteSpace(category) || string.IsNullOrWhiteSpace(amountStr))
+            {
+                MessageBox.Show("Please fill in all fields.");
+                return;
+            }
+
+            if (!decimal.TryParse(amountStr, out decimal amount) || amount <= 0)
+            {
+                MessageBox.Show("Please enter a valid amount.");
+                return;
+            }
+
+            Transaction t = new Transaction
+            {
+                AccountID = _user.AccountID,
+                Date = DateTime.Now,
+                Description = description,
+                TransactionType = (TransactionType)Enum.Parse(typeof(TransactionType), type),
+                Category = (Category)Enum.Parse(typeof(Category), category),
+                Amount = amount
+            };
+
+            transactionLogic.AddTransaction(t);
+            LoadTransactions();
+        }
+
+        private void SaveEditedTransaction(int rowIndex)
+        {
+            var row = dgvTransaction.Rows[rowIndex];
+            int transactionID = Convert.ToInt32(row.Cells["colTransactionID"].Value);
+
+            string description = row.Cells["colDescription"].Value?.ToString();
+            string type = row.Cells["colType"].Value?.ToString();
+            string category = row.Cells["colCategory"].Value?.ToString();
+            string amountStr = row.Cells["colAmount"].Value?.ToString();
+
+            if (string.IsNullOrWhiteSpace(description) || string.IsNullOrWhiteSpace(type) ||
+                string.IsNullOrWhiteSpace(category) || string.IsNullOrWhiteSpace(amountStr))
+            {
+                MessageBox.Show("Please fill in all fields.");
+                return;
+            }
+
+            if (!decimal.TryParse(amountStr, out decimal amount) || amount <= 0)
+            {
+                MessageBox.Show("Please enter a valid amount.");
+                return;
+            }
+
+            Transaction t = new Transaction
+            {
+                TransactionID = transactionID,
+                AccountID = _user.AccountID,
+                Date = DateTime.Now,
+                Description = description,
+                TransactionType = (TransactionType)Enum.Parse(typeof(TransactionType), type),
+                Category = (Category)Enum.Parse(typeof(Category), category),
+                Amount = amount
+            };
+
+            transactionLogic.UpdateTransaction(t);
+            LoadTransactions();
+        }
+        private void EditTransaction(int rowIndex)
+        {
+            if (_isAddingNew)
+            {
+                MessageBox.Show("Please save the current new transaction first.");
+                return;
+            }
+            if (_isEditing)
+            {
+                MessageBox.Show("Please save the current edited transaction first.");
+                return;
+            }
+
+            _isEditing = true;
+            _editingRowIndex = rowIndex;
+            SetFilterButtons(false);
+
+            var row = dgvTransaction.Rows[rowIndex];
+            string rawAmount = row.Cells["colAmount"].Value?.ToString()
+                .Replace("+₱", "")
+                .Replace("-₱", "")
+                .Replace(",", "")
+                .Trim();
+
+            row.Cells["colAmount"].Value = rawAmount;
+            row.Cells["colDelete"].Value = "❌";
+
+            dgvTransaction.CurrentCell = dgvTransaction.Rows[rowIndex].Cells["colDescription"];
+            dgvTransaction.BeginEdit(true);
+        }
+
+        private void CancelTransaction(int rowIndex)
+        {
+            var idValue = dgvTransaction.Rows[rowIndex].Cells["colTransactionID"].Value;
+            int transactionID = (idValue != null && idValue.ToString() != "") ? Convert.ToInt32(idValue) : -1;
+
+            if (transactionID == -1)
+            {
+                dgvTransaction.Rows.RemoveAt(rowIndex);
+                _isAddingNew = false;
+            }
+            else
+            {
+                _isEditing = false;
+                _editingRowIndex = -1;
+                LoadTransactions();
+            }
+
+            SetFilterButtons(true);
+        }
+
+        private void DeleteTransaction(int rowIndex)
+        {
+            var idValue = dgvTransaction.Rows[rowIndex].Cells["colTransactionID"].Value;
+            int transactionID = Convert.ToInt32(idValue);
+
+            DialogResult confirm = MessageBox.Show(
+                "Are you sure you want to delete this transaction?",
+                "Delete Transaction",
+                MessageBoxButtons.YesNo
+            );
+
+            if (confirm == DialogResult.Yes)
+            {
+                transactionLogic.DeleteTransaction(transactionID);
+                LoadTransactions();
+            }
+        }
         private void cmbYear_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadTransactions();
@@ -172,16 +433,16 @@ namespace CentSible.Forms
         {
             LoadTransactions();
         }
-        private void btnAll_Click(object sender, EventArgs e)
+        private void AllBtnTran_Click(object sender, EventArgs e)
         {
             DisplayTransactions(transactions);
         }
-        private void btnExpense_Click(object sender, EventArgs e)
+        private void ExpenseBtnTran_Click(object sender, EventArgs e)
         {
             List<Transaction> filtered = transactionLogic.GetByType(transactions, TransactionType.Expense);
             DisplayTransactions(filtered);
         }
-        private void btnBudget_Click(object sender, EventArgs e)
+        private void BudgetBtnTran_Click(object sender, EventArgs e)
         {
             List<Transaction> filtered = transactionLogic.GetByType(transactions, TransactionType.Budget);
             DisplayTransactions(filtered);
@@ -204,7 +465,7 @@ namespace CentSible.Forms
         private void lblBudget_Click(object sender, EventArgs e) { }
         private void pnlTotalSpent_Paint(object sender, PaintEventArgs e) { }
         private void lblSpent_Click(object sender, EventArgs e) { }
-        private void lblBudget2_Click_1(object sender, EventArgs e) { }
+        private void PBudgetLblTran_Click_1(object sender, EventArgs e) { }
 
         private void SpenPanTran_Paint(object sender, PaintEventArgs e)
         {

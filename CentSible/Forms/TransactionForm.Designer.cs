@@ -205,7 +205,7 @@
             this.PBudgetLblTran.Size = new System.Drawing.Size(73, 30);
             this.PBudgetLblTran.TabIndex = 1;
             this.PBudgetLblTran.Text = "₱ 0.00";
-            this.PBudgetLblTran.Click += new System.EventHandler(this.lblBudget2_Click_1);
+            this.PBudgetLblTran.Click += new System.EventHandler(this.PBudgetLblTran_Click_1);
             // 
             // RemainingBudgetLblTran
             // 
@@ -241,7 +241,7 @@
             this.AllBtnTran.TabIndex = 8;
             this.AllBtnTran.Text = "All";
             this.AllBtnTran.UseVisualStyleBackColor = true;
-            this.AllBtnTran.Click += new System.EventHandler(this.btnAll_Click);
+            this.AllBtnTran.Click += new System.EventHandler(this.AllBtnTran_Click);
             // 
             // ExpenseBtnTran
             // 
@@ -253,7 +253,7 @@
             this.ExpenseBtnTran.TabIndex = 9;
             this.ExpenseBtnTran.Text = "Expense";
             this.ExpenseBtnTran.UseVisualStyleBackColor = true;
-            this.ExpenseBtnTran.Click += new System.EventHandler(this.btnExpense_Click);
+            this.ExpenseBtnTran.Click += new System.EventHandler(this.ExpenseBtnTran_Click);
             // 
             // BudgetBtnTran
             // 
@@ -265,7 +265,7 @@
             this.BudgetBtnTran.TabIndex = 10;
             this.BudgetBtnTran.Text = "Budget";
             this.BudgetBtnTran.UseVisualStyleBackColor = true;
-            this.BudgetBtnTran.Click += new System.EventHandler(this.btnBudget_Click);
+            this.BudgetBtnTran.Click += new System.EventHandler(this.BudgetBtnTran_Click);
             // 
             // colTransactionID
             // 
@@ -496,6 +496,7 @@
             // 
             // TranButtonTran
             // 
+            this.TranButtonTran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.TranButtonTran.FlatAppearance.BorderSize = 0;
             this.TranButtonTran.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
             this.TranButtonTran.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(110)))), ((int)(((byte)(60)))));
