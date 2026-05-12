@@ -13,73 +13,75 @@ using System.Windows.Forms;
 
 namespace CentSible.Forms
 {
-    public partial class TransactionForm : Form
+    public partial class TransactionForm : BaseNavForm
     {
-        private Form _home;
-        private Account _user;
-        private bool _isNavigating = false;
         private bool _isAddingNew = false;
         private bool _isEditing = false;
         private int _editingRowIndex = -1;
-
         private TransactionLogic transactionLogic = new TransactionLogic();
         private List<Transaction> transactions = new List<Transaction>();
-        public TransactionForm(Account user)
+        public TransactionForm(Account user) : base(user)
+       
         {
-            InitializeComponent(); 
-        
-            _user = user;
+            InitializeComponent();
+            InitializeNavigation();      
+        }
 
+        protected override void InitializeNavigation()
+        {
             var homeGroup = new Control[] { HomeButtonTran, HomeTabLayTran };
-            UIHelper.WireHoverRecursive(HomeButtonTran, homeGroup);
-            UIHelper.WireHoverRecursive(HomeTabLayTran, homeGroup);
-
             var goalGroup = new Control[] { GoalButtonTran, GoalTabLayTran };
-            UIHelper.WireHoverRecursive(GoalButtonTran, goalGroup);
-            UIHelper.WireHoverRecursive(GoalTabLayTran, goalGroup);
-
             var sumGroup = new Control[] { SumButtonTran, SumTabLayTran };
-            UIHelper.WireHoverRecursive(SumButtonTran, sumGroup);
-            UIHelper.WireHoverRecursive(SumTabLayTran, sumGroup);
-
             var predGroup = new Control[] { PredButtonTran, PredTabLayTran };
-            UIHelper.WireHoverRecursive(PredButtonTran, predGroup);
-            UIHelper.WireHoverRecursive(PredTabLayTran, predGroup);
-
             var logGroup = new Control[] { LogoutBtnTran, LogTabLayTran };
-            UIHelper.WireHoverRecursive(LogoutBtnTran, logGroup);
-            UIHelper.WireHoverRecursive(LogTabLayTran, logGroup);
 
-            UIHelper.WireClickRecursive(HomeTabLayTran, HomeButtonTran_Click);
-            UIHelper.WireClickRecursive(GoalTabLayTran, GoalButtonTran_Click);
-            UIHelper.WireClickRecursive(SumTabLayTran, SumButtonTran_Click);
-            UIHelper.WireClickRecursive(PredTabLayTran, PredButtonTran_Click);
-            UIHelper.WireClickRecursive(LogTabLayTran, LogoutButtonTran_Click);
+            UIHelper.WireHoverRecursive(HomeButtonTran, homeGroup);
+            UIHelper.WireHoverRecursive(GoalButtonTran, goalGroup);
+            UIHelper.WireHoverRecursive(SumButtonTran, sumGroup);
+            UIHelper.WireHoverRecursive(PredButtonTran, predGroup);
+            UIHelper.WireHoverRecursive(LogoutBtnTran, logGroup);
+
+            UIHelper.WireClickRecursive(HomeTabLayTran, (s, e) => PerformNavigation(() => Navigator.SwitchTo(this, Navigator.Home)));
+            UIHelper.WireClickRecursive(GoalTabLayTran, (s, e) => PerformNavigation(() => Navigator.SwitchTo(this, Navigator.Goal)));
+            UIHelper.WireClickRecursive(SumTabLayTran, (s, e) => PerformNavigation(() => Navigator.SwitchTo(this, Navigator.Summary)));
+            UIHelper.WireClickRecursive(PredTabLayTran, (s, e) => PerformNavigation(() => Navigator.SwitchTo(this, Navigator.Prediction)));
+            UIHelper.WireClickRecursive(LogTabLayTran, (s, e) => Navigator.Logout(this));
         }
         private void TransactionForm_Load(object sender, EventArgs e)
         {
-            if (_user == null)
-            {
-                return;
-            }
+            if (_user == null) return;
+
 
             TranButtonTran.BackColor = Color.FromArgb(52, 110, 60);
             TranButtonTran.ForeColor = Color.Black;
-            dgvTransaction.DataError += (s, ex) => { ex.Cancel = true; };
+
+            
+            if (dgvTransaction.Columns["colType"] is DataGridViewComboBoxColumn typeCol)
+            {
+                typeCol.Items.Clear();
+                typeCol.Items.Add("Expense");
+                typeCol.Items.Add("Budget");
+            }
 
             cmbYearTran.SelectedIndexChanged -= cmbYear_SelectedIndexChanged;
+            cmbMonthTran.SelectedIndexChanged -= cmbMonthTran_SelectedIndexChanged;    
+            cmbYearTran.Items.Clear();
             cmbYearTran.Items.Add(DateTime.Now.Year.ToString());
             cmbYearTran.SelectedIndex = 0;
 
+         
             int currentMonth = DateTime.Now.Month;
+            cmbMonthTran.Items.Clear();
             for (int i = 1; i <= currentMonth; i++)
             {
                 cmbMonthTran.Items.Add(new DateTime(2000, i, 1).ToString("MMMM"));
             }
-            cmbMonthTran.SelectedIndex = currentMonth - 1;
-
+            cmbMonthTran.SelectedIndex = currentMonth - 1;       
             dgvTransaction.DataError += (s, ex) => { ex.Cancel = true; };
+            cmbYearTran.SelectedIndexChanged += cmbYear_SelectedIndexChanged;
+            cmbMonthTran.SelectedIndexChanged += cmbMonthTran_SelectedIndexChanged;
 
+            dgvTransaction.ReadOnly = true;
             LoadTransactions();
         }
 
@@ -113,36 +115,15 @@ namespace CentSible.Forms
             PSpentLblTran.Text = "₱ " + transactionLogic.GetTotalSpent(transactions).ToString("N2");
             PRemainingLblTran.Text = "₱ " + transactionLogic.GetRemainingBudget(transactions).ToString("N2");
 
-            foreach (Transaction t in transactions)
-            {
-                string sign = "";
-                if (t.TransactionType == TransactionType.Budget)
-                {
-                    sign = "+₱";
-                }
-                else
-                {
-                    sign = "-₱";
-                }
-
-                dgvTransaction.Rows.Add(
-                    t.Date.ToString("MMM d"),
-                    t.Description,
-                    t.TransactionType.ToString(),
-                    t.Category.ToString(),
-                    sign + t.Amount.ToString("N2"),
-                    "💾",
-                    "🗑️",
-                    t.TransactionID
-                );
-            }
+         
+            DisplayTransactions(transactions);
         }
-
         private void DisplayTransactions(List<Transaction> list)
         {
-            dgvTransaction.Rows.Clear();
+            dgvTransaction.Rows.Clear(); 
             foreach (Transaction t in list)
             {
+                
                 string sign = "";
                 if (t.TransactionType == TransactionType.Budget)
                 {
@@ -153,16 +134,38 @@ namespace CentSible.Forms
                     sign = "-₱";
                 }
 
-                dgvTransaction.Rows.Add(
+
+                int rowIndex = dgvTransaction.Rows.Add(
                     t.Date.ToString("MMM d"),
                     t.Description,
                     t.TransactionType.ToString(),
-                    t.Category.ToString(),
+                    null,
                     sign + t.Amount.ToString("N2"),
                     "💾",
                     "🗑️",
                     t.TransactionID
                 );
+
+                var row = dgvTransaction.Rows[rowIndex];
+                row.ReadOnly = true;
+                if (row.Cells["colCategory"] is DataGridViewComboBoxCell categoryCell)
+                {
+                    
+                    categoryCell.Items.Clear();
+
+                    
+                    if (t.TransactionType == TransactionType.Budget)
+                    {
+                        categoryCell.Items.AddRange(new[] { "Allowance", "Income", "Others" });
+                    }
+                    else
+                    {
+                        categoryCell.Items.AddRange(new[] { "Food", "Transportation", "Utilities", "Health", "Leisure", "Others" });
+                    }
+
+                    
+                    categoryCell.Value = t.Category.ToString();
+                }
             }
         }
 
@@ -200,41 +203,47 @@ namespace CentSible.Forms
                 dgvTransaction.CommitEdit(DataGridViewDataErrorContexts.Commit);
             }
         }
+       
         private void dgvTransaction_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0)
+           
+            if (e.RowIndex < 0 || e.ColumnIndex != dgvTransaction.Columns["colType"].Index)
             {
                 return;
             }
 
-            if (e.ColumnIndex != dgvTransaction.Columns["colType"].Index)
+           
+            var row = dgvTransaction.Rows[e.RowIndex];
+            string selectedType = row.Cells["colType"].Value?.ToString();
+
+            if (row.Cells["colCategory"] is DataGridViewComboBoxCell categoryCell)
             {
-                return;
+                
+                string[] targetCategories;
+                if (selectedType == "Budget")
+                {
+                    targetCategories = new[] { "Allowance", "Income", "Others" };
+                }
+                else if (selectedType == "Expense")
+                {
+                    targetCategories = new[] { "Food", "Transportation", "Utilities", "Health", "Leisure", "Others" };
+                }
+                else
+                {
+                    categoryCell.Items.Clear();
+                    return;
+                }
+
+               
+                if (categoryCell.Items.Count != targetCategories.Length)
+                {
+                    categoryCell.Items.Clear();
+                    categoryCell.Items.AddRange(targetCategories);
+
+                   
+                    categoryCell.Value = null;
+                }
             }
-
-            string selectedType = dgvTransaction.Rows[e.RowIndex].Cells["colType"].Value?.ToString();
-
-            DataGridViewComboBoxCell categoryCell = (DataGridViewComboBoxCell)dgvTransaction.Rows[e.RowIndex].Cells["colCategory"];
-
-            categoryCell.Items.Clear();
-
-            if (selectedType == "Budget")
-            {
-                categoryCell.Items.Add("Allowance");
-                categoryCell.Items.Add("Income");
-                categoryCell.Items.Add("Others");
-            }
-            else if (selectedType == "Expense")
-            {
-                categoryCell.Items.Add("Food");
-                categoryCell.Items.Add("Transportation");
-                categoryCell.Items.Add("Utilities");
-                categoryCell.Items.Add("Health");
-                categoryCell.Items.Add("Leisure");
-                categoryCell.Items.Add("Others");
-            }
-
-            categoryCell.Value = null;
         }
 
         private void AddTransaction(object sender, EventArgs e)
@@ -250,6 +259,7 @@ namespace CentSible.Forms
                 return;
             }
 
+            dgvTransaction.ReadOnly = false;
             _isAddingNew = true;
             SetFilterButtons(false);
 
@@ -264,7 +274,9 @@ namespace CentSible.Forms
                 -1
             );
 
+
             int newRowIndex = dgvTransaction.Rows.Count - 1;
+            dgvTransaction.Rows[newRowIndex].ReadOnly = false;
             dgvTransaction.CurrentCell = dgvTransaction.Rows[newRowIndex].Cells["colDescription"];
             dgvTransaction.BeginEdit(true);
         }
@@ -321,6 +333,8 @@ namespace CentSible.Forms
                 return;
             }
 
+            dgvTransaction.ReadOnly = false;
+            dgvTransaction.Rows[rowIndex].ReadOnly = false;
             _isEditing = true;
             _editingRowIndex = rowIndex;
             SetFilterButtons(false);
@@ -401,29 +415,12 @@ namespace CentSible.Forms
         private void SumButtonTran_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Summary);
         private void PredButtonTran_Click(object sender, EventArgs e) => Navigator.SwitchTo(this, Navigator.Prediction);
         private void LogoutButtonTran_Click(object sender, EventArgs e) => Navigator.Logout(this);
-        private void Transaction_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (!_isNavigating && e.CloseReason == CloseReason.UserClosing)
-                Application.Exit();
-        }
-        private void lblDate_Click(object sender, EventArgs e) { }
-        private void panel1_Paint(object sender, PaintEventArgs e) { }
-        private void dgvTransaction_Click(object sender, EventArgs e) { }
-        private void lblTransaction_Click(object sender, EventArgs e) { }
-        private void pnlBudget_Paint(object sender, PaintEventArgs e) { }
-        private void lblBudget_Click(object sender, EventArgs e) { }
-        private void pnlTotalSpent_Paint(object sender, PaintEventArgs e) { }
-        private void lblSpent_Click(object sender, EventArgs e) { }
-        private void PBudgetLblTran_Click_1(object sender, EventArgs e) { }
-
-        private void SpenPanTran_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+       
         private void AddTransactionBtnTran_Click(object sender, EventArgs e)
         {
             AddTransaction(sender, e);
         }
     }
 }
+
+

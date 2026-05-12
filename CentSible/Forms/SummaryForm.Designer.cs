@@ -827,7 +827,6 @@
             this.Name = "SummaryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Summary";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SummaryForm_FormClosing);
             this.Load += new System.EventHandler(this.SummaryForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chartSummary)).EndInit();
             this.BreakdownTabLaySum.ResumeLayout(false);

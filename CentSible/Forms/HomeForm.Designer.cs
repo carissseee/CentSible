@@ -1055,7 +1055,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.Activated += new System.EventHandler(this.HomeForm_Activated);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HomeForm_FormClosing);
             this.Load += new System.EventHandler(this.HomeForm_Activated);
             this.StreakIconsTabLayHome.ResumeLayout(false);
             this.StreakIconsTabLayHome.PerformLayout();
