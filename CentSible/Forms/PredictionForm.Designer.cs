@@ -26,13 +26,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PredictionForm));
             this.cbSelectMonthPred = new System.Windows.Forms.ComboBox();
             this.numSelectYearPred = new System.Windows.Forms.NumericUpDown();
-            this.lblPredSavingAmount = new System.Windows.Forms.Label();
-            this.lblPredSpendingAmount = new System.Windows.Forms.Label();
+            this.PredSaveLblPred = new System.Windows.Forms.Label();
+            this.PredSpendLblPred = new System.Windows.Forms.Label();
             this.lblContextDate = new System.Windows.Forms.Label();
-            this.chartForecast = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.PredSavlblPred = new System.Windows.Forms.Label();
-            this.PredSpenlblPred = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.PredSavLblPred = new System.Windows.Forms.Label();
+            this.PredSpenLblPred = new System.Windows.Forms.Label();
+            this.MonthlyForecastLblPred = new System.Windows.Forms.Label();
             this.SidebarTableLayoutPred = new System.Windows.Forms.FlowLayoutPanel();
             this.CentSibleTextPanelGoal = new System.Windows.Forms.Panel();
             this.CentSibleLabelPred = new System.Windows.Forms.Label();
@@ -54,21 +53,19 @@
             this.HomeButtonPred = new System.Windows.Forms.Button();
             this.HomePicBoxPred = new System.Windows.Forms.PictureBox();
             this.PredictionLblPred = new System.Windows.Forms.Label();
-            this.SpenPanTran = new System.Windows.Forms.Panel();
-            this.BudgetPanTran = new System.Windows.Forms.Panel();
-            this.pnlBudgetTran = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.LegendTabLayPred = new System.Windows.Forms.TableLayoutPanel();
             this.ExpenseLblPred = new System.Windows.Forms.Label();
+            this.LegendOrangePnlPred = new System.Windows.Forms.FlowLayoutPanel();
             this.BudgetLblPred = new System.Windows.Forms.Label();
             this.SavingLblPred = new System.Windows.Forms.Label();
-            this.LegendPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.LegendPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.LegendPanel13 = new System.Windows.Forms.FlowLayoutPanel();
+            this.LegendGreenPnlPred = new System.Windows.Forms.FlowLayoutPanel();
+            this.LegendRedPnlPred = new System.Windows.Forms.FlowLayoutPanel();
+            this.PredSavePnlPred = new Guna.UI2.WinForms.Guna2Panel();
+            this.PredSpendPnlPred = new Guna.UI2.WinForms.Guna2Panel();
+            this.LegendPnlPred = new Guna.UI2.WinForms.Guna2Panel();
+            this.ForecastPnlPred = new Guna.UI2.WinForms.Guna2Panel();
+            this.ForecastChrtPred = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.numSelectYearPred)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartForecast)).BeginInit();
             this.SidebarTableLayoutPred.SuspendLayout();
             this.CentSibleTextPanelGoal.SuspendLayout();
             this.SideBarTabLayPred.SuspendLayout();
@@ -82,13 +79,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxPred)).BeginInit();
             this.HomeTabLayPred.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxPred)).BeginInit();
-            this.SpenPanTran.SuspendLayout();
-            this.BudgetPanTran.SuspendLayout();
-            this.pnlBudgetTran.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.LegendTabLayPred.SuspendLayout();
+            this.PredSavePnlPred.SuspendLayout();
+            this.PredSpendPnlPred.SuspendLayout();
+            this.LegendPnlPred.SuspendLayout();
+            this.ForecastPnlPred.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ForecastChrtPred)).BeginInit();
             this.SuspendLayout();
             // 
             // cbSelectMonthPred
@@ -138,27 +134,27 @@
             0,
             0});
             // 
-            // lblPredSavingAmount
+            // PredSaveLblPred
             // 
-            this.lblPredSavingAmount.AutoSize = true;
-            this.lblPredSavingAmount.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold);
-            this.lblPredSavingAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.lblPredSavingAmount.Location = new System.Drawing.Point(3, 28);
-            this.lblPredSavingAmount.Name = "lblPredSavingAmount";
-            this.lblPredSavingAmount.Size = new System.Drawing.Size(180, 30);
-            this.lblPredSavingAmount.TabIndex = 3;
-            this.lblPredSavingAmount.Text = "Predicted Saving";
+            this.PredSaveLblPred.AutoSize = true;
+            this.PredSaveLblPred.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold);
+            this.PredSaveLblPred.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
+            this.PredSaveLblPred.Location = new System.Drawing.Point(5, 30);
+            this.PredSaveLblPred.Name = "PredSaveLblPred";
+            this.PredSaveLblPred.Size = new System.Drawing.Size(180, 30);
+            this.PredSaveLblPred.TabIndex = 3;
+            this.PredSaveLblPred.Text = "Predicted Saving";
             // 
-            // lblPredSpendingAmount
+            // PredSpendLblPred
             // 
-            this.lblPredSpendingAmount.AutoSize = true;
-            this.lblPredSpendingAmount.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.lblPredSpendingAmount.ForeColor = System.Drawing.Color.Red;
-            this.lblPredSpendingAmount.Location = new System.Drawing.Point(3, 28);
-            this.lblPredSpendingAmount.Name = "lblPredSpendingAmount";
-            this.lblPredSpendingAmount.Size = new System.Drawing.Size(197, 35);
-            this.lblPredSpendingAmount.TabIndex = 4;
-            this.lblPredSpendingAmount.Text = "Predicted Spend";
+            this.PredSpendLblPred.AutoSize = true;
+            this.PredSpendLblPred.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PredSpendLblPred.ForeColor = System.Drawing.Color.Red;
+            this.PredSpendLblPred.Location = new System.Drawing.Point(5, 30);
+            this.PredSpendLblPred.Name = "PredSpendLblPred";
+            this.PredSpendLblPred.Size = new System.Drawing.Size(185, 31);
+            this.PredSpendLblPred.TabIndex = 4;
+            this.PredSpendLblPred.Text = "Predicted Spend";
             // 
             // lblContextDate
             // 
@@ -171,81 +167,38 @@
             this.lblContextDate.TabIndex = 5;
             this.lblContextDate.Text = "Dynamic Date";
             // 
-            // chartForecast
+            // PredSavLblPred
             // 
-            chartArea1.AxisX.LabelStyle.Interval = 1D;
-            chartArea1.AxisX.MajorGrid.Enabled = false;
-            chartArea1.AxisY.Interval = 1000D;
-            chartArea1.AxisY.LabelStyle.Format = "₱ #,##0";
-            chartArea1.AxisY.Maximum = 10000D;
-            chartArea1.AxisY.Minimum = 0D;
-            chartArea1.Name = "ChartArea1";
-            this.chartForecast.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.Name = "DefaultLegend";
-            this.chartForecast.Legends.Add(legend1);
-            this.chartForecast.Location = new System.Drawing.Point(3, 3);
-            this.chartForecast.Name = "chartForecast";
-            series1.BorderWidth = 3;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Color = System.Drawing.Color.Red;
-            series1.Legend = "DefaultLegend";
-            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series1.Name = "Expense";
-            series2.BorderWidth = 3;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            series2.Legend = "DefaultLegend";
-            series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series2.Name = "Budget";
-            series3.BorderWidth = 3;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Color = System.Drawing.Color.Lime;
-            series3.Legend = "DefaultLegend";
-            series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series3.Name = "Saving";
-            this.chartForecast.Series.Add(series1);
-            this.chartForecast.Series.Add(series2);
-            this.chartForecast.Series.Add(series3);
-            this.chartForecast.Size = new System.Drawing.Size(685, 281);
-            this.chartForecast.TabIndex = 6;
-            this.chartForecast.Text = "chart1";
+            this.PredSavLblPred.AutoSize = true;
+            this.PredSavLblPred.Font = new System.Drawing.Font("Segoe UI", 8.2F);
+            this.PredSavLblPred.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
+            this.PredSavLblPred.Location = new System.Drawing.Point(7, 11);
+            this.PredSavLblPred.Name = "PredSavLblPred";
+            this.PredSavLblPred.Size = new System.Drawing.Size(110, 19);
+            this.PredSavLblPred.TabIndex = 7;
+            this.PredSavLblPred.Text = "Predicted Saving";
             // 
-            // PredSavlblPred
+            // PredSpenLblPred
             // 
-            this.PredSavlblPred.AutoSize = true;
-            this.PredSavlblPred.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.PredSavlblPred.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.PredSavlblPred.Location = new System.Drawing.Point(4, 6);
-            this.PredSavlblPred.Name = "PredSavlblPred";
-            this.PredSavlblPred.Size = new System.Drawing.Size(138, 23);
-            this.PredSavlblPred.TabIndex = 7;
-            this.PredSavlblPred.Text = "Predicted Saving";
+            this.PredSpenLblPred.AutoSize = true;
+            this.PredSpenLblPred.Font = new System.Drawing.Font("Segoe UI", 8.2F);
+            this.PredSpenLblPred.ForeColor = System.Drawing.Color.Red;
+            this.PredSpenLblPred.Location = new System.Drawing.Point(7, 11);
+            this.PredSpenLblPred.Name = "PredSpenLblPred";
+            this.PredSpenLblPred.Size = new System.Drawing.Size(127, 19);
+            this.PredSpenLblPred.TabIndex = 8;
+            this.PredSpenLblPred.Text = "Predicted Spending";
             // 
-            // PredSpenlblPred
+            // MonthlyForecastLblPred
             // 
-            this.PredSpenlblPred.AutoSize = true;
-            this.PredSpenlblPred.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.PredSpenlblPred.ForeColor = System.Drawing.Color.Red;
-            this.PredSpenlblPred.Location = new System.Drawing.Point(4, 6);
-            this.PredSpenlblPred.Name = "PredSpenlblPred";
-            this.PredSpenlblPred.Size = new System.Drawing.Size(159, 23);
-            this.PredSpenlblPred.TabIndex = 8;
-            this.PredSpenlblPred.Text = "Predicted Spending";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(94)))), ((int)(((byte)(36)))));
-            this.label3.Location = new System.Drawing.Point(490, 181);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 23);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Monthy Forecast";
+            this.MonthlyForecastLblPred.AutoSize = true;
+            this.MonthlyForecastLblPred.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.MonthlyForecastLblPred.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(94)))), ((int)(((byte)(36)))));
+            this.MonthlyForecastLblPred.Location = new System.Drawing.Point(490, 181);
+            this.MonthlyForecastLblPred.Name = "MonthlyForecastLblPred";
+            this.MonthlyForecastLblPred.Size = new System.Drawing.Size(140, 23);
+            this.MonthlyForecastLblPred.TabIndex = 9;
+            this.MonthlyForecastLblPred.Text = "Monthy Forecast";
             // 
             // SidebarTableLayoutPred
             // 
@@ -299,7 +252,7 @@
             this.SideBarTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.SideBarTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 146F));
             this.SideBarTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.SideBarTabLayPred.Size = new System.Drawing.Size(189, 441);
+            this.SideBarTabLayPred.Size = new System.Drawing.Size(195, 411);
             this.SideBarTabLayPred.TabIndex = 11;
             // 
             // LogoutButtonPred
@@ -310,7 +263,7 @@
             this.LogoutButtonPred.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogoutButtonPred.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.LogoutButtonPred.ForeColor = System.Drawing.Color.White;
-            this.LogoutButtonPred.Location = new System.Drawing.Point(3, 399);
+            this.LogoutButtonPred.Location = new System.Drawing.Point(3, 369);
             this.LogoutButtonPred.Name = "LogoutButtonPred";
             this.LogoutButtonPred.Size = new System.Drawing.Size(183, 39);
             this.LogoutButtonPred.TabIndex = 15;
@@ -327,12 +280,12 @@
             this.PredTabLayPred.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
             this.PredTabLayPred.Controls.Add(this.PredPicBoxPred, 0, 0);
             this.PredTabLayPred.Controls.Add(this.PredButtonPred, 1, 0);
-            this.PredTabLayPred.Location = new System.Drawing.Point(3, 203);
+            this.PredTabLayPred.Location = new System.Drawing.Point(3, 179);
             this.PredTabLayPred.Name = "PredTabLayPred";
             this.PredTabLayPred.RowCount = 1;
             this.PredTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PredTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PredTabLayPred.Size = new System.Drawing.Size(183, 44);
+            this.PredTabLayPred.Size = new System.Drawing.Size(183, 38);
             this.PredTabLayPred.TabIndex = 24;
             // 
             // PredPicBoxPred
@@ -341,7 +294,7 @@
             this.PredPicBoxPred.Image = global::CentSible.Properties.Resources.PredictionForm;
             this.PredPicBoxPred.Location = new System.Drawing.Point(12, 3);
             this.PredPicBoxPred.Name = "PredPicBoxPred";
-            this.PredPicBoxPred.Size = new System.Drawing.Size(40, 38);
+            this.PredPicBoxPred.Size = new System.Drawing.Size(40, 32);
             this.PredPicBoxPred.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PredPicBoxPred.TabIndex = 19;
             this.PredPicBoxPred.TabStop = false;
@@ -357,7 +310,7 @@
             this.PredButtonPred.ForeColor = System.Drawing.Color.White;
             this.PredButtonPred.Location = new System.Drawing.Point(67, 3);
             this.PredButtonPred.Name = "PredButtonPred";
-            this.PredButtonPred.Size = new System.Drawing.Size(113, 38);
+            this.PredButtonPred.Size = new System.Drawing.Size(113, 32);
             this.PredButtonPred.TabIndex = 11;
             this.PredButtonPred.Text = "Prediction";
             this.PredButtonPred.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -370,12 +323,12 @@
             this.SumTabLayPred.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
             this.SumTabLayPred.Controls.Add(this.SumPicBoxPred, 0, 0);
             this.SumTabLayPred.Controls.Add(this.SumButtonPred, 1, 0);
-            this.SumTabLayPred.Location = new System.Drawing.Point(3, 153);
+            this.SumTabLayPred.Location = new System.Drawing.Point(3, 135);
             this.SumTabLayPred.Name = "SumTabLayPred";
             this.SumTabLayPred.RowCount = 1;
             this.SumTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SumTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SumTabLayPred.Size = new System.Drawing.Size(183, 44);
+            this.SumTabLayPred.Size = new System.Drawing.Size(183, 38);
             this.SumTabLayPred.TabIndex = 24;
             // 
             // SumPicBoxPred
@@ -384,7 +337,7 @@
             this.SumPicBoxPred.Image = global::CentSible.Properties.Resources.SummaryForm;
             this.SumPicBoxPred.Location = new System.Drawing.Point(12, 3);
             this.SumPicBoxPred.Name = "SumPicBoxPred";
-            this.SumPicBoxPred.Size = new System.Drawing.Size(40, 38);
+            this.SumPicBoxPred.Size = new System.Drawing.Size(40, 32);
             this.SumPicBoxPred.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.SumPicBoxPred.TabIndex = 18;
             this.SumPicBoxPred.TabStop = false;
@@ -400,7 +353,7 @@
             this.SumButtonPred.ForeColor = System.Drawing.Color.White;
             this.SumButtonPred.Location = new System.Drawing.Point(67, 3);
             this.SumButtonPred.Name = "SumButtonPred";
-            this.SumButtonPred.Size = new System.Drawing.Size(113, 38);
+            this.SumButtonPred.Size = new System.Drawing.Size(113, 32);
             this.SumButtonPred.TabIndex = 13;
             this.SumButtonPred.Text = "Summary";
             this.SumButtonPred.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -414,12 +367,12 @@
             this.TranTabLayPred.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
             this.TranTabLayPred.Controls.Add(this.TranButtonPred, 1, 0);
             this.TranTabLayPred.Controls.Add(this.TranPicBoxPred, 0, 0);
-            this.TranTabLayPred.Location = new System.Drawing.Point(3, 103);
+            this.TranTabLayPred.Location = new System.Drawing.Point(3, 91);
             this.TranTabLayPred.Name = "TranTabLayPred";
             this.TranTabLayPred.RowCount = 1;
             this.TranTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TranTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TranTabLayPred.Size = new System.Drawing.Size(183, 44);
+            this.TranTabLayPred.Size = new System.Drawing.Size(183, 38);
             this.TranTabLayPred.TabIndex = 23;
             // 
             // TranButtonPred
@@ -433,7 +386,7 @@
             this.TranButtonPred.ForeColor = System.Drawing.Color.White;
             this.TranButtonPred.Location = new System.Drawing.Point(67, 3);
             this.TranButtonPred.Name = "TranButtonPred";
-            this.TranButtonPred.Size = new System.Drawing.Size(113, 38);
+            this.TranButtonPred.Size = new System.Drawing.Size(113, 32);
             this.TranButtonPred.TabIndex = 12;
             this.TranButtonPred.Text = "Transactions";
             this.TranButtonPred.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -444,9 +397,9 @@
             // 
             this.TranPicBoxPred.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TranPicBoxPred.Image = global::CentSible.Properties.Resources.TransactionForm;
-            this.TranPicBoxPred.Location = new System.Drawing.Point(12, 5);
+            this.TranPicBoxPred.Location = new System.Drawing.Point(12, 3);
             this.TranPicBoxPred.Name = "TranPicBoxPred";
-            this.TranPicBoxPred.Size = new System.Drawing.Size(40, 33);
+            this.TranPicBoxPred.Size = new System.Drawing.Size(40, 32);
             this.TranPicBoxPred.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.TranPicBoxPred.TabIndex = 16;
             this.TranPicBoxPred.TabStop = false;
@@ -458,12 +411,12 @@
             this.GoalTabLayPred.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.36585F));
             this.GoalTabLayPred.Controls.Add(this.GoalButtonPred, 1, 0);
             this.GoalTabLayPred.Controls.Add(this.GoalPicBoxPred, 0, 0);
-            this.GoalTabLayPred.Location = new System.Drawing.Point(3, 53);
+            this.GoalTabLayPred.Location = new System.Drawing.Point(3, 47);
             this.GoalTabLayPred.Name = "GoalTabLayPred";
             this.GoalTabLayPred.RowCount = 1;
             this.GoalTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.GoalTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.GoalTabLayPred.Size = new System.Drawing.Size(183, 44);
+            this.GoalTabLayPred.Size = new System.Drawing.Size(183, 38);
             this.GoalTabLayPred.TabIndex = 22;
             // 
             // GoalButtonPred
@@ -476,7 +429,7 @@
             this.GoalButtonPred.ForeColor = System.Drawing.Color.White;
             this.GoalButtonPred.Location = new System.Drawing.Point(66, 3);
             this.GoalButtonPred.Name = "GoalButtonPred";
-            this.GoalButtonPred.Size = new System.Drawing.Size(114, 38);
+            this.GoalButtonPred.Size = new System.Drawing.Size(114, 32);
             this.GoalButtonPred.TabIndex = 11;
             this.GoalButtonPred.Text = "Goal";
             this.GoalButtonPred.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -489,7 +442,7 @@
             this.GoalPicBoxPred.Image = global::CentSible.Properties.Resources.GoalForm;
             this.GoalPicBoxPred.Location = new System.Drawing.Point(11, 3);
             this.GoalPicBoxPred.Name = "GoalPicBoxPred";
-            this.GoalPicBoxPred.Size = new System.Drawing.Size(40, 38);
+            this.GoalPicBoxPred.Size = new System.Drawing.Size(40, 32);
             this.GoalPicBoxPred.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.GoalPicBoxPred.TabIndex = 17;
             this.GoalPicBoxPred.TabStop = false;
@@ -506,7 +459,7 @@
             this.HomeTabLayPred.RowCount = 1;
             this.HomeTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.HomeTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.HomeTabLayPred.Size = new System.Drawing.Size(183, 44);
+            this.HomeTabLayPred.Size = new System.Drawing.Size(183, 38);
             this.HomeTabLayPred.TabIndex = 21;
             // 
             // HomeButtonPred
@@ -520,7 +473,7 @@
             this.HomeButtonPred.ForeColor = System.Drawing.Color.White;
             this.HomeButtonPred.Location = new System.Drawing.Point(67, 3);
             this.HomeButtonPred.Name = "HomeButtonPred";
-            this.HomeButtonPred.Size = new System.Drawing.Size(108, 38);
+            this.HomeButtonPred.Size = new System.Drawing.Size(108, 32);
             this.HomeButtonPred.TabIndex = 8;
             this.HomeButtonPred.Text = "Home";
             this.HomeButtonPred.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -533,7 +486,7 @@
             this.HomePicBoxPred.Image = global::CentSible.Properties.Resources.HomeForm;
             this.HomePicBoxPred.Location = new System.Drawing.Point(12, 3);
             this.HomePicBoxPred.Name = "HomePicBoxPred";
-            this.HomePicBoxPred.Size = new System.Drawing.Size(40, 38);
+            this.HomePicBoxPred.Size = new System.Drawing.Size(40, 32);
             this.HomePicBoxPred.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.HomePicBoxPred.TabIndex = 15;
             this.HomePicBoxPred.TabStop = false;
@@ -549,81 +502,25 @@
             this.PredictionLblPred.TabIndex = 42;
             this.PredictionLblPred.Text = "Prediction";
             // 
-            // SpenPanTran
-            // 
-            this.SpenPanTran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(151)))), ((int)(((byte)(107)))));
-            this.SpenPanTran.Controls.Add(this.chartForecast);
-            this.SpenPanTran.Location = new System.Drawing.Point(220, 208);
-            this.SpenPanTran.Name = "SpenPanTran";
-            this.SpenPanTran.Size = new System.Drawing.Size(691, 287);
-            this.SpenPanTran.TabIndex = 45;
-            // 
-            // BudgetPanTran
-            // 
-            this.BudgetPanTran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(151)))), ((int)(((byte)(107)))));
-            this.BudgetPanTran.Controls.Add(this.pnlBudgetTran);
-            this.BudgetPanTran.Location = new System.Drawing.Point(223, 86);
-            this.BudgetPanTran.Name = "BudgetPanTran";
-            this.BudgetPanTran.Size = new System.Drawing.Size(202, 66);
-            this.BudgetPanTran.TabIndex = 43;
-            // 
-            // pnlBudgetTran
-            // 
-            this.pnlBudgetTran.BackColor = System.Drawing.Color.White;
-            this.pnlBudgetTran.Controls.Add(this.PredSavlblPred);
-            this.pnlBudgetTran.Controls.Add(this.lblPredSavingAmount);
-            this.pnlBudgetTran.Location = new System.Drawing.Point(3, 2);
-            this.pnlBudgetTran.Name = "pnlBudgetTran";
-            this.pnlBudgetTran.Size = new System.Drawing.Size(196, 61);
-            this.pnlBudgetTran.TabIndex = 6;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(151)))), ((int)(((byte)(107)))));
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(464, 86);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(202, 66);
-            this.panel1.TabIndex = 44;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.lblPredSpendingAmount);
-            this.panel2.Controls.Add(this.PredSpenlblPred);
-            this.panel2.Location = new System.Drawing.Point(3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(196, 61);
-            this.panel2.TabIndex = 6;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(151)))), ((int)(((byte)(107)))));
-            this.panel3.Controls.Add(this.LegendTabLayPred);
-            this.panel3.Location = new System.Drawing.Point(706, 86);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(202, 66);
-            this.panel3.TabIndex = 45;
-            // 
             // LegendTabLayPred
             // 
             this.LegendTabLayPred.BackColor = System.Drawing.Color.White;
             this.LegendTabLayPred.ColumnCount = 2;
             this.LegendTabLayPred.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.LegendTabLayPred.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.LegendTabLayPred.Controls.Add(this.ExpenseLblPred, 0, 0);
-            this.LegendTabLayPred.Controls.Add(this.LegendPanel2, 1, 1);
+            this.LegendTabLayPred.Controls.Add(this.ExpenseLblPred, 0, 2);
+            this.LegendTabLayPred.Controls.Add(this.LegendOrangePnlPred, 1, 1);
             this.LegendTabLayPred.Controls.Add(this.BudgetLblPred, 0, 1);
-            this.LegendTabLayPred.Controls.Add(this.SavingLblPred, 0, 2);
-            this.LegendTabLayPred.Controls.Add(this.LegendPanel13, 1, 2);
-            this.LegendTabLayPred.Controls.Add(this.LegendPanel1, 1, 0);
-            this.LegendTabLayPred.Location = new System.Drawing.Point(3, 3);
+            this.LegendTabLayPred.Controls.Add(this.SavingLblPred, 0, 0);
+            this.LegendTabLayPred.Controls.Add(this.LegendGreenPnlPred, 1, 0);
+            this.LegendTabLayPred.Controls.Add(this.LegendRedPnlPred, 1, 2);
+            this.LegendTabLayPred.Location = new System.Drawing.Point(17, 3);
             this.LegendTabLayPred.Name = "LegendTabLayPred";
             this.LegendTabLayPred.RowCount = 3;
             this.LegendTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.LegendTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.LegendTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.LegendTabLayPred.Size = new System.Drawing.Size(196, 60);
+            this.LegendTabLayPred.Size = new System.Drawing.Size(170, 60);
             this.LegendTabLayPred.TabIndex = 0;
             // 
             // ExpenseLblPred
@@ -632,11 +529,20 @@
             this.ExpenseLblPred.AutoSize = true;
             this.ExpenseLblPred.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ExpenseLblPred.ForeColor = System.Drawing.Color.Red;
-            this.ExpenseLblPred.Location = new System.Drawing.Point(17, 0);
+            this.ExpenseLblPred.Location = new System.Drawing.Point(11, 40);
             this.ExpenseLblPred.Name = "ExpenseLblPred";
             this.ExpenseLblPred.Size = new System.Drawing.Size(63, 20);
             this.ExpenseLblPred.TabIndex = 46;
             this.ExpenseLblPred.Text = "Expense";
+            // 
+            // LegendOrangePnlPred
+            // 
+            this.LegendOrangePnlPred.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LegendOrangePnlPred.BackColor = System.Drawing.Color.Orange;
+            this.LegendOrangePnlPred.Location = new System.Drawing.Point(113, 25);
+            this.LegendOrangePnlPred.Name = "LegendOrangePnlPred";
+            this.LegendOrangePnlPred.Size = new System.Drawing.Size(29, 10);
+            this.LegendOrangePnlPred.TabIndex = 50;
             // 
             // BudgetLblPred
             // 
@@ -644,7 +550,7 @@
             this.BudgetLblPred.AutoSize = true;
             this.BudgetLblPred.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BudgetLblPred.ForeColor = System.Drawing.Color.Orange;
-            this.BudgetLblPred.Location = new System.Drawing.Point(20, 20);
+            this.BudgetLblPred.Location = new System.Drawing.Point(14, 20);
             this.BudgetLblPred.Name = "BudgetLblPred";
             this.BudgetLblPred.Size = new System.Drawing.Size(57, 20);
             this.BudgetLblPred.TabIndex = 47;
@@ -656,66 +562,153 @@
             this.SavingLblPred.AutoSize = true;
             this.SavingLblPred.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SavingLblPred.ForeColor = System.Drawing.Color.Lime;
-            this.SavingLblPred.Location = new System.Drawing.Point(22, 40);
+            this.SavingLblPred.Location = new System.Drawing.Point(16, 0);
             this.SavingLblPred.Name = "SavingLblPred";
             this.SavingLblPred.Size = new System.Drawing.Size(53, 20);
             this.SavingLblPred.TabIndex = 48;
             this.SavingLblPred.Text = "Saving";
             // 
-            // LegendPanel1
+            // LegendGreenPnlPred
             // 
-            this.LegendPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LegendPanel1.BackColor = System.Drawing.Color.Red;
-            this.LegendPanel1.Location = new System.Drawing.Point(132, 5);
-            this.LegendPanel1.Name = "LegendPanel1";
-            this.LegendPanel1.Size = new System.Drawing.Size(29, 10);
-            this.LegendPanel1.TabIndex = 49;
+            this.LegendGreenPnlPred.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LegendGreenPnlPred.BackColor = System.Drawing.Color.Lime;
+            this.LegendGreenPnlPred.Location = new System.Drawing.Point(113, 5);
+            this.LegendGreenPnlPred.Name = "LegendGreenPnlPred";
+            this.LegendGreenPnlPred.Size = new System.Drawing.Size(29, 10);
+            this.LegendGreenPnlPred.TabIndex = 50;
             // 
-            // LegendPanel2
+            // LegendRedPnlPred
             // 
-            this.LegendPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LegendPanel2.BackColor = System.Drawing.Color.Orange;
-            this.LegendPanel2.Location = new System.Drawing.Point(132, 25);
-            this.LegendPanel2.Name = "LegendPanel2";
-            this.LegendPanel2.Size = new System.Drawing.Size(29, 10);
-            this.LegendPanel2.TabIndex = 50;
+            this.LegendRedPnlPred.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LegendRedPnlPred.BackColor = System.Drawing.Color.Red;
+            this.LegendRedPnlPred.Location = new System.Drawing.Point(113, 45);
+            this.LegendRedPnlPred.Name = "LegendRedPnlPred";
+            this.LegendRedPnlPred.Size = new System.Drawing.Size(29, 10);
+            this.LegendRedPnlPred.TabIndex = 49;
             // 
-            // LegendPanel13
+            // PredSavePnlPred
             // 
-            this.LegendPanel13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LegendPanel13.BackColor = System.Drawing.Color.Lime;
-            this.LegendPanel13.Location = new System.Drawing.Point(132, 45);
-            this.LegendPanel13.Name = "LegendPanel13";
-            this.LegendPanel13.Size = new System.Drawing.Size(29, 10);
-            this.LegendPanel13.TabIndex = 50;
+            this.PredSavePnlPred.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
+            this.PredSavePnlPred.BorderRadius = 10;
+            this.PredSavePnlPred.BorderThickness = 3;
+            this.PredSavePnlPred.Controls.Add(this.PredSaveLblPred);
+            this.PredSavePnlPred.Controls.Add(this.PredSavLblPred);
+            this.PredSavePnlPred.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));
+            this.PredSavePnlPred.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.PredSavePnlPred.Location = new System.Drawing.Point(223, 86);
+            this.PredSavePnlPred.Name = "PredSavePnlPred";
+            this.PredSavePnlPred.Size = new System.Drawing.Size(202, 66);
+            this.PredSavePnlPred.TabIndex = 59;
+            // 
+            // PredSpendPnlPred
+            // 
+            this.PredSpendPnlPred.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
+            this.PredSpendPnlPred.BorderRadius = 10;
+            this.PredSpendPnlPred.BorderThickness = 3;
+            this.PredSpendPnlPred.Controls.Add(this.PredSpenLblPred);
+            this.PredSpendPnlPred.Controls.Add(this.PredSpendLblPred);
+            this.PredSpendPnlPred.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));
+            this.PredSpendPnlPred.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.PredSpendPnlPred.Location = new System.Drawing.Point(464, 86);
+            this.PredSpendPnlPred.Name = "PredSpendPnlPred";
+            this.PredSpendPnlPred.Size = new System.Drawing.Size(202, 66);
+            this.PredSpendPnlPred.TabIndex = 60;
+            // 
+            // LegendPnlPred
+            // 
+            this.LegendPnlPred.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
+            this.LegendPnlPred.BorderRadius = 10;
+            this.LegendPnlPred.BorderThickness = 3;
+            this.LegendPnlPred.Controls.Add(this.LegendTabLayPred);
+            this.LegendPnlPred.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));
+            this.LegendPnlPred.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.LegendPnlPred.Location = new System.Drawing.Point(706, 86);
+            this.LegendPnlPred.Name = "LegendPnlPred";
+            this.LegendPnlPred.Size = new System.Drawing.Size(202, 66);
+            this.LegendPnlPred.TabIndex = 61;
+            // 
+            // ForecastPnlPred
+            // 
+            this.ForecastPnlPred.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
+            this.ForecastPnlPred.BorderRadius = 10;
+            this.ForecastPnlPred.BorderThickness = 3;
+            this.ForecastPnlPred.Controls.Add(this.ForecastChrtPred);
+            this.ForecastPnlPred.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));
+            this.ForecastPnlPred.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.ForecastPnlPred.Location = new System.Drawing.Point(220, 208);
+            this.ForecastPnlPred.Name = "ForecastPnlPred";
+            this.ForecastPnlPred.Size = new System.Drawing.Size(691, 258);
+            this.ForecastPnlPred.TabIndex = 60;
+            // 
+            // ForecastChrtPred
+            // 
+            chartArea1.AxisX.LabelStyle.Interval = 1D;
+            chartArea1.AxisX.MajorGrid.Enabled = false;
+            chartArea1.AxisY.Interval = 1000D;
+            chartArea1.AxisY.LabelStyle.Format = "₱ #,##0";
+            chartArea1.AxisY.Maximum = 10000D;
+            chartArea1.AxisY.Minimum = 0D;
+            chartArea1.Name = "ChartArea1";
+            this.ForecastChrtPred.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
+            legend1.Name = "DefaultLegend";
+            this.ForecastChrtPred.Legends.Add(legend1);
+            this.ForecastChrtPred.Location = new System.Drawing.Point(3, 27);
+            this.ForecastChrtPred.Name = "ForecastChrtPred";
+            series1.BorderWidth = 3;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Color = System.Drawing.Color.Red;
+            series1.Legend = "DefaultLegend";
+            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series1.Name = "Expense";
+            series2.BorderWidth = 3;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            series2.Legend = "DefaultLegend";
+            series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series2.Name = "Budget";
+            series3.BorderWidth = 3;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Color = System.Drawing.Color.Lime;
+            series3.Legend = "DefaultLegend";
+            series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series3.Name = "Saving";
+            this.ForecastChrtPred.Series.Add(series1);
+            this.ForecastChrtPred.Series.Add(series2);
+            this.ForecastChrtPred.Series.Add(series3);
+            this.ForecastChrtPred.Size = new System.Drawing.Size(685, 224);
+            this.ForecastChrtPred.TabIndex = 6;
+            this.ForecastChrtPred.Text = "chart1";
             // 
             // PredictionForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(932, 510);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.BudgetPanTran);
-            this.Controls.Add(this.SpenPanTran);
+            this.ClientSize = new System.Drawing.Size(932, 478);
+            this.Controls.Add(this.ForecastPnlPred);
+            this.Controls.Add(this.LegendPnlPred);
+            this.Controls.Add(this.PredSpendPnlPred);
+            this.Controls.Add(this.PredSavePnlPred);
             this.Controls.Add(this.lblContextDate);
             this.Controls.Add(this.PredictionLblPred);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.MonthlyForecastLblPred);
             this.Controls.Add(this.SidebarTableLayoutPred);
             this.Controls.Add(this.numSelectYearPred);
             this.Controls.Add(this.cbSelectMonthPred);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(950, 557);
+            this.MaximumSize = new System.Drawing.Size(950, 525);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(950, 557);
+            this.MinimumSize = new System.Drawing.Size(950, 525);
             this.Name = "PredictionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prediction";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PredictionForm_FormClosing);
             this.Load += new System.EventHandler(this.PredictionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numSelectYearPred)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartForecast)).EndInit();
             this.SidebarTableLayoutPred.ResumeLayout(false);
             this.CentSibleTextPanelGoal.ResumeLayout(false);
             this.SideBarTabLayPred.ResumeLayout(false);
@@ -729,16 +722,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxPred)).EndInit();
             this.HomeTabLayPred.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxPred)).EndInit();
-            this.SpenPanTran.ResumeLayout(false);
-            this.BudgetPanTran.ResumeLayout(false);
-            this.pnlBudgetTran.ResumeLayout(false);
-            this.pnlBudgetTran.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.LegendTabLayPred.ResumeLayout(false);
             this.LegendTabLayPred.PerformLayout();
+            this.PredSavePnlPred.ResumeLayout(false);
+            this.PredSavePnlPred.PerformLayout();
+            this.PredSpendPnlPred.ResumeLayout(false);
+            this.PredSpendPnlPred.PerformLayout();
+            this.LegendPnlPred.ResumeLayout(false);
+            this.ForecastPnlPred.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ForecastChrtPred)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -746,13 +738,12 @@
         #endregion
         private System.Windows.Forms.ComboBox cbSelectMonthPred;
         private System.Windows.Forms.NumericUpDown numSelectYearPred;
-        private System.Windows.Forms.Label lblPredSavingAmount;
-        private System.Windows.Forms.Label lblPredSpendingAmount;
+        private System.Windows.Forms.Label PredSaveLblPred;
+        private System.Windows.Forms.Label PredSpendLblPred;
         private System.Windows.Forms.Label lblContextDate;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartForecast;
-        private System.Windows.Forms.Label PredSavlblPred;
-        private System.Windows.Forms.Label PredSpenlblPred;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label PredSavLblPred;
+        private System.Windows.Forms.Label PredSpenLblPred;
+        private System.Windows.Forms.Label MonthlyForecastLblPred;
         private System.Windows.Forms.FlowLayoutPanel SidebarTableLayoutPred;
         private System.Windows.Forms.Panel CentSibleTextPanelGoal;
         private System.Windows.Forms.Label CentSibleLabelPred;
@@ -774,18 +765,17 @@
         private System.Windows.Forms.Button HomeButtonPred;
         private System.Windows.Forms.PictureBox HomePicBoxPred;
         private System.Windows.Forms.Label PredictionLblPred;
-        private System.Windows.Forms.Panel SpenPanTran;
-        private System.Windows.Forms.Panel BudgetPanTran;
-        private System.Windows.Forms.Panel pnlBudgetTran;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TableLayoutPanel LegendTabLayPred;
         private System.Windows.Forms.Label ExpenseLblPred;
         private System.Windows.Forms.Label SavingLblPred;
         private System.Windows.Forms.Label BudgetLblPred;
-        private System.Windows.Forms.FlowLayoutPanel LegendPanel1;
-        private System.Windows.Forms.FlowLayoutPanel LegendPanel13;
-        private System.Windows.Forms.FlowLayoutPanel LegendPanel2;
+        private System.Windows.Forms.FlowLayoutPanel LegendRedPnlPred;
+        private System.Windows.Forms.FlowLayoutPanel LegendGreenPnlPred;
+        private System.Windows.Forms.FlowLayoutPanel LegendOrangePnlPred;
+        private Guna.UI2.WinForms.Guna2Panel PredSavePnlPred;
+        private Guna.UI2.WinForms.Guna2Panel PredSpendPnlPred;
+        private Guna.UI2.WinForms.Guna2Panel LegendPnlPred;
+        private Guna.UI2.WinForms.Guna2Panel ForecastPnlPred;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ForecastChrtPred;
     }
 }

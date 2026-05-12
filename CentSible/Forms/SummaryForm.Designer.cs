@@ -106,11 +106,11 @@
             // SummaryLblSum
             // 
             this.SummaryLblSum.AutoSize = true;
-            this.SummaryLblSum.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.SummaryLblSum.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.SummaryLblSum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
             this.SummaryLblSum.Location = new System.Drawing.Point(231, 20);
             this.SummaryLblSum.Name = "SummaryLblSum";
-            this.SummaryLblSum.Size = new System.Drawing.Size(127, 35);
+            this.SummaryLblSum.Size = new System.Drawing.Size(112, 30);
             this.SummaryLblSum.TabIndex = 1;
             this.SummaryLblSum.Text = "Summary";
             // 
@@ -119,7 +119,7 @@
             this.CurrentDateSum.AutoSize = true;
             this.CurrentDateSum.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold);
             this.CurrentDateSum.ForeColor = System.Drawing.Color.DarkGreen;
-            this.CurrentDateSum.Location = new System.Drawing.Point(237, 52);
+            this.CurrentDateSum.Location = new System.Drawing.Point(237, 44);
             this.CurrentDateSum.Name = "CurrentDateSum";
             this.CurrentDateSum.Size = new System.Drawing.Size(78, 17);
             this.CurrentDateSum.TabIndex = 2;
@@ -158,7 +158,7 @@
             this.chartSummary.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartSummary.Legends.Add(legend1);
-            this.chartSummary.Location = new System.Drawing.Point(9, 17);
+            this.chartSummary.Location = new System.Drawing.Point(8, 17);
             this.chartSummary.Name = "chartSummary";
             this.chartSummary.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
@@ -166,7 +166,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chartSummary.Series.Add(series1);
-            this.chartSummary.Size = new System.Drawing.Size(362, 381);
+            this.chartSummary.Size = new System.Drawing.Size(363, 381);
             this.chartSummary.TabIndex = 5;
             this.chartSummary.Text = "Category Breakdown";
             // 
@@ -740,16 +740,16 @@
             this.SummaryChrtSum.BorderThickness = 2;
             this.SummaryChrtSum.Controls.Add(this.chartSummary);
             this.SummaryChrtSum.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));
-            this.SummaryChrtSum.Location = new System.Drawing.Point(518, 76);
+            this.SummaryChrtSum.Location = new System.Drawing.Point(517, 76);
             this.SummaryChrtSum.Name = "SummaryChrtSum";
-            this.SummaryChrtSum.Size = new System.Drawing.Size(379, 411);
+            this.SummaryChrtSum.Size = new System.Drawing.Size(380, 411);
             this.SummaryChrtSum.TabIndex = 58;
             // 
             // SpendBreakdownPnlSum
             // 
             this.SpendBreakdownPnlSum.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
             this.SpendBreakdownPnlSum.BorderRadius = 10;
-            this.SpendBreakdownPnlSum.BorderThickness = 3;
+            this.SpendBreakdownPnlSum.BorderThickness = 2;
             this.SpendBreakdownPnlSum.Controls.Add(this.BreakdownTabLaySum);
             this.SpendBreakdownPnlSum.Controls.Add(this.BreakdownLblSum);
             this.SpendBreakdownPnlSum.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(199)))), ((int)(((byte)(132)))));

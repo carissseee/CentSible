@@ -73,14 +73,14 @@ namespace CentSible.Forms
                 decimal truncSpent = Math.Truncate(result.AvgSpent * 100) / 100;
                 decimal truncSaving = Math.Truncate(result.PredictedSaving * 100) / 100;
 
-                lblPredSpendingAmount.Text = $"₱ {truncSpent:N2}";
-                lblPredSavingAmount.Text = $"₱ {truncSaving:N2}";
+                PredSpendLblPred.Text = $"₱ {truncSpent:N2}";
+                PredSaveLblPred.Text = $"₱ {truncSaving:N2}";
                 lblContextDate.Text = $"{cbSelectMonthPred.SelectedItem} {year}";
 
                 
-                chartForecast.Series["Expense"].Points.Clear();
-                chartForecast.Series["Budget"].Points.Clear();
-                chartForecast.Series["Saving"].Points.Clear();
+                ForecastChrtPred.Series["Expense"].Points.Clear();
+                ForecastChrtPred.Series["Budget"].Points.Clear();
+                ForecastChrtPred.Series["Saving"].Points.Clear();
 
                 foreach (var data in result.History)
                 {
@@ -90,9 +90,9 @@ namespace CentSible.Forms
                     decimal chartBudget = Math.Truncate(data.Budget * 100) / 100;
                     decimal chartSaving = Math.Truncate((data.Budget - data.Spent) * 100) / 100;
 
-                    chartForecast.Series["Expense"].Points.AddXY(data.MonthName, data.Spent);         
-                    chartForecast.Series["Budget"].Points.AddXY(data.MonthName, data.Budget);       
-                    chartForecast.Series["Saving"].Points.AddXY(data.MonthName, data.Budget - data.Spent);
+                    ForecastChrtPred.Series["Expense"].Points.AddXY(data.MonthName, data.Spent);         
+                    ForecastChrtPred.Series["Budget"].Points.AddXY(data.MonthName, data.Budget);       
+                    ForecastChrtPred.Series["Saving"].Points.AddXY(data.MonthName, data.Budget - data.Spent);
                 }
             }
             catch (Exception ex)
