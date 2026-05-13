@@ -69,7 +69,7 @@ namespace CentSible.Forms
             chartSummary.Series.Add("Spending");
             chartSummary.Series["Spending"].ChartType = SeriesChartType.Pie;
             chartSummary.Legends.Clear();
-
+            chartSummary.Series["Spending"].Label = "#PERCENT{P0}";
             LoadSummary();
         }
 
