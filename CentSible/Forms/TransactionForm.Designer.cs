@@ -337,8 +337,6 @@
             this.colType.HeaderText = "Type";
             this.colType.Items.AddRange(new object[] {
             "Expense",
-            "Budget",
-            "Expense",
             "Budget"});
             this.colType.MinimumWidth = 6;
             this.colType.Name = "colType";
@@ -348,15 +346,6 @@
             // 
             this.colCategory.HeaderText = "Category";
             this.colCategory.Items.AddRange(new object[] {
-            "Income",
-            "Allowance",
-            "Food",
-            "Transportation",
-            "Utilities",
-            "Miscellaneous",
-            "Health",
-            "Leisure",
-            "Others",
             "Income",
             "Allowance",
             "Food",
@@ -640,21 +629,6 @@
             this.LogoutBtnTran.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LogoutBtnTran.UseVisualStyleBackColor = false;
             this.LogoutBtnTran.Click += new System.EventHandler(this.LogoutButtonTran_Click);
-            // 
-            // PredButtonGoal
-            // 
-            this.PredButtonGoal.Location = new System.Drawing.Point(0, 0);
-            this.PredButtonGoal.Name = "PredButtonGoal";
-            this.PredButtonGoal.Size = new System.Drawing.Size(75, 23);
-            this.PredButtonGoal.TabIndex = 0;
-            // 
-            // PredPicBoxGoal
-            // 
-            this.PredPicBoxGoal.Location = new System.Drawing.Point(0, 0);
-            this.PredPicBoxGoal.Name = "PredPicBoxGoal";
-            this.PredPicBoxGoal.Size = new System.Drawing.Size(100, 50);
-            this.PredPicBoxGoal.TabIndex = 0;
-            this.PredPicBoxGoal.TabStop = false;
             // 
             // CentSibleTextPanelGoal
             // 

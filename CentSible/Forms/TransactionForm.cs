@@ -49,6 +49,9 @@ namespace CentSible.Forms
         }
         private void TransactionForm_Load(object sender, EventArgs e)
         {
+            dgvTransaction.CellContentClick += dgvTransaction_CellContentClick;
+            dgvTransaction.CellValueChanged += dgvTransaction_CellValueChanged;
+
             if (_user == null) return;
 
 
@@ -203,49 +206,26 @@ namespace CentSible.Forms
                 dgvTransaction.CommitEdit(DataGridViewDataErrorContexts.Commit);
             }
         }
-       
+
         private void dgvTransaction_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-           
             if (e.RowIndex < 0 || e.ColumnIndex != dgvTransaction.Columns["colType"].Index)
-            {
                 return;
-            }
 
-           
             var row = dgvTransaction.Rows[e.RowIndex];
             string selectedType = row.Cells["colType"].Value?.ToString();
 
             if (row.Cells["colCategory"] is DataGridViewComboBoxCell categoryCell)
             {
-                
-                string[] targetCategories;
+                categoryCell.Items.Clear();
+                categoryCell.Value = null;
+
                 if (selectedType == "Budget")
-                {
-                    targetCategories = new[] { "Allowance", "Income", "Others" };
-                }
+                    categoryCell.Items.AddRange(new[] { "Allowance", "Income", "Others" });
                 else if (selectedType == "Expense")
-                {
-                    targetCategories = new[] { "Food", "Transportation", "Utilities", "Health", "Leisure", "Others" };
-                }
-                else
-                {
-                    categoryCell.Items.Clear();
-                    return;
-                }
-
-               
-                if (categoryCell.Items.Count != targetCategories.Length)
-                {
-                    categoryCell.Items.Clear();
-                    categoryCell.Items.AddRange(targetCategories);
-
-                   
-                    categoryCell.Value = null;
-                }
+                    categoryCell.Items.AddRange(new[] { "Food", "Transportation", "Utilities", "Health", "Leisure", "Others" });
             }
         }
-
         private void AddTransaction(object sender, EventArgs e)
         {
             if (_isAddingNew)
