@@ -20,7 +20,7 @@ namespace CentSible.Forms
         public SummaryForm(Account user) : base(user)
         {
             InitializeComponent();
-            InitializeNavigation();       
+            InitializeNavigation();
         }
 
         protected override void InitializeNavigation()
@@ -49,6 +49,11 @@ namespace CentSible.Forms
             {
                 return;
             }
+            
+            this.VisibleChanged += (s, ev) => {
+                if (this.Visible && _user != null)
+                    LoadSummary();
+            };
 
             cmbYear.SelectedIndexChanged -= cmbYear_SelectedIndexChanged;
             int currentYear = DateTime.Now.Year;

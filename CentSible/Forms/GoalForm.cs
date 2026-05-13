@@ -64,6 +64,7 @@ namespace CentSible.Forms
 
             SelectMonthDropGoal.SelectedIndexChanged += cbSelectMonth_SelectedIndexChanged;
             SelectYearDropGoal.ValueChanged += numSelectYear_ValueChanged;
+            CurrentDateGoal.Text = $"{SelectMonthDropGoal.SelectedItem} {SelectYearDropGoal.Value}";
 
             UpdateGoalDate();
             UpdateFilter();

@@ -109,7 +109,7 @@
             "October",
             "November ",
             "December"});
-            this.cbSelectMonthPred.Location = new System.Drawing.Point(657, 35);
+            this.cbSelectMonthPred.Location = new System.Drawing.Point(788, 35);
             this.cbSelectMonthPred.Name = "cbSelectMonthPred";
             this.cbSelectMonthPred.Size = new System.Drawing.Size(120, 27);
             this.cbSelectMonthPred.TabIndex = 1;
@@ -118,7 +118,7 @@
             // 
             this.numSelectYearPred.Font = new System.Drawing.Font("Segoe UI", 8.2F);
             this.numSelectYearPred.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.numSelectYearPred.Location = new System.Drawing.Point(788, 35);
+            this.numSelectYearPred.Location = new System.Drawing.Point(657, 35);
             this.numSelectYearPred.Maximum = new decimal(new int[] {
             3000,
             0,
@@ -545,13 +545,13 @@
             this.LegendTabLayPred.Controls.Add(this.SavingLblPred, 0, 0);
             this.LegendTabLayPred.Controls.Add(this.LegendGreenPnlPred, 1, 0);
             this.LegendTabLayPred.Controls.Add(this.LegendRedPnlPred, 1, 2);
-            this.LegendTabLayPred.Location = new System.Drawing.Point(17, 3);
+            this.LegendTabLayPred.Location = new System.Drawing.Point(17, 5);
             this.LegendTabLayPred.Name = "LegendTabLayPred";
             this.LegendTabLayPred.RowCount = 3;
             this.LegendTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.LegendTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.LegendTabLayPred.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.LegendTabLayPred.Size = new System.Drawing.Size(170, 60);
+            this.LegendTabLayPred.Size = new System.Drawing.Size(170, 57);
             this.LegendTabLayPred.TabIndex = 0;
             // 
             // ExpenseLblPred
@@ -560,7 +560,7 @@
             this.ExpenseLblPred.AutoSize = true;
             this.ExpenseLblPred.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ExpenseLblPred.ForeColor = System.Drawing.Color.Red;
-            this.ExpenseLblPred.Location = new System.Drawing.Point(11, 40);
+            this.ExpenseLblPred.Location = new System.Drawing.Point(11, 36);
             this.ExpenseLblPred.Name = "ExpenseLblPred";
             this.ExpenseLblPred.Size = new System.Drawing.Size(63, 20);
             this.ExpenseLblPred.TabIndex = 46;
@@ -570,7 +570,7 @@
             // 
             this.LegendOrangePnlPred.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LegendOrangePnlPred.BackColor = System.Drawing.Color.Orange;
-            this.LegendOrangePnlPred.Location = new System.Drawing.Point(113, 25);
+            this.LegendOrangePnlPred.Location = new System.Drawing.Point(113, 22);
             this.LegendOrangePnlPred.Name = "LegendOrangePnlPred";
             this.LegendOrangePnlPred.Size = new System.Drawing.Size(29, 10);
             this.LegendOrangePnlPred.TabIndex = 50;
@@ -581,9 +581,9 @@
             this.BudgetLblPred.AutoSize = true;
             this.BudgetLblPred.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BudgetLblPred.ForeColor = System.Drawing.Color.Orange;
-            this.BudgetLblPred.Location = new System.Drawing.Point(14, 20);
+            this.BudgetLblPred.Location = new System.Drawing.Point(14, 18);
             this.BudgetLblPred.Name = "BudgetLblPred";
-            this.BudgetLblPred.Size = new System.Drawing.Size(57, 20);
+            this.BudgetLblPred.Size = new System.Drawing.Size(57, 18);
             this.BudgetLblPred.TabIndex = 47;
             this.BudgetLblPred.Text = "Budget";
             // 
@@ -595,7 +595,7 @@
             this.SavingLblPred.ForeColor = System.Drawing.Color.Lime;
             this.SavingLblPred.Location = new System.Drawing.Point(16, 0);
             this.SavingLblPred.Name = "SavingLblPred";
-            this.SavingLblPred.Size = new System.Drawing.Size(53, 20);
+            this.SavingLblPred.Size = new System.Drawing.Size(53, 18);
             this.SavingLblPred.TabIndex = 48;
             this.SavingLblPred.Text = "Saving";
             // 
@@ -603,7 +603,7 @@
             // 
             this.LegendGreenPnlPred.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LegendGreenPnlPred.BackColor = System.Drawing.Color.Lime;
-            this.LegendGreenPnlPred.Location = new System.Drawing.Point(113, 5);
+            this.LegendGreenPnlPred.Location = new System.Drawing.Point(113, 4);
             this.LegendGreenPnlPred.Name = "LegendGreenPnlPred";
             this.LegendGreenPnlPred.Size = new System.Drawing.Size(29, 10);
             this.LegendGreenPnlPred.TabIndex = 50;
@@ -612,7 +612,7 @@
             // 
             this.LegendRedPnlPred.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LegendRedPnlPred.BackColor = System.Drawing.Color.Red;
-            this.LegendRedPnlPred.Location = new System.Drawing.Point(113, 45);
+            this.LegendRedPnlPred.Location = new System.Drawing.Point(113, 41);
             this.LegendRedPnlPred.Name = "LegendRedPnlPred";
             this.LegendRedPnlPred.Size = new System.Drawing.Size(29, 10);
             this.LegendRedPnlPred.TabIndex = 49;
