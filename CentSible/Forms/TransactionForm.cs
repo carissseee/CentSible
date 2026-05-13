@@ -53,7 +53,7 @@ namespace CentSible.Forms
 
 
             TranButtonTran.BackColor = Color.FromArgb(52, 110, 60);
-            TranButtonTran.ForeColor = Color.Black;
+            TranButtonTran.ForeColor = Color.White;
 
             
             if (dgvTransaction.Columns["colType"] is DataGridViewComboBoxColumn typeCol)
