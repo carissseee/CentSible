@@ -1,17 +1,24 @@
-﻿using System;
+﻿using CentSible.Forms;
+using CentSible.Models;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CentSible.Models;
+
 
 namespace CentSible.Forms
 {
+    
     public abstract class BaseNavForm : Form
     {
+
         protected Account _user;
         protected bool _isNavigating = false;
+
+        protected BaseNavForm() { }
         public BaseNavForm(Account user)
         {
             _user = user;
@@ -30,4 +37,10 @@ namespace CentSible.Forms
             navAction.Invoke();
         }
     }
+}
+
+public class BaseNavFormDesigner : BaseNavForm
+{
+    public BaseNavFormDesigner() : base() { }
+    public BaseNavFormDesigner(Account user) : base(user) { }
 }
