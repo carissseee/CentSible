@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace CentSible.Forms
 {
-    public partial class TransactionForm : BaseNavForm
+    public partial class TransactionForm : BaseNavFormDesigner
     {
         private bool _isAddingNew = false;
         private bool _isEditing = false;

@@ -13,7 +13,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace CentSible.Forms
 {
-    public partial class SummaryForm : BaseNavForm
+    public partial class SummaryForm : BaseNavFormDesigner
     {
         private SummaryLogic summaryLogic = new SummaryLogic();
 

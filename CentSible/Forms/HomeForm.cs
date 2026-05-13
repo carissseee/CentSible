@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace CentSible.Forms
 {
-    public partial class HomeForm : BaseNavForm
+    public partial class HomeForm : BaseNavFormDesigner
     {
         private GoalLogic _goalLogic;
         private AccountLogic _accountLogic = new AccountLogic();

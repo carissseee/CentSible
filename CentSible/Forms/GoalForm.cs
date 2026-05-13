@@ -15,7 +15,7 @@ using Guna.UI2.WinForms;
 
 namespace CentSible.Forms
 {
-    public partial class GoalForm : BaseNavForm
+    public partial class GoalForm : BaseNavFormDesigner
     {
         private List<Models.Goal> _allGoals;
         private GoalLogic _goalLogic = new GoalLogic();

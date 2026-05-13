@@ -12,7 +12,7 @@ using CentSible.Logic;
 
 namespace CentSible.Forms
 {
-    public partial class PredictionForm : BaseNavForm
+    public partial class PredictionForm : BaseNavFormDesigner
     {
         private PredictionLogic _predLogic = new PredictionLogic();
 
