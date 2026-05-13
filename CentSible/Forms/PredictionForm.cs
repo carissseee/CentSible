@@ -22,7 +22,7 @@ namespace CentSible.Forms
             InitializeComponent();
             this.VisibleChanged += PredictionForm_VisibleChanged;
             this.cbSelectMonthPred.SelectedIndexChanged += cbSelectMonthPred_SelectedIndexChanged;
-            InitializeNavigation(); 
+            InitializeNavigation();
 
         }
 

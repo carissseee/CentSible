@@ -64,7 +64,6 @@
             this.CentSibleTextPanelGoal = new System.Windows.Forms.Panel();
             this.CentSibleLabelSum = new System.Windows.Forms.Label();
             this.SideBarTabLaySum = new System.Windows.Forms.TableLayoutPanel();
-            this.LogoutBtnSum = new System.Windows.Forms.Button();
             this.PredTabLaySum = new System.Windows.Forms.TableLayoutPanel();
             this.PredPicBoxSum = new System.Windows.Forms.PictureBox();
             this.PredButtonSum = new System.Windows.Forms.Button();
@@ -80,11 +79,12 @@
             this.HomeTabLaySum = new System.Windows.Forms.TableLayoutPanel();
             this.HomeButtonSum = new System.Windows.Forms.Button();
             this.HomePicBoxSum = new System.Windows.Forms.PictureBox();
+            this.LogTabLaySum = new System.Windows.Forms.TableLayoutPanel();
+            this.LogPicBoxTran = new System.Windows.Forms.PictureBox();
+            this.LogoutBtnSum = new System.Windows.Forms.Button();
             this.SummaryChrtSum = new Guna.UI2.WinForms.Guna2Panel();
             this.SpendBreakdownPnlSum = new Guna.UI2.WinForms.Guna2Panel();
             this.SumReportPnlSum = new Guna.UI2.WinForms.Guna2Panel();
-            this.LogTabLaySum = new System.Windows.Forms.TableLayoutPanel();
-            this.LogPicBoxTran = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.chartSummary)).BeginInit();
             this.BreakdownTabLaySum.SuspendLayout();
             this.SidebarTableLayoutSum.SuspendLayout();
@@ -100,11 +100,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxSum)).BeginInit();
             this.HomeTabLaySum.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxSum)).BeginInit();
+            this.LogTabLaySum.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogPicBoxTran)).BeginInit();
             this.SummaryChrtSum.SuspendLayout();
             this.SpendBreakdownPnlSum.SuspendLayout();
             this.SumReportPnlSum.SuspendLayout();
-            this.LogTabLaySum.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LogPicBoxTran)).BeginInit();
             this.SuspendLayout();
             // 
             // SummaryLblSum
@@ -183,8 +183,8 @@
             // 
             this.BreakdownTabLaySum.ColumnCount = 3;
             this.BreakdownTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.08779F));
-            this.BreakdownTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.56878F));
-            this.BreakdownTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.34343F));
+            this.BreakdownTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.95798F));
+            this.BreakdownTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.97479F));
             this.BreakdownTabLaySum.Controls.Add(this.lblOTotal, 2, 5);
             this.BreakdownTabLaySum.Controls.Add(this.pnlFood, 0, 0);
             this.BreakdownTabLaySum.Controls.Add(this.lblLTotal, 2, 4);
@@ -388,9 +388,9 @@
             this.lblTransportation.ForeColor = System.Drawing.Color.DarkGreen;
             this.lblTransportation.Location = new System.Drawing.Point(46, 38);
             this.lblTransportation.Name = "lblTransportation";
-            this.lblTransportation.Size = new System.Drawing.Size(77, 17);
+            this.lblTransportation.Size = new System.Drawing.Size(97, 17);
             this.lblTransportation.TabIndex = 5;
-            this.lblTransportation.Text = "Transaction";
+            this.lblTransportation.Text = "Transportation";
             this.lblTransportation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblHealth
@@ -505,23 +505,6 @@
             this.SideBarTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.SideBarTabLaySum.Size = new System.Drawing.Size(195, 411);
             this.SideBarTabLaySum.TabIndex = 11;
-            // 
-            // LogoutBtnSum
-            // 
-            this.LogoutBtnSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
-            this.LogoutBtnSum.FlatAppearance.BorderSize = 0;
-            this.LogoutBtnSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
-            this.LogoutBtnSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LogoutBtnSum.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.LogoutBtnSum.ForeColor = System.Drawing.Color.White;
-            this.LogoutBtnSum.Location = new System.Drawing.Point(67, 3);
-            this.LogoutBtnSum.Name = "LogoutBtnSum";
-            this.LogoutBtnSum.Size = new System.Drawing.Size(113, 33);
-            this.LogoutBtnSum.TabIndex = 15;
-            this.LogoutBtnSum.Text = "Logout";
-            this.LogoutBtnSum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogoutBtnSum.UseVisualStyleBackColor = false;
-            this.LogoutBtnSum.Click += new System.EventHandler(this.LogoutBtnSum_Click);
             // 
             // PredTabLaySum
             // 
@@ -742,6 +725,49 @@
             this.HomePicBoxSum.TabIndex = 15;
             this.HomePicBoxSum.TabStop = false;
             // 
+            // LogTabLaySum
+            // 
+            this.LogTabLaySum.ColumnCount = 2;
+            this.LogTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
+            this.LogTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
+            this.LogTabLaySum.Controls.Add(this.LogPicBoxTran, 0, 0);
+            this.LogTabLaySum.Controls.Add(this.LogoutBtnSum, 1, 0);
+            this.LogTabLaySum.Location = new System.Drawing.Point(3, 369);
+            this.LogTabLaySum.Name = "LogTabLaySum";
+            this.LogTabLaySum.RowCount = 1;
+            this.LogTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.LogTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.LogTabLaySum.Size = new System.Drawing.Size(183, 39);
+            this.LogTabLaySum.TabIndex = 26;
+            // 
+            // LogPicBoxTran
+            // 
+            this.LogPicBoxTran.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LogPicBoxTran.Image = global::CentSible.Properties.Resources.LogoutForm;
+            this.LogPicBoxTran.Location = new System.Drawing.Point(12, 3);
+            this.LogPicBoxTran.Name = "LogPicBoxTran";
+            this.LogPicBoxTran.Size = new System.Drawing.Size(40, 33);
+            this.LogPicBoxTran.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LogPicBoxTran.TabIndex = 19;
+            this.LogPicBoxTran.TabStop = false;
+            // 
+            // LogoutBtnSum
+            // 
+            this.LogoutBtnSum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(46)))), ((int)(((byte)(27)))));
+            this.LogoutBtnSum.FlatAppearance.BorderSize = 0;
+            this.LogoutBtnSum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(160)))), ((int)(((byte)(90)))));
+            this.LogoutBtnSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogoutBtnSum.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.LogoutBtnSum.ForeColor = System.Drawing.Color.White;
+            this.LogoutBtnSum.Location = new System.Drawing.Point(67, 3);
+            this.LogoutBtnSum.Name = "LogoutBtnSum";
+            this.LogoutBtnSum.Size = new System.Drawing.Size(113, 33);
+            this.LogoutBtnSum.TabIndex = 15;
+            this.LogoutBtnSum.Text = "Logout";
+            this.LogoutBtnSum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LogoutBtnSum.UseVisualStyleBackColor = false;
+            this.LogoutBtnSum.Click += new System.EventHandler(this.LogoutBtnSum_Click);
+            // 
             // SummaryChrtSum
             // 
             this.SummaryChrtSum.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(125)))), ((int)(((byte)(50)))));
@@ -779,32 +805,6 @@
             this.SumReportPnlSum.Name = "SumReportPnlSum";
             this.SumReportPnlSum.Size = new System.Drawing.Size(261, 123);
             this.SumReportPnlSum.TabIndex = 59;
-            // 
-            // LogTabLaySum
-            // 
-            this.LogTabLaySum.ColumnCount = 2;
-            this.LogTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.12195F));
-            this.LogTabLaySum.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.87805F));
-            this.LogTabLaySum.Controls.Add(this.LogPicBoxTran, 0, 0);
-            this.LogTabLaySum.Controls.Add(this.LogoutBtnSum, 1, 0);
-            this.LogTabLaySum.Location = new System.Drawing.Point(3, 369);
-            this.LogTabLaySum.Name = "LogTabLaySum";
-            this.LogTabLaySum.RowCount = 1;
-            this.LogTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.LogTabLaySum.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.LogTabLaySum.Size = new System.Drawing.Size(183, 39);
-            this.LogTabLaySum.TabIndex = 26;
-            // 
-            // LogPicBoxTran
-            // 
-            this.LogPicBoxTran.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LogPicBoxTran.Image = global::CentSible.Properties.Resources.LogoutForm;
-            this.LogPicBoxTran.Location = new System.Drawing.Point(12, 3);
-            this.LogPicBoxTran.Name = "LogPicBoxTran";
-            this.LogPicBoxTran.Size = new System.Drawing.Size(40, 33);
-            this.LogPicBoxTran.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.LogPicBoxTran.TabIndex = 19;
-            this.LogPicBoxTran.TabStop = false;
             // 
             // SummaryForm
             // 
@@ -844,13 +844,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.GoalPicBoxSum)).EndInit();
             this.HomeTabLaySum.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HomePicBoxSum)).EndInit();
+            this.LogTabLaySum.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LogPicBoxTran)).EndInit();
             this.SummaryChrtSum.ResumeLayout(false);
             this.SpendBreakdownPnlSum.ResumeLayout(false);
             this.SpendBreakdownPnlSum.PerformLayout();
             this.SumReportPnlSum.ResumeLayout(false);
             this.SumReportPnlSum.PerformLayout();
-            this.LogTabLaySum.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LogPicBoxTran)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
