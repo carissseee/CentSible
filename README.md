@@ -1,11 +1,11 @@
 <h1 align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Kaushan+Script&weight=500&size=50&duration=1000&pause=1000&color=98FFD0&center=true&vCenter=true&multiline=true&repeat=false&width=800&height=75&lines=CentSible+🪙" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Satify&weight=500&size=50&duration=1000&pause=1000&color=98FFD0&center=true&vCenter=true&multiline=true&repeat=false&width=800&height=75&lines=CentSible+🪙" alt="Typing SVG" />
   </a>
 </h1>
 
 <p align="center">
-  <img src="centsible.gif" width="600">
+  <img src="README/centsible.gif" width="600">
 </p>
 
 <p align="center">
@@ -31,7 +31,7 @@
     <img alt="IDE" src="https://img.shields.io/badge/IDE-Visual_Studio-FEC148?logoColor=black&style=for-the-badge">
   </a>
   <a>
-    <img alt="NuGet" src="https://img.shields.io/badge/NuGet-MySql.Data-02A4DE?logoColor=black&style=for-the-badge">
+    <img alt="NuGet" src="https://img.shields.io/badge/NuGet-MySql.Data, BCrypt, Guna-02A4DE?logoColor=black&style=for-the-badge">
   </a>
 </p>
 
@@ -61,6 +61,14 @@ The application supports multiple user accounts, each with their own private fin
 <hr style="border: 2px solid #98FFD0;">
 
 ## 📌 UML Diagram
+
+<p align="center">
+  <img src="README/CentSible_UML.png" width="800">
+</p>
+
+<p align="justify">
+The UML diagram illustrates the core components of the CentSible system. The Account class manages user information and login activities, while the Transaction class handles budgeting and expense records categorized into different types. The Goal class allows users to create and monitor financial goals such as savings or spending targets. The Summary class processes transaction data to generate financial insights, including total budgets, expenses, and categorized breakdowns. Meanwhile, the Prediction class analyzes transaction history to estimate future savings and spending patterns. Enumerations such as TransactionType, GoalType, and Category are used to organize and standardize system data.
+</p>
 
 <hr style="border: 2px solid #98FFD0;">
 
@@ -168,9 +176,31 @@ Follow these steps in order. Each step must be completed successfully before mov
 | **2** | 📂 **Open the Solution in Visual Studio** | Inside the extracted folder, locate the file with the `.slnx` extension (e.g., `CentSible.slnx`). Double-click it to open the entire solution in Visual Studio, which will load all project files, forms, and configurations automatically. |
 | **3** | 🗄️ **Start the Database Server** | Open **XAMPP Control Panel**. Click **Start** next to the MySQL module. The status indicator should turn green, confirming the database server is running. Always start XAMPP before launching the app. |
 | **4** | 🗃️ **Import the Database Schema** | Open phpMyAdmin at `http://localhost/phpmyadmin`. Create a new database named `centsible_db`. Import the provided `.sql` file from the project folder using the **Import** tab. Without this step, the application will crash on login. |
-| **5** | 📦 **Install the MySQL NuGet Package** | In Visual Studio, right-click the project name in **Solution Explorer** and select **Manage NuGet Packages**. Search for `MySql.Data` and click **Install**. If it already shows a checkmark, skip this step. |
+| **5** | 📦 **Install the Necessary NuGet Packages** | In Visual Studio, right-click the project name in **Solution Explorer** and select **Manage NuGet Packages**. Search for `MySql.Data`, `BCrypt.Net-Next`, and `Guna.UI2.WinForms`  and click **Install**. |
 | **6** | 🔨 **Build the Solution** | Navigate to **Build > Rebuild Solution**. Check the Output panel — it should display `Rebuild All: 1 succeeded` with zero errors. If errors appear, review the Error List panel for missing packages or connection string issues. |
 | **7** | 🚀 **Launch the Application** | Press **F5** on your keyboard or click the green **Play** button in the toolbar. The application will build and launch the Login screen. You are now ready to use CentSible. |
 | **8** | 🪙 **Register Your Account and Start Tracking** | On the Login screen, click **Create Account**. Fill in your desired username and password, then confirm. After registration, log in with your new credentials and begin tracking your finances. |
 
 <hr style="border: 2px solid #98FFD0;">
+
+## 👥Team of Authors
+| Name |Role | GitHub |
+| :--- | :--- | :--- |
+| **Auditor, Kishean Carisse B.** | Project Manager | [@carissseee](https://github.com/carissseee) |
+| **Aningalan, Jared Lance S.** | Logic / Tester |[@JaredAningalan](https://github.com/JaredAningalan)|
+| **Bernal, Brandon Yosef Y.** | GUI |[@Brandon-JYB](https://github.com/Brandon-JYB)|
+
+
+<h2 align="center">💗 Acknowledgement ✨</h2>
+
+<p align="justify">
+We would like to extend our heartfelt gratitude to our instructor <b>Ms. Darlene Opeña</b>, for her continuous support throughout the development of this project. From the very beginning, during our <b>project proposal</b> , she took the time to understand our vision and helped us shape it into something meaningful and achievable. Her honest and constructive feedback during our <b>UI presentations</b> pushed us to think deeper, design better, and never settle for less than our best. Throughout the <b>overall development</b> of CentSible, her continued guidance and advice in our progress made a real difference. 
+</p>
+
+<p align="justify">
+To our teammates, thank you for your diligence, commitment, and cooperation during this project. It has been a pleasure to work together, and without each of you, we really could not have finished this.
+</p>
+
+<p align="left">
+  <i> — The Dreamers ✨🪙</i>
+</p>
