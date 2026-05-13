@@ -41,7 +41,6 @@
             this.CentSibleLabelGoal = new System.Windows.Forms.Label();
             this.SavingBtnGoal = new Guna.UI2.WinForms.Guna2Button();
             this.SpendingBtnGoal = new Guna.UI2.WinForms.Guna2Button();
-            this.GoalDateLabelGoal = new System.Windows.Forms.Label();
             this.SaveBtnGoal = new Guna.UI2.WinForms.Guna2Button();
             this.SpendLblGoal = new System.Windows.Forms.Label();
             this.SpendingGoalTabLayGoal = new System.Windows.Forms.TableLayoutPanel();
@@ -84,9 +83,9 @@
             this.IndicatorPnlGoal = new Guna.UI2.WinForms.Guna2Panel();
             this.CurrentBarGoal = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.MilestoneBarGoal = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.CurrentDateGoal = new System.Windows.Forms.Label();
             this.SelectMonthDropGoal = new System.Windows.Forms.ComboBox();
             this.SelectYearDropGoal = new System.Windows.Forms.NumericUpDown();
+            this.GoalDateLabelGoal = new System.Windows.Forms.Label();
             this.SpendingGoalTabLayGoal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TargetAmountPicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CurrentAmountPicbox)).BeginInit();
@@ -262,18 +261,6 @@
             this.SpendingBtnGoal.TabIndex = 59;
             this.SpendingBtnGoal.Text = "Spend";
             this.SpendingBtnGoal.Click += new System.EventHandler(this.SpendingBtnGoal_Click);
-            // 
-            // GoalDateLabelGoal
-            // 
-            this.GoalDateLabelGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.GoalDateLabelGoal.AutoSize = true;
-            this.GoalDateLabelGoal.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold);
-            this.GoalDateLabelGoal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(153)))), ((int)(((byte)(66)))));
-            this.GoalDateLabelGoal.Location = new System.Drawing.Point(237, 36);
-            this.GoalDateLabelGoal.Name = "GoalDateLabelGoal";
-            this.GoalDateLabelGoal.Size = new System.Drawing.Size(67, 17);
-            this.GoalDateLabelGoal.TabIndex = 32;
-            this.GoalDateLabelGoal.Text = "Goal Date";
             // 
             // SaveBtnGoal
             // 
@@ -860,17 +847,6 @@
             this.MilestoneBarGoal.Text = "MilestoneBarGoal";
             this.MilestoneBarGoal.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
-            // CurrentDateGoal
-            // 
-            this.CurrentDateGoal.AutoSize = true;
-            this.CurrentDateGoal.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentDateGoal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(94)))), ((int)(((byte)(36)))));
-            this.CurrentDateGoal.Location = new System.Drawing.Point(237, 44);
-            this.CurrentDateGoal.Name = "CurrentDateGoal";
-            this.CurrentDateGoal.Size = new System.Drawing.Size(92, 17);
-            this.CurrentDateGoal.TabIndex = 61;
-            this.CurrentDateGoal.Text = "Dynamic Date";
-            // 
             // SelectMonthDropGoal
             // 
             this.SelectMonthDropGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -923,21 +899,32 @@
             0});
             this.SelectYearDropGoal.ValueChanged += new System.EventHandler(this.numSelectYear_ValueChanged);
             // 
+            // GoalDateLabelGoal
+            // 
+            this.GoalDateLabelGoal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.GoalDateLabelGoal.AutoSize = true;
+            this.GoalDateLabelGoal.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold);
+            this.GoalDateLabelGoal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(94)))), ((int)(((byte)(36)))));
+            this.GoalDateLabelGoal.Location = new System.Drawing.Point(237, 44);
+            this.GoalDateLabelGoal.Name = "GoalDateLabelGoal";
+            this.GoalDateLabelGoal.Size = new System.Drawing.Size(67, 17);
+            this.GoalDateLabelGoal.TabIndex = 32;
+            this.GoalDateLabelGoal.Text = "Goal Date";
+            // 
             // GoalForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(248)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(932, 478);
-            this.Controls.Add(this.CurrentDateGoal);
             this.Controls.Add(this.SelectYearDropGoal);
             this.Controls.Add(this.SelectMonthDropGoal);
             this.Controls.Add(this.SavingBtnGoal);
             this.Controls.Add(this.SpendingBtnGoal);
             this.Controls.Add(this.IndicatorPnlGoal);
             this.Controls.Add(this.GoalPnlGoal);
-            this.Controls.Add(this.GoalsLblGoal);
             this.Controls.Add(this.GoalDateLabelGoal);
             this.Controls.Add(this.SidebarTableLayoutGoal);
+            this.Controls.Add(this.GoalsLblGoal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(950, 525);
@@ -946,7 +933,7 @@
             this.Name = "GoalForm";
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Goal";       
+            this.Text = "Goal";
             this.Load += new System.EventHandler(this.GoalForm_Load);
             this.SpendingGoalTabLayGoal.ResumeLayout(false);
             this.SpendingGoalTabLayGoal.PerformLayout();
@@ -1003,7 +990,6 @@
         private System.Windows.Forms.PictureBox TargetDatePicbox;
         private System.Windows.Forms.PictureBox RemainDaysPicbox;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Label GoalDateLabelGoal;
         private System.Windows.Forms.FlowLayoutPanel SidebarTableLayoutGoal;
         private System.Windows.Forms.Panel CentSibleTextPanelGoal;
         private System.Windows.Forms.TableLayoutPanel SideBarTabLayGoal;
@@ -1033,10 +1019,10 @@
         private Guna.UI2.WinForms.Guna2ProgressBar MilestoneBarGoal;
         private Guna.UI2.WinForms.Guna2Button SpendingBtnGoal;
         private Guna.UI2.WinForms.Guna2Button SavingBtnGoal;
-        private System.Windows.Forms.Label CurrentDateGoal;
         private System.Windows.Forms.TableLayoutPanel LogTabLayGoal;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox SelectMonthDropGoal;
         private System.Windows.Forms.NumericUpDown SelectYearDropGoal;
+        private System.Windows.Forms.Label GoalDateLabelGoal;
     }
 }
